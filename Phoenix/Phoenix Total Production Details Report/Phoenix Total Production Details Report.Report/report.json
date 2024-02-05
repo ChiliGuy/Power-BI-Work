@@ -1,0 +1,472 @@
+{
+  "config": "{\"version\":\"5.42\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY18SU07\",\"version\":\"3.15\",\"type\":2},\"customTheme\":{\"name\":\"Creighton_University401820079340252.json\",\"version\":\"5.47\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod"
+    },
+    {
+      "boundSection": "ReportSection1906fd749eb56412d697",
+      "config": "{}",
+      "name": "Pod1",
+      "parameters": "[{\"name\":\"Param_Filter\",\"boundFilter\":\"Filter\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Finance Categories\"}},\"Property\":\"Finance Category\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection1b0fe049a5f7f24c70e0",
+      "config": "{}",
+      "name": "Pod2",
+      "parameters": "[{\"name\":\"Param_Filter\",\"boundFilter\":\"Filter\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Transaction Categories\"}},\"Property\":\"Transaction Category\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection224b81e565a9d71863c6",
+      "config": "{}",
+      "name": "Pod3",
+      "parameters": "[{\"name\":\"Param_Filter\",\"boundFilter\":\"Filter\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"HH Record Type\"}},\"Property\":\"Record Type\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection0791b1e30a53cd2d2d80",
+      "config": "{}",
+      "name": "Pod4",
+      "parameters": "[{\"name\":\"Param_Filter\",\"boundFilter\":\"Filter\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Report Inventory\"}},\"Property\":\"Report ID\"}},\"isLegacySingleSelection\":true}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection595481a800eb2a006ccb",
+      "config": "{}",
+      "name": "Pod5"
+    },
+    {
+      "boundSection": "ReportSectionb93d4e40539bf6cdeae7",
+      "config": "{}",
+      "name": "Pod6"
+    },
+    {
+      "boundSection": "ReportSection0ab7d9c28197107cd1ff",
+      "config": "{}",
+      "name": "Pod7"
+    }
+  ],
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Creighton_University401820079340252.json",
+            "path": "Creighton_University401820079340252.json",
+            "type": 201
+          },
+          {
+            "name": "questions-1014060_1920605274495355947.jpg",
+            "path": "questions-1014060_1920605274495355947.jpg",
+            "type": 100
+          },
+          {
+            "name": "survey-2316468_128022715595222204854.png",
+            "path": "survey-2316468_128022715595222204854.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY18SU07",
+            "path": "BaseThemes/CY18SU07.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}}}}]}}",
+      "displayName": "Total Production Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Period\"}},\"Property\":\"Campaign Period Type\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Period\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Campaign Period Type\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Current'\"}}],[{\"Literal\":{\"Value\":\"'Pre-Campaign'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0df97064ae5dca5e9c44\",\"layouts\":[{\"id\":0,\"position\":{\"x\":343.3434650455927,\"y\":428.936170212766,\"z\":3000,\"width\":624.4376899696049,\"height\":240.24316109422494}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Finance Categories.TRANS_AMT)\"}],\"Category\":[{\"queryRef\":\"Finance Categories.FINANCE_CATEGORY\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Finance Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Finance Categories.FINANCE_CATEGORY\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10M\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10M\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dollars by Finance Category'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Finance Categories\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 240.24,
+          "width": 624.44,
+          "x": 343.34,
+          "y": 428.94,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"1c0cc896efd4da4e955c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":687.6595744680851,\"y\":176.048632218845,\"z\":4000,\"width\":592.3404255319149,\"height\":240.24316109422494}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(HH Record Type.TRANS_AMT)\"}],\"Category\":[{\"queryRef\":\"HH Record Type.RECORD_TYPE\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(HH Record Type.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"},\"Name\":\"HH Record Type.RECORD_TYPE\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10M\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10M\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dollars by Household Record Type'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"HH Record Type\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 240.24,
+          "width": 592.34,
+          "x": 687.66,
+          "y": 176.05,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"4e4404ee97921ef3a99e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":0,\"z\":2000,\"width\":784,\"height\":54}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Phoenix Total Production Details Report\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 54.00,
+          "width": 784.00,
+          "x": 304.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"817f658bc8899cdd6200\",\"layouts\":[{\"id\":0,\"position\":{\"x\":984.3161094224924,\"y\":687.6595744680851,\"z\":5000,\"width\":295.6838905775076,\"height\":32.09726443768997}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Last Transaction Processed on \"},{\"value\":{\"propertyIdentifier\":{\"objectName\":\"values\",\"propertyName\":\"expr\"},\"selector\":{\"id\":\"LstProcDt\"}}}],\"horizontalTextAlignment\":\"right\"}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Last Refresh Date\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Proc Dt\"},\"Name\":\"Last Refresh Date.Last Proc Dt\"}]}}},\"Property\":\"Last Refresh Date.Last Proc Dt\"}},\"Function\":3},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"LstProcDt\",\"utterance\":\"LastProc last proc dt\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'M/d/yyyy'\"}}}},\"selector\":{\"id\":\"LstProcDt\"}}]}}}",
+          "filters": "[]",
+          "height": 32.10,
+          "width": 295.68,
+          "x": 984.32,
+          "y": 687.66,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"81e01a35d1a370e8a0e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":176.048632218845,\"z\":0,\"width\":640,\"height\":240.24316109422494}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Transaction Categories.TRANS_AMT)\"}],\"Category\":[{\"queryRef\":\"Transaction Categories.TRANSACTION_CATEGORY\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Transaction Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"},\"Name\":\"Transaction Categories.TRANSACTION_CATEGORY\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10M\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10M\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dollars by Transaction Category'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 240.24,
+          "width": 640.00,
+          "x": 0.00,
+          "y": 176.05,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e7c518c2505ba8c09b03\",\"layouts\":[{\"id\":0,\"position\":{\"x\":527.1732522796353,\"y\":64.19452887537994,\"z\":1000,\"width\":256.7781155015198,\"height\":96.29179331306992}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Transaction Categories.TRANS_AMT)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Transaction Categories.TRANS_AMT)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Dollars'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'20'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 96.29,
+          "width": 256.78,
+          "x": 527.17,
+          "y": 64.19,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Report Info",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Report Inventory\"}},\"Property\":\"Report ID\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report ID\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'pbi_phx_001_giving'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"requireSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection0791b1e30a53cd2d2d80",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"129b242a10be2bfdc150\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":422,\"z\":3000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Report Group)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report Group\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Report Group)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Requester Workgroup'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 422.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"4083bfd96696f1fde44b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":560,\"z\":4000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.IntendedAudience)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IntendedAudience\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.IntendedAudience)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Intended Audience'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 560.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"4526576772b66e98c810\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":0,\"z\":8000,\"width\":328,\"height\":144}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"survey-2316468_128022715595222204854.png\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'We want your feedback!'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://forms.office.com/Pages/ResponsePage.aspx?id=21RxTH3Ry0K591_2Lzll3sBnD4rdjKJFqAF8u3Q0QBhUN0lZTTBGMzgyQ0JIM0YxT1BTNVBMN1dFOS4u'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Click here to fill out our feedback form'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 328.00,
+          "x": 896.00,
+          "y": 0.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"5cacf06cf182d95e5a83\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":2,\"z\":5000,\"width\":536,\"height\":256}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Description)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Description\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Description)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report Description'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 256.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 2.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"74e60dbfcd744601880a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":160,\"z\":9000,\"width\":328,\"height\":152}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"questions-1014060_1920605274495355947.jpg\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Questions? Check out our glossary of terms'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'12'\"}}}}}],\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://creightonuniv.sharepoint.com/:w:/t/UR/DevProgs/AdvSvcs/EUDFHgPTS9pHoqMfiKi8i08B8K9UhZ8lgIWtXh9_ah64gQ?e=Audpjs'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Click here for the glossary of terms'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 152.00,
+          "width": 328.00,
+          "x": 896.00,
+          "y": 160.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"9f6e1affc42ffcd4ae28\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":284,\"z\":6000,\"width\":536,\"height\":248}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.DescriptionofLogic)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"DescriptionofLogic\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.DescriptionofLogic)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Description of Logic'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 248.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 284.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"aec6e88f23b18835c5b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":146,\"z\":1000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Title)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Title\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Title)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report Title'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 146.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c113a0af07a4857c28c7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":560,\"z\":7000,\"width\":536,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Last Refresh Date.Last Refresh Date Time)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Last Refresh Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Refresh Date Time\"}},\"Function\":3},\"Name\":\"Min(Last Refresh Date.Last Refresh Date Time)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Refresh Date Time\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Last Refresh Date'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 560.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"e7f79911d64c3b9809af\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":284,\"z\":2000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Requestor)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Requestor\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Requestor)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Requester'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 284.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ed4ccbfd263d10682bee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":296,\"height\":120}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Report ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report ID\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Report ID)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report ID'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 120.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}",
+      "displayName": "Household Record Type Page",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Period\"}},\"Property\":\"Campaign Period Type\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "ReportSection0ab7d9c28197107cd1ff",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0b8d100fc60e35587267\",\"layouts\":[{\"id\":0,\"position\":{\"x\":128.3890577507599,\"y\":448.3890577507599,\"z\":2000,\"width\":975.5623100303952,\"height\":271.3677811550152}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"HH Record Type.TRANS_NBR\"},{\"queryRef\":\"Sum(HH Record Type.TRANS_AMT)\"},{\"queryRef\":\"HH Record Type.PRIM_ID_NUMBER\"},{\"queryRef\":\"HH Record Type.PRIM_NAME\"},{\"queryRef\":\"HH Record Type.BEHALF_ID_NUMBER\"},{\"queryRef\":\"HH Record Type.BEHALF_NAME\"},{\"queryRef\":\"HH Record Type.RECORD_TYPE\"},{\"queryRef\":\"HH Record Type.CAMPAIGN_ERA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"TRANS_NBR\"},\"Name\":\"HH Record Type.TRANS_NBR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(HH Record Type.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PRIM_ID_NUMBER\"},\"Name\":\"HH Record Type.PRIM_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PRIM_NAME\"},\"Name\":\"HH Record Type.PRIM_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"BEHALF_ID_NUMBER\"},\"Name\":\"HH Record Type.BEHALF_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"BEHALF_NAME\"},\"Name\":\"HH Record Type.BEHALF_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"},\"Name\":\"HH Record Type.RECORD_TYPE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"CAMPAIGN_ERA\"},\"Name\":\"HH Record Type.CAMPAIGN_ERA\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}}}]},\"columnProperties\":{\"HH Record Type.TRANS_NBR\":{\"displayName\":\"Transaction Nbr\"},\"HH Record Type.PRIM_ID_NUMBER\":{\"displayName\":\"Primary ID Nbr\"},\"HH Record Type.PRIM_NAME\":{\"displayName\":\"Primary Donor Name\"},\"HH Record Type.BEHALF_ID_NUMBER\":{\"displayName\":\"BehalfOf ID Nbr\"},\"HH Record Type.BEHALF_NAME\":{\"displayName\":\"BehalfOf Name\"},\"HH Record Type.CAMPAIGN_ERA\":{\"displayName\":\"Campaign Year\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"91.01198303699957D\"}}}},\"selector\":{\"metadata\":\"HH Record Type.TRANS_NBR\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"81.62907053651324D\"}}}},\"selector\":{\"metadata\":\"Sum(HH Record Type.TRANS_AMT)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Transaction Details'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.37,
+          "width": 975.56,
+          "x": 128.39,
+          "y": 448.39,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"43affa4bdb37b7e7914a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":103.99392558845862,\"y\":166.19589977220957,\"z\":0,\"width\":1024.3887623386486,\"height\":278.9369779802582}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"HH Record Type.RECORD_TYPE\",\"active\":true}],\"Columns\":[{\"queryRef\":\"HH Record Type.CAMPAIGN_ERA\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(HH Record Type.TRANS_AMT)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"},\"Name\":\"HH Record Type.RECORD_TYPE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"CAMPAIGN_ERA\"},\"Name\":\"HH Record Type.CAMPAIGN_ERA\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(HH Record Type.TRANS_AMT)\"}]},\"columnProperties\":{\"HH Record Type.RECORD_TYPE\":{\"displayName\":\"Record Type\"},\"HH Record Type.CAMPAIGN_ERA\":{\"displayName\":\"Campaign Year\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Sum(HH Record Type.TRANS_AMT)\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Year Breakout'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 278.94,
+          "width": 1024.39,
+          "x": 103.99,
+          "y": 166.20,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ab23c90304dc6f65bd69\",\"layouts\":[{\"id\":0,\"position\":{\"x\":128.3890577507599,\"y\":0,\"z\":1000,\"width\":975.5623100303952,\"height\":160.48632218844986}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"HH Record Type.RECORD_TYPE\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(HH Record Type.TRANS_AMT)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"},\"Name\":\"HH Record Type.RECORD_TYPE\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(HH Record Type.TRANS_AMT)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9M\"}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9M\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Household Record Type Overview'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 160.49,
+          "width": 975.56,
+          "x": 128.39,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Finance Category List",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Finance Categories\"}},\"Property\":\"Finance Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Capital'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection1906fd749eb56412d697",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"e13c1360ce9d7fd2b673\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1008,\"height\":704}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Finance Categories.TRANS_NBR\"},{\"queryRef\":\"Sum(Finance Categories.TRANS_AMT)\"},{\"queryRef\":\"Finance Categories.PRIM_ID_NUMBER\"},{\"queryRef\":\"Finance Categories.PRIM_NAME\"},{\"queryRef\":\"Finance Categories.BEHALF_ID_NUMBER\"},{\"queryRef\":\"Finance Categories.BEHALF_NAME\"},{\"queryRef\":\"Finance Categories.FINANCE_CATEGORY\"},{\"queryRef\":\"Finance Categories.CAMPAIGN_ERA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TRANS_NBR\"},\"Name\":\"Finance Categories.TRANS_NBR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Finance Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Finance Categories.FINANCE_CATEGORY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"CAMPAIGN_ERA\"},\"Name\":\"Finance Categories.CAMPAIGN_ERA\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"PRIM_ID_NUMBER\"},\"Name\":\"Finance Categories.PRIM_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"PRIM_NAME\"},\"Name\":\"Finance Categories.PRIM_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"BEHALF_ID_NUMBER\"},\"Name\":\"Finance Categories.BEHALF_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"BEHALF_NAME\"},\"Name\":\"Finance Categories.BEHALF_NAME\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 704.00,
+          "width": 1008.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e43411a98bbb45e7a98e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1088,\"y\":0,\"z\":1000,\"width\":128,\"height\":64}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'arrowbutton'\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 64.00,
+          "width": 128.00,
+          "x": 1088.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Transaction Category List",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Transaction Categories\"}},\"Property\":\"Transaction Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Pledge Activity - Anticipated'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection1b0fe049a5f7f24c70e0",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"084910722b40cbca79ad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1024,\"height\":672}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Transaction Categories.TRANS_NBR\"},{\"queryRef\":\"Sum(Transaction Categories.TRANS_AMT)\"},{\"queryRef\":\"Transaction Categories.PRIM_ID_NUMBER\"},{\"queryRef\":\"Transaction Categories.PRIM_NAME\"},{\"queryRef\":\"Transaction Categories.BEHALF_ID_NUMBER\"},{\"queryRef\":\"Transaction Categories.BEHALF_NAME\"},{\"queryRef\":\"Transaction Categories.TRANSACTION_CATEGORY\"},{\"queryRef\":\"Transaction Categories.CAMPAIGN_ERA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Nbr\"},\"Name\":\"Transaction Categories.TRANS_NBR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Transaction Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"},\"Name\":\"Transaction Categories.TRANSACTION_CATEGORY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Campaign Year\"},\"Name\":\"Transaction Categories.CAMPAIGN_ERA\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Primary ID Nbr\"},\"Name\":\"Transaction Categories.PRIM_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Primary Donor Name\"},\"Name\":\"Transaction Categories.PRIM_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"BehalfOf Name\"},\"Name\":\"Transaction Categories.BEHALF_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"BehalfOf ID Nbr\"},\"Name\":\"Transaction Categories.BEHALF_ID_NUMBER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 672.00,
+          "width": 1024.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b791e95ab084e633421e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1040,\"y\":0,\"z\":1000,\"width\":112,\"height\":64}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'arrowbutton'\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 64.00,
+          "width": 112.00,
+          "x": 1040.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Household List",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"HH Record Type\"}},\"Property\":\"Record Type\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Friend'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection224b81e565a9d71863c6",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"526261d6e9d7b425b926\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":896,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"HH Record Type.TRANS_NBR\"},{\"queryRef\":\"Sum(HH Record Type.TRANS_AMT)\"},{\"queryRef\":\"HH Record Type.RECORD_TYPE\"},{\"queryRef\":\"HH Record Type.PRIM_ID_NUMBER\"},{\"queryRef\":\"HH Record Type.PRIM_NAME\"},{\"queryRef\":\"HH Record Type.BEHALF_ID_NUMBER\"},{\"queryRef\":\"HH Record Type.BEHALF_NAME\"},{\"queryRef\":\"HH Record Type.CAMPAIGN_ERA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HH Record Type\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"TRANS_NBR\"},\"Name\":\"HH Record Type.TRANS_NBR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(HH Record Type.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"},\"Name\":\"HH Record Type.RECORD_TYPE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"CAMPAIGN_ERA\"},\"Name\":\"HH Record Type.CAMPAIGN_ERA\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PRIM_NAME\"},\"Name\":\"HH Record Type.PRIM_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PRIM_ID_NUMBER\"},\"Name\":\"HH Record Type.PRIM_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"BEHALF_NAME\"},\"Name\":\"HH Record Type.BEHALF_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"BEHALF_ID_NUMBER\"},\"Name\":\"HH Record Type.BEHALF_ID_NUMBER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Record Type\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 896.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8f9a3bbe3f7a24c306a4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1072,\"y\":0,\"z\":1000,\"width\":128,\"height\":64}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'arrowbutton'\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 64.00,
+          "width": 128.00,
+          "x": 1072.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}",
+      "displayName": "Transaction Category Page",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Period\"}},\"Property\":\"Campaign Period Type\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "ReportSection595481a800eb2a006ccb",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"43affa4bdb37b7e7914a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":98.16249050873198,\"y\":236.1731207289294,\"z\":0,\"width\":1082.7031131359151,\"height\":196.32498101746395}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Transaction Categories.TRANSACTION_CATEGORY\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Transaction Categories.CAMPAIGN_ERA\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Transaction Categories.TRANS_AMT)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"},\"Name\":\"Transaction Categories.TRANSACTION_CATEGORY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Campaign Year\"},\"Name\":\"Transaction Categories.CAMPAIGN_ERA\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Transaction Categories.TRANS_AMT)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"}}}]},\"columnProperties\":{\"Transaction Categories.TRANSACTION_CATEGORY\":{\"displayName\":\"Transaction Category\"},\"Transaction Categories.CAMPAIGN_ERA\":{\"displayName\":\"Campaign Era\"},\"Sum(Transaction Categories.TRANS_AMT)\":{\"displayName\":\"Transaction Amt\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Transaction Categories.TRANS_AMT)\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Year Breakout'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 196.32,
+          "width": 1082.70,
+          "x": 98.16,
+          "y": 236.17,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"76cdfbe09767b89545e1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":144,\"y\":16,\"z\":1000,\"width\":992,\"height\":208}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Transaction Categories.TRANSACTION_CATEGORY\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Transaction Categories.TRANS_AMT)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"},\"Name\":\"Transaction Categories.TRANSACTION_CATEGORY\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Transaction Categories.TRANS_AMT)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9M\"}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9M\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Transaction Category Overview'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 208.00,
+          "width": 992.00,
+          "x": 144.00,
+          "y": 16.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ba00927871b4cedf330a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":98.2370820668693,\"y\":448.3890577507599,\"z\":2000,\"width\":1082.5531914893618,\"height\":271.3677811550152}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Transaction Categories.TRANS_NBR\"},{\"queryRef\":\"Sum(Transaction Categories.TRANS_AMT)\"},{\"queryRef\":\"Transaction Categories.PRIM_ID_NUMBER\"},{\"queryRef\":\"Transaction Categories.PRIM_NAME\"},{\"queryRef\":\"Transaction Categories.BEHALF_ID_NUMBER\"},{\"queryRef\":\"Transaction Categories.BEHALF_NAME\"},{\"queryRef\":\"Transaction Categories.TRANSACTION_CATEGORY\"},{\"queryRef\":\"Transaction Categories.CAMPAIGN_ERA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Transaction Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Nbr\"},\"Name\":\"Transaction Categories.TRANS_NBR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Transaction Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Primary Donor Name\"},\"Name\":\"Transaction Categories.PRIM_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Primary ID Nbr\"},\"Name\":\"Transaction Categories.PRIM_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"BehalfOf ID Nbr\"},\"Name\":\"Transaction Categories.BEHALF_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"BehalfOf Name\"},\"Name\":\"Transaction Categories.BEHALF_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Category\"},\"Name\":\"Transaction Categories.TRANSACTION_CATEGORY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Campaign Year\"},\"Name\":\"Transaction Categories.CAMPAIGN_ERA\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'9'\"}}}}}],\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"values\":[{\"properties\":{},\"selector\":{\"data\":[{\"roles\":[\"Values\"]}],\"metadata\":\"Sum(Transaction Categories.TRANS_AMT)\"}},{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(Transaction Categories.TRANS_AMT)\"}}],\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Transaction Categories.TRANS_AMT)\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Transaction Categories.PRIM_ID_NUMBER\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Transaction Categories.BEHALF_ID_NUMBER\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Transaction Categories.CAMPAIGN_ERA\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Transaction Details'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.37,
+          "width": 1082.55,
+          "x": 98.24,
+          "y": 448.39,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"65D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}",
+      "displayName": "Finance Category Page",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Period\"}},\"Property\":\"Campaign Period Type\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "ReportSectionb93d4e40539bf6cdeae7",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4434ce8bc27eb6116fde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":143.8420652999241,\"y\":15.550493545937739,\"z\":0,\"width\":992.315869400152,\"height\":211.8754745634017}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Finance Categories.FINANCE_CATEGORY\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Finance Categories.TRANS_AMT)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Finance Categories.FINANCE_CATEGORY\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Finance Categories.TRANS_AMT)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9M\"}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9M\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Finance Category Overview'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 211.88,
+          "width": 992.32,
+          "x": 143.84,
+          "y": 15.55,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"96f7ceb6d773de9136f5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":108.85345482156417,\"y\":237.1450265755505,\"z\":1000,\"width\":1063.264996203493,\"height\":232.28549734244498}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Finance Categories.TRANS_AMT)\"}],\"Columns\":[{\"queryRef\":\"Finance Categories.CAMPAIGN_ERA\",\"active\":true}],\"Rows\":[{\"queryRef\":\"Finance Categories.FINANCE_CATEGORY\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Finance Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"CAMPAIGN_ERA\"},\"Name\":\"Finance Categories.CAMPAIGN_ERA\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Finance Categories.FINANCE_CATEGORY\"}]},\"columnProperties\":{\"Finance Categories.FINANCE_CATEGORY\":{\"displayName\":\"Finance Category\"},\"Finance Categories.CAMPAIGN_ERA\":{\"displayName\":\"Campaign Year\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Finance Categories.TRANS_AMT)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Year Breakout'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 232.29,
+          "width": 1063.27,
+          "x": 108.85,
+          "y": 237.15,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"990fe22acb22a622bae1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":149.67350037965073,\"y\":480.1214882308277,\"z\":2000,\"width\":981.6249050873198,\"height\":240.06074411541385}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Finance Categories.TRANS_NBR\"},{\"queryRef\":\"Sum(Finance Categories.TRANS_AMT)\"},{\"queryRef\":\"Finance Categories.PRIM_ID_NUMBER\"},{\"queryRef\":\"Finance Categories.PRIM_NAME\"},{\"queryRef\":\"Finance Categories.BEHALF_ID_NUMBER\"},{\"queryRef\":\"Finance Categories.BEHALF_NAME\"},{\"queryRef\":\"Finance Categories.FINANCE_CATEGORY\"},{\"queryRef\":\"Finance Categories.CAMPAIGN_ERA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Finance Categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TRANS_NBR\"},\"Name\":\"Finance Categories.TRANS_NBR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"PRIM_NAME\"},\"Name\":\"Finance Categories.PRIM_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"BEHALF_ID_NUMBER\"},\"Name\":\"Finance Categories.BEHALF_ID_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"BEHALF_NAME\"},\"Name\":\"Finance Categories.BEHALF_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Finance Categories.FINANCE_CATEGORY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"CAMPAIGN_ERA\"},\"Name\":\"Finance Categories.CAMPAIGN_ERA\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0},\"Name\":\"Sum(Finance Categories.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"PRIM_ID_NUMBER\"},\"Name\":\"Finance Categories.PRIM_ID_NUMBER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Transaction Amt\"}},\"Function\":0}}}]},\"columnProperties\":{\"Finance Categories.TRANS_NBR\":{\"displayName\":\"Transaction Nbr\"},\"Finance Categories.PRIM_ID_NUMBER\":{\"displayName\":\"Primary ID Nbr\"},\"Finance Categories.PRIM_NAME\":{\"displayName\":\"Primary Donor Name\"},\"Finance Categories.BEHALF_ID_NUMBER\":{\"displayName\":\"BehalfOf ID Nbr\"},\"Finance Categories.BEHALF_NAME\":{\"displayName\":\"BehalfOf Name\"},\"Finance Categories.CAMPAIGN_ERA\":{\"displayName\":\"Campaign Year\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"83.57436875072949D\"}}}},\"selector\":{\"metadata\":\"Sum(Finance Categories.TRANS_AMT)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"103.65642142940513D\"}}}},\"selector\":{\"metadata\":\"Finance Categories.TRANS_NBR\"}}],\"columnFormatting\":[{\"properties\":{\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Finance Categories.TRANS_AMT)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Transaction Details'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384c70'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'17'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 240.06,
+          "width": 981.62,
+          "x": 149.67,
+          "y": 480.12,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Creighton_University401820079340252.json"
+}

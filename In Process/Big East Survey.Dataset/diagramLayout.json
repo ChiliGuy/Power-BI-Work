@@ -1,0 +1,165 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1172,
+            "y": 255
+          },
+          "nodeIndex": "Max Rev Date",
+          "nodeLineageTag": "b699e22a-2555-43fd-b737-44524c029d94",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 9,
+            "y": 328
+          },
+          "nodeIndex": "Calendar - Ten Yrs",
+          "nodeLineageTag": "b148a526-f1dc-433d-bdf5-2f85adf4177a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Production",
+          "nodeLineageTag": "6c90fcd2-9e3c-44d3-8b08-a8c83f6272fe",
+          "size": {
+            "height": 240,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 598,
+            "y": 1
+          },
+          "nodeIndex": "Revenue",
+          "nodeLineageTag": "d92b422c-de43-4253-8659-71a893dc34da",
+          "size": {
+            "height": 255,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1170,
+            "y": 125
+          },
+          "nodeIndex": "Key Measures",
+          "nodeLineageTag": "ef1f0cab-8124-4277-96be-36d97afc49f9",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1172,
+            "y": 383
+          },
+          "nodeIndex": "DataSource",
+          "nodeLineageTag": "7c4cf7be-345d-438c-84ed-73e2a3bd7f9f",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1166,
+            "y": 0
+          },
+          "nodeIndex": "General Measures",
+          "nodeLineageTag": "60494bde-fa8f-44bc-bdff-0a6f2acb9921",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 303,
+            "y": 354
+          },
+          "nodeIndex": "Trustees",
+          "nodeLineageTag": "44cd377f-a084-4fa1-a750-87d5833d68ab",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 901,
+            "y": 0.5
+          },
+          "nodeIndex": "Board Production",
+          "nodeLineageTag": "faa9c9ff-5370-4ac6-a221-1d3f741bf511",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 905.546875,
+            "y": 337.5
+          },
+          "nodeIndex": "Board Revenue",
+          "nodeLineageTag": "9ff3c9f8-18dc-40a6-a742-b74dbde5562c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 294.296875,
+            "y": 0
+          },
+          "nodeIndex": "Fiscal Years",
+          "nodeLineageTag": "68533846-b153-406e-90b1-92899b8f624f",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -1,0 +1,381 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Calendar - FY13+",
+          "size": {
+            "height": 300,
+            "width": 205
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 639.7,
+            "y": 261
+          },
+          "nodeIndex": "Proposals",
+          "size": {
+            "height": 232,
+            "width": 201
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 5.4000000000000909,
+            "y": 432
+          },
+          "nodeIndex": "Contact Reports",
+          "size": {
+            "height": 300,
+            "width": 198
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 287.40000000000009,
+            "y": 550
+          },
+          "nodeIndex": "Prospects and Scores",
+          "size": {
+            "height": 262,
+            "width": 229
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 953.40000000000009,
+            "y": 0
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 124,
+            "width": 209
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 643.40000000000009,
+            "y": 538
+          },
+          "nodeIndex": "Pledge Pymts Due",
+          "size": {
+            "height": 278,
+            "width": 202
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 954.40000000000009,
+            "y": 141
+          },
+          "nodeIndex": "Proposal Measures",
+          "size": {
+            "height": 124,
+            "width": 204
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1261.4,
+            "y": 459
+          },
+          "nodeIndex": "Current FY",
+          "nodeLineageTag": "be889103-60b3-4e1b-a38e-7656255a5fd4",
+          "size": {
+            "height": 124,
+            "width": 205
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1258.4,
+            "y": 312
+          },
+          "nodeIndex": "Pledge Measures",
+          "nodeLineageTag": "368fe7cb-731a-4590-ba0b-b5e7ad6eb1b0",
+          "size": {
+            "height": 124,
+            "width": 204
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 290.09999999999991,
+            "y": 0
+          },
+          "nodeIndex": "Entities w/Locations",
+          "size": {
+            "height": 192,
+            "width": 201
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 638.09999999999991,
+            "y": 0
+          },
+          "nodeIndex": "Household Giving",
+          "size": {
+            "height": 233,
+            "width": 200
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1254.8,
+            "y": 0
+          },
+          "nodeIndex": "Household Keys",
+          "nodeLineageTag": "2277d23d-cd62-4142-8f88-e33aa4b5f41d",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1252.8,
+            "y": 185
+          },
+          "nodeIndex": "Max Proposal Date",
+          "nodeLineageTag": "d931e443-bf52-4d8d-892d-bdf65b733b8a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 969.8,
+            "y": 658
+          },
+          "nodeIndex": "Plg DD Cats",
+          "nodeLineageTag": "4f16ee57-d81f-47f6-9cbc-6ed99428f1ea",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 949.8,
+            "y": 288
+          },
+          "nodeIndex": "Proposal Solictors",
+          "nodeLineageTag": "4aa63a11-3a6d-4281-b380-9857f79bedc5",
+          "size": {
+            "height": 296,
+            "width": 210
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1250.8,
+            "y": 610
+          },
+          "nodeIndex": "Prospect Measures",
+          "nodeLineageTag": "a2a4c7cd-e542-4a71-9c18-a290114ba2f7",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 280.79999999999995,
+            "y": 223
+          },
+          "nodeIndex": "Primary Managers",
+          "nodeLineageTag": "4364c06e-e9dd-4869-81f0-c348d6bbe619",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 316,
+            "y": 178
+          },
+          "nodeIndex": "Proposals",
+          "nodeLineageTag": "c7c19d33-04e7-42ff-9dc9-8e9f2675b98f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 632,
+            "y": 258
+          },
+          "nodeIndex": "Proposal Solictors",
+          "nodeLineageTag": "4aa63a11-3a6d-4281-b380-9857f79bedc5",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": -100,
+            "y": 64
+          },
+          "nodeIndex": "Prospects and Scores",
+          "nodeLineageTag": "3eb420af-ead3-4775-9ad7-8e0b155381a3",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 936,
+            "y": 25
+          },
+          "nodeIndex": "Proposal Measures",
+          "nodeLineageTag": "90019b5a-2e94-4588-9bb6-215d2e96a8b5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Proposals",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 443,
+            "y": 129
+          },
+          "nodeIndex": "Prospects and Scores",
+          "nodeLineageTag": "3eb420af-ead3-4775-9ad7-8e0b155381a3",
+          "size": {
+            "height": 384,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 787,
+            "y": 504
+          },
+          "nodeIndex": "Contact Reports",
+          "nodeLineageTag": "e6c51ac0-b1a0-4056-9a21-60c3378e0a0b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 133,
+            "y": 518
+          },
+          "nodeIndex": "Entities w/Locations",
+          "nodeLineageTag": "f854e171-69c1-46b8-8102-5e256e502670",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 115
+          },
+          "nodeIndex": "Household Giving",
+          "nodeLineageTag": "fb02580a-24d3-4c25-b931-09cb60bb6c0c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 784,
+            "y": 54
+          },
+          "nodeIndex": "Primary Managers",
+          "nodeLineageTag": "4364c06e-e9dd-4869-81f0-c348d6bbe619",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "Prospects",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

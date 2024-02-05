@@ -1,0 +1,256 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU08\",\"version\":\"5.35\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"filterPaneHiddenInEditMode\":false},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "filters": "[]",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod"
+    }
+  ],
+  "publicCustomVisuals": [
+    "ChicletSlicer1448559807354",
+    "textFilter25A4896A83E0487089E2B90C9AE57C8A"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU08",
+            "path": "BaseThemes/CY22SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "questions-1014060_1920605274495355947.jpg",
+            "path": "questions-1014060_1920605274495355947.jpg",
+            "type": 100
+          },
+          {
+            "name": "survey-2316468_128022715595222204854.png",
+            "path": "survey-2316468_128022715595222204854.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "New 50K Donors",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"33a46754172b27385ccb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.442211055276381,\"y\":452.2613065326633,\"z\":7000,\"width\":1021.5075376884422,\"height\":267.73869346733665}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Camp $50k+ Donors.Entity ID\"},{\"queryRef\":\"Camp $50k+ Donors.Entity Name\"},{\"queryRef\":\"Camp $50k+ Donors.Rec Type\"},{\"queryRef\":\"Camp $50k+ Donors.1st Camp Dt\"},{\"queryRef\":\"Sum(Camp $50k+ Donors.1st Camp Amt)\"},{\"queryRef\":\"Camp $50k+ Donors.1st Camp Trans Type\"},{\"queryRef\":\"Camp $50k+ Donors.Sol Workgroup\"},{\"queryRef\":\"Camp $50k+ Donors.Solicitor Name\"},{\"queryRef\":\"Camp $50k+ Donors.Entity Sort\"},{\"queryRef\":\"Camp $50k+ Donors.Switch Measure\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity ID\"},\"Name\":\"Camp $50k+ Donors.Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity Name\"},\"Name\":\"Camp $50k+ Donors.Entity Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"1st Camp Amt\"}},\"Function\":0},\"Name\":\"Sum(Camp $50k+ Donors.1st Camp Amt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"1st Camp Trans Type\"},\"Name\":\"Camp $50k+ Donors.1st Camp Trans Type\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rec Type\"},\"Name\":\"Camp $50k+ Donors.Rec Type\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Sol Workgroup\"},\"Name\":\"Camp $50k+ Donors.Sol Workgroup\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Solicitor Name\"},\"Name\":\"Camp $50k+ Donors.Solicitor Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"1st Camp Dt\"},\"Name\":\"Camp $50k+ Donors.1st Camp Dt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity Sort\"},\"Name\":\"Camp $50k+ Donors.Entity Sort\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Donor Category\"},\"Name\":\"Camp $50k+ Donors.Switch Measure\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity Sort\"}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"objects\":{\"columnHeaders\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"columnFormatting\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Camp $50k+ Donors.1st Camp Trans Type\"}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"118.40705069063289D\"}}}},\"selector\":{\"metadata\":\"Camp $50k+ Donors.Solicitor Name\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"104.291466013481D\"}}}},\"selector\":{\"metadata\":\"Camp $50k+ Donors.Sol Workgroup\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"139.31660570186705D\"}}}},\"selector\":{\"metadata\":\"Camp $50k+ Donors.1st Camp Trans Type\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"86.7286650337025D\"}}}},\"selector\":{\"metadata\":\"Camp $50k+ Donors.Rec Type\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"131.46233870860755D\"}}}},\"selector\":{\"metadata\":\"Camp $50k+ Donors.Entity Name\"}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7938ff1c671c0b5330d4\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"1st Camp Amt\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"Filter26ea52f2d2eab10e53a6\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"1st Camp Dt\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"Filter8edf13407445380d9ccc\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"1st Camp Trans Type\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":2},{\"name\":\"Filter0beb4dd8148896a9b625\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"50K Campaign Gift Ind\"}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":3},{\"name\":\"Filter15151d7d450589282008\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Donor Category\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":4},{\"name\":\"Filterb709e671d7b77d826526\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fcg_options\"}},\"Property\":\"fcg_ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fcg_options\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"fcg_ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Yes'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"ordinal\":5},{\"name\":\"Filtera97b1674c9e6a3c75ec4\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Donor Category Slicer\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Donor Category Slicer\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"ordinal\":6},{\"name\":\"Filter9a2eccd03da908819369\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Entity ID\"}},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false,\"ordinal\":7},{\"name\":\"Filter36c4220b7888a36be643\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Entity Name\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":8},{\"name\":\"Filteracad65ded67b893c8750\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"FCG Filter\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"FCG Filter\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"ordinal\":9},{\"name\":\"Filtere5851c188bee16cd6deb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Entity Sort\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":10},{\"name\":\"Filter889798e4ade8753e3d64\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Rec Type\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":11},{\"name\":\"Filter5a2e530008c5370229b6\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Sol Workgroup\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":12},{\"name\":\"Filtera52914a463d457500001\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Solicitor Name\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":13},{\"name\":\"Filterf2eb173277660b59de82\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"50K Campaign Gift Ind\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":14}]",
+          "height": 267.74,
+          "width": 1021.51,
+          "x": 8.44,
+          "y": 452.26,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"4f6dbbc35dc9267cf2f8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":214.67336683417085,\"y\":60.30150753768844,\"z\":3000,\"width\":190.55276381909547,\"height\":77.1859296482412}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.Household Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Household Count\"},\"Name\":\"Key Measures.Household Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Household Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"36D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Household Count'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 77.19,
+          "width": 190.55,
+          "x": 214.67,
+          "y": 60.30,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"55bb1f665034202b258a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.233303740431163,\"y\":146.82725003768908,\"z\":0,\"width\":1020.9296638134642,\"height\":297.7711519455938}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Camp $50k+ Donors.1st Camp FY\",\"active\":true},{\"queryRef\":\"Calendar - FY13+.FiscalMonthLong\"}],\"Y\":[{\"queryRef\":\"campaign_50k_donors.Continuing Donors\"},{\"queryRef\":\"campaign_50k_donors.New Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c1\",\"Entity\":\"campaign_50k_donors\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"calendar_FY13+\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"1st Camp FY\"},\"Name\":\"Camp $50k+ Donors.1st Camp FY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"FiscalMonthLong\"},\"Name\":\"Calendar - FY13+.FiscalMonthLong\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Continuing Donors\"},\"Name\":\"campaign_50k_donors.Continuing Donors\",\"NativeReferenceName\":\"Continuing Donors\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"New Donors\"},\"Name\":\"campaign_50k_donors.New Donors\",\"NativeReferenceName\":\"New Donors\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"1st Camp FY\"}}}]},\"columnProperties\":{\"Camp $50k+ Donors.1st Camp FY\":{\"displayName\":\"Campaign Year\"},\"Calendar - FY13+.FiscalMonthLong\":{\"displayName\":\"Fiscal Month\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4D89AB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'New $50k Donor'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Continuing $50k Donor'\"}}}}}]}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"legend\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'$50k+ Donor Count by FY of First Campaign Transaction'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"76D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter9d0f370c41bd8cd36544\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"campaign_50k_donors\"}},\"Property\":\"FCG Filter\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"FCG Filter\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 297.77,
+          "width": 1020.93,
+          "x": 8.23,
+          "y": 146.83,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8a98d9ea4caa41d017e5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1045.6281407035176,\"y\":366.6331658291457,\"z\":8000,\"width\":233.96984924623115,\"height\":89.24623115577889}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"donor_category_slicer.Donor Category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"donor_category_slicer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Donor Category\"},\"Name\":\"donor_category_slicer.Donor Category\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Donor Category\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"outline\":{\"expr\":{\"Literal\":{\"Value\":\"'None'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"'Vertical'\"}}},\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"forcedSelection\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"multiselect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.25,
+          "width": 233.97,
+          "x": 1045.63,
+          "y": 366.63,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"add3a4216cc399c15eb9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.442211055276381,\"y\":9.64824120603015,\"z\":6000,\"width\":1020.3015075376884,\"height\":38.5929648241206}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"First-Time $50k+ Donors Analysis\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"14pt\",\"color\":\"#ffffff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 38.59,
+          "width": 1020.30,
+          "x": 8.44,
+          "y": 9.65,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"bf6f13a176ffb1c8fc2e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1045.6281407035176,\"y\":558.3919597989949,\"z\":1000,\"width\":233.96984924623115,\"height\":89.24623115577889}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"bequests_slicer.Bequests Included?\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bequests_slicer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Bequests Included?\"},\"Name\":\"bequests_slicer.Bequests Included?\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"outline\":{\"expr\":{\"Literal\":{\"Value\":\"'None'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"'Vertical'\"}}},\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"forcedSelection\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"multiselect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bequests_slicer\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Bequests Included?\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'No'\"}}]]}}}]}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.25,
+          "width": 233.97,
+          "x": 1045.63,
+          "y": 558.39,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c142c111fbe31d80af76\",\"layouts\":[{\"id\":0,\"position\":{\"x\":419.69849246231155,\"y\":60.30150753768844,\"z\":9000,\"width\":609.0452261306532,\"height\":77.1859296482412}}],\"singleVisual\":{\"visualType\":\"textFilter25A4896A83E0487089E2B90C9AE57C8A\",\"projections\":{\"field\":[{\"queryRef\":\"campaign_50k_donors.Solicitor Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Solicitor Name\"},\"Name\":\"campaign_50k_donors.Solicitor Name\",\"NativeReferenceName\":\"Solicitor Name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading3'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 77.19,
+          "width": 609.05,
+          "x": 419.70,
+          "y": 60.30,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"eaee3df0e08320d150a2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1045.6281407035176,\"y\":461.90954773869345,\"z\":4000,\"width\":233.96984924623115,\"height\":90.45226130653266}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"Camp $50k+ Donors.P or O\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity Type\"},\"Name\":\"Camp $50k+ Donors.P or O\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"outline\":{\"expr\":{\"Literal\":{\"Value\":\"'None'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"'Vertical'\"}}},\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.45,
+          "width": 233.97,
+          "x": 1045.63,
+          "y": 461.91,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"ebecde301a0486e86323\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.442211055276381,\"y\":60.30150753768844,\"z\":2000,\"width\":190.55276381909547,\"height\":77.1859296482412}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.Individual Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Individual Count\"},\"Name\":\"Key Measures.Individual Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Individual Count\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"36D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Donor Count'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 77.19,
+          "width": 190.55,
+          "x": 8.44,
+          "y": 60.30,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"f155d9cd3b9bd7a36e26\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1045.6281407035176,\"y\":9.64824120603015,\"z\":5000,\"width\":233.96984924623115,\"height\":350.9547738693467}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"Camp $50k+ Donors.Sol Workgroup\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"campaign_50k_donors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Sol Workgroup\"},\"Name\":\"Camp $50k+ Donors.Sol Workgroup\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"outline\":{\"expr\":{\"Literal\":{\"Value\":\"'None'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"'Vertical'\"}}},\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 350.95,
+          "width": 233.97,
+          "x": 1045.63,
+          "y": 9.65,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Report Info",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter25a9c4594cd5d563b746\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Report Inventory\"}},\"Property\":\"Report ID\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report ID\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'  50k Camp Donor Analysis'\"}}],[{\"Literal\":{\"Value\":\"' 50k Camp Donor Analysis'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection07e25866902b60946d79",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3153e45779e3aa4f154c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":146,\"z\":2000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Title)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Title\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Title)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report Title'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 146.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"390a273dede2cadc7160\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":2,\"z\":5000,\"width\":536,\"height\":256}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Description)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Description\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Description)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report Description'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 256.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 2.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"64b1e8d095ed0d78b0c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":296,\"height\":120}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Report ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report ID\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Report ID)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report ID'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 120.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"6ed31a3beb6a744525c4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":284,\"z\":1000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Requestor)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Requestor\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Requestor)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Requester'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 284.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9b6b08dd03e28318f7fe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":160,\"z\":8000,\"width\":328,\"height\":152}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"questions-1014060_1920605274495355947.jpg\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Questions? Check out our glossary of terms'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'12'\"}}}}}],\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://creightonuniv.sharepoint.com/:w:/t/UR/DevProgs/AdvSvcs/EUDFHgPTS9pHoqMfiKi8i08B8K9UhZ8lgIWtXh9_ah64gQ?e=Audpjs'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Click here for the glossary of terms'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 152.00,
+          "width": 328.00,
+          "x": 896.00,
+          "y": 160.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"ada1ab4fec79588db506\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":284,\"z\":6000,\"width\":536,\"height\":248}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.DescriptionofLogic)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"DescriptionofLogic\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.DescriptionofLogic)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Description of Logic'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 248.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 284.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"c66f98520d4b93905a9d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":422,\"z\":3000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Report Group)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report Group\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Report Group)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Requester Workgroup'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 422.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"dc9a68ca505cee65481b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":0,\"z\":7000,\"width\":328,\"height\":144}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"survey-2316468_128022715595222204854.png\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'We want your feedback!'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://forms.office.com/Pages/ResponsePage.aspx?id=21RxTH3Ry0K591_2Lzll3sBnD4rdjKJFqAF8u3Q0QBhUN0lZTTBGMzgyQ0JIM0YxT1BTNVBMN1dFOS4u'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Click here to fill out our feedback form'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 328.00,
+          "x": 896.00,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"ee0475b10c0f69b11179\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":560,\"z\":9000,\"width\":536,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Last Refresh Date.Last Refresh Date Time)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Last Refresh Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Refresh Date Time\"}},\"Function\":3},\"Name\":\"Min(Last Refresh Date.Last Refresh Date Time)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Refresh Date Time\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Last Refresh Date'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 560.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"f89a82bf584473386a42\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":560,\"z\":4000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.IntendedAudience)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IntendedAudience\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.IntendedAudience)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Intended Audience'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 560.00,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

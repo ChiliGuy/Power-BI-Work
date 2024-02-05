@@ -1,0 +1,73 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.44\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"10a1604f3bf4fa9f4a0d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.562310030395137,\"y\":65.16717325227964,\"z\":0,\"width\":1250.820668693009,\"height\":611.7933130699089}}],\"singleVisual\":{\"visualType\":\"azureMap\",\"projections\":{\"Y\":[{\"queryRef\":\"Main Query.HH Lat\"}],\"X\":[{\"queryRef\":\"Main Query.HH Long\"}],\"Size\":[{\"queryRef\":\"CountNonNull(Main Query.Prim Dnr ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Main Query\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"HH Lat\"},\"Name\":\"Main Query.HH Lat\",\"NativeReferenceName\":\"HH Lat\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"HH Long\"},\"Name\":\"Main Query.HH Long\",\"NativeReferenceName\":\"HH Long\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Prim Dnr ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Main Query.Prim Dnr ID)\",\"NativeReferenceName\":\"Prim Dnr ID\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"showSelectionControl\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMapLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 611.79,
+          "width": 1250.82,
+          "x": 15.56,
+          "y": 65.17,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection9b68bd7ebe134a24cf53",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7fcf193d343f1a04f130\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.562310030395137,\"y\":54.46808510638298,\"z\":0,\"width\":1246.9300911854104,\"height\":619.5744680851064}}],\"singleVisual\":{\"visualType\":\"azureMap\",\"projections\":{\"Size\":[{\"queryRef\":\"CountNonNull(Main Query.Prim Dnr ID)\"}],\"Category\":[{\"queryRef\":\"Main Query.HH Market Area\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Main Query\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Prim Dnr ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Main Query.Prim Dnr ID)\",\"NativeReferenceName\":\"Prim Dnr ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"HH Market Area\"},\"Name\":\"Main Query.HH Market Area\",\"NativeReferenceName\":\"HH Market Area\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{}}],\"mapControls\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"centerLatitude\":{\"expr\":{\"Literal\":{\"Value\":\"31.815434301648402D\"}}},\"centerLongitude\":{\"expr\":{\"Literal\":{\"Value\":\"-114.77780700342208D\"}}},\"defaultStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}},\"zoom\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"showStylePicker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showNavigationControls\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showSelectionControl\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"bubbleLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"bubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"minBubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"maxRadius\":{\"expr\":{\"Literal\":{\"Value\":\"21L\"}}},\"bubbleStrokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"autoStrokeColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"layerPosition\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMapLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"heatMapRadius\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 619.57,
+          "width": 1246.93,
+          "x": 15.56,
+          "y": 54.47,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"dbead465d1313d1cf5fb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":403.6474164133739,\"y\":3.8905775075987843,\"z\":1000,\"width\":472.7051671732523,\"height\":50.577507598784194}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Donors Heatmap\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"18pt\",\"color\":\"#0045a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 50.58,
+          "width": 472.71,
+          "x": 403.65,
+          "y": 3.89,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY20SU09\",\"version\":\"5.17\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY20SU09",
+            "path": "BaseThemes/CY20SU09.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"242987b0a016cc5c96df\",\"layouts\":[{\"id\":0,\"position\":{\"x\":404.62006079027356,\"y\":390.0030395136783,\"z\":3000,\"width\":508.69300911854106,\"height\":105.04559270516718}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Campaign Donors.Market Area\",\"active\":true}],\"Values\":[{\"queryRef\":\"Min(Campaign Donors.Entity ID)\"},{\"queryRef\":\"Divide(Count(Campaign Donors.Entity ID), ScopedEval(Count(Campaign Donors.Entity ID), []))\"},{\"queryRef\":\"Sum(Campaign Donors.Camp Trans Amt)\"},{\"queryRef\":\"Divide(Sum(Campaign Donors.Camp Trans Amt), ScopedEval(Sum(Campaign Donors.Camp Trans Amt), []))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Donors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Market Area\"},\"Name\":\"Campaign Donors.Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity ID\"}},\"Function\":2},\"Name\":\"Min(Campaign Donors.Entity ID)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Camp Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Campaign Donors.Camp Trans Amt)\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Camp Trans Amt\"}},\"Function\":0}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Camp Trans Amt\"}},\"Function\":0}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"Divide(Sum(Campaign Donors.Camp Trans Amt), ScopedEval(Sum(Campaign Donors.Camp Trans Amt), []))\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity ID\"}},\"Function\":2}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity ID\"}},\"Function\":2}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"Divide(Count(Campaign Donors.Entity ID), ScopedEval(Count(Campaign Donors.Entity ID), []))\"}]},\"columnProperties\":{\"Min(Campaign Donors.Entity ID)\":{\"displayName\":\"Donor Count\"},\"Sum(Campaign Donors.Camp Trans Amt)\":{\"displayName\":\"Camp Gift Total\"},\"Divide(Count(Campaign Donors.Entity ID), ScopedEval(Count(Campaign Donors.Entity ID), []))\":{\"displayName\":\"% of Total\"},\"Divide(Sum(Campaign Donors.Camp Trans Amt), ScopedEval(Sum(Campaign Donors.Camp Trans Amt), []))\":{\"displayName\":\"% of Total Amt\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Min(Campaign Donors.Entity ID)\"}},{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Campaign Donors.Camp Trans Amt)\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter888bafb47126159d3739\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Donors\"}},\"Property\":\"Recent Dnr?\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filterd8b2fca5e8ba82aec891\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Donors\"}},\"Property\":\"Camp Trans FY\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 105.05,
+          "width": 508.69,
+          "x": 404.62,
+          "y": 390.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"2c99ca6334901de6a0e4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":497.9939209726444,\"y\":336.53495440729483,\"z\":4000,\"width\":321.9452887537994,\"height\":46.68693009118541}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Giving Statistics\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"16pt\",\"color\":\"#0d6abf\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 46.69,
+          "width": 321.95,
+          "x": 497.99,
+          "y": 336.53,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"390edbc0f40ebac1a169\",\"layouts\":[{\"id\":0,\"position\":{\"x\":256.7781155015198,\"y\":0,\"z\":0,\"width\":766.4437689969606,\"height\":59.33130699088146}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Alumni Engagement Counts\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0d6abf\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 59.33,
+          "width": 766.44,
+          "x": 256.78,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4251bf410d80b422373e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":337.18338399189463,\"y\":128.3890577507599,\"z\":5000,\"width\":317.08206686930095,\"height\":137.14285714285714}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Committee Mbr.Market Area\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Committee Mbr.Current Mbr?)\"},{\"queryRef\":\"Sum(Committee Mbr.Recent Mbr?)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Committee Mbr\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Market Area\"},\"Name\":\"Committee Mbr.Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Current Mbr?\"}},\"Function\":0},\"Name\":\"Sum(Committee Mbr.Current Mbr?)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Recent Mbr?\"}},\"Function\":0},\"Name\":\"Sum(Committee Mbr.Recent Mbr?)\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Committee/Board Membership'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 137.14,
+          "width": 317.08,
+          "x": 337.18,
+          "y": 128.39,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"54cc25497c7372244e5c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":58.358662613981764,\"y\":128.3890577507599,\"z\":1000,\"width\":238.29787234042556,\"height\":137.14285714285714}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Alumni - All.Market Area\",\"active\":true}],\"Values\":[{\"queryRef\":\"Count(Alumni - All.Entity ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alumni - All\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Market Area\"},\"Name\":\"Alumni - All.Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Entity ID\"}},\"Function\":2},\"Name\":\"Count(Alumni - All.Entity ID)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Market Area\"}}}]},\"columnProperties\":{\"Count(Alumni - All.Entity ID)\":{\"displayName\":\"Alumni Count\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Count(Alumni - All.Entity ID)\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Alumni Counts'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 137.14,
+          "width": 238.30,
+          "x": 58.36,
+          "y": 128.39,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"5b67324d5c66dfaf4b38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":694.7922998986828,\"y\":128.3890577507599,\"z\":6000,\"width\":224.6808510638298,\"height\":137.14285714285714}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Visits.Market Area\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Visits.Recent Visit?)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"Visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Market Area\"},\"Name\":\"Visits.Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Recent Visit?\"}},\"Function\":0},\"Name\":\"Sum(Visits.Recent Visit?)\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Recent Visits'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 137.14,
+          "width": 224.68,
+          "x": 694.79,
+          "y": 128.39,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"63b880a8c3397c1685b9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":203.28267477203647,\"y\":522.2826747720364,\"z\":2000,\"width\":911.3677811550152,\"height\":130.33434650455928}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Campaign Donors.Market Area\",\"active\":true}],\"Values\":[{\"queryRef\":\"Min(Campaign Donors.Entity ID)\"},{\"queryRef\":\"Sum(Campaign Donors.Camp Trans Amt)\"}],\"Columns\":[{\"queryRef\":\"Campaign Donors.Camp Trans FY\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Donors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Market Area\"},\"Name\":\"Campaign Donors.Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Entity ID\"}},\"Function\":2},\"Name\":\"Min(Campaign Donors.Entity ID)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Camp Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Campaign Donors.Camp Trans Amt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Camp Trans FY\"},\"Name\":\"Campaign Donors.Camp Trans FY\"}]},\"columnProperties\":{\"Min(Campaign Donors.Entity ID)\":{\"displayName\":\"Donor Count\"},\"Sum(Campaign Donors.Camp Trans Amt)\":{\"displayName\":\"Camp Gift Total\"},\"Campaign Donors.Camp Trans FY\":{\"displayName\":\"Campaign FY\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Min(Campaign Donors.Entity ID)\"}},{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Campaign Donors.Camp Trans Amt)\"}}],\"columnHeaders\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}],\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"rowHeaders\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}],\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"gridVerticalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter888bafb47126159d3739\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Donors\"}},\"Property\":\"Recent Dnr?\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filterd8b2fca5e8ba82aec891\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Donors\"}},\"Property\":\"Camp Trans FY\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Donors\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Camp Trans FY\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2019'\"}}],[{\"Literal\":{\"Value\":\"'2020'\"}}],[{\"Literal\":{\"Value\":\"'2021'\"}}],[{\"Literal\":{\"Value\":\"'2018'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false}]",
+          "height": 130.33,
+          "width": 911.37,
+          "x": 203.28,
+          "y": 522.28,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"d2b94f51876a68f9fc83\",\"layouts\":[{\"id\":0,\"position\":{\"x\":960,\"y\":128.3890577507599,\"z\":7000,\"width\":226.6261398176292,\"height\":137.14285714285714}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Event.Market Area\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Event.Recent Event?)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Event\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Market Area\"},\"Name\":\"Event.Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Recent Event?\"}},\"Function\":0},\"Name\":\"Sum(Event.Recent Event?)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Event.Recent Event?)\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Event Attendance'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 137.14,
+          "width": 226.63,
+          "x": 960.00,
+          "y": 128.39,
+          "z": 7000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

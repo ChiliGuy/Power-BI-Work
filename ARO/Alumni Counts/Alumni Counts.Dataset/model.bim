@@ -1,0 +1,234 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"All Degrees\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "All Degrees",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8165fa32-ecc5-48d7-a016-94d8bfb08af5",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cd63a747-dbfe-44bf-8a49-455c75a505e0",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inst Sffx",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1b263466-778d-438c-89d9-ebd7ee8afbba",
+            "sourceColumn": "Inst Sffx",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "676fc368-b936-47ad-85b0-a66ea0ec3444",
+            "sortByColumn": "Sort School",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4ea76529-56dc-4e1e-8a90-f048de96ff10",
+            "sourceColumn": "Deg Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg Lvl",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f218ffc6-e0c2-4b03-94bc-c98c64c663a0",
+            "sortByColumn": "Sort Level",
+            "sourceColumn": "Deg Lvl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Act Addr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "690f96e1-9d8a-4dcc-af02-ffe154fec8fd",
+            "sourceColumn": "Act Addr",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Act Email",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f7fbfa48-8cac-463e-9a6b-7b9706eee96e",
+            "sourceColumn": "Act Email",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a929ab42-f8f6-4fe9-92a2-e37f6b037752",
+            "sourceColumn": "Sort School",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Level",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "320110ac-299b-4712-8ca2-b913c479831a",
+            "sourceColumn": "Sort Level",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "d7b0cbd9-c7a0-4d37-9410-fa795f41d9c5",
+        "measures": [
+          {
+            "name": "Alumni Count",
+            "expression": [
+              "",
+              "    DISTINCTCOUNTNOBLANK( 'All Degrees'[Entity ID] )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "1953c6da-6cab-4d62-967e-de8dfde36142"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "All Degrees-aa407e56-3b23-4588-a265-c11e438733a8",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select e.id_number              \"\"Entity ID\"\",#(lf)       e.pref_mail_name         \"\"Entity Name\"\",#(lf)       e.institutional_suffix   \"\"Inst Sffx\"\",#(lf)       ts.short_desc            \"\"School\"\",#(lf)       d.degree_year            \"\"Deg Yr\"\",#(lf)       tdl.short_desc           \"\"Deg Lvl\"\",#(lf)       nvl(addr.adr_nd,0)       \"\"Act Addr\"\",#(lf)       nvl(em.em_nd,0)          \"\"Act Email\"\",#(lf)       ts.hierarchy_order       \"\"Sort School\"\",#(lf)       tdl.hierarchy_order      \"\"Sort Level\"\"#(lf)from advance.entity e#(lf)inner join advance.degrees d            ON e.id_number = d.id_number#(lf)inner join advance.tms_degree_level tdl ON d.degree_level_code = tdl.degree_level_code#(lf)inner join advance.tms_school ts        ON d.school_code = ts.school_code#(lf)left join (#(lf)           select xa.id_number adrid, 1 adr_nd#(lf)             from advance.address xa#(lf)            where xa.addr_status_code = 'A'#(lf)            and   xa.addr_pref_ind = 'Y'#(lf)            and   xa.addr_type_code IN ('H','B','5','7','S')#(lf)           ) addr ON e.id_number = addr.adrid#(lf)left join (#(lf)           select xem.id_number emid, 1 em_nd#(lf)             from advance.email xem#(lf)            where xem.email_status_code = 'A'#(lf)            and   xem.preferred_ind = 'Y'#(lf)           ) em ON e.id_number = em.emid#(lf)where d.institution_code = '6121'#(lf)and   d.degree_type <> 'S'#(lf)and   e.record_status_code = 'A'#(lf)and   d.degree_year <> ' '#(lf)and   d.degree_code <> ' '#(lf)#(lf)order by \"\"Sort School\"\", \"\"Sort Level\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Act Addr\", Int64.Type}, {\"Act Email\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

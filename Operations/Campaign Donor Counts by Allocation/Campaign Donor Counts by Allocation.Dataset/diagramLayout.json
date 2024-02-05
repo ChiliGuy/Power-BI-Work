@@ -1,0 +1,94 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 25.600000381469727,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 4.2335025380710647
+          },
+          "nodeIndex": "Campaign Production",
+          "size": {
+            "height": 534,
+            "width": 354
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 720.87614213197958,
+            "y": 0
+          },
+          "nodeIndex": "Donors",
+          "size": {
+            "height": 720.69035532994917,
+            "width": 290.4467005076142
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1070.4649746192893,
+            "y": 0
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 186.71074380165291,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1076.9923857868021,
+            "y": 256.83248730964459
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1618.5,
+            "y": 0
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 423.80656453243944,
+            "y": 71.969543147208128
+          },
+          "nodeIndex": "dnr_trans_map",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70.863309352517987,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

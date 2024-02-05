@@ -1,0 +1,1213 @@
+{
+  "config": "{\"version\":\"5.40\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.28\",\"type\":2},\"customTheme\":{\"name\":\"Creighton_University5789915806511441.json\",\"version\":\"5.43\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSectionc338f2f822d22d09c7c0",
+      "config": "{}",
+      "name": "Pod",
+      "referenceScope": 1
+    },
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod1",
+      "referenceScope": 1
+    },
+    {
+      "boundSection": "ReportSectionfae04235303994dc79b3",
+      "config": "{}",
+      "name": "Pod10",
+      "parameters": "[{\"name\":\"Param_Filter63445d2e5c69b1f8f91a\",\"boundFilter\":\"Filter63445d2e5c69b1f8f91a\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Class Decade\"}}},{\"name\":\"Param_Filter6170653bcdd598efa782\",\"boundFilter\":\"Filter6170653bcdd598efa782\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance School\"}}},{\"name\":\"Param_Filter1bc8964f4f41fb83af19\",\"boundFilter\":\"Filter1bc8964f4f41fb83af19\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"RECENT_ALUMNI\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectionc1a05740b080ed70ae71",
+      "config": "{}",
+      "name": "Pod11",
+      "parameters": "[{\"name\":\"Param_Filter0a283c45e80635ddb8f8\",\"boundFilter\":\"Filter0a283c45e80635ddb8f8\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"MARITAL_STATUS\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectioncdc24951cd99e0b95a0b",
+      "config": "{}",
+      "name": "Pod12",
+      "parameters": "[{\"name\":\"Param_Filter640a6c5c8bda5e62fb6f\",\"boundFilter\":\"Filter640a6c5c8bda5e62fb6f\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"AGE\"}},\"asAggregation\":true},{\"name\":\"Param_Filterc22f45dbf3124e5521a1\",\"boundFilter\":\"Filterc22f45dbf3124e5521a1\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectiond1a949e24695eee81227",
+      "config": "{}",
+      "name": "Pod13",
+      "parameters": "[{\"name\":\"Param_Filter6a6e9ef9d4fdaf6f8bd8\",\"boundFilter\":\"Filter6a6e9ef9d4fdaf6f8bd8\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Fac Staff\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection887ecd7fb83f9949a26a",
+      "config": "{}",
+      "name": "Pod14",
+      "parameters": "[{\"name\":\"Param_Filterff691e7637889fc6d2d4\",\"boundFilter\":\"Filterff691e7637889fc6d2d4\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total LYBUNTFY3 Commitments\"}}},{\"name\":\"Param_Filterc6dd9e944653a2416c9e\",\"boundFilter\":\"Filterc6dd9e944653a2416c9e\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total LYBUNTFY3 Donors\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection3a65af0cb35b4c4ad374",
+      "config": "{}",
+      "name": "Pod15",
+      "parameters": "[{\"name\":\"Param_Filter3dd79a1fa9843d500487\",\"boundFilter\":\"Filter3dd79a1fa9843d500487\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Sub100 Donors\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection76899650e0e4569a8710",
+      "config": "{}",
+      "name": "Pod2",
+      "parameters": "[{\"name\":\"Param_Filter853a7acf13484803d047\",\"boundFilter\":\"Filter853a7acf13484803d047\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Report Inventory\"}},\"Property\":\"Report ID\"}},\"isLegacySingleSelection\":true}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection5a04621843cf7d91b6dc",
+      "config": "{}",
+      "name": "Pod3",
+      "parameters": "[{\"name\":\"Param_Filter0e2b4720fad0418a38ca\",\"boundFilter\":\"Filter0e2b4720fad0418a38ca\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Current FY Donors\"}}},{\"name\":\"Param_Filterf7e29b053fdeb264d7a5\",\"boundFilter\":\"Filterf7e29b053fdeb264d7a5\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Current FY Commitments\"}}},{\"name\":\"Param_Filter98d35214e1d0244b6ad7\",\"boundFilter\":\"Filter98d35214e1d0244b6ad7\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Current FY Donors\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectionddc69e13c0c80abfb69a",
+      "config": "{}",
+      "name": "Pod4",
+      "parameters": "[{\"name\":\"Param_Filtere3cbe9e3960e1666b199\",\"boundFilter\":\"Filtere3cbe9e3960e1666b199\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Lifetime Donors\"}}},{\"name\":\"Param_Filter56894270c863c88f186d\",\"boundFilter\":\"Filter56894270c863c88f186d\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Lifetime Commitments\"}}},{\"name\":\"Param_Filtere5a958b09385669c56b6\",\"boundFilter\":\"Filtere5a958b09385669c56b6\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Lifetime Donors\"}}},{\"name\":\"Param_Filtere3dff238362221b53a33\",\"boundFilter\":\"Filtere3dff238362221b53a33\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Average Lifetime Commitments\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectioncdba46e512fbc0182243",
+      "config": "{}",
+      "name": "Pod5",
+      "parameters": "[{\"name\":\"Param_Filter7b406e4a1b1c48f81af0\",\"boundFilter\":\"Filter7b406e4a1b1c48f81af0\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Last FY Donors\"}}},{\"name\":\"Param_Filtere9ccf922e5356519ef0b\",\"boundFilter\":\"Filtere9ccf922e5356519ef0b\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Last FY Commitments\"}}},{\"name\":\"Param_Filter7232863ceac96d0d5f79\",\"boundFilter\":\"Filter7232863ceac96d0d5f79\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Last FY Donors\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection308dba1dab001b80bfac",
+      "config": "{}",
+      "name": "Pod6",
+      "parameters": "[{\"name\":\"Param_Filter2089892c04836fec0225\",\"boundFilter\":\"Filter2089892c04836fec0225\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Audience Members\"}}},{\"name\":\"Param_Filtere5d1b70e7b6b0d9d428f\",\"boundFilter\":\"Filtere5d1b70e7b6b0d9d428f\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gender\"}}},{\"name\":\"Param_Filterb9f8b86207e50d1d8355\",\"boundFilter\":\"Filterb9f8b86207e50d1d8355\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Market Area\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection8bf840a3196581e540cb",
+      "config": "{}",
+      "name": "Pod7",
+      "parameters": "[{\"name\":\"Param_Filter1b23f5724490cab5f7ec\",\"boundFilter\":\"Filter1b23f5724490cab5f7ec\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct CORE Prospect\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection911329a2a832062837a0",
+      "config": "{}",
+      "name": "Pod8",
+      "parameters": "[{\"name\":\"Param_Filterb1b80ff601ec7a9b2097\",\"boundFilter\":\"Filterb1b80ff601ec7a9b2097\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Assigned Prospect\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection0ffb72e991377e3209e5",
+      "config": "{}",
+      "name": "Pod9",
+      "parameters": "[{\"name\":\"Param_Filterd51b4df28d1268f78246\",\"boundFilter\":\"Filterd51b4df28d1268f78246\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct MGI Greater Than 95\"}}},{\"name\":\"Param_Filter418e173ca6bf55f48234\",\"boundFilter\":\"Filter418e173ca6bf55f48234\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct AGI Greater Than 65\"}}},{\"name\":\"Param_Filterb094a7ddbc5adf5b8bf8\",\"boundFilter\":\"Filterb094a7ddbc5adf5b8bf8\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended an Event\"}}},{\"name\":\"Param_Filterb203f09926afe01bf53a\",\"boundFilter\":\"Filterb203f09926afe01bf53a\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended a Reunion\"}}},{\"name\":\"Param_Filterec95038e72d5b69c2005\",\"boundFilter\":\"Filterec95038e72d5b69c2005\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended Event In Last 3 Yrs\"}}},{\"name\":\"Param_Filterbb8b73748152099c762a\",\"boundFilter\":\"Filterbb8b73748152099c762a\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended Events Were Reunion\"}}},{\"name\":\"Param_Filterff8fba24618669815ea4\",\"boundFilter\":\"Filterff8fba24618669815ea4\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended ARO Event\"}}},{\"name\":\"Param_Filter536487f41a0a215fb7db\",\"boundFilter\":\"Filter536487f41a0a215fb7db\",\"fieldExpr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Engaged Alumni\"}}}]",
+      "type": 1
+    }
+  ],
+  "publicCustomVisuals": [
+    "heatmapF244EA9EE1F34E828A80CF19B41976F8",
+    "Histogram1445664487616",
+    "sankey02300D1BE6F5427989F3DE31CCA9E0F32020"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Creighton_University5789915806511441.json",
+            "path": "Creighton_University5789915806511441.json",
+            "type": 100
+          },
+          {
+            "name": "questions-1014060_1920605274495355947.jpg",
+            "path": "questions-1014060_1920605274495355947.jpg",
+            "type": 100
+          },
+          {
+            "name": "survey-2316468_128022715595222204854.png",
+            "path": "survey-2316468_128022715595222204854.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "path": "heatmapF244EA9EE1F34E828A80CF19B41976F8.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "heatmapF244EA9EE1F34E828A80CF19B41976F8",
+        "type": 0
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "path": "Histogram1445664487616.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "Histogram1445664487616",
+        "type": 0
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "path": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
+        "type": 0
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "By School/College",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "ordinal": 12,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8c6f09e09d621e70799e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"Category\":[{\"queryRef\":\"school_info.SCHOOL\",\"active\":true}],\"Series\":[{\"queryRef\":\"school_info.RECENT_ALUMNI\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"school_info\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"SCHOOL\"},\"Name\":\"school_info.SCHOOL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"RECENT_ALUMNI\"},\"Name\":\"school_info.RECENT_ALUMNI\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"},\"school_info.SCHOOL\":{\"displayName\":\"School/College\"},\"school_info.RECENT_ALUMNI\":{\"displayName\":\"Recent Alumni?\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'RightCenter'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter1824475aac8853a67c48\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"SCHOOL\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"school_info\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"SCHOOL\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Engagement KPIs Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterd51b4df28d1268f78246\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct MGI Greater Than 95\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter418e173ca6bf55f48234\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct AGI Greater Than 65\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterb094a7ddbc5adf5b8bf8\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended an Event\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterb203f09926afe01bf53a\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended a Reunion\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterec95038e72d5b69c2005\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended Event In Last 3 Yrs\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterbb8b73748152099c762a\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended Events Were Reunion\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterff8fba24618669815ea4\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Attended ARO Event\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter536487f41a0a215fb7db\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Engaged Alumni\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection0ffb72e991377e3209e5",
+      "ordinal": 10,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"06384a93b8742ef24a24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720.1927710843373}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance MGI_95\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance AGI_65\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Total Events Attended)\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Reunion Events Attended)\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Last 3 Yrs Events Attended)\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance ARO Events Attended)\"},{\"queryRef\":\"alumni_engagement.ENGAGEMENT\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"alumni_engagement\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance MGI_95\"},\"Name\":\"Bluejay Bites All Clickers.Advance MGI_95\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance AGI_65\"},\"Name\":\"Bluejay Bites All Clickers.Advance AGI_65\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Total Events Attended\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Total Events Attended)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Reunion Events Attended\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Reunion Events Attended)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Last 3 Yrs Events Attended\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Last 3 Yrs Events Attended)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance ARO Events Attended\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance ARO Events Attended)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ENGAGEMENT\"},\"Name\":\"alumni_engagement.ENGAGEMENT\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Bluejay Bites All Clickers.Advance MGI_95\":{\"displayName\":\"MGI > 95\"},\"Bluejay Bites All Clickers.Advance AGI_65\":{\"displayName\":\"AGI > 95\"},\"Sum(Bluejay Bites All Clickers.Advance Total Events Attended)\":{\"displayName\":\"Events Attended\"},\"Sum(Bluejay Bites All Clickers.Advance Reunion Events Attended)\":{\"displayName\":\"Reunion Attended\"},\"Sum(Bluejay Bites All Clickers.Advance Last 3 Yrs Events Attended)\":{\"displayName\":\"Events Attended Last 3 Yrs\"},\"Sum(Bluejay Bites All Clickers.Advance ARO Events Attended)\":{\"displayName\":\"ARO Events Attended\"},\"alumni_engagement.ENGAGEMENT\":{\"displayName\":\"Engagement Activities\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.19,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d65b1d6c0de41b0c3751\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total Audience Members Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter2089892c04836fec0225\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Audience Members\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filtere5d1b70e7b6b0d9d428f\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gender\"}},\"type\":\"Categorical\",\"howCreated\":5,\"objects\":{}},{\"name\":\"Filterb9f8b86207e50d1d8355\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Market Area\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Market Area\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Phoenix-Mesa, AZ'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection308dba1dab001b80bfac",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0ba6cf195164c10762d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ddff3fb4c3cc57b04ad3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Gender\"},{\"queryRef\":\"entities.MARITAL_STATUS\"},{\"queryRef\":\"entities.BIRTH_DATE\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Place\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Market Area\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"entities\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Gender\"},\"Name\":\"Bluejay Bites All Clickers.Advance Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"MARITAL_STATUS\"},\"Name\":\"entities.MARITAL_STATUS\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"BIRTH_DATE\"},\"Name\":\"entities.BIRTH_DATE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Place\"},\"Name\":\"Bluejay Bites All Clickers.Advance Place\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Market Area\"},\"Name\":\"Bluejay Bites All Clickers.Advance Market Area\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"entities.MARITAL_STATUS\":{\"displayName\":\"Marital Status\"},\"entities.BIRTH_DATE\":{\"displayName\":\"Birth Date\"},\"Bluejay Bites All Clickers.Advance Gender\":{\"displayName\":\"Gender\"},\"Bluejay Bites All Clickers.Advance Place\":{\"displayName\":\"Location\"},\"Bluejay Bites All Clickers.Advance Market Area\":{\"displayName\":\"Market Area\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Creighton Engagement Score",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection37bd31068279a1348a9d",
+      "ordinal": 26,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3f9684f97208150e473b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance AES\",\"active\":true}],\"Values\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance AES\"},\"Name\":\"Bluejay Bites All Clickers.Advance AES\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"},\"Bluejay Bites All Clickers.Advance AES\":{\"displayName\":\"Creighton Engagement Score\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Gift Count",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection3812fa5a603a00c711a6",
+      "ordinal": 24,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3fab9298815c562ff782\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":1280,\"height\":98.6987951807229}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"production.FISCAL_YR\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FISCAL_YR\"},\"Name\":\"production.FISCAL_YR\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 98.70,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"daaa5b001b4c4d810499\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.421686746987952,\"y\":98.6987951807229,\"z\":0,\"width\":1264.578313253012,\"height\":621.4939759036145}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Count of Trans Category\",\"active\":true}],\"Series\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Gave in Last Year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Count of Trans Category\"},\"Name\":\"Bluejay Bites All Clickers.Advance Count of Trans Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Gave in Last Year\"},\"Name\":\"Bluejay Bites All Clickers.Advance Gave in Last Year\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Count of Trans Category\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Count of Trans Category\":{\"displayName\":\"Lifetime Count of Gifts\"},\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"},\"Bluejay Bites All Clickers.Advance Gave in Last Year\":{\"displayName\":\"Gave in Last Calendar Year\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"valueAxis\":[{\"properties\":{\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A9BF51'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gave in Last Year\"}},\"Right\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gave in Last Year\"}},\"Right\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 621.49,
+          "width": 1264.58,
+          "x": 15.42,
+          "y": 98.70,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total Sub100 Dnrs Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter3dd79a1fa9843d500487\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Sub100 Donors\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection3a65af0cb35b4c4ad374",
+      "ordinal": 8,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4a2060f00207570d704a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e9953d0da748e4ea9e63\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Lifetime Commitments)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Lifetime Commitments\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Lifetime Commitments)\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Sum(Bluejay Bites All Clickers.Advance Lifetime Commitments)\":{\"displayName\":\"Lifetime Commitments\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterfedb3c603c20ccc80e20\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Sub100 Commitment Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Sub100 Commitment Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"1L\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Gender",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection48a6ebd04c0d02167c96",
+      "ordinal": 14,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a3bdfc4e7205c5ec14dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Gender\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Gender\"},\"Name\":\"Bluejay Bites All Clickers.Advance Gender\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Gender\":{\"displayName\":\"Gender\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Category, data value, percent of total'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"19D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FEB56C'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Male'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Unknown'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Female'\"}}}}}]}}],\"legend\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterff90e654bb8a0b3d7b53\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Preferred Channel",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection4a42761260d2ee3662ce",
+      "ordinal": 25,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f59a44320b9339d4090\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Giving Channel\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Giving Channel\"},\"Name\":\"Bluejay Bites All Clickers.Advance Giving Channel\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":2},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":2}}}]},\"columnProperties\":{\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"},\"Bluejay Bites All Clickers.Advance Giving Channel\":{\"displayName\":\"Preferred Giving Channel\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total Current FY Dnrs Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter0e2b4720fad0418a38ca\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Current FY Donors\"}},\"type\":\"Categorical\",\"howCreated\":5,\"isLockedInViewMode\":false},{\"name\":\"Filterf7e29b053fdeb264d7a5\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Current FY Commitments\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter98d35214e1d0244b6ad7\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Current FY Donors\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection5a04621843cf7d91b6dc",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4eb4d7108837b6a12e90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6036cf16b8aacc94e67c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Current FY Commitments)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Current FY Commitments\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Current FY Commitments)\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Sum(Bluejay Bites All Clickers.Advance Current FY Commitments)\":{\"displayName\":\"Current FY Commitments\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Current FY Commitments\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Current FY Commitments\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Engagement KPIs",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection5f754450e90a01ee5b12",
+      "ordinal": 9,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0ad4cd09166c6d5b2be0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":432,\"z\":3000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Attended a Reunion\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended a Reunion\"},\"Name\":\"Bluejay Bites All Clickers.Pct Attended a Reunion\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended a Reunion\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Attended a Reunion\":{\"displayName\":\"% Attended a Reunion\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 432.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"3d691290d26c012e9eea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":288,\"z\":7000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Engaged Alumni\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Engaged Alumni\"},\"Name\":\"Bluejay Bites All Clickers.Pct Engaged Alumni\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Engaged Alumni\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Engaged Alumni\":{\"displayName\":\"% Engaged Alumni Activities\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 288.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"4891db4ae418c1ac370e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct MGI Greater Than 95\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct MGI Greater Than 95\"},\"Name\":\"Bluejay Bites All Clickers.Pct MGI Greater Than 95\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct MGI Greater Than 95\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct MGI Greater Than 95\":{\"displayName\":\"% MGI Greater Than 95\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"507ba7c2893de60a6b35\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":576,\"z\":6000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Attended Event In Last 3 Yrs\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended Event In Last 3 Yrs\"},\"Name\":\"Bluejay Bites All Clickers.Pct Attended Event In Last 3 Yrs\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended Event In Last 3 Yrs\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Attended Event In Last 3 Yrs\":{\"displayName\":\"% Attended Event In Last 3 Yrs\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 576.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"e2eada6153ddab657a07\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":144,\"z\":1000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct AGI Greater Than 65\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct AGI Greater Than 65\"},\"Name\":\"Bluejay Bites All Clickers.Pct AGI Greater Than 65\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct AGI Greater Than 65\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct AGI Greater Than 65\":{\"displayName\":\"% AGI Greater Than 65\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 144.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e32b7a2930b097071946\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":0,\"z\":4000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Attended Events Were Reunion\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended Events Were Reunion\"},\"Name\":\"Bluejay Bites All Clickers.Pct Attended Events Were Reunion\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended Events Were Reunion\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Attended Events Were Reunion\":{\"displayName\":\"% Attended Events Were Reunion\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"e3e209ea9e7c8b2561d3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":144,\"z\":5000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Attended ARO Event\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended ARO Event\"},\"Name\":\"Bluejay Bites All Clickers.Pct Attended ARO Event\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended ARO Event\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Attended ARO Event\":{\"displayName\":\"% Attended ARO Event\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 144.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"f02b157b38b45b539d22\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":288,\"z\":2000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Attended an Event\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended an Event\"},\"Name\":\"Bluejay Bites All Clickers.Pct Attended an Event\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Attended an Event\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Attended an Event\":{\"displayName\":\"% Attended an Event\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8700A9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 288.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Gift KPIs",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection6fc303644e890acddd9a",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"00e6c9d2befd36f207a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":608,\"y\":432,\"z\":10000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Last FY Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Last FY Donors\"},\"Name\":\"Bluejay Bites All Clickers.Pct Last FY Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Last FY Donors\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Last FY Donors\":{\"displayName\":\"% Last FY Donors\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF5500'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 608.00,
+          "y": 432.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"15927de7866e433ee484\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Audience Members\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Audience Members\"},\"Name\":\"Bluejay Bites All Clickers.Total Audience Members\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Audience Members\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.25}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"265280a518bb006ba261\",\"layouts\":[{\"id\":0,\"position\":{\"x\":608,\"y\":144,\"z\":12000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Lifetime Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Lifetime Donors\"},\"Name\":\"Bluejay Bites All Clickers.Pct Lifetime Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Lifetime Donors\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Lifetime Donors\":{\"displayName\":\"% Lifetime Donors\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF5500'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 608.00,
+          "y": 144.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"340545b3c2d87b636c00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":144,\"z\":0,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Lifetime Commitments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Lifetime Commitments\"},\"Name\":\"Bluejay Bites All Clickers.Total Lifetime Commitments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Lifetime Commitments\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#005CA9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 144.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"497f0a86c0ead6eb6202\",\"layouts\":[{\"id\":0,\"position\":{\"x\":912.9638554216867,\"y\":143.42168674698794,\"z\":13000,\"width\":286.8433734939759,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total LYBUNTFY3 Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total LYBUNTFY3 Donors\"},\"Name\":\"Bluejay Bites All Clickers.Total LYBUNTFY3 Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total LYBUNTFY3 Donors\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#005CA9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 286.84,
+          "x": 912.96,
+          "y": 143.42,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"4bb3cf5fae71e2626c7f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":288,\"z\":7000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Current FY Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Current FY Donors\"},\"Name\":\"Bluejay Bites All Clickers.Total Current FY Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Current FY Donors\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.25}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 288.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"5081244745ed075055b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":912.9857819905212,\"y\":294.21800947867297,\"z\":14000,\"width\":286.63507109004735,\"height\":128.90995260663507}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Sub100 Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Sub100 Donors\"},\"Name\":\"Bluejay Bites All Clickers.Total Sub100 Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Sub100 Donors\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#005CA9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.91,
+          "width": 286.64,
+          "x": 912.99,
+          "y": 294.22,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"5525ae6d840daacb0761\",\"layouts\":[{\"id\":0,\"position\":{\"x\":912,\"y\":0,\"z\":1000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Average Lifetime Commitments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Average Lifetime Commitments\"},\"Name\":\"Bluejay Bites All Clickers.Average Lifetime Commitments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Average Lifetime Commitments\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#005CA9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 912.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"60ff843cee1644bd41c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":144,\"z\":11000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Lifetime Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Lifetime Donors\"},\"Name\":\"Bluejay Bites All Clickers.Total Lifetime Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Lifetime Donors\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.25}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 144.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"6145483adef005619ac4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":432,\"z\":6000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Last FY Commitments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Last FY Commitments\"},\"Name\":\"Bluejay Bites All Clickers.Total Last FY Commitments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Last FY Commitments\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#005CA9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 432.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"766dcb0e30b55eb590a7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":608,\"y\":0,\"z\":2000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Assigned Prospect\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Assigned Prospect\"},\"Name\":\"Bluejay Bites All Clickers.Pct Assigned Prospect\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Assigned Prospect\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF5500'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 608.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"af35e080190566012ea8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":0,\"z\":3000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct CORE Prospect\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct CORE Prospect\"},\"Name\":\"Bluejay Bites All Clickers.Pct CORE Prospect\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct CORE Prospect\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF5500'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b003dd0dfbbfde788066\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":432,\"z\":8000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Last FY Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Last FY Donors\"},\"Name\":\"Bluejay Bites All Clickers.Total Last FY Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Last FY Donors\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.25}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 0.00,
+          "y": 432.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"d0b849a92bc7ebe16468\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304,\"y\":288,\"z\":5000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Total Current FY Commitments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Current FY Commitments\"},\"Name\":\"Bluejay Bites All Clickers.Total Current FY Commitments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Current FY Commitments\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#005CA9'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 304.00,
+          "y": 288.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"d7b78684f58827aa1a83\",\"layouts\":[{\"id\":0,\"position\":{\"x\":608,\"y\":288,\"z\":9000,\"width\":288,\"height\":128}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Current FY Donors\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Current FY Donors\"},\"Name\":\"Bluejay Bites All Clickers.Pct Current FY Donors\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Current FY Donors\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Current FY Donors\":{\"displayName\":\"% Current FY Donors\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF5500'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00235D'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 288.00,
+          "x": 608.00,
+          "y": 288.00,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Report Information",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter853a7acf13484803d047\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Report Inventory\"}},\"Property\":\"Report ID\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report ID\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bluejay Bites Audience Anlaysis'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"requireSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection76899650e0e4569a8710",
+      "ordinal": 27,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"29577aeaa28ac5cae044\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":560,\"z\":9000,\"width\":536,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Last Refresh Date.Last Refresh Date Time)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Last Refresh Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Refresh Date Time\"}},\"Function\":3},\"Name\":\"Min(Last Refresh Date.Last Refresh Date Time)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Last Refresh Date Time\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Last Refresh Date'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 560.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"31c15f4aa1a92c380215\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":284,\"z\":1000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Requestor)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Requestor\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Requestor)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Requester'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 284.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"3294bcc11b9239be3aaa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":422,\"z\":3000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Report Group)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report Group\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Report Group)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Requester Workgroup'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 422.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"3986d2abda6d02b14445\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":560,\"z\":4000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.IntendedAudience)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IntendedAudience\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.IntendedAudience)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Intended Audience'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 560.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"423bcf38ddc0b003b92c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":296,\"height\":120}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Report ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Report ID\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Report ID)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report ID'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 120.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4b9e94db75407c0e8409\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":2,\"z\":5000,\"width\":536,\"height\":256}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Description)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Description\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Description)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report Description'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 256.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 2.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"697e67e29aea1d4c96b6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":160,\"z\":8000,\"width\":328,\"height\":152}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"questions-1014060_1920605274495355947.jpg\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Questions? Check out our glossary of terms'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'12'\"}}}}}],\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://creightonuniv.sharepoint.com/:w:/t/UR/DevProgs/AdvSvcs/EUDFHgPTS9pHoqMfiKi8i08B8K9UhZ8lgIWtXh9_ah64gQ?e=Audpjs'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Click here for the glossary of terms'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 152.00,
+          "width": 328.00,
+          "x": 896.00,
+          "y": 160.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"7f6b821c451e5660ad36\",\"layouts\":[{\"id\":0,\"position\":{\"x\":328,\"y\":284,\"z\":6000,\"width\":536,\"height\":248}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.DescriptionofLogic)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"DescriptionofLogic\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.DescriptionofLogic)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Description of Logic'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 248.00,
+          "width": 536.00,
+          "x": 328.00,
+          "y": 284.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"9a68446c89869c125a90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":146,\"z\":2000,\"width\":296,\"height\":112}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Report Inventory.Title)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Report Inventory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Title\"}},\"Function\":3},\"Name\":\"Min(Report Inventory.Title)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Report Title'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 296.00,
+          "x": 0.00,
+          "y": 146.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"9ff30a6585a910788e08\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":0,\"z\":7000,\"width\":328,\"height\":144}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"survey-2316468_128022715595222204854.png\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'We want your feedback!'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://forms.office.com/Pages/ResponsePage.aspx?id=21RxTH3Ry0K591_2Lzll3sBnD4rdjKJFqAF8u3Q0QBhUN0lZTTBGMzgyQ0JIM0YxT1BTNVBMN1dFOS4u'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Click here to fill out our feedback form'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.00,
+          "width": 328.00,
+          "x": 896.00,
+          "y": 0.00,
+          "z": 7000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total LYBUNT Last 3 FY Dnrs Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterff691e7637889fc6d2d4\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total LYBUNTFY3 Commitments\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterc6dd9e944653a2416c9e\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total LYBUNTFY3 Donors\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection887ecd7fb83f9949a26a",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"105f5554ab3f1aaa08a8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fd9e362fa7ef461ea42e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720.1789709172259}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance LYBUNTFY3 Commitments)\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Current FY Commitments)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance LYBUNTFY3 Commitments\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance LYBUNTFY3 Commitments)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Current FY Commitments\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Current FY Commitments)\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Sum(Bluejay Bites All Clickers.Advance LYBUNTFY3 Commitments)\":{\"displayName\":\"LYBUNTFY3 Commitments\"},\"Sum(Bluejay Bites All Clickers.Advance Current FY Commitments)\":{\"displayName\":\"Current FY Commitments\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"275.9776358101936D\"}}}},\"selector\":{\"metadata\":\"Bluejay Bites All Clickers.Email Address\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"235.97991804569625D\"}}}},\"selector\":{\"metadata\":\"Bluejay Bites All Clickers.Advance Full Name\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtera281e5539669379658a6\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance LYBUNTFY3 Commitments\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance LYBUNTFY3 Commitments\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 720.18,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Pct CORE Prospects Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter1b23f5724490cab5f7ec\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct CORE Prospect\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection8bf840a3196581e540cb",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5334c0662ba6760ee9f5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"assigned_prospects.PRIMARY_MANAGER\"},{\"queryRef\":\"assigned_prospects.TEAM\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"assigned_prospects\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"PRIMARY_MANAGER\"},\"Name\":\"assigned_prospects.PRIMARY_MANAGER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"TEAM\"},\"Name\":\"assigned_prospects.TEAM\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"assigned_prospects.PRIMARY_MANAGER\":{\"displayName\":\"Primary Manager\"},\"assigned_prospects.TEAM\":{\"displayName\":\"Team\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter580fe8fe90258c4f62e8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance CORE Prospect\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance CORE Prospect\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Y'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"67b37e39df76ed4b78f0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Pct Assigned Prospects Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterb1b80ff601ec7a9b2097\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Assigned Prospect\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection911329a2a832062837a0",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8cabaa384c68896f38e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9d44215a245e67916c66\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance CORE Prospect\"},{\"queryRef\":\"assigned_prospects.PRIMARY_MANAGER\"},{\"queryRef\":\"assigned_prospects.TEAM\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"assigned_prospects\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"PRIMARY_MANAGER\"},\"Name\":\"assigned_prospects.PRIMARY_MANAGER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"TEAM\"},\"Name\":\"assigned_prospects.TEAM\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance CORE Prospect\"},\"Name\":\"Bluejay Bites All Clickers.Advance CORE Prospect\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"assigned_prospects.PRIMARY_MANAGER\":{\"displayName\":\"Primary Manager\"},\"assigned_prospects.TEAM\":{\"displayName\":\"Team\"},\"Bluejay Bites All Clickers.Advance CORE Prospect\":{\"displayName\":\"CORE Prospect\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Market Area",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection9f4eac992ebe17b14180",
+      "ordinal": 18,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"313455f7d81136b64ee2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f0bf3f2ccd0a2b2c07b4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Market Area\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Market Area\"},\"Name\":\"Bluejay Bites All Clickers.Advance Market Area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Market Area\":{\"displayName\":\"Market Area\"},\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter6c081981c8b9de870ae3\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Market Area\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Market Area\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Donor School to Alloc School (Count)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionbc7c5b75d7a18e4fa2f2",
+      "ordinal": 23,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3663688a1a1265f8428e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.421686746987952,\"y\":0,\"z\":0,\"width\":1264.578313253012,\"height\":720.1927710843373}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"production.SCHOOL\",\"active\":true}],\"Values\":[{\"queryRef\":\"Min(production.TRANS_NBR)\"}],\"Rows\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance School\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"production\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"SCHOOL\"},\"Name\":\"production.SCHOOL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance School\"},\"Name\":\"Bluejay Bites All Clickers.Advance School\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"TRANS_NBR\"}},\"Function\":2},\"Name\":\"Min(production.TRANS_NBR)\"}]},\"columnProperties\":{\"production.SCHOOL\":{\"displayName\":\"Allocation School\"},\"Bluejay Bites All Clickers.Advance School\":{\"displayName\":\"Donor School\"},\"Min(production.TRANS_NBR)\":{\"displayName\":\"Gift Count\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"values\":[{\"properties\":{\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"grid\":[{\"properties\":{}}],\"columnHeaders\":[{\"properties\":{\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.42105263157895D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'College of Professional Studies'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.15789473684211D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'General University'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"102.52631578947368D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Graduate School'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.68421052631578D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Health Sciences'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"123.10526315789474D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Pharmacy & Health Prof'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.05263157894737D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'School of Dentistry'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"108.6842105263158D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Arts & Sciences'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"103.36842105263158D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Athletics'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"76.24098525996317D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Heider CoB'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"95.72285708117045D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Law'\"}}}}}]}}],\"rowHeaders\":[{\"properties\":{\"showExpandCollapseButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter70f84b48003ee02eb91d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"SCHOOL\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.19,
+          "width": 1264.58,
+          "x": 15.42,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Marital Status",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter0a283c45e80635ddb8f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"MARITAL_STATUS\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSectionc1a05740b080ed70ae71",
+      "ordinal": 15,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3ffc3b6328205c7022bb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"Category\":[{\"queryRef\":\"entities.MARITAL_STATUS\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"entities\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"MARITAL_STATUS\"},\"Name\":\"entities.MARITAL_STATUS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"entities.MARITAL_STATUS\":{\"displayName\":\"Marital Status\"},\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter22bee1cabc0915e90de2\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"MARITAL_STATUS\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"entities\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"MARITAL_STATUS\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f725ee2840a111a9127c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Address",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionc2275b76503b88c8e31b",
+      "ordinal": 17,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3898303cdff291361a94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"4b3221108d400dd485ea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"azureMap\",\"projections\":{\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Place\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"Min(Bluejay Bites All Clickers.Advance Full Name)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Place\"},\"Name\":\"Bluejay Bites All Clickers.Advance Place\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"}},\"Function\":3},\"Name\":\"Min(Bluejay Bites All Clickers.Advance Full Name)\"}]},\"columnProperties\":{\"Min(Bluejay Bites All Clickers.Advance Full Name)\":{\"displayName\":\"Full Name\"},\"Bluejay Bites All Clickers.Advance Place\":{\"displayName\":\"Location\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"defaultStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}},\"showStylePicker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showNavigationControls\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showSelectionControl\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"bubbleLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"bubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"minBubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"maxRadius\":{\"expr\":{\"Literal\":{\"Value\":\"21L\"}}},\"bubbleStrokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"autoStrokeColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"layerPosition\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMapLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"heatMapColorLow\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"heatMapColorCenter\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0.2}}}}},\"heatMapColorHigh\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.25}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Class Decade",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionc338f2f822d22d09c7c0",
+      "ordinal": 11,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7567cf402b7d04e98469\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Class Decade\",\"active\":true}],\"Series\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance School\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Class Decade\"},\"Name\":\"Bluejay Bites All Clickers.Advance Class Decade\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance School\"},\"Name\":\"Bluejay Bites All Clickers.Advance School\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Class Decade\"}}}]},\"columnProperties\":{\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"},\"Bluejay Bites All Clickers.Advance Class Decade\":{\"displayName\":\"Class Decade\"},\"Bluejay Bites All Clickers.Advance School\":{\"displayName\":\"School/College\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'RightCenter'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter96f8fa84986c123ad914\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance School\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance School\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Friend of Creighton'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total Last FY Dnrs Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter7b406e4a1b1c48f81af0\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Last FY Donors\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filtere9ccf922e5356519ef0b\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Last FY Commitments\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter7232863ceac96d0d5f79\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Last FY Donors\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSectioncdba46e512fbc0182243",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4440688632d9501dbcf4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Last FY Commitments)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Last FY Commitments\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Last FY Commitments)\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Sum(Bluejay Bites All Clickers.Advance Last FY Commitments)\":{\"displayName\":\"Last FY Commitments\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Last FY Commitments\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Last FY Commitments\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"6c284192983cbff2b13d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Age",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter640a6c5c8bda5e62fb6f\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"AGE\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterc22f45dbf3124e5521a1\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSectioncdc24951cd99e0b95a0b",
+      "ordinal": 16,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"65f6e1edb1ccc8653e89\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c760fe0361dad9ad9194\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"Category\":[{\"queryRef\":\"entities.AGE\",\"active\":true}],\"Series\":[{\"queryRef\":\"entities.Gender\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"entities\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"AGE\"},\"Name\":\"entities.AGE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Gender\"},\"Name\":\"entities.Gender\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"},\"entities.AGE\":{\"displayName\":\"Age\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'RightCenter'\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Unknown'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FEB56C'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Male'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Female'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterc6cd9c6641205bd096b5\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"entities\"}},\"Property\":\"Gender\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"entities\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Gender\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Fac/Staff Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter6a6e9ef9d4fdaf6f8bd8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Fac Staff\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Fac Staff\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'University Relations'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSectiond1a949e24695eee81227",
+      "ordinal": 20,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3268bbb7b6baf26ef619\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720.1927710843373}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"faculty_staff.EMPLOYER_UNIT\"},{\"queryRef\":\"faculty_staff.PLACE_OF_WORK\"},{\"queryRef\":\"faculty_staff.POSITION_LEVEL\"},{\"queryRef\":\"faculty_staff.START_DATE\"},{\"queryRef\":\"Sum(faculty_staff.START_FISCAL_YR)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"faculty_staff\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"EMPLOYER_UNIT\"},\"Name\":\"faculty_staff.EMPLOYER_UNIT\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"PLACE_OF_WORK\"},\"Name\":\"faculty_staff.PLACE_OF_WORK\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"POSITION_LEVEL\"},\"Name\":\"faculty_staff.POSITION_LEVEL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"START_DATE\"},\"Name\":\"faculty_staff.START_DATE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"START_FISCAL_YR\"},\"Name\":\"Sum(faculty_staff.START_FISCAL_YR)\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterdba2433a56bedf0dfeda\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"faculty_staff\"}},\"Property\":\"CURRENT_STAFF\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"faculty_staff\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"CURRENT_STAFF\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Y'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 720.19,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4b109b20e90698786f1e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total Lifetime Dnrs Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filtere3cbe9e3960e1666b199\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Lifetime Donors\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter56894270c863c88f186d\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Total Lifetime Commitments\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filtere5a958b09385669c56b6\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Pct Lifetime Donors\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filtere3dff238362221b53a33\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Average Lifetime Commitments\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSectionddc69e13c0c80abfb69a",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"9b72b53f6f014217e6a4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.367088607595,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Sum(Bluejay Bites All Clickers.Advance Lifetime Commitments)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Lifetime Commitments\"},\"Name\":\"Sum(Bluejay Bites All Clickers.Advance Lifetime Commitments)\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Sum(Bluejay Bites All Clickers.Advance Lifetime Commitments)\":{\"displayName\":\"Lifetime Commitments\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Lifetime Commitments\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Lifetime Commitments\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1279.37,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f8e32093e9bb5f41b3a4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Fac/Staff Place of Work",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectioneb43497032c7c4d0301d",
+      "ordinal": 19,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"12e976a5ae40ab260dc0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736,\"y\":128,\"z\":1000,\"width\":384,\"height\":192}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Pct Fac Staff\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Fac Staff\"},\"Name\":\"Bluejay Bites All Clickers.Pct Fac Staff\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Pct Fac Staff\"}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Pct Fac Staff\":{\"displayName\":\"Creighton Faculty/Staff\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 192.00,
+          "width": 384.00,
+          "x": 736.00,
+          "y": 128.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"3cad2b2c210809592686\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":0,\"z\":0,\"width\":1264,\"height\":720}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Fac Staff\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Fac Staff\"},\"Name\":\"Bluejay Bites All Clickers.Advance Fac Staff\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Fac Staff\":{\"displayName\":\"Creighton Place of Work\"},\"CountNonNull(Bluejay Bites All Clickers.Advance Entity ID)\":{\"displayName\":\"Count of Audience Members\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter34bf26fae73bd52b6038\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Fac Staff\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Fac Staff\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Not Faculty/Staff'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false,\"isLockedInViewMode\":false}]",
+          "height": 720.00,
+          "width": 1264.00,
+          "x": 16.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Donor School to Alloc School (Median)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionf9d0d4de385f3bc59e30",
+      "ordinal": 22,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"cd7f6d84396ee6708fc7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.421686746987952,\"y\":0,\"z\":0,\"width\":1264.578313253012,\"height\":720.1927710843373}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"production.SCHOOL\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(production.TRANS_AMT)\"}],\"Rows\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance School\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"production\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"SCHOOL\"},\"Name\":\"production.SCHOOL\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"TRANS_AMT\"}},\"Function\":6},\"Name\":\"Sum(production.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance School\"},\"Name\":\"Bluejay Bites All Clickers.Advance School\"}]},\"columnProperties\":{\"production.SCHOOL\":{\"displayName\":\"Allocation School\"},\"Sum(production.TRANS_AMT)\":{\"displayName\":\"Total Production\"},\"Bluejay Bites All Clickers.Advance School\":{\"displayName\":\"Donor School\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"values\":[{\"properties\":{\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"grid\":[{\"properties\":{}}],\"columnHeaders\":[{\"properties\":{\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.42105263157895D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'College of Professional Studies'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.15789473684211D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'General University'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"102.52631578947368D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Graduate School'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.68421052631578D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Health Sciences'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"123.10526315789474D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Pharmacy & Health Prof'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.05263157894737D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'School of Dentistry'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"108.6842105263158D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Arts & Sciences'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"103.36842105263158D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Athletics'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"76.24098525996317D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Heider CoB'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"95.72285708117045D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Law'\"}}}}}]}}],\"rowHeaders\":[{\"properties\":{\"showExpandCollapseButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter70f84b48003ee02eb91d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"SCHOOL\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.19,
+          "width": 1264.58,
+          "x": 15.42,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Alumni Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter63445d2e5c69b1f8f91a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance Class Decade\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter6170653bcdd598efa782\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Bluejay Bites All Clickers\"}},\"Property\":\"Advance School\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filter1bc8964f4f41fb83af19\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"RECENT_ALUMNI\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"school_info\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"RECENT_ALUMNI\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Y'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSectionfae04235303994dc79b3",
+      "ordinal": 13,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"068de1a1b970f6a622e7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720.1927710843373}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"queryRef\":\"Bluejay Bites All Clickers.Email Address\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance School\"},{\"queryRef\":\"Bluejay Bites All Clickers.Advance Class Decade\"},{\"queryRef\":\"school_info.RECENT_ALUMNI\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"school_info\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Entity ID\"},\"Name\":\"Bluejay Bites All Clickers.Advance Entity ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"EMMA Member ID\"},\"Name\":\"Bluejay Bites All Clickers.EMMA Member ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Full Name\"},\"Name\":\"Bluejay Bites All Clickers.Advance Full Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Email Address\"},\"Name\":\"Bluejay Bites All Clickers.Email Address\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance School\"},\"Name\":\"Bluejay Bites All Clickers.Advance School\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance Class Decade\"},\"Name\":\"Bluejay Bites All Clickers.Advance Class Decade\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"RECENT_ALUMNI\"},\"Name\":\"school_info.RECENT_ALUMNI\"}]},\"columnProperties\":{\"Bluejay Bites All Clickers.Advance Entity ID\":{\"displayName\":\"Entity ID\"},\"Bluejay Bites All Clickers.Advance Full Name\":{\"displayName\":\"Full Name\"},\"Bluejay Bites All Clickers.Advance School\":{\"displayName\":\"School\"},\"Bluejay Bites All Clickers.Advance Class Decade\":{\"displayName\":\"Class Decade\"},\"school_info.RECENT_ALUMNI\":{\"displayName\":\"Recent Alumni\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter54e83a85bbba5cde8e92\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"RECENT_ALUMNI\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"school_info\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"RECENT_ALUMNI\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'N'\"}}],[{\"Literal\":{\"Value\":\"'Y'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 720.19,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8fe8be4e0f129b2f72da\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "By Donor School to Alloc School (Total)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionfbc431807a72da81eb31",
+      "ordinal": 21,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"cb4fa158ae3a0a8bd0ec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.421686746987952,\"y\":0,\"z\":0,\"width\":1264.578313253012,\"height\":720.1927710843373}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"production.SCHOOL\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(production.TRANS_AMT)\"}],\"Rows\":[{\"queryRef\":\"Bluejay Bites All Clickers.Advance School\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"production\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Bluejay Bites All Clickers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"SCHOOL\"},\"Name\":\"production.SCHOOL\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"TRANS_AMT\"}},\"Function\":0},\"Name\":\"Sum(production.TRANS_AMT)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Advance School\"},\"Name\":\"Bluejay Bites All Clickers.Advance School\"}]},\"columnProperties\":{\"production.SCHOOL\":{\"displayName\":\"Allocation School\"},\"Sum(production.TRANS_AMT)\":{\"displayName\":\"Total Production\"},\"Bluejay Bites All Clickers.Advance School\":{\"displayName\":\"Donor School\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"values\":[{\"properties\":{\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"grid\":[{\"properties\":{}}],\"columnHeaders\":[{\"properties\":{\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.42105263157895D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'College of Professional Studies'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112.15789473684211D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'General University'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"102.52631578947368D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Graduate School'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.68421052631578D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Health Sciences'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"123.10526315789474D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Pharmacy & Health Prof'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"109.05263157894737D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'School of Dentistry'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"108.6842105263158D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Arts & Sciences'\"}}}}}]}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"103.36842105263158D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"production\"}},\"Property\":\"SCHOOL\"}},\"Right\":{\"Literal\":{\"Value\":\"'Athletics'\"}}}}}]}}],\"rowHeaders\":[{\"properties\":{\"showExpandCollapseButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter70f84b48003ee02eb91d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"school_info\"}},\"Property\":\"SCHOOL\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 720.19,
+          "width": 1264.58,
+          "x": 15.42,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Creighton_University5789915806511441.json"
+}

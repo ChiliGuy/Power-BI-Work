@@ -1,0 +1,303 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1064.6046272184556,
+            "y": 1066.6788151123146
+          },
+          "nodeIndex": "Acquired, Retained, Reactivated",
+          "size": {
+            "height": 160,
+            "width": 238
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 715.65897959183667,
+            "y": 355.18855214911434
+          },
+          "nodeIndex": "Calendar",
+          "size": {
+            "height": 341,
+            "width": 238
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 1077.3114926784544,
+            "y": 373.18778702510525
+          },
+          "nodeIndex": "Donor Attributes",
+          "size": {
+            "height": 288,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1392.9512059638,
+            "y": 886.44974270579769
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 341,
+            "width": 238
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 1072.1734693877552,
+            "y": 0
+          },
+          "nodeIndex": "Alumni",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 167.00204081632671,
+            "y": 489.79591836734693
+          },
+          "nodeIndex": "Campaign Performance to Goal",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 713.92040816326517,
+            "y": 0
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 285.63265306122452,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 351.98017468990696,
+            "y": 0
+          },
+          "nodeIndex": "Campaign Revenue",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Campaign Production",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1378.156844864262,
+            "y": 0.20715143022715665
+          },
+          "nodeIndex": "Cume Camp 650 to Goal",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1381.6855461719235,
+            "y": 264.30702155113738
+          },
+          "nodeIndex": "Cume Camp 700 to Goal",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 388.14489795918348,
+            "y": 1106.8979591836735
+          },
+          "nodeIndex": "FS Counts",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 31.106122448979704,
+            "y": 991.83673469387759
+          },
+          "nodeIndex": "FS Giving",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 217.02448979591827,
+            "y": 840.85714285714278
+          },
+          "nodeIndex": "Place of Work",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1384.4685239308726,
+            "y": 552.66178026967418
+          },
+          "nodeIndex": "Progress to Goal",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 717.34693877551035,
+            "y": 836.73469387755108
+          },
+          "nodeIndex": "Allocations",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1061.8612244897961,
+            "y": 755.10204081632651
+          },
+          "nodeIndex": "Capital Goals",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 725.10612244897948,
+            "y": 1179.5918367346937
+          },
+          "nodeIndex": "Data Source",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 452.23133219620308,
+            "y": 444.84840568019888
+          },
+          "nodeIndex": "YearTable",
+          "nodeLineageTag": "5e4720d6-82ed-45d4-9904-d1a139fb4de5",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1811.7,
+            "y": 0
+          },
+          "nodeIndex": "Campaign Performance to Goal - NEW",
+          "nodeLineageTag": "e41cfab0-2f15-4a09-bbd5-66f9082c75ad",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 1797.7869128196335,
+            "y": 349.05988036949913
+          },
+          "nodeIndex": "Query1",
+          "nodeLineageTag": "8459e936-8155-4142-b3c5-df49b218fc8f",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 1733.5443110393023,
+            "y": 785.790614413198
+          },
+          "nodeIndex": "Query2",
+          "nodeLineageTag": "0b45ebac-7678-41c4-9f99-992d4f539ec2",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 1714.1195232505033,
+            "y": 1154.332906710297
+          },
+          "nodeIndex": "Tent Cume Camp 650 to Goal (2)",
+          "nodeLineageTag": "8917f6e2-1340-4fe6-a071-bb4ef549329e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 14
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 61.594016411284692,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

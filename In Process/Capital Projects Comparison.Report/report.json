@@ -1,0 +1,273 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Production Totals by Project Name",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3df4720f342046e1b5a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":4.753946146703806,\"z\":2000,\"width\":566.9080779944289,\"height\":49.91643454038997,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Production Totals by Project Name\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#0045a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 49.92,
+          "width": 566.91,
+          "x": 15.45,
+          "y": 4.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b03cb1bd8219ed66a71b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":90.32497678737232,\"z\":0,\"width\":1251.4763231197771,\"height\":593.0547818012999,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Production.Project Name\",\"active\":true},{\"queryRef\":\"Production.Allocation Name\"},{\"queryRef\":\"Production.Gift Strata\"}],\"Values\":[{\"queryRef\":\"Key Measures.Trans Count\"},{\"queryRef\":\"Key Measures.Total Production\"},{\"queryRef\":\"Key Measures.Household Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Production.Allocation Name\",\"NativeReferenceName\":\"Allocation Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gift Strata\"},\"Name\":\"Production.Gift Strata\",\"NativeReferenceName\":\"Gift Strata\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Production Trans Count\"},\"Name\":\"Key Measures.Trans Count\",\"NativeReferenceName\":\"Trans Count1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Total Production\"},\"Name\":\"Key Measures.Total Production\",\"NativeReferenceName\":\"Total Production\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Project Name\"},\"Name\":\"Production.Project Name\",\"NativeReferenceName\":\"Project Name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Production Household Count\"},\"Name\":\"Key Measures.Household Count\",\"NativeReferenceName\":\"Household Count1\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Production.Project Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Production\"}},\"Property\":\"Project Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"Production.Allocation Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Production\"}},\"Property\":\"Allocation Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"Production.Gift Strata\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Sokol/Ryan Center'\"}}],\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Ryan Athletic Center'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'Ryan Center Women''s Athletic Lounge Restructure'\"}}],\"isToggled\":true}]}]}}],\"columnProperties\":{\"Key Measures.Trans Count\":{\"displayName\":\"Trans Count\"},\"Key Measures.Household Count\":{\"displayName\":\"Household Count\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"columnFormatting\":[{\"properties\":{\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Key Measures.Trans Count\"}},{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Total Production\"}},{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Household Count\"}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"108.85328916843157D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Household Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"80.73816155988858D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Trans Count\"}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 593.05,
+          "width": 1251.48,
+          "x": 15.45,
+          "y": 90.32,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ef00ae923939bd9026d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":966.2395543175487,\"y\":14.26183844011142,\"z\":1000,\"width\":300.68709377901575,\"height\":76.0631383472609,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Production.Trans Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Category\"},\"Name\":\"Production.Trans Category\",\"NativeReferenceName\":\"Production Trans Category\"}]},\"columnProperties\":{\"Production.Trans Category\":{\"displayName\":\"Production Trans Category\"}},\"syncGroup\":{\"groupName\":\"Trans Category\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.06,
+          "width": 300.69,
+          "x": 966.24,
+          "y": 14.26,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Revenue Transaction Details",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection10f3140e9e1b0d0a192d",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0894414f72de9769c9de\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.507892293407613,\"y\":76.0631383472609,\"z\":0,\"width\":1257.418755803157,\"height\":613.259052924791,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Revenue.Project Name\"},{\"queryRef\":\"Revenue.Alloc Code\"},{\"queryRef\":\"Revenue.Allocation Name\"},{\"queryRef\":\"Revenue.Primary ID\"},{\"queryRef\":\"Revenue.Primary Name\"},{\"queryRef\":\"Revenue.Trans Nbr\"},{\"queryRef\":\"Revenue.Trans Dt\"},{\"queryRef\":\"Revenue.Fiscal Yr\"},{\"queryRef\":\"Sum(Revenue.Revenue Amt)\"},{\"queryRef\":\"Revenue.Trans Category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Project Name\"},\"Name\":\"Revenue.Project Name\",\"NativeReferenceName\":\"Project Name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Alloc Code\"},\"Name\":\"Revenue.Alloc Code\",\"NativeReferenceName\":\"Alloc Code1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Revenue.Allocation Name\",\"NativeReferenceName\":\"Allocation Name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Primary ID\"},\"Name\":\"Revenue.Primary ID\",\"NativeReferenceName\":\"Primary ID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Primary Name\"},\"Name\":\"Revenue.Primary Name\",\"NativeReferenceName\":\"Primary Name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Trans Nbr\"},\"Name\":\"Revenue.Trans Nbr\",\"NativeReferenceName\":\"Trans Nbr1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Trans Dt\"},\"Name\":\"Revenue.Trans Dt\",\"NativeReferenceName\":\"Trans Dt1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Revenue.Fiscal Yr\",\"NativeReferenceName\":\"Fiscal Yr1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Revenue Amt\"}},\"Function\":0},\"Name\":\"Sum(Revenue.Revenue Amt)\",\"NativeReferenceName\":\"Trans Amt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Trans Category\"},\"Name\":\"Revenue.Trans Category\",\"NativeReferenceName\":\"Trans Category1\"}]},\"columnProperties\":{\"Sum(Revenue.Revenue Amt)\":{\"displayName\":\"Trans Amt\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}],\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"columnFormatting\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Sum(Revenue.Revenue Amt)\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Revenue.Project Name\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Revenue.Alloc Code\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Revenue.Allocation Name\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Revenue.Primary ID\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Revenue.Primary Name\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Revenue.Trans Nbr\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Revenue.Trans Dt\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}},\"selector\":{\"metadata\":\"Revenue.Fiscal Yr\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Revenue.Trans Category\"}}]}}}",
+          "filters": "[]",
+          "height": 613.26,
+          "width": 1257.42,
+          "x": 9.51,
+          "y": 76.06,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"5b07dc4f4c86c5de45b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":4.753946146703806,\"z\":2000,\"width\":566.9080779944289,\"height\":49.91643454038997,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Revenue Transaction Details\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#4cab57\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 49.92,
+          "width": 566.91,
+          "x": 15.45,
+          "y": 4.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"c5248e6104ae739be9c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":966.2395543175487,\"y\":0,\"z\":1000,\"width\":300.68709377901575,\"height\":76.0631383472609,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Production.Trans Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Category\"},\"Name\":\"Production.Trans Category\",\"NativeReferenceName\":\"Trans Category\"}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.06,
+          "width": 300.69,
+          "x": 966.24,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d54fc1065b7b657ce544\",\"layouts\":[{\"id\":0,\"position\":{\"x\":965.7142857142858,\"y\":4.285714285714286,\"z\":3000,\"width\":301.42857142857144,\"height\":75.71428571428572,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Revenue.Trans Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Trans Category\"},\"Name\":\"Revenue.Trans Category\",\"NativeReferenceName\":\"Revenue Trans Category\"}]},\"columnProperties\":{\"Revenue.Trans Category\":{\"displayName\":\"Revenue Trans Category\"}},\"syncGroup\":{\"groupName\":\"Trans Category1\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 75.71,
+          "width": 301.43,
+          "x": 965.71,
+          "y": 4.29,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Production Transaction Details",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection475a026c0ad82d130267",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"c1a8f843169928a96783\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":4.753946146703806,\"z\":2000,\"width\":566.9080779944289,\"height\":49.91643454038997,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Production Transaction Details\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#0045a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 49.92,
+          "width": 566.91,
+          "x": 15.45,
+          "y": 4.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"cb9a2de260c36b604844\",\"layouts\":[{\"id\":0,\"position\":{\"x\":966.2395543175487,\"y\":0,\"z\":1000,\"width\":300.68709377901575,\"height\":76.0631383472609,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Production.Trans Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Category\"},\"Name\":\"Production.Trans Category\",\"NativeReferenceName\":\"Production Trans Category\"}]},\"columnProperties\":{\"Production.Trans Category\":{\"displayName\":\"Production Trans Category\"}},\"syncGroup\":{\"groupName\":\"Trans Category\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.06,
+          "width": 300.69,
+          "x": 966.24,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"eda4f554114d8e4e37b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.507892293407613,\"y\":76.0631383472609,\"z\":0,\"width\":1257.418755803157,\"height\":613.259052924791,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Production.Project Name\"},{\"queryRef\":\"Production.Alloc Code\"},{\"queryRef\":\"Production.Allocation Name\"},{\"queryRef\":\"Production.Primary ID\"},{\"queryRef\":\"Production.Primary Name\"},{\"queryRef\":\"Production.Trans Nbr\"},{\"queryRef\":\"Production.Trans Dt\"},{\"queryRef\":\"Production.Fiscal Yr\"},{\"queryRef\":\"Sum(Production.Production Amt)\"},{\"queryRef\":\"Production.Trans Category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Alloc Code\"},\"Name\":\"Production.Alloc Code\",\"NativeReferenceName\":\"Alloc Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Production.Allocation Name\",\"NativeReferenceName\":\"Allocation Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Primary ID\"},\"Name\":\"Production.Primary ID\",\"NativeReferenceName\":\"Primary ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Primary Name\"},\"Name\":\"Production.Primary Name\",\"NativeReferenceName\":\"Primary Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Project Name\"},\"Name\":\"Production.Project Name\",\"NativeReferenceName\":\"Project Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Nbr\"},\"Name\":\"Production.Trans Nbr\",\"NativeReferenceName\":\"Trans Nbr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Dt\"},\"Name\":\"Production.Trans Dt\",\"NativeReferenceName\":\"Trans Dt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Production.Fiscal Yr\",\"NativeReferenceName\":\"Fiscal Yr\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Production Amt\"}},\"Function\":0},\"Name\":\"Sum(Production.Production Amt)\",\"NativeReferenceName\":\"Trans Amt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Category\"},\"Name\":\"Production.Trans Category\",\"NativeReferenceName\":\"Trans Category\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Project Name\"}}}]},\"columnProperties\":{\"Sum(Production.Production Amt)\":{\"displayName\":\"Trans Amt\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Sum(Production.Production Amt)\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Production.Project Name\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Production.Alloc Code\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Production.Allocation Name\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Production.Primary ID\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Production.Primary Name\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Production.Trans Nbr\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}},\"selector\":{\"metadata\":\"Production.Trans Dt\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Production.Fiscal Yr\"}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}],\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 613.26,
+          "width": 1257.42,
+          "x": 9.51,
+          "y": 76.06,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Revenue Totals by Gift Strata",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection47eee9e76ae20b5410c2",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"230038210238ab63d65b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":4.753946146703806,\"z\":1000,\"width\":566.9080779944289,\"height\":49.91643454038997,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Revenue Totals by Project Name\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#2f943a\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 49.92,
+          "width": 566.91,
+          "x": 15.45,
+          "y": 4.75,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"62c72616dc567022d235\",\"layouts\":[{\"id\":0,\"position\":{\"x\":809.3593314763231,\"y\":0,\"z\":2000,\"width\":457.5673166202414,\"height\":89.13649025069638,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Revenue.Project Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Project Name\"},\"Name\":\"Revenue.Project Name\",\"NativeReferenceName\":\"Project Name1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Project Name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Championship Center'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.14,
+          "width": 457.57,
+          "x": 809.36,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"9946910f84920ac37728\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":90.32497678737232,\"z\":0,\"width\":1251.4763231197771,\"height\":593.0547818012999,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Revenue.Gift Strata\",\"active\":true},{\"queryRef\":\"Revenue.Allocation Name\"},{\"queryRef\":\"Revenue.Primary Name\"}],\"Values\":[{\"queryRef\":\"Key Measures.Revenue Trans Count\"},{\"queryRef\":\"Key Measures.Total Revenue\"},{\"queryRef\":\"Key Measures.Revenue Household Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Revenue.Allocation Name\",\"NativeReferenceName\":\"Allocation Name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Gift Strata\"},\"Name\":\"Revenue.Gift Strata\",\"NativeReferenceName\":\"Gift Strata1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Revenue Trans Count\"},\"Name\":\"Key Measures.Revenue Trans Count\",\"NativeReferenceName\":\"Trans Count\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Total Revenue\"},\"Name\":\"Key Measures.Total Revenue\",\"NativeReferenceName\":\"Total Revenue\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Revenue Household Count\"},\"Name\":\"Key Measures.Revenue Household Count\",\"NativeReferenceName\":\"Household Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Primary Name\"},\"Name\":\"Revenue.Primary Name\",\"NativeReferenceName\":\"Primary Name\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Revenue.Gift Strata\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Revenue\"}},\"Property\":\"Gift Strata\"}}],\"isPinned\":true},{\"queryRefs\":[\"Revenue.Allocation Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Revenue\"}},\"Property\":\"Allocation Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"Revenue.Primary Name\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Key Measures.Revenue Trans Count\":{\"displayName\":\"Trans Count\"},\"Key Measures.Revenue Household Count\":{\"displayName\":\"Household Count\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"80.90746703783596D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Trans Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"100.52941374549557D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Household Count\"}}],\"columnFormatting\":[{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Trans Count\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Household Count\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Key Measures.Total Revenue\"}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 593.05,
+          "width": 1251.48,
+          "x": 15.45,
+          "y": 90.32,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Revenue Totals by Project Name",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection4d79bb8c1e5300c91abc",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6dd572092d9c06600650\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":90.32497678737232,\"z\":0,\"width\":1251.4763231197771,\"height\":593.0547818012999,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Revenue.Project Name\",\"active\":true},{\"queryRef\":\"Revenue.Allocation Name\"},{\"queryRef\":\"Revenue.Gift Strata\"}],\"Values\":[{\"queryRef\":\"Key Measures.Revenue Trans Count\"},{\"queryRef\":\"Key Measures.Total Revenue\"},{\"queryRef\":\"Key Measures.Revenue Household Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Project Name\"},\"Name\":\"Revenue.Project Name\",\"NativeReferenceName\":\"Project Name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Revenue.Allocation Name\",\"NativeReferenceName\":\"Allocation Name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Gift Strata\"},\"Name\":\"Revenue.Gift Strata\",\"NativeReferenceName\":\"Gift Strata1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Revenue Trans Count\"},\"Name\":\"Key Measures.Revenue Trans Count\",\"NativeReferenceName\":\"Trans Count\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Total Revenue\"},\"Name\":\"Key Measures.Total Revenue\",\"NativeReferenceName\":\"Total Revenue\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Revenue Household Count\"},\"Name\":\"Key Measures.Revenue Household Count\",\"NativeReferenceName\":\"Household Count\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Revenue.Project Name\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"Revenue.Allocation Name\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"Revenue.Gift Strata\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Key Measures.Revenue Trans Count\":{\"displayName\":\"Trans Count\"},\"Key Measures.Revenue Household Count\":{\"displayName\":\"Household Count\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"85.68135325397326D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Trans Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"98.14580602036496D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Household Count\"}}],\"columnFormatting\":[{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Trans Count\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Household Count\"}},{\"properties\":{\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Key Measures.Total Revenue\"}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 593.05,
+          "width": 1251.48,
+          "x": 15.45,
+          "y": 90.32,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"935600b724c1a216ad2d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":966.2395543175487,\"y\":14.26183844011142,\"z\":1000,\"width\":300.68709377901575,\"height\":76.0631383472609,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Production.Trans Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Trans Category\"},\"Name\":\"Production.Trans Category\",\"NativeReferenceName\":\"Trans Category\"}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.06,
+          "width": 300.69,
+          "x": 966.24,
+          "y": 14.26,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"b90ec6442c93ec795014\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":4.753946146703806,\"z\":2000,\"width\":566.9080779944289,\"height\":49.91643454038997,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Revenue Totals by Project Name\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#2f943a\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 49.92,
+          "width": 566.91,
+          "x": 15.45,
+          "y": 4.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"d6cf90c4ae0a31d75c80\",\"layouts\":[{\"id\":0,\"position\":{\"x\":965.7142857142858,\"y\":4.285714285714286,\"z\":3000,\"width\":301.42857142857144,\"height\":75.71428571428572,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Revenue.Trans Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Trans Category\"},\"Name\":\"Revenue.Trans Category\",\"NativeReferenceName\":\"Revenue Trans Category\"}]},\"columnProperties\":{\"Revenue.Trans Category\":{\"displayName\":\"Revenue Trans Category\"}},\"syncGroup\":{\"groupName\":\"Trans Category1\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4cab57'\"}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 75.71,
+          "width": 301.43,
+          "x": 965.71,
+          "y": 4.29,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Production Totals by Gift Strata",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection9b1ab2157ec390b6523b",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3a36c6fc46a560d77653\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":131.92200557103064,\"z\":0,\"width\":1251.4763231197771,\"height\":551.4577530176416,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Production.Gift Strata\",\"active\":true},{\"queryRef\":\"Production.Allocation Name\"},{\"queryRef\":\"Production.Primary Name\"}],\"Values\":[{\"queryRef\":\"Key Measures.Trans Count\"},{\"queryRef\":\"Key Measures.Total Production\"},{\"queryRef\":\"Key Measures.Household Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Production.Allocation Name\",\"NativeReferenceName\":\"Allocation Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gift Strata\"},\"Name\":\"Production.Gift Strata\",\"NativeReferenceName\":\"Gift Strata\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Production Trans Count\"},\"Name\":\"Key Measures.Trans Count\",\"NativeReferenceName\":\"Trans Count1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Total Production\"},\"Name\":\"Key Measures.Total Production\",\"NativeReferenceName\":\"Total Production\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Production Household Count\"},\"Name\":\"Key Measures.Household Count\",\"NativeReferenceName\":\"Household Count1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Primary Name\"},\"Name\":\"Production.Primary Name\",\"NativeReferenceName\":\"Primary Name\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Production.Gift Strata\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Production\"}},\"Property\":\"Gift Strata\"}}],\"isPinned\":true},{\"queryRefs\":[\"Production.Allocation Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Production\"}},\"Property\":\"Allocation Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"Production.Primary Name\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Key Measures.Trans Count\":{\"displayName\":\"Trans Count\"},\"Key Measures.Household Count\":{\"displayName\":\"Household Count\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"columnFormatting\":[{\"properties\":{\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Trans Count\"}},{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Key Measures.Total Production\"}},{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}},\"selector\":{\"metadata\":\"Key Measures.Household Count\"}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"114.66480686366411D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Household Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"77.2302675593091D\"}}}},\"selector\":{\"metadata\":\"Key Measures.Trans Count\"}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 551.46,
+          "width": 1251.48,
+          "x": 15.45,
+          "y": 131.92,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a523efaf500d5ab95482\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.450324976787371,\"y\":4.753946146703806,\"z\":2000,\"width\":566.9080779944289,\"height\":49.91643454038997,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Production Totals by Gift Strata\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#0045a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 49.92,
+          "width": 566.91,
+          "x": 15.45,
+          "y": 4.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"da900a4c1dab54b2251a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":809.3593314763231,\"y\":22.58124419684308,\"z\":1000,\"width\":457.5673166202414,\"height\":89.13649025069638,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Production.Project Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Project Name\"},\"Name\":\"Production.Project Name\",\"NativeReferenceName\":\"Project Name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Production\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Project Name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Championship Center'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0045A6'\"}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.14,
+          "width": 457.57,
+          "x": 809.36,
+          "y": 22.58,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

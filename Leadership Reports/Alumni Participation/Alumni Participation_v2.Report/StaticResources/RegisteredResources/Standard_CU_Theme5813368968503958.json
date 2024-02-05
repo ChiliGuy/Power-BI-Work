@@ -1,0 +1,105 @@
+{
+  "name": "Standard CU Theme",
+  "dataColors": [
+    "#0045A6",
+    "#4D89AB",
+    "#91BAD2",
+    "#95D2F3",
+    "#3BA368",
+    "#D7D2CB",
+    "#D9B300",
+    "#AB6C4D"
+  ],
+  "neutral": "#F6D74A",
+  "minimum": "#FA8A99",
+  "center": "#F8F86B",
+  "maximum": "#63AD70",
+  "textClasses": {
+    "label": {
+      "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif"
+    },
+    "callout": {
+      "color": "#0045A6",
+      "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif",
+      "fontSize": 24
+    },
+    "title": {
+      "color": "#0045A6",
+      "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif",
+      "fontSize": 16
+    },
+    "header": {
+      "color": "#3781AB",
+      "fontSize": 16
+    }
+  },
+  "foreground": "#0045A6",
+  "foregroundNeutralSecondary": "#023885",
+  "backgroundLight": "#4D89AB",
+  "backgroundNeutral": "#D9D7D5",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "visualHeader": [
+          {
+            "background": {
+              "solid": {
+                "color": "#0045A6"
+              }
+            },
+            "foreground": {
+              "solid": {
+                "color": "#0045A6"
+              }
+            }
+          }
+        ],
+        "visualTooltip": [
+          {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": "#0045A6"
+              }
+            },
+            "actionFontColor": {
+              "solid": {
+                "color": "#02347A"
+              }
+            }
+          }
+        ],
+        "visualHeaderTooltip": [
+          {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": "#0045A6"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F2F2F2"
+              }
+            }
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#EDECEC"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

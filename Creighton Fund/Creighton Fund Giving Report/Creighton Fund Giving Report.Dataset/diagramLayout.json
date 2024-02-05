@@ -1,0 +1,106 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 601.16247660200054,
+            "y": 590.4274323769647
+          },
+          "nodeIndex": "Creighton Fund Production",
+          "size": {
+            "height": 308,
+            "width": 267.39791536677774
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 230.49425385941751,
+            "y": 350.46816163274593
+          },
+          "nodeIndex": "Custom Sort Table",
+          "size": {
+            "height": 137,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 58.7879823500823,
+            "y": 154.4681616327459
+          },
+          "nodeIndex": "Gift Band Group",
+          "size": {
+            "height": 156,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 370.70473813536569,
+            "y": 0
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 732.145693964933,
+            "y": 0
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 189.09494623284115,
+            "width": 275.7473942084722
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 784.16824054069434,
+            "y": 307.81010753431769
+          },
+          "nodeIndex": "CF Segments",
+          "size": {
+            "height": 143.18043270823415,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1081.6971097740118,
+            "y": 307.7379344510241
+          },
+          "nodeIndex": "CF Solicitation Families",
+          "size": {
+            "height": 162.40930194155163,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

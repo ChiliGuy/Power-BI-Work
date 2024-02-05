@@ -1,0 +1,1751 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Pledge Payments\",\"Calendar - FY16+\",\"Key Measures\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "80c8836e-6ff6-4714-b428-018532df7f1c",
+        "fromColumn": "Plg Date",
+        "fromTable": "Pledge Payments",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_b885b38f-5d22-4021-b920-9d731d5c4e26"
+      },
+      {
+        "name": "b8de2a49-402f-4130-ab5d-5fedf6d23540",
+        "fromColumn": "Pymt Date",
+        "fromTable": "Pledge Payments",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_93d416ab-9ca0-42c9-85e1-be01f7c41ce1"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Pledge Payments",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "93935fd9-6f6c-4837-8dc5-f3e9f57e65ef",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b07df336-f165-48de-9baa-be94001456d5",
+            "sourceColumn": "Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pledge Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52714a05-4a8c-490e-89b4-71f406f89218",
+            "sourceColumn": "Pledge Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Plg Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "14d97074-7466-4c76-8601-293a01f2bc60",
+            "sourceColumn": "Plg Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_b885b38f-5d22-4021-b920-9d731d5c4e26"
+                },
+                "isDefault": true,
+                "relationship": "80c8836e-6ff6-4714-b428-018532df7f1c"
+              }
+            ]
+          },
+          {
+            "name": "Act?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "da0214c8-a5d2-4ef5-8360-2419844e48ef",
+            "sourceColumn": "Act?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Plg Camp Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d4fec53-7232-414a-81c8-a4c0d37c19eb",
+            "sourceColumn": "Plg Camp Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Plg Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "8fd3db5b-7bed-4753-b84c-13ecc6e23cc4",
+            "sourceColumn": "Plg Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Donor ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ac34f140-ea93-437b-8885-2d37ca82a84f",
+            "sourceColumn": "Donor ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "abf3e319-b7a9-420b-8133-377b5ccb8557",
+            "sourceColumn": "Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              },
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "12b4699c-e440-412a-a586-0e1564882e12",
+            "sourceColumn": "Pymt Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_93d416ab-9ca0-42c9-85e1-be01f7c41ce1"
+                },
+                "isDefault": true,
+                "relationship": "b8de2a49-402f-4130-ab5d-5fedf6d23540"
+              }
+            ]
+          },
+          {
+            "name": "Pymt Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa7f7f87-131c-434e-8518-44de25ce3a64",
+            "sourceColumn": "Pymt Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt CY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86ebe749-844c-498b-b1d0-02b38dcb6798",
+            "sourceColumn": "Pymt CY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt Cal Qtr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54a63dc6-7998-4686-96c0-feaa4e2ca18c",
+            "sourceColumn": "Pymt Cal Qtr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt FY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9cf4199f-95aa-45b4-a44d-742d16ff97da",
+            "sourceColumn": "Pymt FY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt FY Qtr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87cce1d0-74ce-420d-87f4-7cc4cea8acf0",
+            "sourceColumn": "Pymt FY Qtr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "ab7b2942-caac-44b2-ba6e-1cc64f0c23e9",
+            "sourceColumn": "Pymt Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e2781143-5548-4eb5-a20c-1262a4e46c29",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ccfcee6d-f48a-43e1-9133-2738060fb9ff",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9efddb2a-f458-4b8e-9b7d-7bead9e461a4",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e225816-375e-494b-88a7-3f5bacfbfe19",
+            "sourceColumn": "Campaign Bucket",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2b0da785-3b5b-47d2-ac3c-41fb1958abe3",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Sub-Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7268100a-809e-49ac-af2e-dd7d6041a0f1",
+            "sourceColumn": "Camp Sub-Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Donor Sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "528b0820-2860-435e-a8f8-df672b6aa363",
+            "sourceColumn": "Donor Sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f4b4dc0b-9048-47bb-a960-ea4cd815713c",
+            "sourceColumn": "Pymt ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "220f1fae-4727-45ac-9b31-e100cfddf499",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "82bb3fc1-495a-4e05-aa67-2b25d26d474a",
+            "sourceColumn": "Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Org",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2bc0a0d-9ac8-454f-b8f8-613a744e540f",
+            "sourceColumn": "Org",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "87ae36f3-9b0d-4dfd-b41b-abc3dc74b46d",
+        "partitions": [
+          {
+            "name": "Pledge Payments-5108bdae-95d2-4601-94f0-11f9744f31b2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"-- This report is intended for Katie Rinkol for use in providing projected capital revenue in future years for Jan Madsen and other mgmt. smk 12/3/21#(lf)select distinct 'Anticipated - Campaign Plg Pymts'     \"\"Trans Category\"\",#(lf)       pt1.short_desc                                  \"\"Trans Type\"\",#(lf)       pp1.prim_pledge_number                          \"\"Pledge Nbr\"\",#(lf)       pp1.prim_pledge_date_of_record                  \"\"Plg Date\"\",#(lf)       'Y'                                             \"\"Act?\"\",#(lf)       p1.pledge_campaign                              \"\"Plg Camp Cd\"\",#(lf)       pp1.prim_pledge_amount                          \"\"Plg Amt\"\",#(lf)       dnr.did                                         \"\"Donor ID\"\",#(lf)       dnr.nme                                         \"\"Donor Name\"\",#(lf)       ps1.payment_schedule_pledge_nbr||ps1.payment_schedule_date \"\"Pymt ID\"\",#(lf)       to_date(ps1.payment_schedule_date,'YYYYMMDD')   \"\"Pymt Date\"\",#(lf)       to_char(to_date(ps1.payment_schedule_date,'YYYYMMDD'),'Month') \"\"Pymt Month\"\",#(lf)       CASE WHEN ps1.payment_schedule_date < to_char(sysdate,'YYYYMMDD') THEN '01-Past Due'#(lf)            WHEN ps1.payment_schedule_date >= '20311231' THEN '2031+'#(lf)          ELSE substr(ps1.payment_schedule_date,1,4) END \"\"Pymt CY\"\",#(lf)       CASE WHEN substr(ps1.payment_schedule_date,5,2) = '01' THEN 'Qtr 1'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '02' THEN 'Qtr 1'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '03' THEN 'Qtr 1'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '04' THEN 'Qtr 2'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '05' THEN 'Qtr 2'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '06' THEN 'Qtr 2'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '07' THEN 'Qtr 3'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '08' THEN 'Qtr 3'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '09' THEN 'Qtr 3'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '10' THEN 'Qtr 4'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '11' THEN 'Qtr 4'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '12' THEN 'Qtr 4'#(lf)          ELSE 'Investigate' END                       \"\"Pymt Cal Qtr\"\",#(lf)       CASE WHEN ps1.payment_schedule_date < to_char(sysdate,'YYYYMMDD') THEN '01-Past Due'#(lf)            WHEN ps1.payment_schedule_date BETWEEN to_char(sysdate,'YYYYMMDD') AND '20170630' THEN '2017'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20170701' AND '20180630' THEN '2018'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20180701' AND '20190630' THEN '2019'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20190701' AND '20200630' THEN '2020'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20200701' AND '20210630' THEN '2021'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20210701' AND '20220630' THEN '2022'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20220701' AND '20230630' THEN '2023'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20230701' AND '20240630' THEN '2024'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20240701' AND '20250630' THEN '2025'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20250701' AND '20260630' THEN '2026'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20260701' AND '20270630' THEN '2027'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20270701' AND '20280630' THEN '2028'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20280701' AND '20290630' THEN '2029'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20290701' AND '20300630' THEN '2030'#(lf)            WHEN ps1.payment_schedule_date BETWEEN '20300701' AND '20310630' THEN '2031'#(lf)            WHEN ps1.payment_schedule_date >= '20310701' THEN '2031+'#(lf)          ELSE 'Investigate' END                       \"\"Pymt FY\"\",#(lf)       CASE WHEN substr(ps1.payment_schedule_date,5,2) = '01' THEN 'Qtr 3'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '02' THEN 'Qtr 3'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '03' THEN 'Qtr 3'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '04' THEN 'Qtr 4'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '05' THEN 'Qtr 4'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '06' THEN 'Qtr 4'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '07' THEN 'Qtr 1'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '08' THEN 'Qtr 1'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '09' THEN 'Qtr 1'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '10' THEN 'Qtr 2'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '11' THEN 'Qtr 2'#(lf)            WHEN substr(ps1.payment_schedule_date,5,2) = '12' THEN 'Qtr 2'#(lf)          ELSE 'Investigate' END                       \"\"Pymt FY Qtr\"\",#(lf)       ps1.payment_schedule_balance                    \"\"Pymt Amt\"\",#(lf)       allc.sch                                        \"\"School\"\",#(lf)       allc.cd                                         \"\"Alloc Code\"\",#(lf)       allc.nme                                        \"\"Allocation Name\"\",#(lf)       allc.fnd                                        \"\"Fund\"\",#(lf)       allc.org                                        \"\"Org\"\",#(lf)       allc.purp                                       \"\"Finance Category\"\",#(lf)       allc.c1                                         \"\"Campaign Bucket\"\",#(lf)       allc.c2                                         \"\"Campaign Priority\"\",#(lf)       allc.c3                                         \"\"Camp Sub-Priority\"\",#(lf)       dnr.srt                                         \"\"Donor Sort\"\"#(lf)from advance.primary_pledge pp1#(lf)inner join advance.pledge p1            ON pp1.prim_pledge_number = p1.pledge_pledge_number#(lf)inner join advance.tms_pledge_type pt1  ON pp1.prim_pledge_type = pt1.pledge_type_code#(lf)left join advance.payment_schedule ps1 ON pp1.prim_pledge_number = ps1.payment_schedule_pledge_nbr#(lf)inner join (select xp1.pledge_pledge_number pnbr, xe1.id_number did, xe1.pref_mail_name nme, xe1.pref_name_sort srt#(lf)              from advance.pledge xp1#(lf)             inner join advance.entity xe1 ON xp1.pledge_donor_id = xe1.id_number#(lf)             where xp1.pledge_associated_code = 'P'#(lf)            )dnr ON pp1.prim_pledge_number = dnr.pnbr#(lf)inner join (select xxp1.pledge_pledge_number pnbr, xxp1.pledge_allocation_name cd, xxsch.short_desc sch, xxa1.long_name nme, #(lf)                   cat1.short_desc c1, cat2.short_desc c2, cat3.short_desc c3, tmsp.short_desc purp,#(lf)                   substr(xxa1.account,1,6) fnd, substr(xxa1.account,7,6) org#(lf)              from advance.pledge xxp1#(lf)             inner join advance.allocation xxa1       ON xxp1.pledge_allocation_name = xxa1.allocation_code#(lf)             left join advance.tms_alloc_school xxsch ON xxa1.alloc_school = xxsch.alloc_school_code#(lf)             left join advance.tms_purpose tmsp       ON xxa1.alloc_purpose = tmsp.purpose_code#(lf)             left join advance.tms_category1 cat1     ON xxa1.category1_code = cat1.category1_code#(lf)             left join advance.tms_category2 cat2     ON xxa1.category2_code = cat2.category2_code#(lf)             left join advance.tms_category3 cat3     ON xxa1.category3_code = cat3.category3_code#(lf)             where xxa1.alloc_purpose = 'CCCAP'#(lf)            )allc ON pp1.prim_pledge_number = allc.pnbr#(lf)left join (select xas1.proposal_id prid, xs1.name nme#(lf)             from advance.assignment xas1, advance.staff xs1#(lf)            where xas1.assignment_id_number = xs1.id_number#(lf)           )ps ON pp1.proposal_id = ps.prid#(lf)where pp1.prim_pledge_status = 'A'#(lf)and   pp1.prim_pledge_type NOT IN ('E1','P1','L2')#(lf)and   ps1.payment_schedule_status = 'U'#(lf)#(lf)order by \"\"Allocation Name\"\", \"\"Donor Sort\"\", \"\"Pymt Date\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Plg Date\", type date}, {\"Plg Amt\", Currency.Type}, {\"Pymt Date\", Currency.Type}, {\"Pymt Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_6d63811e-070b-40e2-8d7e-93581252f0ed",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "6df34ecc-da3c-450a-a056-1f97ffcbfc88",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e89bba9e-15ad-4370-8c20-dfee0ed5e9c1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "63adfa9d-8570-40d4-be6b-6d630ac6bee1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "406216f8-30d9-4e85-aad5-ffb0f15626a2",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e4aa68d6-236a-492e-aec3-e09200eb580b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "7e4ba088-01d0-4a00-b6bd-8b036d53e7a1",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "5c63c3ad-c9ed-42b7-b9a1-c53bb700b3ba",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "5742c0a2-904a-43d4-a3ec-92da548739fd",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "d0ca9c4e-38b5-4c18-9e02-fe1691b72fb5",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "c0293352-fa50-4e56-bbf6-51ccb2ae78fe",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2d6cab7c-45c6-4f39-8a9c-f7a559abc458",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "5b22f363-9957-49a7-b5a8-a1b8932a8398"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "831eab94-fbfd-45da-9ccf-3f325bb517ab",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_6d63811e-070b-40e2-8d7e-93581252f0ed-18fb3789-76f8-4585-a9bb-82871755715d",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_b885b38f-5d22-4021-b920-9d731d5c4e26",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "dcebb2db-99a5-4cb2-a620-b725d81867f4",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "05e32a60-99b1-4d09-8fd8-f83332c4a7f7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ccee4794-33f1-4eda-8fec-3a531528fc4c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "9b86722d-6493-4403-8513-8cd9c91d48e4",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "693772a0-3f65-4923-af6c-fb07bf1e8b7e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "7581f36b-34d7-4d90-87aa-40da51b85af2",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "c23f6a8e-1d3e-441c-b9cb-00fab7c289bc",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9fbf1ae7-0d80-41e0-90e0-7d0e8a93995d",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "466020f1-46b1-4d39-8c48-e070750b4290",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "53320f47-0e39-4e82-a791-86d905b3575e",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "fa7ebc4d-d013-4248-860c-ff89c79a5c00",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "9794372e-f3e2-4fdb-89d1-401602f76814"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "53059f11-25e3-4200-8bad-18b633a8a072",
+        "partitions": [
+          {
+            "name": "LocalDateTable_b885b38f-5d22-4021-b920-9d731d5c4e26-c5fe3107-76d3-4638-92f7-e0693529c69d",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Pledge Payments'[Plg Date])), 1, 1), Date(Year(MAX('Pledge Payments'[Plg Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Calendar - FY16+",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "isKey": true,
+            "lineageTag": "f203bec7-88f9-4599-9a62-c0251bc1a6f6",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthNum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9773c476-fbb6-4aff-b7e1-dae750710189",
+            "sourceColumn": "MonthNum",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "727ade41-0b2d-4798-bea8-36cd3c33c57e",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "04e4adc0-058b-4995-9f86-5f1f9a162a8e",
+            "sourceColumn": "MonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f6fafcc-eb93-4bc9-8705-e03aa663c3db",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d61d526b-d9f8-4aac-9caf-68321463aa5c",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SortFiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "39522518-2669-4d5c-b840-b70a501ee328",
+            "sourceColumn": "SortFiscalMonth",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eaf88a8f-85e7-4a6f-974f-1a1e875c3adc",
+            "sourceColumn": "FiscalMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalMonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5cafbe7e-600b-4379-ba57-caa77706aa0d",
+            "sourceColumn": "FiscalMonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalQuarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "be562f1c-5556-46a2-9bf4-073394779dde",
+            "sourceColumn": "FiscalQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea1976fb-85fe-4073-963d-d8ea61340386",
+            "sourceColumn": "FiscalYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurMonthOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "06aa697b-c123-4514-bb44-20f13bc3b8c8",
+            "sourceColumn": "CurMonthOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurQuarterOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2c3a59ef-a764-4ffc-9bd0-865f05cf7922",
+            "sourceColumn": "CurQuarterOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "314fe4bf-de52-457d-9d61-6280f03bf5b4",
+            "sourceColumn": "CurYearOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FutureDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "891193e7-720b-41ca-bae4-e0c6ffa8416d",
+            "sourceColumn": "FutureDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurFiscalYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fe45e34a-d438-4d1f-a8c0-a8a8722b4f48",
+            "sourceColumn": "CurFiscalYearOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SortMonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3e54586d-754b-4739-9618-28565f9db737",
+            "sourceColumn": "SortMonthYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6c388a70-0a81-41d2-a838-a89baa175c26",
+            "sourceColumn": "MonthYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthYearLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65b78027-4a51-46ef-bede-ec5a656d49be",
+            "sourceColumn": "MonthYearLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ac12e47f-026e-4de8-9b79-3de3a5b557ed",
+            "sourceColumn": "SortWeekday",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Weekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eb52a76f-7914-4898-8ea4-78537de14cdf",
+            "sourceColumn": "Weekday",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekdayWeekend",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b2dcea14-19c0-4c98-a89c-da92a35db94b",
+            "sourceColumn": "WeekdayWeekend",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekSequence",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5b686cc4-97bb-40df-92f3-d9dd8727ebbd",
+            "sourceColumn": "SortWeekSequence",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurWeekOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b897ad6f-5b36-4af4-8a06-2bb140e25138",
+            "sourceColumn": "CurWeekOffset",
+            "summarizeBy": "sum"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "db489d5c-34be-4971-9ff9-08ae4731510f",
+        "partitions": [
+          {
+            "name": "Calendar - FY16+-22bf03b0-bd86-4b86-bd81-6cd2d6ffa55a",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    /*",
+                "    ****This Calendar was created and provided by Avi Singh****",
+                "    ****This can be freely shared as long as this text comment is retained.****",
+                "    http://www.youtube.com/PowerBIPro",
+                "    www.LearnPowerBI.com by Avi Singh",
+                "    */",
+                "    #\"LearnPowerBI.com by Avi Singh\" = 1,",
+                "    StartDate = #date(2016,10,01),",
+                "    EndDate = Date.From(DateTimeZone.LocalNow()) /*was \"#date(2017, 1, 1)\" Updated on 201802027: hard Coded End of Year caused some formulas to break, switching to dynamic date*/,",
+                "    //Used for 'Offset' Column calculations, you may Hard code CurrentDate for testing e.g. #date(2017,9,1)",
+                "    CurrentDate = Date.From(DateTimeZone.LocalNow()),",
+                "    // Specify the last month in your Fiscal Year, e.g. if June is the last month of your Fiscal Year, specify 6",
+                "    FiscalYearEndMonth = 6,",
+                "    #\"==SET PARAMETERS ABOVE==\" = 1,",
+                "    #\"==Build Date Column==\" = #\"==SET PARAMETERS ABOVE==\",",
+                "    ListDates = List.Dates(StartDate, Number.From(EndDate - StartDate)+1, #duration(1,0,0,0)),",
+                "    #\"Converted to Table\" = Table.FromList(ListDates, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Renamed Columns as Date\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Date\"}}),",
+                "    // As far as Power BI is concerned, the 'Date' column is all that is needed :-) But we will continue and add a few Human-Friendly Columns",
+                "    #\"Changed Type to Date\" = Table.TransformColumnTypes(#\"Renamed Columns as Date\",{{\"Date\", type date}}),",
+                "    #\"==Add Calendar Columns==\" = #\"Changed Type to Date\",",
+                "    #\"Added Calendar MonthNum\" = Table.AddColumn(#\"==Add Calendar Columns==\", \"MonthNum\", each Date.Month([Date]), Int64.Type),",
+                "    #\"Added Month Name\" = Table.AddColumn(#\"Added Calendar MonthNum\", \"Month\", each Text.Start(Date.MonthName([Date]),3), type text),",
+                "    #\"Added Month Name Long\" = Table.AddColumn(#\"Added Month Name\", \"MonthLong\", each Date.MonthName([Date]), type text),",
+                "    #\"Added Calendar Quarter\" = Table.AddColumn(#\"Added Month Name Long\", \"Quarter\", each \"Q\" & Text.From(Date.QuarterOfYear([Date]))),",
+                "    #\"Added Calendar Year\" = Table.AddColumn(#\"Added Calendar Quarter\", \"Year\", each Date.Year([Date]), Int64.Type),",
+                "    #\"==Add Fiscal Calendar Columns==\" = #\"Added Calendar Year\",",
+                "    #\"Added FiscalMonthNum\" = Table.AddColumn(#\"==Add Fiscal Calendar Columns==\", \"FiscalMonthNum\", each if [MonthNum] > FiscalYearEndMonth",
+                "then [MonthNum] - FiscalYearEndMonth",
+                "else [MonthNum] + (12 - FiscalYearEndMonth), type number),",
+                "    #\"Added FiscalMonth Name\" = Table.AddColumn(#\"Added FiscalMonthNum\", \"FiscalMonth\", each [Month]),",
+                "    #\"Added FiscalMonth Name Long\" = Table.AddColumn(#\"Added FiscalMonth Name\", \"FiscalMonthLong\", each [MonthLong]),",
+                "    #\"Added FiscalQuarter\" = Table.AddColumn(#\"Added FiscalMonth Name Long\", \"FiscalQuarter\", each \"FQ\" & Text.From(Number.RoundUp([FiscalMonthNum] / 3,0))),",
+                "    #\"Added FiscalYear\" = Table.AddColumn(#\"Added FiscalQuarter\", \"FiscalYear\", each \"FY\" & ",
+                "Text.End(",
+                "  Text.From(",
+                "    if [MonthNum] > FiscalYearEndMonth",
+                "    then [Year] + 1",
+                "    else [Year]",
+                "  )",
+                "  , 2",
+                ")),",
+                "",
+                "    #\"==Add Calendar Date Offset Columns==\" = #\"Added FiscalYear\",",
+                "    // Can be used to for example to show the past 3 months(CurMonthOffset = 0, -1, -2)",
+                "    #\"Added CurMonthOffset\" = Table.AddColumn(#\"==Add Calendar Date Offset Columns==\", \"CurMonthOffset\", each ( Date.Year([Date]) - Date.Year(CurrentDate) ) * 12",
+                "+ Date.Month([Date]) - Date.Month(CurrentDate), Int64.Type),",
+                "    // Can be used to for example to show the past 3 quarters (CurQuarterOffset = 0, -1, -2)",
+                "    #\"Added CurQuarterOffset\" = Table.AddColumn(#\"Added CurMonthOffset\", \"CurQuarterOffset\", each /*Year Difference*/",
+                "       ( Date.Year([Date]) - Date.Year(CurrentDate) )*4",
+                "       /*Quarter Difference*/",
+                "      + Number.RoundUp(Date.Month([Date]) / 3) ",
+                "      - Number.RoundUp(Date.Month(CurrentDate) / 3),",
+                "Int64.Type),",
+                "    // Can be used to for example to show the past 3 years (CurYearOffset = 0, -1, -2)",
+                "    #\"Added CurYearOffset\" = Table.AddColumn(#\"Added CurQuarterOffset\", \"CurYearOffset\", each Date.Year([Date]) - Date.Year(CurrentDate), Int64.Type),",
+                "    // Can be used to for example filter out all future dates",
+                "    #\"Added FutureDate Flag\" = Table.AddColumn(#\"Added CurYearOffset\", \"FutureDate\", each if [Date] > CurrentDate then \"Future\" else \"Past\" ),",
+                "    // FiscalYearOffset is the only Offset that is different.",
+                "    // FiscalQuarterOffset = is same as CurQuarterOffset",
+                "    // FiscalMonthOffset = is same as CurMonthOffset",
+                "    #\"==Add FiscalYearOffset==\" = #\"Added FutureDate Flag\",",
+                "    #\"Filtered Rows to CurrentDate\" = Table.SelectRows(#\"==Add FiscalYearOffset==\", each ([Date] = CurrentDate)),",
+                "    CurrentFiscalYear = #\"Filtered Rows to CurrentDate\"{0}[FiscalYear],",
+                "    #\"Continue...Orig Table\" = #\"==Add FiscalYearOffset==\",",
+                "    #\"Added CurFiscalYearOffset\" = Table.AddColumn(#\"Continue...Orig Table\", \"CurFiscalYearOffset\", each Number.From(Text.Range([FiscalYear],2,2)) - ",
+                "Number.From(Text.Range(CurrentFiscalYear,2,2))",
+                "/*Extract the numerical portion, e.g. FY18 = 18*/),",
+                "    #\"==Add General Columns==\" = #\"Added CurFiscalYearOffset\",",
+                "    // Used as 'Sort by Column' for MonthYear columns",
+                "    #\"Added MonthYearNum\" = Table.AddColumn(#\"==Add General Columns==\", \"MonthYearNum\", each [Year]*100 + [MonthNum] /*e.g. Sep-2016 would become 201609*/, Int64.Type),",
+                "    #\"Added MonthYear\" = Table.AddColumn(#\"Added MonthYearNum\", \"MonthYear\", each [Month] & \"-\" & Text.End(Text.From([Year]),2)),",
+                "    #\"Added MonthYearLong\" = Table.AddColumn(#\"Added MonthYear\", \"MonthYearLong\", each [Month] & \"-\" & Text.From([Year])),",
+                "    #\"Added WeekdayNum\" = Table.AddColumn(#\"Added MonthYearLong\", \"WeekdayNum\", each Date.DayOfWeek([Date]), Int64.Type),",
+                "    #\"Added Weekday Name\" = Table.AddColumn(#\"Added WeekdayNum\", \"Weekday\", each Text.Start(Date.DayOfWeekName([Date]),3), type text),",
+                "    #\"Added WeekdayWeekend\" = Table.AddColumn(#\"Added Weekday Name\", \"WeekdayWeekend\", each if [WeekdayNum] = 0 or [WeekdayNum] = 6",
+                "then \"Weekend\"",
+                "else \"Weekday\"),",
+                "    #\"==Improve Ultimate Table\" = #\"Added WeekdayWeekend\",",
+                "    #\"----Add WeekSequenceNum----\" = #\"==Improve Ultimate Table\",",
+                "    #\"Filtered Rows Sundays Only (Start of Week)\" = Table.SelectRows(#\"----Add WeekSequenceNum----\", each ([WeekdayNum] = 0)),",
+                "    #\"Added Index WeekSequenceNum\" = Table.AddIndexColumn(#\"Filtered Rows Sundays Only (Start of Week)\", \"WeekSequenceNum\", 2, 1),",
+                "    #\"Merged Queries Ultimate Table to WeekSequenceNum\" = Table.NestedJoin(#\"==Improve Ultimate Table\",{\"Date\"},#\"Added Index WeekSequenceNum\",{\"Date\"},\"Added Index WeekNum\",JoinKind.LeftOuter),",
+                "    #\"Expanded Added Index WeekNum\" = Table.ExpandTableColumn(#\"Merged Queries Ultimate Table to WeekSequenceNum\", \"Added Index WeekNum\", {\"WeekSequenceNum\"}, {\"WeekSequenceNum\"}),",
+                "    // somehow it ends up being unsorted after Expand Column, should not matter for the end table, but makes it harder to debug and check everything is correct. Thus sorting it.",
+                "    #\"ReSorted Rows by Date\" = Table.Sort(#\"Expanded Added Index WeekNum\",{{\"Date\", Order.Ascending}}),",
+                "    #\"Filled Down WeekSequenceNum\" = Table.FillDown(#\"ReSorted Rows by Date\",{\"WeekSequenceNum\"}),",
+                "    #\"Replaced Value WeekSequenceNum null with 1\" = Table.ReplaceValue(#\"Filled Down WeekSequenceNum\",null,1,Replacer.ReplaceValue,{\"WeekSequenceNum\"}),",
+                "    #\"----WeekSequenceNum Complete----\" = #\"Replaced Value WeekSequenceNum null with 1\",",
+                "    Current_WeekSequenceNum = #\"----WeekSequenceNum Complete----\"{[Date = CurrentDate]}?[WeekSequenceNum],",
+                "    #\"Added Custom CurWeekOffset\" = Table.AddColumn(#\"----WeekSequenceNum Complete----\", \"CurWeekOffset\", each [WeekSequenceNum] - Current_WeekSequenceNum, Int64.Type),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom CurWeekOffset\",{{\"Quarter\", type text}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"FiscalMonthNum\", \"SortFiscalMonth\"}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"FiscalMonth\", type text}, {\"FiscalMonthLong\", type text}, {\"FiscalQuarter\", type text}, {\"FiscalYear\", type text}, {\"FutureDate\", type text}, {\"CurFiscalYearOffset\", Int64.Type}}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type1\",{{\"MonthYearNum\", \"SortMonthYear\"}}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Renamed Columns1\",{{\"MonthYear\", type text}, {\"MonthYearLong\", type text}}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Changed Type2\",{{\"WeekdayNum\", \"SortWeekday\"}}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Renamed Columns2\",{{\"WeekdayWeekend\", type text}}),",
+                "    #\"Renamed Columns3\" = Table.RenameColumns(#\"Changed Type3\",{{\"WeekSequenceNum\", \"SortWeekSequence\"}})",
+                "in",
+                "    #\"Renamed Columns3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "0b470df2-8a14-41a4-810e-0de425534bc1",
+        "measures": [
+          {
+            "name": "Current Dt",
+            "expression": [
+              "",
+              "    MAX( 'Calendar - FY16+'[Date] )"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "c062bee8-e55f-4cf7-90ad-b6bf9331ec0f"
+          },
+          {
+            "name": "As of Date",
+            "expression": [
+              "",
+              "    \"As of \" & [Current Dt]"
+            ],
+            "lineageTag": "7cd48641-a3c7-4b51-831d-03a458c27ddf"
+          },
+          {
+            "name": "Plg Count",
+            "expression": [
+              "",
+              "    var _PlgCnt = DISTINCTCOUNT( 'Pledge Payments'[Pledge Nbr] )",
+              "   return",
+              "   IF(ISBLANK(_PlgCnt),0,_PlgCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "aba0222b-802b-4cd6-942a-030b9d01dc95"
+          },
+          {
+            "name": "Pymt Count",
+            "expression": [
+              "",
+              "    var _PymtCnt = DISTINCTCOUNT( 'Pledge Payments'[Pymt ID] )",
+              "   return",
+              "   IF(ISBLANK(_PymtCnt),0,_PymtCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "5240380b-32e2-448a-ab48-d05b38448b16"
+          },
+          {
+            "name": "Total Due",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _DueTtl = CALCULATE(",
+              "                    SUMX( 'Pledge Payments', 'Pledge Payments'[Pymt Amt] )",
+              "                        ) + 0",
+              "   return",
+              "   IF(ISBLANK(_DueTtl),0,_DueTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "c31f0576-b39c-441c-b08e-f748bf7e135f"
+          },
+          {
+            "name": "Past Due Plg Count",
+            "expression": [
+              "",
+              "    var _Today = TODAY()",
+              "    var _PDCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Pledge Payments'[Pledge Nbr] ),",
+              "                    'Pledge Payments'[Pymt Date] < _Today",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_PDCnt),0,_PDCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "c3a6a9fa-6fe1-4892-8a20-48c0bc0a6a88"
+          },
+          {
+            "name": "Past Due Pymt Count",
+            "expression": [
+              "",
+              "    var _Today = TODAY()",
+              "    var _PDCnt = CALCULATE(",
+              "                    COUNTA( 'Pledge Payments'[Pymt Date] ),",
+              "                    'Pledge Payments'[Pymt Date] < _Today",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_PDCnt),0,_PDCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "1b769225-9ced-407a-8dae-e1a5b4061324"
+          },
+          {
+            "name": "Past Due Pymt Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _Today = TODAY()",
+              "    var _PDTtl = CALCULATE(",
+              "                    SUMX( 'Pledge Payments', 'Pledge Payments'[Pymt Amt] ),",
+              "                    'Pledge Payments'[Pymt Date] < _Today",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_PDTtl),0,_PDTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "f1f4f47c-1204-43bc-90f2-ccade5b7a57b"
+          },
+          {
+            "name": "% Past Due",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Past Due Pymt Total] / [Total Due]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "4d895e3f-e90c-4d09-a396-2755a9820f39"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-9b88db01-6f2f-41fd-bcb9-69ba94b8a806",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_93d416ab-9ca0-42c9-85e1-be01f7c41ce1",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "4aaef92c-8f49-4564-80e6-d380f6f84f5f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b5090cf5-b11c-4fde-9126-3645aebd99af",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "3e5f4874-33bb-43d7-93b1-7eb12f318af4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a9af8830-0384-4f52-9063-16c0025d02fc",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "797770f5-971f-4e06-81b2-984b797c9e43",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "97876050-da6b-4e02-98f4-d37dce30d487",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "427a051e-2bf5-423f-8d34-2289dd46c328",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "48e55e01-a9a9-470c-a89c-d2912c03c609",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "b6bee44d-3ec9-4a60-907c-c926cceddb3b",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "60bd277f-a8b9-4d40-87c0-cd6d47c8e1cb",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "f747993e-d82b-4a7f-be72-8b58fc037710",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "dcbf46a2-0358-4900-9547-2e13915576ff"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "c43c89e2-76a1-4384-b557-0bea1b270a01",
+        "partitions": [
+          {
+            "name": "LocalDateTable_93d416ab-9ca0-42c9-85e1-be01f7c41ce1-a085e045-0a0e-4d30-998d-0b5049f6f157",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Pledge Payments'[Pymt Date])), 1, 1), Date(Year(MAX('Pledge Payments'[Pymt Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

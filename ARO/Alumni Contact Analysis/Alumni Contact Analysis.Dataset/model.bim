@@ -1,0 +1,1696 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Alumni Contact Stats\",\"Key Measures\",\"Report Inventory\",\"Last Refresh Date\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.122.746.0 (23.10)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "a74df146-a7aa-4b80-a72e-68677ddcea3e",
+        "fromColumn": "Last Refresh Date Time",
+        "fromTable": "Last Refresh Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_b12cc0d1-b4ba-4ddd-af5d-aebe673aa362"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Alumni Contact Stats",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f93f512-c7b2-4c36-9287-12d0bc82e089",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "555c98a6-ae67-4bf5-b192-9594c4dc9e93",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inst Suffix",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ab462b2-ba77-467c-bc8a-664c7a4b5130",
+            "sourceColumn": "Inst Suffix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71b164e9-42b2-4db1-ba34-a2535a514f0b",
+            "sourceColumn": "Deg School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg Level",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cc4af9b2-8852-404f-8c68-c201fde4604b",
+            "sourceColumn": "Deg Level",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "40b20dba-1344-4514-8488-d349cc443724",
+            "sourceColumn": "Entity Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Addr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2ad2cd20-1167-41c2-b1b4-f32a0fb43d8e",
+            "sourceColumn": "Addr",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Addr Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "36196f4e-9c2a-4367-9901-aca09c771a33",
+            "sourceColumn": "Addr Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Email",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "86821f6d-e61a-4889-8deb-afbdc20812ef",
+            "sourceColumn": "Email",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Email Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c482546c-c87f-4118-9f91-c81c49cd36dc",
+            "sourceColumn": "Email Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Phn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37167480-0b2f-4f73-b193-97f458304f01",
+            "sourceColumn": "Phn",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Phn Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9a928d6c-36bd-403c-9486-6d5ca030e935",
+            "sourceColumn": "Phn Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Mgr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c45ecf07-d0cb-4991-a57b-e57ad037795b",
+            "sourceColumn": "Primary Mgr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Lifetime Giving",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "511add4d-244a-4f56-be44-c85b15230531",
+            "sourceColumn": "Lifetime Giving",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Entity Sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17337ce3-0f2b-4cba-b6d7-5d8783c9dcc5",
+            "sourceColumn": "Entity Sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Full Exc?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2e075949-17de-4b98-89fc-951a49632512",
+            "sourceColumn": "Full Exc?",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Addr Exc?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "67395936-44a2-4aab-8cbe-69b76016beb2",
+            "sourceColumn": "Addr Exc?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Email Exc?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7b336ac2-1a17-4d59-ae0e-5f86b6484076",
+            "sourceColumn": "Email Exc?",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Phn Exc?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a1bcb7da-b36c-4903-93eb-0021a9d49fc4",
+            "sourceColumn": "Phn Exc?",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "dc23a8c0-85ed-4eed-87f8-2c1d098bc787",
+        "partitions": [
+          {
+            "name": "Alumni Contact Stats-39bddb95-6890-4a76-9a64-f5f63a5d10c9",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct e.id_number                                     \"\"Entity ID\"\",#(lf)       e.pref_mail_name                                         \"\"Entity Name\"\",#(lf)       e.institutional_suffix                                   \"\"Inst Suffix\"\",#(lf)       deg.schl                                                 \"\"Deg School\"\",#(lf)       deg.lvl                                                  \"\"Deg Level\"\",#(lf)       rs.short_desc                                            \"\"Entity Status\"\",#(lf)       nvl(xcc.nd,0)                                            \"\"Full Exc?\"\",#(lf)       nvl(ad.nd,0)                                             \"\"Addr\"\",#(lf)       nvl(xadd.nd,0)                                           \"\"Addr Exc?\"\",#(lf)       CASE WHEN ad.nd = 1 THEN 'With Address'#(lf)          ELSE 'Without Address' END                            \"\"Addr Ind\"\",#(lf)       nvl(eml.nd,0)                                            \"\"Email\"\",#(lf)       nvl(xeml.nd,0)                                           \"\"Email Exc?\"\",#(lf)       CASE WHEN eml.nd = 1 THEN 'With Email'#(lf)          ELSE 'Without Email' END                              \"\"Email Ind\"\",#(lf)       nvl(tel.nd,0)                                            \"\"Phn\"\",#(lf)       nvl(xphn.nd,0)                                           \"\"Phn Exc?\"\",#(lf)       CASE WHEN tel.nd = 1 THEN 'With Phone'#(lf)          ELSE 'Without Phone' END                              \"\"Phn Ind\"\",#(lf)       advdeploy.fn_display_manager(e.id_number,'P','\\z','; ')  \"\"Primary Mgr\"\",#(lf)       nvl(ds.dnr_sum_lifetime_asc_amt,0)                       \"\"Lifetime Giving\"\",#(lf)       e.pref_name_sort                                         \"\"Entity Sort\"\"#(lf)from advance.entity e#(lf)inner join advance.tms_record_status rs ON e.record_status_code = rs.record_status_code#(lf)left join advance.donor_summary ds      ON e.id_number = ds.dnr_sum_id_number#(lf)left join (select addr.id_number, 1 nd#(lf)             from advance.address addr#(lf)            where addr.addr_status_code = 'A' #(lf)            and addr.addr_pref_ind = 'Y'#(lf)           )ad ON e.id_number = ad.id_number #(lf)left join (select em.id_number, 1 nd#(lf)             from advance.email em#(lf)            where em.email_status_code = 'A' #(lf)            and em.preferred_ind = 'Y'#(lf)           )eml ON e.id_number = eml.id_number #(lf)left join (select t.id_number, 1 nd#(lf)             from advance.telephone t#(lf)            where t.telephone_status_code = 'A' #(lf)            and t.preferred_ind = 'Y'#(lf)           )tel ON e.id_number = tel.id_number#(lf)inner join (#(lf)            select distinct d.id_number did, s.short_desc schl, dl.short_desc lvl#(lf)              from advance.degrees d#(lf)             inner join advance.tms_degree_level dl ON d.degree_level_code = dl.degree_level_code#(lf)             inner join advance.tms_school s        ON d.school_code = s.school_code#(lf)             where d.institution_code = '6121'#(lf)             and   d.degree_level_code IN ('A','B','D','M')#(lf)             )deg ON e.id_number = deg.did#(lf)left join (#(lf)           select ml1.id_number xid, 1 nd#(lf)             from advance.mailing_list ml1#(lf)            where ml1.mail_list_code IN ('XCC','XNOC')#(lf)            and   ml1.mail_list_status_code = 'ACT'#(lf)           )xcc ON e.id_number = xcc.xid#(lf)left join (#(lf)           select ml2.id_number xid, 1 nd#(lf)             from advance.mailing_list ml2#(lf)            where ml2.mail_list_code = 'XEMC'#(lf)            and   ml2.mail_list_status_code = 'ACT'#(lf)           )xeml ON e.id_number = xeml.xid#(lf)left join (#(lf)           select ml3.id_number xid, 1 nd#(lf)             from advance.mailing_list ml3#(lf)            where ml3.mail_list_code = 'XMLC'#(lf)            and   ml3.mail_list_status_code = 'ACT'#(lf)           )xadd ON e.id_number = xadd.xid#(lf)left join (#(lf)           select ml4.id_number xid, 1 nd#(lf)             from advance.mailing_list ml4#(lf)            where ml4.mail_list_code = 'XPHC'#(lf)            and   ml4.mail_list_status_code = 'ACT'#(lf)           )xphn ON e.id_number = xphn.xid#(lf)#(lf)where e.record_type_code = 'A'#(lf)and   e.record_status_code IN ('A','I','L')#(lf)#(lf)order by \"\"Entity Status\"\", \"\"Entity Sort\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Addr\", Int64.Type}, {\"Email\", Int64.Type}, {\"Phn\", Int64.Type}, {\"Lifetime Giving\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_372639f7-0dc1-48c3-b649-64d1045eda47",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "7283eacb-6326-456e-b5ae-1be1b932b7c8",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "da87bf20-efc0-407f-8b93-ef9cc9d77fc9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "948e1d05-2e33-4220-8086-a125c7cd14a9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "cce8726d-0288-44f8-ab86-ed52b544e975",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "adc55452-fe0a-4a6d-b8d7-afe6e55915f7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "d53edf88-aa88-4f0f-a745-d6c50b54f5ea",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b6af31af-7d9a-4efe-82fe-8c282d470ca9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "dc9d9064-fa69-422c-8e39-ab36411bbeac",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "351ea2c2-a7ba-45a1-97bd-cdfc556e7b21",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "10573714-dd27-4eef-be15-2636ffed110a",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "36c2cda1-4dbb-434d-968d-aa167bf6ff76",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "d4a18960-d868-4a37-bc89-b4d6858d622d"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "7d8de177-745b-49f0-a458-13b61b11d30e",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_372639f7-0dc1-48c3-b649-64d1045eda47-e504356d-9738-4709-9355-730367370850",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "b35a6aa1-7522-4a8b-aef8-7383a7c49c53",
+        "measures": [
+          {
+            "name": "Alumni Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _AlumCnt = DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] )",
+              "   return",
+              "   IF(ISBLANK(_AlumCnt),0,_AlumCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "1849f047-8f75-4fe0-9126-e0dedfae423f"
+          },
+          {
+            "name": "Address Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _AddrTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_AddrTtl),0,_AddrTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "3fd6047c-ea8b-425d-abd0-65eef173b1a1"
+          },
+          {
+            "name": "Email Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _EmlTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Email] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_EmlTtl),0,_EmlTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "d1c475e3-7395-409a-be15-64c52cd7dfc3"
+          },
+          {
+            "name": "Phone Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _PhnTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Phn] = 1",
+              "                    ) + 0",
+              "   return   ",
+              "IF(ISBLANK(_PhnTtl),0,_PhnTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "16d126f3-d68c-4e0b-81e2-34c2125239ed"
+          },
+          {
+            "name": "Contact Score",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Address Count] + [Email Count] + [Phone Count]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "c8674ee7-37cc-4365-bd2c-9a8d7cecd988"
+          },
+          {
+            "name": "Address %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Address Count] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "eabeb09f-34f5-4d9d-9341-57f8832730d3"
+          },
+          {
+            "name": "Email %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Email Count] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "eb290ca3-21ee-4063-8f82-c97176343ed7"
+          },
+          {
+            "name": "Phone %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Phone Count] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "799acc53-7212-4691-aedd-b5dffdfb4b61"
+          },
+          {
+            "name": "Addr Excl Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _AddrXCnt = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr Exc?] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_AddrXCnt),0,_AddrXCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "f1dc5a07-f8cd-478c-a3ad-d1dd38a6fcbc"
+          },
+          {
+            "name": "Email Excl Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _EmlXCnt = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Email Exc?] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_EmlXCnt),0,_EmlXCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "1d07c45c-be8e-42b3-bf80-6f7a29c11d76"
+          },
+          {
+            "name": "Phn Excl Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _PhnXCnt = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Phn Exc?] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_PhnXCnt),0,_PhnXCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "32442332-441b-4d25-827d-eaefdbe94a1a"
+          },
+          {
+            "name": "XNOC Excl Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _XNOCXCnt = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Full Exc?] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_XNOCXCnt),0,_XNOCXCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "b3a4505f-67df-47ad-b14a-9902546b737a"
+          },
+          {
+            "name": "Addr Total Excl",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [XNOC Excl Count] + [Addr Excl Count]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "46e2174c-d813-4788-b24e-13bafa786626"
+          },
+          {
+            "name": "Email Total Excl",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [XNOC Excl Count] + [Email Excl Count]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "d1779c52-0dca-469f-9477-a08ea73618b9"
+          },
+          {
+            "name": "Phone Total Excl",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [XNOC Excl Count] + [Phn Excl Count]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "815ffbc0-8d22-448d-ac06-5ab6b031082d"
+          },
+          {
+            "name": "Email Excl %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Email Excl Count] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "994aa333-4e0d-4de4-a8e9-e9e7f004b988"
+          },
+          {
+            "name": "Address Excl %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Addr Excl Count] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "ee8039c3-aa5f-4885-9451-07278de5859e"
+          },
+          {
+            "name": "Phone Excl %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Phn Excl Count] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "9af00aa4-85c1-4e8c-92de-347ec8747b60"
+          },
+          {
+            "name": "Email Contactable",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    ( [Alumni Count] - [Inactive or Lost Count] ) - [Email Total Excl]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "24f542fb-7e04-4c51-92de-7acae052ec9a"
+          },
+          {
+            "name": "Addr Contactable",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    ( [Alumni Count] - [Inactive or Lost Count] ) - [Addr Total Excl]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "da0efbe5-dd18-4810-aa22-d4f8c6f35cd7"
+          },
+          {
+            "name": "Phone Contactable",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    ( [Alumni Count] - [Inactive or Lost Count] ) - [Phone Total Excl]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "16c2d73b-cbe0-4f7f-9480-1ba06cb30ae2"
+          },
+          {
+            "name": "Addr Contact %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Addr Contactable] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "1f071ad3-44ee-49a9-8e23-c2f565c8ab8e"
+          },
+          {
+            "name": "Email Contact %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Email Contactable] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "9f86ef8c-fccd-4c33-ab98-eb791de296eb"
+          },
+          {
+            "name": "Phone Contact %",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    [Phone Contactable] / [Alumni Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "48126a01-3f10-4f0e-8c62-cc768d510c15"
+          },
+          {
+            "name": "Inactive or Lost Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _ILXCnt = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Entity Status] IN {\"Inactive\",\"Lost\"}",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_ILXCnt),0,_ILXCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "14a165df-13d5-47f2-be84-2e238ffc318a"
+          },
+          {
+            "name": "One Contact Method Count",
+            "expression": [
+              "",
+              "    var _OneTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] + 'Alumni Contact Stats'[Email] + 'Alumni Contact Stats'[Phn] = 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK( _OneTtl),0, _OneTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "da880496-d6ff-4a8a-8d03-68cdc564dc9d"
+          },
+          {
+            "name": "One Method %",
+            "expression": [
+              "",
+              "    [One Contact Method Count] / [Alumni Count]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "6fc6f169-581e-47d6-b15b-ff18f7b763d0"
+          },
+          {
+            "name": "Two Contact Method Count",
+            "expression": [
+              "",
+              "    var _TwoTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] + 'Alumni Contact Stats'[Email] + 'Alumni Contact Stats'[Phn] = 2",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_TwoTtl),0,_TwoTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "4cc0ab45-7232-4e0e-8620-89c762252e48"
+          },
+          {
+            "name": "Two Method %",
+            "expression": [
+              "",
+              "    [Two Contact Method Count] / [Alumni Count]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "5b4a860a-55c7-4001-b11b-c79ce3b49ab2"
+          },
+          {
+            "name": "Three Contact Method Count",
+            "expression": [
+              "",
+              "    var _ThrTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] + 'Alumni Contact Stats'[Email] + 'Alumni Contact Stats'[Phn] = 3",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_ThrTtl),0,_ThrTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "0b0171bf-ab6d-4745-b161-e6b18c8847a0"
+          },
+          {
+            "name": "Three Method %",
+            "expression": [
+              "",
+              "    [Three Contact Method Count] / [Alumni Count]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "a86eec3c-6877-4410-ad62-55501f6dd291"
+          },
+          {
+            "name": "At Least One Contact Method Count",
+            "expression": [
+              "",
+              "    var _AtLstOneTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] + 'Alumni Contact Stats'[Email] + 'Alumni Contact Stats'[Phn] >= 1",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_AtLstOneTtl),0, _AtLstOneTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "691385de-f12b-45ce-9e15-64f0cfd05334"
+          },
+          {
+            "name": "At Least One Method %",
+            "expression": [
+              "",
+              "    [At Least One Contact Method Count] / [Alumni Count]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "09255513-d6dc-4a0b-8080-0536e72be4f4"
+          },
+          {
+            "name": "At Least Two Contact Method Count",
+            "expression": [
+              "",
+              "    var _AtLstTwoTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] + 'Alumni Contact Stats'[Email] + 'Alumni Contact Stats'[Phn] >= 2",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_AtLstTwoTtl),0, _AtLstTwoTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "c0293b55-507e-43c5-aefe-7aa37bb44de7"
+          },
+          {
+            "name": "At Least Two Method %",
+            "expression": [
+              "",
+              "    [At Least Two Contact Method Count] / [Alumni Count]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "90055647-df5e-4a75-a437-a5fb8a63e51d"
+          },
+          {
+            "name": "At Least Three Contact Method Count",
+            "expression": [
+              "",
+              "    var _AtLstThreeTtl = CALCULATE(",
+              "                        DISTINCTCOUNT( 'Alumni Contact Stats'[Entity ID] ),",
+              "                            'Alumni Contact Stats'[Addr] + 'Alumni Contact Stats'[Email] + 'Alumni Contact Stats'[Phn] >= 3",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_AtLstThreeTtl),0, _AtLstThreeTtl)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "125dcf0c-c730-41a2-97dd-16d3167fc5dd"
+          },
+          {
+            "name": "At Least Three Method %",
+            "expression": [
+              "",
+              "    [At Least Three Contact Method Count] / [Alumni Count]"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "0562c142-3ead-4ae1-934f-00ac40736932"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-19e41043-3630-407e-bed6-0ade93df9c2c",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Report Inventory",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e50c2992-71a0-4dc6-a80e-724d5d3c8a1e",
+            "sourceColumn": "Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ef441acd-cbdb-48fe-b3bd-601d76c08b50",
+            "sourceColumn": "Report ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e3dde230-5216-4bec-936e-dd90781c0dd9",
+            "sourceColumn": "Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c1a7f7b8-ca20-4097-990d-541a402ebb12",
+            "sourceColumn": "Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0882cee0-9ff5-4409-8fa4-e0178ecbe812",
+            "sourceColumn": "Report Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Platform",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ee50d0c8-32f2-437e-9415-4d8643395cad",
+            "sourceColumn": "Report Platform",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last Updated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a615b3af-2720-4577-9fa9-5a27479be4d8",
+            "sourceColumn": "Last Updated",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Change Log",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64f85975-f275-4b62-8ffe-d4095d290b0c",
+            "sourceColumn": "Change Log",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Changed By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f51f1cae-c88b-444f-badd-14ea89acb7dd",
+            "sourceColumn": "Changed By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Technical Support Co",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "92a760bf-becf-4096-80e1-a8876aed6601",
+            "sourceColumn": "Technical Support Co",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Directory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ddd5972c-af46-47db-a0bd-afc1a141c2c6",
+            "sourceColumn": "Report Directory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Published Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ae0a322b-097d-42ba-b60e-c5df123139cd",
+            "sourceColumn": "Published Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Data Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7c3da427-84fc-4fc9-9b6f-7824a12e38e9",
+            "sourceColumn": "Data Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "URL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13f2a61e-c22a-4ee8-b4df-191047273fcb",
+            "sourceColumn": "URL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Stored Procedure _x0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7332ca6a-3f20-4da4-af0f-8d651f9416c4",
+            "sourceColumn": "Stored Procedure _x0",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Views",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "31905542-4896-45b6-b1d6-a7cdf1eca2c6",
+            "sourceColumn": "Views",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subreport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d79690d2-cc80-4972-9d40-0732a4839c95",
+            "sourceColumn": "Subreport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Requestor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5407c217-c18f-47da-a18e-f153773c3c45",
+            "sourceColumn": "Requestor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IntendedAudience",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f58615b8-7052-4f9f-aa5c-c9d2a46f7404",
+            "sourceColumn": "IntendedAudience",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DescriptionofLogic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "01149286-0c24-4a81-9b51-92a3aff1874e",
+            "sourceColumn": "DescriptionofLogic",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Archived?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f4779245-b7fc-4cea-992b-e407b22bc261",
+            "sourceColumn": "Archived?",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9e7dc0b6-b9b4-4e13-864f-f406f15f5b9d",
+        "partitions": [
+          {
+            "name": "Report Inventory",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PowerBI.Dataflows([]),",
+                "    #\"922282c1-3a89-4e61-bb8b-31842dac6fa3\" = Source{[workspaceId=\"922282c1-3a89-4e61-bb8b-31842dac6fa3\"]}[Data],",
+                "    #\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\" = #\"922282c1-3a89-4e61-bb8b-31842dac6fa3\"{[dataflowId=\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\"]}[Data],",
+                "    #\"Report Inventory1\" = #\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\"{[entity=\"Report Inventory\"]}[Data]",
+                "in",
+                "    #\"Report Inventory1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Last Refresh Date",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Last Refresh Date Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "c03c4b83-0444-4f73-af3a-9efdb458e5b0",
+            "sourceColumn": "Last Refresh Date Time",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_b12cc0d1-b4ba-4ddd-af5d-aebe673aa362"
+                },
+                "isDefault": true,
+                "relationship": "a74df146-a7aa-4b80-a72e-68677ddcea3e"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "24dc5d64-5ff0-474d-bd8b-5d44eda8a028",
+        "partitions": [
+          {
+            "name": "Last Refresh Date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),10)),",
+                "    #\"Converted to Table\" = #table(1, {{Source}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Last Refresh Date Time\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Last Refresh Date Time\", type datetime}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_b12cc0d1-b4ba-4ddd-af5d-aebe673aa362",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "a2c26bcd-9a22-47dd-9bc9-0d64beca56e3",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "adbf0405-33ce-401e-9550-943d94dc6a40",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "a82c4e9f-d50a-4215-9f88-a6ce9ab80674",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "2fde9a22-b803-42a0-913b-1c210b13d67f",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "9518b419-35de-4798-af2b-c82458569e88",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "c4829d8c-0017-44e6-a8e4-232a2c6fe92d",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "76d60f8e-52b8-4c52-be93-1c4ed4e7bb9e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f5b5ad8a-ab23-4d16-b6ae-f556704c06d9",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "c1c6c02f-f6c0-4c00-9cb7-c949d2ba2161",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "172d557d-d26d-4caa-9513-6d15aed667d8",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2adde8c4-8e86-49e0-9021-8e9cd77516b9",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "06c54b75-8ba8-4d18-9ba0-b18de788c930"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "6ace430c-8820-4082-9cb4-99f528f04cc5",
+        "partitions": [
+          {
+            "name": "LocalDateTable_b12cc0d1-b4ba-4ddd-af5d-aebe673aa362",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Last Refresh Date'[Last Refresh Date Time])), 1, 1), Date(Year(MAX('Last Refresh Date'[Last Refresh Date Time])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

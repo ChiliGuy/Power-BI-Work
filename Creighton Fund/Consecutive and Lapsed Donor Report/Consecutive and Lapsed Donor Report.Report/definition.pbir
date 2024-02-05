@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Consecutive and Lapsed Donor Report.Dataset"
+    },
+    "byConnection": null
+  }
+}

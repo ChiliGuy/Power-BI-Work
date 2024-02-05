@@ -1,0 +1,94 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 295.20001220703125,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Demographic Data",
+          "size": {
+            "height": 405,
+            "width": 354
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 474.28425057933373,
+            "y": 0
+          },
+          "nodeIndex": "Attendance Data",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 780.36458211443085,
+            "y": 0
+          },
+          "nodeIndex": "Giving",
+          "size": {
+            "height": 194,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1060.9876411019213,
+            "y": 0
+          },
+          "nodeIndex": "Giving Period Sort",
+          "size": {
+            "height": 137,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1373.4101429359589,
+            "y": 109.5
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1685.8326447699965,
+            "y": 0
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

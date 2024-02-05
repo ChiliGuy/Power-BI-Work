@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Strategic Geographic Targeting Report.Dataset"
+    },
+    "byConnection": null
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 641.5,
+            "y": 227.7
+          },
+          "nodeIndex": "5 Year Difference (UGRD)",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 2310.3999999999996,
+            "y": 531
+          },
+          "nodeIndex": "CFY Production",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 2006.5,
+            "y": 535
+          },
+          "nodeIndex": "CFY Revenue",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1379.8,
+            "y": 4.5
+          },
+          "nodeIndex": "current_yr_part_counts",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 2308.1,
+            "y": 187.60000000000002
+          },
+          "nodeIndex": "CY Progress to Goal",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 298.89999999999964,
+            "y": 584
+          },
+          "nodeIndex": "disc_visits",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 341.79999999999995
+          },
+          "nodeIndex": "Lead Goals",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 556
+          },
+          "nodeIndex": "Lead Summaries",
+          "size": {
+            "height": 230,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 2002.9,
+            "y": 189
+          },
+          "nodeIndex": "Revenue to Goal",
+          "size": {
+            "height": 254,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 611.80000000000018,
+            "y": 586
+          },
+          "nodeIndex": "CFY FacStaff",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1099.5,
+            "y": 536
+          },
+          "nodeIndex": "FS_Giving",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 840.5,
+            "y": 446
+          },
+          "nodeIndex": "Place of Work",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2237.1,
+            "y": 0
+          },
+          "nodeIndex": "Goal Measures",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1951.1,
+            "y": 0
+          },
+          "nodeIndex": "Data Source",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2696.6,
+            "y": 0
+          },
+          "nodeIndex": "UR Non-Financial Goals",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3129.3,
+            "y": 0
+          },
+          "nodeIndex": "CFY Allocations",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3562,
+            "y": 0
+          },
+          "nodeIndex": "50k+ Donors",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

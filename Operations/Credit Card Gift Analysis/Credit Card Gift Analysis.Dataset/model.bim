@@ -1,0 +1,408 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Credit Card Gifts\",\"Key Measures\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Credit Card Gifts",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Batch Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dd8adacf-3626-4cb3-a4b2-f1733d1402f1",
+            "sourceColumn": "Batch Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Batch Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fd83a639-99a5-4ea3-ba16-a06fd93db881",
+            "sourceColumn": "Batch Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sum of Rcpts",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "d9c1501b-af48-40eb-bf8e-be998e21d36b",
+            "sourceColumn": "Sum of Rcpts",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Batch Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "16aa8043-ac33-4ce9-ac77-ccc9ea8d77a7",
+            "sourceColumn": "Batch Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Batch Pymt Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b2e115f-c652-4908-a2c0-195a21444e94",
+            "sourceColumn": "Batch Pymt Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Batch Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b066e848-d343-4979-84b5-0948dd18f483",
+            "sourceColumn": "Batch Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rcpt Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ca5fc7fc-e780-4334-a488-82bec377cee5",
+            "sourceColumn": "Rcpt Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pymt Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1fc9f014-e475-484d-860f-de201ebbb740",
+            "sourceColumn": "Pymt Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gift Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "339370cc-e126-4b8b-b2c6-ee15e77e9dd6",
+            "sourceColumn": "Gift Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rcpt Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "045ebb3b-b2f5-4ebf-a130-b6576b9bbeee",
+            "sourceColumn": "Rcpt Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rcpt Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7b9b1e7f-b5a5-4544-ad37-bb9e43535ad6",
+            "sortByColumn": "Sort Month",
+            "sourceColumn": "Rcpt Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "60c4240f-899e-42ff-a609-bcb94e446c13",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rcpt Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "840bdc72-2b4b-490e-96f2-96c472d2c3f9",
+            "sourceColumn": "Rcpt Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "40f09fb6-9fe3-4e63-aca2-1540c36603a3",
+            "sourceColumn": "Sort Month",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Donor Count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "eb49bed8-bcae-423b-99bc-11d6c744b181",
+            "sourceColumn": "Donor Count",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "2530efde-41f0-4ebe-acad-0b6e006b34e2",
+        "partitions": [
+          {
+            "name": "Credit Card Gifts-d3e1e3b7-500b-4fc0-aacc-879ff88e642d",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select bc.bc_batch_number                     \"\"Batch Nbr\"\",#(lf)       bt.short_desc                          \"\"Batch Type\"\",#(lf)       bc.bc_sum_of_receipts                  \"\"Sum of Rcpts\"\",#(lf)       trunc(bc.bc_date_processed)            \"\"Batch Dt\"\",#(lf)       pt.short_desc                          \"\"Batch Pymt Type\"\",#(lf)       src.short_desc                         \"\"Batch Source\"\",#(lf)       pg.prim_gift_receipt_number            \"\"Rcpt Nbr\"\",#(lf)       pt1.short_desc                         \"\"Pymt Type\"\",#(lf)       src2.short_desc                        \"\"Gift Source\"\",#(lf)       dnr.cnt                                \"\"Donor Count\"\",#(lf)       pg.prim_gift_date_of_record            \"\"Rcpt Dt\"\",#(lf)       to_char(pg.prim_gift_date_of_record,'Month') \"\"Rcpt Month\"\",#(lf)       pg.prim_gift_year_of_giving            \"\"Fiscal Yr\"\",#(lf)       pg.prim_gift_amount                    \"\"Rcpt Amt\"\",#(lf)       CASE WHEN EXTRACT(MONTH FROM pg.prim_gift_date_of_record) < 7 THEN EXTRACT(MONTH FROM pg.prim_gift_date_of_record)+6#(lf)          ELSE EXTRACT(MONTH FROM pg.prim_gift_date_of_record)-6 END \"\"Sort Month\"\"#(lf)from advance.batch_control bc#(lf)inner join advance.tms_batch_type bt     ON bc.bc_batch_type_code = bt.batch_type#(lf)left join advance.tms_payment_type pt    ON bc.bc_payment_type = pt.payment_type_code#(lf)left join advance.tms_gift_src_info src  ON bc.bc_source_of_information = src.gift_src_info_code#(lf)inner join advance.primary_gift pg       ON bc.bc_batch_number = pg.prim_gift_batch_number#(lf)inner join (select g.gift_receipt_number rcpt,#(lf)                   COUNT(DISTINCT g.gift_donor_id) cnt#(lf)              from advance.gift g#(lf)             where g.gift_associated_code NOT IN ('M','H')#(lf)             group by g.gift_receipt_number#(lf)            )dnr ON pg.prim_gift_receipt_number = dnr.rcpt#(lf)left join advance.tms_payment_type pt1   ON pg.prim_gift_payment_type = pt1.payment_type_code#(lf)left join advance.tms_gift_src_info src2 ON pg.prim_gift_source_of_info = src2.gift_src_info_code#(lf)where pg.prim_gift_date_of_record >= '01-JUL-2014'#(lf)and   bc.bc_batch_type_code NOT IN ('C','6','X')#(lf)and   pg.prim_gift_payment_type = 'O'#(lf)#(lf)order by \"\"Fiscal Yr\"\", \"\"Sort Month\"\", \"\"Batch Nbr\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Sum of Rcpts\", Currency.Type}, {\"Batch Dt\", type date}, {\"Rcpt Dt\", type date}, {\"Rcpt Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "622caf8d-f57b-4c87-a277-af793480743d",
+        "measures": [
+          {
+            "name": "Gift Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    SUMX( 'Credit Card Gifts', 'Credit Card Gifts'[Rcpt Amt] )"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "8ab82930-fc1e-4a5e-89f1-bc3510659382"
+          },
+          {
+            "name": "Gift Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    DISTINCTCOUNT( 'Credit Card Gifts'[Rcpt Nbr] )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "3f259651-9cc5-40da-9fa5-65d7ca631857"
+          },
+          {
+            "name": "Avg Gift",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    DIVIDE( [Gift Total], [Gift Count] )"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "4b2c11af-cc0f-4578-9d52-448e7c91364d"
+          },
+          {
+            "name": "Donor Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    SUMX( 'Credit Card Gifts', 'Credit Card Gifts'[Donor Count] )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "68e7d2db-1a38-4539-a57b-f9e8cc7f503c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-66134f29-1406-46ef-8353-fbb9b46ec3f9",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

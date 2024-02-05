@@ -1,0 +1,82 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.28\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection7eb05c26b39609169459",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filter9ab4803f716aed3dcfab\",\"boundFilter\":\"Filter9ab4803f716aed3dcfab\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"prospect_moves\"}},\"Property\":\"GIFT_OFFICER\"}}}]",
+      "type": 1
+    }
+  ],
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Moves KPIs",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a998e7d5429fece05b4c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"prospect_moves.GIFT_OFFICER\"},{\"queryRef\":\"prospect_moves.VISIST_TO_ASSIGNMENT\"},{\"queryRef\":\"prospect_moves.QUALIFY_TO_CULTIVATE\"},{\"queryRef\":\"prospect_moves.CULTIVATE_TO_CLOSE\"},{\"queryRef\":\"prospect_moves.CULTIVATE_TO_REFUSAL\"},{\"queryRef\":\"prospect_moves.CULTIVATE_TO_CYCLE_END\"},{\"queryRef\":\"prospect_moves.CLOSE_TO_STEWARDSHIP\"},{\"queryRef\":\"prospect_moves.STEWARDSHIP_TO_IDENTIFICATION\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prospect_moves\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"GIFT_OFFICER\"},\"Name\":\"prospect_moves.GIFT_OFFICER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"VISIST_TO_ASSIGNMENT\"},\"Name\":\"prospect_moves.VISIST_TO_ASSIGNMENT\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"QUALIFY_TO_CULTIVATE\"},\"Name\":\"prospect_moves.QUALIFY_TO_CULTIVATE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CULTIVATE_TO_CLOSE\"},\"Name\":\"prospect_moves.CULTIVATE_TO_CLOSE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CULTIVATE_TO_REFUSAL\"},\"Name\":\"prospect_moves.CULTIVATE_TO_REFUSAL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CULTIVATE_TO_CYCLE_END\"},\"Name\":\"prospect_moves.CULTIVATE_TO_CYCLE_END\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CLOSE_TO_STEWARDSHIP\"},\"Name\":\"prospect_moves.CLOSE_TO_STEWARDSHIP\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"STEWARDSHIP_TO_IDENTIFICATION\"},\"Name\":\"prospect_moves.STEWARDSHIP_TO_IDENTIFICATION\"}]},\"columnProperties\":{\"prospect_moves.GIFT_OFFICER\":{\"displayName\":\"Gift Offier\"},\"prospect_moves.VISIST_TO_ASSIGNMENT\":{\"displayName\":\"Visit to Assignment\"},\"prospect_moves.QUALIFY_TO_CULTIVATE\":{\"displayName\":\"Qualify to Cultivate\"},\"prospect_moves.CULTIVATE_TO_CLOSE\":{\"displayName\":\"Cultivate to Close\"},\"prospect_moves.CULTIVATE_TO_REFUSAL\":{\"displayName\":\"Cultivate to Refusal\"},\"prospect_moves.CULTIVATE_TO_CYCLE_END\":{\"displayName\":\"Cultivate to Cycle End\"},\"prospect_moves.CLOSE_TO_STEWARDSHIP\":{\"displayName\":\"Close to Stewardship\"},\"prospect_moves.STEWARDSHIP_TO_IDENTIFICATION\":{\"displayName\":\"Stewardship to Identification\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}],\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Moves Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter9ab4803f716aed3dcfab\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"prospect_moves\"}},\"Property\":\"GIFT_OFFICER\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prospect_moves\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"GIFT_OFFICER\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Mr. Kevin P. Gleason'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection7eb05c26b39609169459",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"051dcb7a1e98685d1ccf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"prospect_moves_details.GIFT_OFFICER\"},{\"queryRef\":\"prospect_moves_details.STAGE_TRANSITION\"},{\"queryRef\":\"prospect_moves_details.ASSIGNED_ENTITY_ID\"},{\"queryRef\":\"prospect_moves_details.ASSIGNED_ENTITY\"},{\"queryRef\":\"prospect_moves_details.LAST_STAGE_DATE\"},{\"queryRef\":\"prospect_moves_details.LAST_STAGE\"},{\"queryRef\":\"prospect_moves_details.STAGE_DATE\"},{\"queryRef\":\"prospect_moves_details.STAGE\"},{\"queryRef\":\"prospect_moves_details.ASSN_START_DATE\"},{\"queryRef\":\"prospect_moves_details.ASSN_STOP_DATE\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prospect_moves_details\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"GIFT_OFFICER\"},\"Name\":\"prospect_moves_details.GIFT_OFFICER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"STAGE_TRANSITION\"},\"Name\":\"prospect_moves_details.STAGE_TRANSITION\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ASSIGNED_ENTITY_ID\"},\"Name\":\"prospect_moves_details.ASSIGNED_ENTITY_ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ASSIGNED_ENTITY\"},\"Name\":\"prospect_moves_details.ASSIGNED_ENTITY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"STAGE_DATE\"},\"Name\":\"prospect_moves_details.STAGE_DATE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"STAGE\"},\"Name\":\"prospect_moves_details.STAGE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"LAST_STAGE_DATE\"},\"Name\":\"prospect_moves_details.LAST_STAGE_DATE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"LAST_STAGE\"},\"Name\":\"prospect_moves_details.LAST_STAGE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ASSN_START_DATE\"},\"Name\":\"prospect_moves_details.ASSN_START_DATE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ASSN_STOP_DATE\"},\"Name\":\"prospect_moves_details.ASSN_STOP_DATE\"}]},\"columnProperties\":{\"prospect_moves_details.GIFT_OFFICER\":{\"displayName\":\"Gift Officer\"},\"prospect_moves_details.STAGE_TRANSITION\":{\"displayName\":\"Stage Transition\"},\"prospect_moves_details.ASSIGNED_ENTITY_ID\":{\"displayName\":\"Assigned Entity ID\"},\"prospect_moves_details.ASSIGNED_ENTITY\":{\"displayName\":\"Assigned Entity\"},\"prospect_moves_details.LAST_STAGE_DATE\":{\"displayName\":\"Last Stage Date\"},\"prospect_moves_details.LAST_STAGE\":{\"displayName\":\"Last Stage\"},\"prospect_moves_details.STAGE_DATE\":{\"displayName\":\"Stage Date\"},\"prospect_moves_details.STAGE\":{\"displayName\":\"Stage\"},\"prospect_moves_details.ASSN_START_DATE\":{\"displayName\":\"Assn Start Date\"},\"prospect_moves_details.ASSN_STOP_DATE\":{\"displayName\":\"Assn Stop Date\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Sparse'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a3319e0a261835b989aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

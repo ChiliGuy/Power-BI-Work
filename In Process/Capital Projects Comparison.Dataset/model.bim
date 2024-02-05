@@ -1,0 +1,766 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.122.746.0 (23.10)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Production\",\"Key Measures\",\"Revenue\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "key_measures.production_household_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Production Household Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Household Count": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "key_measures.production_trans_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Production Trans Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Trans Count": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "key_measures.revenue_household_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Revenue Household Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Household Count": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "key_measures.revenue_trans_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Revenue Trans Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Trans Count": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "production.trans_category": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Production",
+                    "ConceptualProperty": "Trans Category"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Production Trans Category": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "revenue.trans_category": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Revenue",
+                    "ConceptualProperty": "Trans Category"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Revenue Trans Category": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Production",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Project Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f3171c1c-43f8-4875-93e4-614fbea2102c",
+            "sourceColumn": "Project Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d8cf0382-e96e-4cc6-95df-1a7f892c1ff0",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c6ff4d13-3ebe-4a95-9af5-e68ca359f862",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e4433d98-b87b-497c-80f5-73f93397a94c",
+            "sourceColumn": "Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Production Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "dbecb46c-6b8a-4fa7-b181-f183d9ee89d3",
+            "sourceColumn": "Production Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Gift Strata",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d017a023-3279-4627-b670-f9b47235e1dd",
+            "sortByColumn": "Sort Strata",
+            "sourceColumn": "Gift Strata",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e4c97eb-0b88-438c-a839-06bbe54bf509",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86300004-e96b-4242-bd69-aa9d05e8ab02",
+            "sourceColumn": "Primary ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "305d09fb-4447-479b-a2bd-a80d003db7b8",
+            "sourceColumn": "Primary Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b99adee4-6cf3-460d-b545-7d9c561a32ed",
+            "sourceColumn": "Sec ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "21505cbc-57f4-45f3-b670-7f75418ad8b3",
+            "sourceColumn": "Sec Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Household Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eaa0ae3f-5db3-4d25-8ac4-6809a71321ac",
+            "sourceColumn": "Household Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Strata",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ce7247d3-15b9-451e-9d38-9097532f89f2",
+            "sourceColumn": "Sort Strata",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "99d2894b-251f-4f3d-a9cb-e807c789ad61",
+            "sourceColumn": "Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7c8f5f9-3b91-4a69-ae8d-94766cff0ef7",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f93fb162-194c-42fc-84bd-020ae883929a",
+        "partitions": [
+          {
+            "name": "Production",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"select distinct#(lf)       CASE WHEN p1.allocation_code = 'CGENCLNCCC' THEN 'Werner Center'#(lf)            WHEN p1.allocation_code IN ('CGENOTHGRVE','KGENOTHGRVS') THEN 'Graves Hall'#(lf)            WHEN p1.allocation_code IN ('CATHOTHAPFP','CATHPMNGRAPH02','CATHPMNGRAPH') THEN 'Championship Center'#(lf)            WHEN p1.allocation_code = 'CDNTOTHSDNT' THEN 'Dental School'#(lf)            WHEN p1.allocation_code = 'CGENOTHJESU' THEN 'Jesuit Residence'#(lf)            WHEN p1.allocation_code = 'CATHOTHWPRF' THEN 'The Ruth'#(lf)            WHEN p1.allocation_code IN ('CATHOTHRYAN','CATHPMNRYAN') THEN 'Sokol/Ryan Center'#(lf)          ELSE 'Investigate' END          \"\"Project Name\"\",#(lf)       p1.allocation_code                 \"\"Alloc Code\"\",#(lf)       p1.allocation_name                 \"\"Allocation Name\"\",#(lf)       p1.trans_nbr                       \"\"Trans Nbr\"\",#(lf)       p1.trans_dt                        \"\"Trans Dt\"\",#(lf)       p1.fiscal_yr                       \"\"Fiscal Yr\"\",#(lf)       p1.trans_amt                       \"\"Production Amt\"\",#(lf)       CASE WHEN p1.trans_amt > 10000000.00 THEN '$10,000,000+'#(lf)            WHEN p1.trans_amt BETWEEN 5000000.00 AND 9999999.99 THEN '$5,000,000+'#(lf)            WHEN p1.trans_amt BETWEEN 1000000.00 AND 4999999.99 THEN '$1,000,000+'#(lf)            WHEN p1.trans_amt BETWEEN 500000.00 AND 999999.99 THEN '$500,000+'#(lf)            WHEN p1.trans_amt BETWEEN 250000.00 AND 499999.99 THEN '$250,000+'#(lf)            WHEN p1.trans_amt BETWEEN 100000.00 AND 249999.99 THEN '$100,000+'#(lf)            WHEN p1.trans_amt BETWEEN 50000.00 AND 99999.99 THEN '$50,000+'#(lf)          ELSE 'Less than $50,000' END    \"\"Gift Strata\"\",#(lf)       p1.trans_category                  \"\"Trans Category\"\",#(lf)       hh1.primary_id_number              \"\"Primary ID\"\",#(lf)       e1.pref_mail_name                  \"\"Primary Name\"\",#(lf)       hh1.secondary_id_number            \"\"Sec ID\"\",#(lf)       sp1.pref_mail_name                 \"\"Sec Name\"\",#(lf)       th1.household_key                  \"\"Household Key\"\",#(lf)       CASE WHEN p1.trans_amt > 10000000.00 THEN '100'#(lf)            WHEN p1.trans_amt BETWEEN 5000000.00 AND 9999999.99 THEN '200'#(lf)            WHEN p1.trans_amt BETWEEN 1000000.00 AND 4999999.99 THEN '300'#(lf)            WHEN p1.trans_amt BETWEEN 500000.00 AND 999999.99 THEN '400'#(lf)            WHEN p1.trans_amt BETWEEN 250000.00 AND 499999.99 THEN '500'#(lf)            WHEN p1.trans_amt BETWEEN 100000.00 AND 249999.99 THEN '600'#(lf)            WHEN p1.trans_amt BETWEEN 50000.00 AND 99999.99 THEN '700'#(lf)          ELSE '800' END                  \"\"Sort Strata\"\"#(lf)from advur.mvw_total_production p1#(lf)inner join advur.mvw_trans_households th1           ON p1.trans_nbr = th1.trans_nbr#(lf)inner join advur.mvw_hh_entities_with_deceased hh1  ON th1.household_key = hh1.household_key#(lf)inner join advance.entity e1                        ON hh1.primary_id_number = e1.id_number#(lf) left join advance.entity sp1                       ON hh1.secondary_id_number = sp1.id_number#(lf)where p1.allocation_code IN ('CGENCLNCCC','CGENOTHGRVE','KGENOTHGRVS','CATHOTHAPFP','CATHPMNGRAPH02','CATHPMNGRAPH','CDNTOTHSDNT','CGENOTHJESU','CATHOTHWPRF','CATHOTHRYAN','CATHPMNRYAN')\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Production Amt\", Currency.Type}, {\"Trans Dt\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "0c0e41c1-552e-4d41-b9bf-37f10daa3542",
+        "measures": [
+          {
+            "name": "Total Production",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        SUMX( Production, Production[Production Amt] )",
+              "    )"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "cb6f17dc-242e-447b-8e7f-2e6da125ddd0"
+          },
+          {
+            "name": "Production Trans Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        DISTINCTCOUNTNOBLANK( Production[Trans Nbr] )",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "bcf600bb-18d9-4268-806e-7748602e6f8e"
+          },
+          {
+            "name": "Production Household Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        DISTINCTCOUNTNOBLANK( Production[Household Key] )",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "828d1ae9-1c3a-44a0-a0ba-a9c94220a815"
+          },
+          {
+            "name": "Revenue Trans Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        DISTINCTCOUNTNOBLANK( Revenue[Trans Nbr] )",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "eaceff31-05b7-4595-9c94-ca465cd12a58"
+          },
+          {
+            "name": "Revenue Household Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        DISTINCTCOUNTNOBLANK( Revenue[Household Key] )",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "edf9dab9-a744-4a8b-b21e-9fedc22a8e0e"
+          },
+          {
+            "name": "Total Revenue",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        SUMX( Revenue, Revenue[Revenue Amt] )",
+              "    )"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "16cb7e26-0f74-46df-bb94-4d0d7452ff38"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Revenue",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Project Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aed8541a-5ed3-41a1-ae0f-54fd0538b5e3",
+            "sourceColumn": "Project Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5d1264fd-6966-4c58-b327-96d9795291ef",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf258fcd-de7c-487e-9106-4c922013df83",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0be83142-3f63-4b5b-85c2-b176c4c1e288",
+            "sourceColumn": "Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "ff4e308a-5bba-4d92-9b55-af14bb2ba44a",
+            "sourceColumn": "Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "673594e5-dcda-4e36-8b30-c23538cd34b9",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Revenue Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "a3a71438-05c0-4309-bdb3-42621264f3bb",
+            "sourceColumn": "Revenue Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Gift Strata",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "55c89cf6-9555-46ca-9db7-28d361e485c3",
+            "sortByColumn": "Sort Strata",
+            "sourceColumn": "Gift Strata",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "207502c0-aeb6-4a0b-892c-a11fed33fab5",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dee30ad8-071a-4fb1-8ef0-c5ab6aa1bbff",
+            "sourceColumn": "Primary ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "02559794-5a4f-44d0-a092-f389a8d6b5c2",
+            "sourceColumn": "Primary Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b4588b52-2464-4e95-95e2-5600f827d737",
+            "sourceColumn": "Sec ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c5c05fd8-cae4-4775-8e86-7944a639ae67",
+            "sourceColumn": "Sec Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Household Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "334690df-191b-48e0-8abe-a8de52b490b3",
+            "sourceColumn": "Household Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Strata",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eb1f9337-cb7e-4b6f-8237-ee67dbae9838",
+            "sourceColumn": "Sort Strata",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "008cd85c-06cf-4c15-a362-65fb4ec68728",
+        "partitions": [
+          {
+            "name": "Revenue",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- For a select set of capital project allocations, show the total Revenue, total number of donors, and total number of gifts by giftband.#(lf)#(lf)select distinct#(lf)       CASE WHEN r1.allocation_code = 'CGENCLNCCC' THEN 'Werner Center'#(lf)            WHEN r1.allocation_code IN ('CGENOTHGRVE','KGENOTHGRVS') THEN 'Graves Hall'#(lf)            WHEN r1.allocation_code IN ('CATHOTHAPFP','CATHPMNGRAPH02','CATHPMNGRAPH') THEN 'Championship Center'#(lf)            WHEN r1.allocation_code = 'CDNTOTHSDNT' THEN 'Dental School'#(lf)            WHEN r1.allocation_code = 'CGENOTHJESU' THEN 'Jesuit Residence'#(lf)            WHEN r1.allocation_code = 'CATHOTHWPRF' THEN 'The Ruth'#(lf)            WHEN r1.allocation_code IN ('CATHOTHRYAN','CATHPMNRYAN') THEN 'Sokol/Ryan Center'#(lf)          ELSE 'Investigate' END          \"\"Project Name\"\",#(lf)       r1.allocation_code                 \"\"Alloc Code\"\",#(lf)       r1.allocation_name                 \"\"Allocation Name\"\",#(lf)       r1.trans_nbr                       \"\"Trans Nbr\"\",#(lf)       r1.trans_dt                        \"\"Trans Dt\"\",#(lf)       r1.fiscal_yr                       \"\"Fiscal Yr\"\",#(lf)       r1.trans_amt                       \"\"Revenue Amt\"\",#(lf)       CASE WHEN r1.trans_amt > 10000000.00 THEN '$10,000,000+'#(lf)            WHEN r1.trans_amt BETWEEN 5000000.00 AND 9999999.99 THEN '$5,000,000+'#(lf)            WHEN r1.trans_amt BETWEEN 1000000.00 AND 4999999.99 THEN '$1,000,000+'#(lf)            WHEN r1.trans_amt BETWEEN 500000.00 AND 999999.99 THEN '$500,000+'#(lf)            WHEN r1.trans_amt BETWEEN 250000.00 AND 499999.99 THEN '$250,000+'#(lf)            WHEN r1.trans_amt BETWEEN 100000.00 AND 249999.99 THEN '$100,000+'#(lf)            WHEN r1.trans_amt BETWEEN 50000.00 AND 99999.99 THEN '$50,000+'#(lf)          ELSE 'Less than $50,000' END    \"\"Gift Strata\"\",#(lf)       r1.trans_category                  \"\"Trans Category\"\",#(lf)       hh1.primary_id_number              \"\"Primary ID\"\",#(lf)       e1.pref_mail_name                  \"\"Primary Name\"\",#(lf)       hh1.secondary_id_number            \"\"Sec ID\"\",#(lf)       sp1.pref_mail_name                 \"\"Sec Name\"\",#(lf)       th1.household_key                  \"\"Household Key\"\",#(lf)       CASE WHEN r1.trans_amt > 10000000.00 THEN '100'#(lf)            WHEN r1.trans_amt BETWEEN 5000000.00 AND 9999999.99 THEN '200'#(lf)            WHEN r1.trans_amt BETWEEN 1000000.00 AND 4999999.99 THEN '300'#(lf)            WHEN r1.trans_amt BETWEEN 500000.00 AND 999999.99 THEN '400'#(lf)            WHEN r1.trans_amt BETWEEN 250000.00 AND 499999.99 THEN '500'#(lf)            WHEN r1.trans_amt BETWEEN 100000.00 AND 249999.99 THEN '600'#(lf)            WHEN r1.trans_amt BETWEEN 50000.00 AND 99999.99 THEN '700'#(lf)          ELSE '800' END                  \"\"Sort Strata\"\"#(lf)from advur.mvw_total_revenue r1#(lf)inner join advur.mvw_trans_households th1           ON r1.trans_nbr = th1.trans_nbr#(lf)inner join advur.mvw_hh_entities_with_deceased hh1  ON th1.household_key = hh1.household_key#(lf)inner join advance.entity e1                        ON hh1.primary_id_number = e1.id_number#(lf) left join advance.entity sp1                       ON hh1.secondary_id_number = sp1.id_number#(lf)where r1.allocation_code IN ('CGENCLNCCC','CGENOTHGRVE','KGENOTHGRVS','CATHOTHAPFP','CATHPMNGRAPH02','CATHPMNGRAPH','CDNTOTHSDNT','CGENOTHJESU','CATHOTHWPRF','CATHOTHRYAN','CATHPMNRYAN')#(lf)\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Trans Dt\", type date}, {\"Revenue Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

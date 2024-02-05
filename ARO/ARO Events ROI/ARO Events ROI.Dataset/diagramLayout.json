@@ -1,0 +1,142 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 196,
+            "y": 211
+          },
+          "nodeIndex": "Date",
+          "size": {
+            "height": 155,
+            "width": 273
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 482
+          },
+          "nodeIndex": "Contacts",
+          "size": {
+            "height": 337,
+            "width": 188
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 272.6,
+            "y": 501
+          },
+          "nodeIndex": "Events",
+          "size": {
+            "height": 337,
+            "width": 172
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 566.90000000000009,
+            "y": 374
+          },
+          "nodeIndex": "Lead Tasks",
+          "size": {
+            "height": 234,
+            "width": 184
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 898.3,
+            "y": 142
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 195,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 926,
+            "y": 0
+          },
+          "nodeIndex": "Last Refresh",
+          "size": {
+            "height": 124,
+            "width": 173
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 571.40000000000009,
+            "y": 625
+          },
+          "nodeIndex": "Participants",
+          "size": {
+            "height": 227,
+            "width": 185
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "FY Contacts",
+          "size": {
+            "height": 124,
+            "width": 162
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 295.70000000000005,
+            "y": 0
+          },
+          "nodeIndex": "FY Events",
+          "size": {
+            "height": 124,
+            "width": 149
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 604.7,
+            "y": 0
+          },
+          "nodeIndex": "FY Leads",
+          "size": {
+            "height": 124,
+            "width": 143
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

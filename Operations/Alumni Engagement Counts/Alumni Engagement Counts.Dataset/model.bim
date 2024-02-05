@@ -1,0 +1,3881 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Alumni - All\",\"Event\",\"Visits\",\"Committee Mbr\",\"Campaign Donors\"]"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "alumni__all": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Alumni - All"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "alumni - all": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "alumnus - all": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  }
+                ]
+              },
+              "alumni__all.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Alumni - All",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "alumni__all.entity_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Alumni - All",
+                    "ConceptualProperty": "Entity Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity nickname": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity title": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity label": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity tag": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "alumni__all.market_area": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Alumni - All",
+                    "ConceptualProperty": "Market Area"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "market area": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "area": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "market region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "market district": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market continent": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "campaign_donor": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "campaign donor": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "campaign giver": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "campaign contributor": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "campaign benefactor": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "campaign patron": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "campaign supporter": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "campaign subscriber": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "campaign presenter": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "giver": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "contributor": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "benefactor": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.camp_trans_FY": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Camp Trans FY"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "camp trans FY": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "FY": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "trans FY": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "Campaign FY": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.camp_trans_amt": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Camp Trans Amt"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "camp trans amt": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.camp_trans_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Camp Trans Nbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "camp trans nbr": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "Hidden": true,
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.entity_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Entity Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity nickname": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity title": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity label": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity tag": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.market_area": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Market Area"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "market area": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "area": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "market region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "market district": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market continent": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.rcnt_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "RcntNbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "rcnt nbr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "RcntNbr": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "campaign_donor.recent_dnr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Campaign Donors",
+                    "ConceptualProperty": "Recent Dnr?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "recent dnr?": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "committee_mbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "committee mbr": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "committee_mbr.current_mbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr",
+                    "ConceptualProperty": "Current Mbr?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "current mbr?": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "latest mbr?": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "contemporary mbr?": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "present mbr?": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "present day mbr?": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.484
+                    }
+                  }
+                ]
+              },
+              "committee_mbr.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "committee_mbr.entity_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr",
+                    "ConceptualProperty": "Entity Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity nickname": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity title": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity label": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity tag": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "committee_mbr.market_area": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr",
+                    "ConceptualProperty": "Market Area"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "market area": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "area": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "market region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "market district": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market continent": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "committee_mbr.rcnt_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr",
+                    "ConceptualProperty": "RcntNbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "rcnt nbr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "RcntNbr": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "committee_mbr.recent_mbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Committee Mbr",
+                    "ConceptualProperty": "Recent Mbr?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "recent mbr?": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "event": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Event"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "event": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "occurrence": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "affair": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "episode": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "occasion": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "happening": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "incident": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "experience": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "consequence": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "aftermath": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "upshot": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "event.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Event",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "event.entity_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Event",
+                    "ConceptualProperty": "Entity Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity nickname": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity title": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity label": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity tag": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "event.market_area": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Event",
+                    "ConceptualProperty": "Market Area"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "market area": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "area": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "market region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "market district": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market continent": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "event.rcnt_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Event",
+                    "ConceptualProperty": "RcntNbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "rcnt nbr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "RcntNbr": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "event.recent_event": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Event",
+                    "ConceptualProperty": "Recent Event?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "recent event?": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "visit": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Visits"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "visit": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "appointment": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "call": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "stopover": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "stay": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "holiday": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "vacation": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "break": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "trip": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "outing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              },
+              "visit.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Visits",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "visit.entity_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Visits",
+                    "ConceptualProperty": "Entity Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity nickname": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity title": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity label": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity tag": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "visit.market_area": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Visits",
+                    "ConceptualProperty": "Market Area"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "market area": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "area": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "market region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "region": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locale": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "market district": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market continent": {
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "visit.rcnt_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Visits",
+                    "ConceptualProperty": "RcntNbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "rcnt nbr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "RcntNbr": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "visit.recent_visit": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Visits",
+                    "ConceptualProperty": "Recent Visit?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "recent visit?": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "alumni__all_has_committee_mbr": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "alumni__all_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "alumni__all.entity_ID": {
+                    "Target": {
+                      "Entity": "alumni__all.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "alumni__all_has_entity_name": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all.entity_name"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "alumni__all.entity_name": {
+                    "Target": {
+                      "Entity": "alumni__all.entity_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "alumni__all_has_event": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "event"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "alumni__all_has_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all.market_area"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "alumni__all.market_area": {
+                    "Target": {
+                      "Entity": "alumni__all.market_area"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "alumni__all_has_visit": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "visit"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "alumni__all_in_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Alumni - All"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "alumni__all.market_area"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "alumni__all.market_area": {
+                    "Target": {
+                      "Entity": "alumni__all.market_area"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "alumni__all.market_area"
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_don": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {}
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_alumni__all": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor"
+                      },
+                      "Subject": {
+                        "Role": "alumni__all"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Nouns": [
+                      {
+                        "entity": {}
+                      }
+                    ],
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_camp_trans_FY": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.camp_trans_FY"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.camp_trans_FY": {
+                    "Target": {
+                      "Entity": "campaign_donor.camp_trans_FY"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_camp_trans_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.camp_trans_nbr"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.camp_trans_nbr": {
+                    "Target": {
+                      "Entity": "campaign_donor.camp_trans_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_entity_name": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.entity_name"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.entity_name": {
+                    "Target": {
+                      "Entity": "campaign_donor.entity_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.market_area"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.market_area": {
+                    "Target": {
+                      "Entity": "campaign_donor.market_area"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_rcnt_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.rcnt_nbr"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.rcnt_nbr": {
+                    "Target": {
+                      "Entity": "campaign_donor.rcnt_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_has_recent_dnr": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.recent_dnr"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.recent_dnr": {
+                    "Target": {
+                      "Entity": "campaign_donor.recent_dnr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_in_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "campaign_donor.market_area"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.market_area": {
+                    "Target": {
+                      "Entity": "campaign_donor.market_area"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "campaign_donor.market_area"
+                  }
+                },
+                "State": "Generated"
+              },
+              "campaign_donor_is_expensive": {
+                "Binding": {
+                  "ConceptualEntity": "Campaign Donors"
+                },
+                "Phrasings": [
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {}
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {}
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "campaign_donor.camp_trans_amt"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "campaign_donor.camp_trans_amt"
+                      },
+                      "Subject": {
+                        "Role": "campaign_donor"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "campaign_donor": {
+                    "Target": {
+                      "Entity": "campaign_donor"
+                    }
+                  },
+                  "campaign_donor.camp_trans_amt": {
+                    "Target": {
+                      "Entity": "campaign_donor.camp_trans_amt"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_alumni__all": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_current_mbr": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr.current_mbr"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.current_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr.current_mbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.entity_ID": {
+                    "Target": {
+                      "Entity": "committee_mbr.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_entity_name": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr.entity_name"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.entity_name": {
+                    "Target": {
+                      "Entity": "committee_mbr.entity_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr.market_area"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.market_area": {
+                    "Target": {
+                      "Entity": "committee_mbr.market_area"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_rcnt_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr.rcnt_nbr"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.rcnt_nbr": {
+                    "Target": {
+                      "Entity": "committee_mbr.rcnt_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_has_recent_mbr": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "committee_mbr.recent_mbr"
+                      },
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.recent_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr.recent_mbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "committee_mbr_in_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Committee Mbr"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "committee_mbr.market_area"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "committee_mbr"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "committee_mbr": {
+                    "Target": {
+                      "Entity": "committee_mbr"
+                    }
+                  },
+                  "committee_mbr.market_area": {
+                    "Target": {
+                      "Entity": "committee_mbr.market_area"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "committee_mbr.market_area"
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_has_alumni__all": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all"
+                      },
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "event.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  },
+                  "event.entity_ID": {
+                    "Target": {
+                      "Entity": "event.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_has_entity_name": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "event.entity_name"
+                      },
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  },
+                  "event.entity_name": {
+                    "Target": {
+                      "Entity": "event.entity_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_has_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "event.market_area"
+                      },
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  },
+                  "event.market_area": {
+                    "Target": {
+                      "Entity": "event.market_area"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_has_rcnt_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "event.rcnt_nbr"
+                      },
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  },
+                  "event.rcnt_nbr": {
+                    "Target": {
+                      "Entity": "event.rcnt_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_has_recent_event": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "event.recent_event"
+                      },
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  },
+                  "event.recent_event": {
+                    "Target": {
+                      "Entity": "event.recent_event"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "event_in_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Event"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "event.market_area"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "event"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "event": {
+                    "Target": {
+                      "Entity": "event"
+                    }
+                  },
+                  "event.market_area": {
+                    "Target": {
+                      "Entity": "event.market_area"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "event.market_area"
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_has_alumni__all": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "alumni__all"
+                      },
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "alumni__all": {
+                    "Target": {
+                      "Entity": "alumni__all"
+                    }
+                  },
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "visit.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  },
+                  "visit.entity_ID": {
+                    "Target": {
+                      "Entity": "visit.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_has_entity_name": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "visit.entity_name"
+                      },
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  },
+                  "visit.entity_name": {
+                    "Target": {
+                      "Entity": "visit.entity_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_has_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "visit.market_area"
+                      },
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  },
+                  "visit.market_area": {
+                    "Target": {
+                      "Entity": "visit.market_area"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_has_rcnt_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "visit.rcnt_nbr"
+                      },
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  },
+                  "visit.rcnt_nbr": {
+                    "Target": {
+                      "Entity": "visit.rcnt_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_has_recent_visit": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "visit.recent_visit"
+                      },
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  },
+                  "visit.recent_visit": {
+                    "Target": {
+                      "Entity": "visit.recent_visit"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "visit_in_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Visits"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "visit.market_area"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {}
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "visit"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "visit": {
+                    "Target": {
+                      "Entity": "visit"
+                    }
+                  },
+                  "visit.market_area": {
+                    "Target": {
+                      "Entity": "visit.market_area"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "visit.market_area"
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "8617f3dd-b936-4f96-a29e-51cf5946c844",
+        "fromColumn": "Entity ID",
+        "fromTable": "Campaign Donors",
+        "toColumn": "Entity ID",
+        "toTable": "Alumni - All"
+      },
+      {
+        "name": "56813dc6-b2b7-440c-ba62-acdaf14d3339",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Entity ID",
+        "fromTable": "Visits",
+        "toColumn": "Entity ID",
+        "toTable": "Alumni - All"
+      },
+      {
+        "name": "991b9104-955d-4262-97b6-1ff4616daff8",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Entity ID",
+        "fromTable": "Committee Mbr",
+        "toColumn": "Entity ID",
+        "toTable": "Alumni - All"
+      },
+      {
+        "name": "3537b61a-d794-418e-bc23-f5e09b798d00",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Entity ID",
+        "fromTable": "Event",
+        "toColumn": "Entity ID",
+        "toTable": "Alumni - All"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Alumni - All",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cfe90c2f-9442-48da-b0f3-41e36f78a0c1",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4eade170-be63-4ad9-94e3-67c50926398e",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e40f6187-dd77-420a-9813-8687f477f268",
+            "sourceColumn": "Market Area",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3536a7f9-ea8d-4dd2-a9e7-63dad0456eef",
+        "partitions": [
+          {
+            "name": "Alumni - All-9b09e34f-612d-4443-8845-3c49a9a613a0",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct e.id_number                 \"\"Entity ID\"\",#(lf)       e.pref_mail_name                     \"\"Entity Name\"\",#(lf)       hhloc.dsc                            \"\"Market Area\"\"#(lf)  from advance.entity e, advance.entity_record_type ert,#(lf)        (select distinct xa.id_number eid, xgc.description dsc#(lf)           from advance.address xa, advance.address_geo xag, advance.geo_code xgc#(lf)          where xa.addr_status_code = 'A'#(lf)          and   xa.addr_pref_ind = 'Y'#(lf)          and   xa.id_number = xag.id_number#(lf)          and   xa.xsequence = xag.xsequence#(lf)          and   xag.geo_type = 3#(lf)          and   xag.geo_code IN ('592','620')#(lf)          and   xag.geo_code = xgc.geo_code#(lf)         )hhloc#(lf)where  e.id_number = ert.id_number#(lf)and    ert.record_type_code = 'A'#(lf)and    e.id_number = hhloc.eid#(lf)#(lf)order by \"\"Entity ID\"\"\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Event",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c9cebafe-ba17-4605-9c48-e3f6c5e1337a",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ebed4509-aa0b-40e0-aa45-f5341b86e7b3",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08b3497b-bd09-4337-8839-fd7a00243870",
+            "sourceColumn": "Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Recent Event?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "0937c49d-30a7-41b3-8a5c-4aa37401c8fc",
+            "sourceColumn": "Recent Event?",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "RcntNbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1088299f-0573-4235-aeb3-7210ed84d50d",
+            "sourceColumn": "RcntNbr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9458c508-1265-4f00-a380-bad0ba0438d6",
+        "partitions": [
+          {
+            "name": "Event-24f457ab-b9f0-435b-b973-52f41543fd64",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct e.id_number                 \"\"Entity ID\"\",#(lf)       e.pref_mail_name                     \"\"Entity Name\"\",#(lf)       hhloc.dsc                            \"\"Market Area\"\",#(lf)       rcnt.nd                              \"\"Recent Event?\"\",#(lf)       e.id_number||nvl(rcnt.nd,0)          \"\"RcntNbr\"\"#(lf)  from advance.entity e, advance.entity_record_type ert,#(lf)        (select distinct xa.id_number eid, xgc.description dsc#(lf)           from advance.address xa, advance.address_geo xag, advance.geo_code xgc#(lf)          where xa.addr_status_code = 'A'#(lf)          and   xa.addr_pref_ind = 'Y'#(lf)          and   xa.id_number = xag.id_number#(lf)          and   xa.xsequence = xag.xsequence#(lf)          and   xag.geo_type = 3#(lf)          and   xag.geo_code IN ('592','620')#(lf)          and   xag.geo_code = xgc.geo_code#(lf)         )hhloc,#(lf)        (select xprt.id_number pid, '1' nd#(lf)           from advance.ep_event xev1, advance.ep_participant xprt, advance.ep_participation xprn#(lf)          where EXTRACT(YEAR FROM xev1.event_start_datetime) BETWEEN (EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))-3) AND EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))#(lf)          and   xev1.event_status_code NOT IN ('N','P','X')#(lf)          and   xev1.event_id = xprn.event_id#(lf)          and   xprn.event_id = xprt.event_id#(lf)          and   xprn.registration_id = xprt.registration_id#(lf)          and   xprn.participation_status_code IN ('P','R','W')#(lf)          and   xprt.id_number > ' '#(lf)         )rcnt#(lf)where  e.id_number = ert.id_number#(lf)and    ert.record_type_code = 'A'#(lf)and    e.id_number = hhloc.eid#(lf)and    e.id_number = rcnt.pid#(lf)#(lf)order by \"\"Entity ID\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Recent Event?\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Visits",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "db3ba8ed-1632-4694-8a7a-8b4492627943",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "81cf189c-1c30-46ac-91ae-6271f2781537",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71ba7b95-873f-44d3-a4a4-17b15efe2213",
+            "sourceColumn": "Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RcntNbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cda98fad-720f-4446-a6bc-d5d5160619b6",
+            "sourceColumn": "RcntNbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Recent Visit?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "66a72c15-e06a-4c66-b8d7-0ca1ca5d1393",
+            "sourceColumn": "Recent Visit?",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "4ba9cbb0-512f-4f7d-b3e6-56359755a129",
+        "partitions": [
+          {
+            "name": "Visits-1a5f0c45-511f-4ccb-8cb5-2f54b01065c5",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct e.id_number                 \"\"Entity ID\"\",#(lf)       e.pref_mail_name                     \"\"Entity Name\"\",#(lf)       hhloc.dsc                            \"\"Market Area\"\",#(lf)       rcnt.nd                              \"\"Recent Visit?\"\",#(lf)       e.id_number||nvl(rcnt.nd,0)          \"\"RcntNbr\"\"#(lf)  from advance.entity e, advance.entity_record_type ert,#(lf)        (select distinct xa.id_number eid, xgc.description dsc#(lf)           from advance.address xa, advance.address_geo xag, advance.geo_code xgc#(lf)          where xa.addr_status_code = 'A'#(lf)          and   xa.addr_pref_ind = 'Y'#(lf)          and   xa.id_number = xag.id_number#(lf)          and   xa.xsequence = xag.xsequence#(lf)          and   xag.geo_type = 3#(lf)          and   xag.geo_code IN ('592','620')#(lf)          and   xag.geo_code = xgc.geo_code#(lf)         )hhloc,#(lf)        (select xc1.id_number pid, '1' nd#(lf)           from advance.contact_report xc1#(lf)          where EXTRACT(YEAR FROM xc1.contact_date) BETWEEN (EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))-3) AND EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))#(lf)          and   xc1.contact_type IN ('V','X')#(lf)         )rcnt#(lf)where  e.id_number = ert.id_number#(lf)and    ert.record_type_code = 'A'#(lf)and    e.id_number = hhloc.eid#(lf)and    e.id_number = rcnt.pid#(lf)#(lf)order by \"\"Entity ID\"\"\"]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(Source,{{\"Recent Visit?\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Committee Mbr",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a52b4330-b79e-4366-ab0c-9bb6463ca946",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "77d666f0-7ab8-4f3e-b8e4-da445bd1fe0e",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1c7c8a62-ad55-466b-98b7-08953616d729",
+            "sourceColumn": "Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Recent Mbr?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0168d594-25cd-428c-8432-b4b1a159fb8c",
+            "sourceColumn": "Recent Mbr?",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Current Mbr?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6599d115-d675-4ede-884c-225b1b66b688",
+            "sourceColumn": "Current Mbr?",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "RcntNbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ed868382-4ad1-436e-b292-1618911960e1",
+            "sourceColumn": "RcntNbr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7f7a8b1f-0b8c-40c5-8633-e93e59a634c2",
+        "partitions": [
+          {
+            "name": "Committee Mbr-81ca0d75-a0f9-41ad-abdd-82ef20eadedb",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct e.id_number                 \"\"Entity ID\"\",#(lf)       e.pref_mail_name                     \"\"Entity Name\"\",#(lf)       hhloc.dsc                            \"\"Market Area\"\",#(lf)       rcnt.nd                              \"\"Recent Mbr?\"\",#(lf)       nvl(cur.nd,0)                        \"\"Current Mbr?\"\",#(lf)       e.id_number||nvl(rcnt.nd,0)          \"\"RcntNbr\"\"#(lf)  from advance.entity e, advance.entity_record_type ert,#(lf)        (select distinct xa.id_number eid, xgc.description dsc#(lf)           from advance.address xa, advance.address_geo xag, advance.geo_code xgc#(lf)          where xa.addr_status_code = 'A'#(lf)          and   xa.addr_pref_ind = 'Y'#(lf)          and   xa.id_number = xag.id_number#(lf)          and   xa.xsequence = xag.xsequence#(lf)          and   xag.geo_type = 3#(lf)          and   xag.geo_code IN ('592','620')#(lf)          and   xag.geo_code = xgc.geo_code#(lf)         )hhloc,#(lf)        (select xaf1.id_number pid, '1' nd#(lf)           from advance.affiliation xaf1#(lf)          where xaf1.affil_code = 'BOD'#(lf)          and   ((xaf1.affil_status_code = 'P'#(lf)          and    EXTRACT(YEAR FROM xaf1.stop_date) BETWEEN (EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))-6) AND EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6)))#(lf)            or  xaf1.affil_status_code IN ('C','E')#(lf)                )#(lf)         UNION ALL#(lf)         select xcm1.id_number pid, '1' nd#(lf)           from advance.committee xcm1#(lf)          where ((xcm1.committee_status_code = 'P'#(lf)          and    substr(xcm1.stop_dt,1,4) BETWEEN (EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))-6) AND EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6)))#(lf)            or  xcm1.committee_status_code IN ('C','E')#(lf)                )#(lf)         )rcnt,#(lf)        (select xaf2.id_number pid, '1' nd#(lf)           from advance.affiliation xaf2#(lf)          where xaf2.affil_code = 'BOD'#(lf)          and   xaf2.affil_status_code IN ('C','E')#(lf)         UNION ALL#(lf)         select xcm2.id_number pid, '1' nd#(lf)           from advance.committee xcm2#(lf)          where xcm2.committee_status_code IN ('C','E')#(lf)         )cur#(lf)where  e.id_number = ert.id_number#(lf)and    ert.record_type_code = 'A'#(lf)and    e.id_number = hhloc.eid#(lf)and    e.id_number = rcnt.pid#(lf)and    e.id_number = cur.pid(+)#(lf)#(lf)order by \"\"Entity ID\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Recent Mbr?\", Int64.Type}, {\"Current Mbr?\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Campaign Donors",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ecac50aa-a921-4869-983e-156325646a23",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "365b17e4-029c-41bc-a713-913e19e1cf55",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7dc080d3-7b88-4e83-ac6c-f5819e880e1f",
+            "sourceColumn": "Camp Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Trans FY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6acd3019-74d0-408f-ad80-9ab727e91e3d",
+            "sourceColumn": "Camp Trans FY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "54089b3e-487c-45bb-8834-7861ecbf77a8",
+            "sourceColumn": "Camp Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aabb12af-591f-43af-9d45-1e70e2af5591",
+            "sourceColumn": "Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Recent Dnr?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a19016e0-6075-4fe1-882a-025388c91a26",
+            "sourceColumn": "Recent Dnr?",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "RcntNbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e78d564f-0756-4153-902e-557932a125f1",
+            "sourceColumn": "RcntNbr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "86f75bb0-ae24-4ce0-9454-09962a515449",
+        "partitions": [
+          {
+            "name": "Campaign Donors-18f76eb5-fb73-4596-9eae-9aedb4213bb1",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct e.id_number                 \"\"Entity ID\"\",#(lf)       e.pref_mail_name                     \"\"Entity Name\"\",#(lf)       campdnr.tnbr                         \"\"Camp Trans Nbr\"\",#(lf)       campdnr.fy                           \"\"Camp Trans FY\"\",#(lf)       campdnr.tamt                         \"\"Camp Trans Amt\"\",#(lf)       campdnr.mrkt                         \"\"Market Area\"\",#(lf)       nvl(rcnt.nd,0)                       \"\"Recent Dnr?\"\",#(lf)       CASE WHEN rcnt.nd = '1' THEN e.id_number||nvl(rcnt.nd,0)#(lf)          ELSE NULL END                     \"\"RcntNbr\"\"#(lf)  from advance.entity e,#(lf)       (select distinct px.primary_recipient_ids did,#(lf)               ma.dsc                            mrkt,#(lf)               p.trans_nbr                       tnbr,#(lf)               p.trans_amt                       tamt,#(lf)               p.fiscal_yr                       fy#(lf)          from advur.mvw_total_production p, advur.mvw_total_production_ext px, advance.entity_record_type ert,#(lf)               (select distinct xa.id_number indid, xgc.description dsc#(lf)                  from advance.address xa, advance.address_geo xag, advance.geo_code xgc#(lf)                 where xa.addr_status_code = 'A'#(lf)                 and   xa.addr_pref_ind = 'Y'#(lf)                 and   xa.id_number = xag.id_number#(lf)                 and   xa.xsequence = xag.xsequence#(lf)                 and   xag.geo_type = 3#(lf)                 and   xag.geo_code IN ('592','620')#(lf)                 and   xag.geo_code = xgc.geo_code#(lf)                )ma#(lf)         where p.campaign_ind = 'Current Campaign'#(lf)         and   p.trans_nbr = px.trans_nbr#(lf)         and   px.primary_recipient_ids = ert.id_number#(lf)         and   ert.record_type_code = 'A'#(lf)         and   px.primary_recipient_ids = ma.indid#(lf)         )campdnr,#(lf)        (select xg1.gift_donor_id did, '1' nd#(lf)           from advance.gift xg1#(lf)          where xg1.gift_year_of_giving BETWEEN (EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))-3) AND EXTRACT(YEAR FROM ADD_MONTHS(sysdate,6))#(lf)          and   xg1.gift_associated_credit_amt > 0#(lf)          and   xg1.gift_associated_code NOT IN ('M','H')#(lf)         )rcnt#(lf)where  e.record_type_code = 'A'#(lf)and    e.id_number = campdnr.did#(lf)and    e.id_number = rcnt.did(+)#(lf)#(lf)order by \"\"Entity ID\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Camp Trans Amt\", Currency.Type}, {\"Recent Dnr?\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

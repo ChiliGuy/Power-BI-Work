@@ -1,0 +1,142 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 270.70291194750422,
+            "y": 304.24132581710637
+          },
+          "nodeIndex": "allocations",
+          "size": {
+            "height": 300,
+            "width": 235.19780049534296
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 126.96685250635153
+          },
+          "nodeIndex": "stewardees",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 557.37125151566545,
+            "y": 129.36245349703739
+          },
+          "nodeIndex": "beneficiaries",
+          "size": {
+            "height": 301.90102229043225,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 883.392224271804,
+            "y": 0
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 887.104863780692,
+            "y": 457.55978922100263
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 887.14931864521077,
+            "y": 291.06552036833415
+          },
+          "nodeIndex": "CurrentFY",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 887.193791786715,
+            "y": 147.32946092718151
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 273.33271168017382,
+            "y": 0
+          },
+          "nodeIndex": "Alloc Bridge",
+          "size": {
+            "height": 181.85703219729109,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 267.8864625529115,
+            "y": 699.51548928027614
+          },
+          "nodeIndex": "Award Year",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1319.9,
+            "y": 0
+          },
+          "nodeIndex": "Calendar - FY13_to_EndOfCFY",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 83.486357192872333,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

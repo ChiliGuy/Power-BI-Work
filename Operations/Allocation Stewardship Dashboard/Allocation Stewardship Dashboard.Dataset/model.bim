@@ -1,0 +1,2267 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Data Source\",\"allocations\",\"stewardees\",\"beneficiaries\",\"Report Inventory\",\"Last Refresh Date\",\"CurrentFY\",\"Key Measures\",\"Award Year\",\"Gift Officers\",\"Alloc Bridge\",\"Calendar - FY13_to_EndOfCFY\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "description": "Allows the user to pull data from PADV or select one of the previous Snapshots",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL22\", \"ADVJUL21\", \"ADVJUL20\", \"ADVTEST\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "738104e0-5fb0-4432-98fd-557736c927ea"
+      },
+      {
+        "name": "Gift Officers",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query written to pull gift officers assigned to stewardees for the Allocation Stewardee Dashboard.   smk 5/11/2023#(lf)#(lf)SELECT distinct stw.household_key                          \"\"HH Key\"\", #(lf)       pm.last_name||', '||nvl(pm.nick_name,pm.first_name) \"\"Primary Manager\"\",#(lf)       uc.short_desc                                       \"\"PM Team\"\"#(lf)FROM advur.mvw_ent_active_prospects port#(lf)left join advance.tms_unit_code uc               ON port.staff_unit_code = uc.unit_code#(lf)inner join advur.vw_hh_allocation_stewardees stw ON port.household_key = stw.household_key#(lf)LEFT JOIN advur.mvw_ent_salutations pm           ON port.gift_officer = pm.id_number#(lf)#(lf)order by \"\"Primary Manager\"\"\"])",
+          "in",
+          "    Source"
+        ],
+        "kind": "m",
+        "lineageTag": "5f678369-dae7-4076-bd8b-430f9c56d6cf"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "e73bc6b7-f5b7-43a2-8693-e58ab9037600",
+        "fromColumn": "Academic Year",
+        "fromTable": "allocations",
+        "toColumn": "Academic Year",
+        "toTable": "Award Year"
+      },
+      {
+        "name": "cc4f9feb-b3cf-49ef-9e1a-f5cc04300dc5",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Alloc Cd",
+        "fromTable": "allocations",
+        "toColumn": "Alloc Cd",
+        "toTable": "Alloc Bridge"
+      },
+      {
+        "name": "95ea0ebb-27b2-44fe-8ca8-d06e2799c2d2",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Alloc Cd",
+        "fromTable": "beneficiaries",
+        "isActive": false,
+        "toColumn": "Alloc Cd",
+        "toTable": "Alloc Bridge"
+      },
+      {
+        "name": "4cd0aa26-9b94-49b5-9de3-3848b54577a7",
+        "fromColumn": "Alloc Code",
+        "fromTable": "stewardees",
+        "isActive": false,
+        "toColumn": "Alloc Cd",
+        "toTable": "Alloc Bridge"
+      },
+      {
+        "name": "88b45a45-27c8-48c6-a3a5-97a64010aa2c",
+        "fromColumn": "Bene Key",
+        "fromTable": "beneficiaries",
+        "toColumn": "Bene Key",
+        "toTable": "allocations"
+      },
+      {
+        "name": "7d790220-40e5-4f1c-8a01-e522b8715e5c",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Alloc Cd",
+        "fromTable": "allocations",
+        "toCardinality": "many",
+        "toColumn": "Alloc Code",
+        "toTable": "stewardees"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "allocations",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b9ecba35-d5de-4b63-b0c5-5734a79d3633",
+            "sourceColumn": "Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cebcf586-d86b-49c4-a5e1-50e361811ce4",
+            "sortByColumn": "Sort School",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "14e8ace9-dfe1-4dd2-ba0e-af7d082782cf",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Account Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d15924e0-22f8-474d-86c4-6ee27e5e78a9",
+            "sourceColumn": "Account Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FAO Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "556ec757-c0fb-4be4-90df-4c770d77bee3",
+            "sourceColumn": "FAO Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "98140e66-af14-4880-b9c8-12d3059b53ff",
+            "sourceColumn": "Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Org",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ed0ceb50-0b53-49c2-a1d6-2008f2e87d52",
+            "sourceColumn": "Org",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "38c6ab27-4aa9-48bc-97a1-0a0b3110073c",
+            "sourceColumn": "Campaign Bucket",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6f6c5c1d-1d3b-458a-bd64-efd964b94d0a",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Sub-Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ec061a6c-71bd-41c2-a365-91740d45bb0c",
+            "sourceColumn": "Campaign Sub-Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Goal Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d113665e-69c5-4ec8-9911-141975595acf",
+            "sourceColumn": "Goal Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Goal Sub-Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c5565c4f-7636-4ee7-b796-ae44a232b37d",
+            "sourceColumn": "Goal Sub-Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5fe4eac7-b5fa-470f-a5ab-ef43a8c73094",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "755b3315-01ce-470c-ac70-282723947cf0",
+            "sourceColumn": "Alloc Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schol Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c56f3aeb-7d84-41a4-90f8-c11723a74398",
+            "sortByColumn": "Sort FinCat",
+            "sourceColumn": "Schol Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "79baf502-4a9f-47f9-916d-93348aba224f",
+            "sourceColumn": "Allocation Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ath Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1fb0f172-2dd7-48b4-9c0a-9800b14b9ffa",
+            "sourceColumn": "Ath Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CFAE Purpose",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ff74e3bf-1d4f-4b66-ae76-cabce6890d2c",
+            "sourceColumn": "CFAE Purpose",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CFAE Sub-Purpose",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fffce588-20e5-4929-b741-19224bbd9235",
+            "sourceColumn": "CFAE Sub-Purpose",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "000f587b-5f8b-4cdf-bd37-4045d153b589",
+            "sourceColumn": "Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Stop Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "dc634fa1-3563-46c0-9dc2-00def46ff235",
+            "sourceColumn": "Stop Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6bc03875-fd59-41ab-85eb-02f87c3bf290",
+            "sourceColumn": "Finance Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Desc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c138b4c-a20c-44d0-ab3c-717c63f5673b",
+            "sourceColumn": "Alloc Desc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Comment",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "25c10e8b-c9ca-4b6c-bf88-4a86b347837d",
+            "sourceColumn": "Alloc Comment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "117deca9-23bc-4e28-8df4-9ce74ccd0553",
+            "sourceColumn": "Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Long Nm",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c9cd4d11-6e82-4793-807d-75d849857ae5",
+            "sourceColumn": "Alloc Long Nm",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Short Nm",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e16015c-21cd-4126-bcfa-d24f9ac6d6e6",
+            "sourceColumn": "Alloc Short Nm",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c66620ee-f901-4ec5-82fc-45f7e4f7dfd2",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e11a2ee6-88b3-4b81-b6e9-8d7aafe92b9e",
+            "sourceColumn": "Sort School",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "159f40ff-2aae-4832-a1bc-26d62693301f",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Academic Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf611c42-cc1b-4773-b885-dd425ddebe10",
+            "sourceColumn": "Academic Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Award Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2be6dc7a-1aa4-426f-855f-5bc5531377e3",
+            "sourceColumn": "Award Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bene Cnt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b4c24d03-199d-4e36-aca4-4c6d8e0faff6",
+            "sourceColumn": "Bene Cnt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Stew Cnt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8f0987fa-1eb8-4e45-80f5-f8016ccf64aa",
+            "sourceColumn": "Stew Cnt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Balance",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "24a96895-e7a6-43ca-b8a2-906f59b07e52",
+            "sourceColumn": "Balance",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valuation Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "f11c5ba7-98f2-4b99-ba16-94036bfaff9c",
+            "sourceColumn": "Valuation Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FinCatCd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "34be28a1-ad8a-4b2e-9eb7-19e34b1cb27e",
+            "sourceColumn": "FinCatCd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AllocFundCd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3aea18c-e8b0-4192-8705-141c43383a3e",
+            "sourceColumn": "AllocFundCd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bene Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24ce77b3-ebdd-4df9-ae1a-6c229e797cbb",
+            "sourceColumn": "Bene Key",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "dd201ace-892d-4b15-ba80-195ba0b02e85",
+        "partitions": [
+          {
+            "name": "allocations-0f9efcc9-c79c-40f9-bdf3-fc7b0970c60f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query written to pull all active allocations, with Stewardee and Beneficiary Counts for use in the Allocation Stewardship Dashboard. smk 5/11/2023#(lf)-- Updated to add a long name with attributes concatenated into one statement; also added award years (most recent three). smk 5/12/2023#(lf)#(lf)WITH nbrs AS (#(lf)             -- Beneficiaries from two years ago#(lf)              SELECT distinct to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-3)    -- Change number subtracted from year#(lf)                              ||'-'||to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2) acadyr,#(lf)                     to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2) fy,#(lf)                     allc.allocation_code                                          allccd,#(lf)                     CASE WHEN nvl(bene.cnt,0) > 0 THEN 'Awarded' ELSE 'Not Awarded' END  award,#(lf)                     to_char(nvl(bene.cnt,0))                                      bene,#(lf)                     to_char(nvl(stew.cnt,0))                                      stew,#(lf)                     nvl(val.amt,0)                                                bal,#(lf)                     val.dt                                                        val,#(lf)                     allc.finance_fund                                             finfund#(lf)                FROM advur.mvw_allocations allc#(lf)                left join (#(lf)                           select ab.allocation_code cd, count(distinct ab.id_number) cnt#(lf)                             from advance.allocation_beneficiary ab    -- Change number subtracted from year#(lf)                            inner join advur.vw_current_fiscal_year fy on to_char((fy.fiscal_yr-2)) = substr(ab.description, -4, 4)#(lf)                            where ab.alloc_beneficiary_status_code = 'AC'#(lf)                            group by ab.allocation_code#(lf)                            )bene ON allc.allocation_code = bene.cd#(lf)                left join (#(lf)                           select xs.allocation_code cd, count(distinct xs.id_number) cnt#(lf)                             from advance.allocation_stewardee xs#(lf)                            where xs.active_ind = 'Y'#(lf)                            and   xs.stewardee_status_code = 'CU'#(lf)                            group by xs.allocation_code#(lf)                           )stew ON allc.allocation_code = stew.cd#(lf)                left join (#(lf)                           select af.allocation_code alloc, af.valuation_date dt, af.market_value_amt amt#(lf)                             from advance.allocation_financial af#(lf)                            where EXTRACT(YEAR FROM af.valuation_date) = advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2#(lf)                            and   af.alloc_financial_code = 'FYR'#(lf)                           )val ON allc.allocation_code = val.alloc#(lf)                left join (#(lf)                           select fy.fiscal_yr-2 fy    -- Change number subtracted from year#(lf)                             from advur.vw_current_fiscal_year fy#(lf)                            )fyear ON advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2 = fyear.fy    -- Change number subtracted from year#(lf)               WHERE allc.start_date <= to_date('06/30'||fyear.fy, 'MM/DD/YYYY')#(lf)               and   allc.purpose_code IN ('CCASC','CCESC')#(lf)             UNION ALL#(lf)             -- Beneficiaries from one year ago#(lf)             SELECT distinct to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2)    -- Change number subtracted from year#(lf)                              ||'-'||to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1) acadyr,#(lf)                     to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1) fy,#(lf)                     allc.allocation_code                                          allccd,#(lf)                     CASE WHEN nvl(bene.cnt,0) > 0 THEN 'Awarded' ELSE 'Not Awarded' END  award,#(lf)                     to_char(nvl(bene.cnt,0))                                      bene,#(lf)                     to_char(nvl(stew.cnt,0))                                      stew,#(lf)                     nvl(val.amt,0)                                                bal,#(lf)                     val.dt                                                        val,#(lf)                     allc.finance_fund                                             finfund#(lf)                FROM advur.mvw_allocations allc#(lf)                left join (#(lf)                           select ab.allocation_code cd, count(distinct ab.id_number) cnt#(lf)                             from advance.allocation_beneficiary ab    -- Change number subtracted from year#(lf)                            inner join advur.vw_current_fiscal_year fy on to_char((fy.fiscal_yr-1)) = substr(ab.description, -4, 4)#(lf)                            where ab.alloc_beneficiary_status_code = 'AC'#(lf)                            group by ab.allocation_code#(lf)                            )bene ON allc.allocation_code = bene.cd#(lf)                left join (#(lf)                           select xs.allocation_code cd, count(distinct xs.id_number) cnt#(lf)                             from advance.allocation_stewardee xs#(lf)                            where xs.active_ind = 'Y'#(lf)                            and   xs.stewardee_status_code = 'CU'#(lf)                            group by xs.allocation_code#(lf)                           )stew ON allc.allocation_code = stew.cd#(lf)                left join (#(lf)                           select af.allocation_code alloc, af.valuation_date dt, af.market_value_amt amt#(lf)                             from advance.allocation_financial af#(lf)                            where EXTRACT(YEAR FROM af.valuation_date) = advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1#(lf)                            and   af.alloc_financial_code = 'FYR'#(lf)                           )val ON allc.allocation_code = val.alloc#(lf)                left join (#(lf)                           select fy.fiscal_yr-1 fy    -- Change number subtracted from year#(lf)                             from advur.vw_current_fiscal_year fy#(lf)                            )fyear ON advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1 = fyear.fy    -- Change number subtracted from year#(lf)               WHERE allc.start_date <= to_date('06/30'||fyear.fy, 'MM/DD/YYYY')#(lf)               and   allc.purpose_code IN ('CCASC','CCESC')#(lf)            UNION ALL#(lf)            -- Beneficiaries from this year#(lf)            SELECT distinct to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1)    -- Change number subtracted from year#(lf)                              ||'-'||to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))) acadyr,#(lf)                     to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))) fy,#(lf)                     allc.allocation_code                                          allccd,#(lf)                     CASE WHEN nvl(bene.cnt,0) > 0 THEN 'Awarded' ELSE 'Not Awarded' END  award,#(lf)                     to_char(nvl(bene.cnt,0))                                      bene,#(lf)                     to_char(nvl(stew.cnt,0))                                      stew,#(lf)                     nvl(val.amt,0)                                                bal,#(lf)                     val.dt                                                        val,#(lf)                     allc.finance_fund                                             finfund#(lf)                FROM advur.mvw_allocations allc#(lf)                left join (#(lf)                           select ab.allocation_code cd, count(distinct ab.id_number) cnt#(lf)                             from advance.allocation_beneficiary ab    -- Change number subtracted from year#(lf)                            inner join advur.vw_current_fiscal_year fy on to_char((fy.fiscal_yr)) = substr(ab.description, -4, 4)#(lf)                            where ab.alloc_beneficiary_status_code = 'AC'#(lf)                            group by ab.allocation_code#(lf)                            )bene ON allc.allocation_code = bene.cd#(lf)                left join (#(lf)                           select xs.allocation_code cd, count(distinct xs.id_number) cnt#(lf)                             from advance.allocation_stewardee xs#(lf)                            where xs.active_ind = 'Y'#(lf)                            and   xs.stewardee_status_code = 'CU'#(lf)                            group by xs.allocation_code#(lf)                           )stew ON allc.allocation_code = stew.cd#(lf)                left join (#(lf)                           select af.allocation_code alloc, af.valuation_date dt, af.market_value_amt amt#(lf)                             from advance.allocation_financial af#(lf)                            where EXTRACT(YEAR FROM af.valuation_date) = advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))#(lf)                            and   af.alloc_financial_code = 'FYR'#(lf)                           )val ON allc.allocation_code = val.alloc#(lf)                left join (#(lf)                           select fy.fiscal_yr fy    -- Change number subtracted from year#(lf)                             from advur.vw_current_fiscal_year fy#(lf)                            )fyear ON advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')) = fyear.fy    -- Change number subtracted from year#(lf)               WHERE allc.start_date <= to_date('06/30'||fyear.fy, 'MM/DD/YYYY')#(lf)               and   allc.purpose_code IN ('CCASC','CCESC')#(lf)            UNION ALL#(lf)            -- Beneficiaries already awarded for next year#(lf)            SELECT distinct to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')))    -- Change number subtracted from year#(lf)                              ||'-'||to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1) acadyr,#(lf)                     to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1) fy,#(lf)                     allc.allocation_code                                          allccd,#(lf)                     CASE WHEN nvl(bene.cnt,0) > 0 THEN 'Awarded' ELSE 'Not Awarded' END  award,#(lf)                     to_char(nvl(bene.cnt,0))                                      bene,#(lf)                     to_char(nvl(stew.cnt,0))                                      stew,#(lf)                     nvl(val.amt,0)                                                bal,#(lf)                     val.dt                                                        val,#(lf)                     allc.finance_fund                                             finfund#(lf)                FROM advur.mvw_allocations allc#(lf)                left join (#(lf)                           select ab.allocation_code cd, count(distinct ab.id_number) cnt#(lf)                             from advance.allocation_beneficiary ab    -- Change number subtracted from year#(lf)                            inner join advur.vw_current_fiscal_year fy on to_char((fy.fiscal_yr+1)) = substr(ab.description, -4, 4)#(lf)                            where ab.alloc_beneficiary_status_code = 'AC'#(lf)                            group by ab.allocation_code#(lf)                            )bene ON allc.allocation_code = bene.cd#(lf)                left join (#(lf)                           select xs.allocation_code cd, count(distinct xs.id_number) cnt#(lf)                             from advance.allocation_stewardee xs#(lf)                            where xs.active_ind = 'Y'#(lf)                            and   xs.stewardee_status_code = 'CU'#(lf)                            group by xs.allocation_code#(lf)                           )stew ON allc.allocation_code = stew.cd#(lf)                left join (#(lf)                           select af.allocation_code alloc, af.valuation_date dt, af.market_value_amt amt#(lf)                             from advance.allocation_financial af#(lf)                            where EXTRACT(YEAR FROM af.valuation_date) = advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1#(lf)                            and   af.alloc_financial_code = 'FYR'#(lf)                           )val ON allc.allocation_code = val.alloc#(lf)                left join (#(lf)                           select fy.fiscal_yr+1 fy    -- Change number subtracted from year#(lf)                             from advur.vw_current_fiscal_year fy#(lf)                            )fyear ON advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1 = fyear.fy    -- Change number subtracted from year#(lf)               WHERE allc.start_date <= to_date('06/30'||fyear.fy, 'MM/DD/YYYY')#(lf)               and   allc.purpose_code IN ('CCASC','CCESC')#(lf)          )#(lf)#(lf)select distinct a10.status_code            \"\"Status\"\",#(lf)       tas.short_desc                      \"\"School\"\",#(lf)       a10.long_name||' '||a10.long_name2||' ('||a10.allocation_code||')' \"\"Allocation Name\"\",#(lf)       a10.account_2                       \"\"FAO Nbr\"\",#(lf)       xn10.acadyr                         \"\"Academic Year\"\",#(lf)       CASE WHEN a10.cfae_purpose_code = 'CF' THEN 'Annual'#(lf)            WHEN a10.cfae_purpose_code = 'LR' and a10.cfae_sub_code = '26' THEN 'Endowed'#(lf)          ELSE NULL END                    \"\"Schol Type\"\",#(lf)       xn10.award                          \"\"Award Ind\"\",#(lf)       xn10.bene                           \"\"Bene Cnt\"\",#(lf)       xn10.stew                           \"\"Stew Cnt\"\",#(lf)       nvl(xn10.bal,0)                     \"\"Balance\"\",#(lf)       xn10.val                            \"\"Valuation Dt\"\",#(lf)       substr(a10.account,1,6)             \"\"Fund\"\",#(lf)       substr(a10.account,7,6)             \"\"Org\"\",#(lf)       a10.start_date                      \"\"Start Dt\"\",#(lf)       sd.short_desc                       \"\"Alloc Group\"\",#(lf)       a10.allocation_code                 \"\"Alloc Cd\"\",#(lf)       CASE WHEN a10.athletics_ind = 'Y' THEN 'Athletics'#(lf)          ELSE 'Non-Athletics' END         \"\"Ath Ind\"\",#(lf)       a10.category1_code||' - '||cat1.short_desc   \"\"Campaign Bucket\"\",#(lf)       a10.category2_code||' - '||cat2.short_desc   \"\"Campaign Priority\"\",#(lf)       a10.category3_code||' - '||cat3.short_desc   \"\"Campaign Sub-Priority\"\",#(lf)       nvl(ep.short_desc,'Missing')        \"\"Goal Category\"\",#(lf)       nvl(et.short_desc,'Missing')        \"\"Goal Sub-Category\"\",#(lf)       prp.short_desc                      \"\"Finance Category\"\",#(lf)       fnd.short_desc                      \"\"Allocation Fund\"\",#(lf)       nvl(a10.cfae_purpose_code||' - '||c.short_desc,'Missing') \"\"CFAE Purpose\"\",#(lf)       a10.cfae_sub_code||' - '||csc.short_desc   \"\"CFAE Sub-Purpose\"\",#(lf)       a10.account                         \"\"Account Nbr\"\",#(lf)       a10.stop_date                       \"\"Stop Dt\"\",#(lf)       xn10.finfund                        \"\"Finance Fund\"\",#(lf)       a10.description                     \"\"Alloc Desc\"\",#(lf)       a10.xcomment                        \"\"Alloc Comment\"\",#(lf)       a10.long_name||' '||a10.long_name2  \"\"Alloc Long Nm\"\",#(lf)       a10.short_name                      \"\"Alloc Short Nm\"\",#(lf)       a10.alloc_purpose                   \"\"FinCatCd\"\",#(lf)       a10.fund_name                       \"\"AllocFundCd\"\",#(lf)       prp.hierarchy_order                 \"\"Sort FinCat\"\",#(lf)       tas.hierarchy_order                 \"\"Sort School\"\",#(lf)       a10.alpha_sort                      \"\"Sort Alloc\"\",#(lf)       xn10.acadyr||a10.allocation_code    \"\"Bene Key\"\"#(lf)FROM advance.allocation a10#(lf)left join nbrs xn10                         ON a10.allocation_code = xn10.allccd#(lf)left join advance.tms_cfae_purpose c        ON a10.cfae_purpose_code = c.cfae_purpose_code#(lf)left join advance.tms_cfae_sub_code csc     ON a10.cfae_sub_code = csc.cfae_sub_code#(lf)left join advance.tms_alloc_sub_dept sd     ON a10.alloc_sub_dept = sd.alloc_sub_dept_code#(lf)left join advance.tms_alloc_school tas      ON a10.alloc_school = tas.alloc_school_code#(lf)left join advance.tms_category1 cat1        ON a10.category1_code = cat1.category1_code#(lf)left join advance.tms_category2 cat2        ON a10.category2_code = cat2.category2_code#(lf)left join advance.tms_category3 cat3        ON a10.category3_code = cat3.category3_code#(lf)left join advance.tms_purpose prp           ON a10.alloc_purpose = prp.purpose_code#(lf)left join advance.tms_fund_code fnd         ON a10.fund_name = fnd.fund_code_code#(lf)left join advance.tms_endow_pool ep         ON a10.endow_pool_code = ep.endow_pool#(lf)left join advance.tms_endow_type et         ON a10.endow_type_code = et.endow_type#(lf)#(lf)WHERE a10.status_code = 'A'#(lf)and   a10.alloc_purpose IN ('CCASC','CCESC')#(lf)#(lf)order by \"\"Allocation Name\"\", \"\"Sort School\"\", \"\"Sort FinCat\"\", \"\"Academic Year\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Bene Cnt\", Int64.Type}, {\"Stew Cnt\", Int64.Type}, {\"Balance\", Currency.Type}, {\"Valuation Dt\", type date}, {\"Start Dt\", type date}, {\"Stop Dt\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "stewardees",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "HH Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "df5a5843-b165-4df5-80bd-08df54f9ce9e",
+            "sourceColumn": "HH Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec Stewardee Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b9d35f69-c7a2-4566-b177-d132b1ec1a5c",
+            "sourceColumn": "Sec Stewardee Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Sec Stew",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "35a2d127-6fe1-40e3-9b94-13e27f767056",
+            "sourceColumn": "Sort Sec Stew",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Prim Stew",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64a516f4-ff4c-4124-add1-00afcc536927",
+            "sourceColumn": "Sort Prim Stew",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec Stewardee Types",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1b252735-87e7-48a7-8e0f-6c7af6f17461",
+            "sourceColumn": "Sec Stewardee Types",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f0cbb0b7-4e7e-42bb-bd08-fe3699971559",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Stewardee ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64ee4ea6-24eb-4f91-bcbe-c00cf41efe08",
+            "sourceColumn": "Primary Stewardee ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sec Stewardee ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "788e6412-58e1-4d1e-928f-6f69ec4bffb9",
+            "sourceColumn": "Sec Stewardee ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Stewardee Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08b43817-84d6-42b7-93e3-5c86aee6c566",
+            "sourceColumn": "Primary Stewardee Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Stewardee Types",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4500164b-84ab-4516-a230-1deb56085793",
+            "sourceColumn": "Primary Stewardee Types",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mgr Team",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d9a7648-5657-476d-84aa-79da18294adb",
+            "sourceColumn": "Mgr Team",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Primary Mgr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8755f1c7-2f29-4928-8c95-cba551c6dbc4",
+            "sourceColumn": "Primary Mgr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "72f85283-ebaa-4707-b06c-963957cba5bb",
+        "partitions": [
+          {
+            "name": "stewardees-a511929a-437b-45a7-97a1-9c429ed6f49a",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query written to pull stewardees for the Allocation Stewardee Dashboard. Stewardees view pull all Active stewardees with a status of 'CU'.  smk 5/11/2023#(lf)-- Updated to add a column that concatenates all the stewardee information into one field, to be used for a matrix in the Dashboard. smk 5/12/2023#(lf)-- Updated to pull everything about each stewardee into a single column. smk 5/15/2023#(lf)-- Updated to pull out the Stewardee Types from the Stewardee Name into their own column. smk 5/18/2023#(lf)#(lf)SELECT distinct stw.allocation_code    \"\"Alloc Code\"\",#(lf)       stw.household_key               \"\"HH Key\"\", #(lf)       stw.primary_stewardee           \"\"Primary Stewardee ID\"\",#(lf)       stw.secondary_stewardee         \"\"Sec Stewardee ID\"\",#(lf)       prim.pref_mail_name||' ('||stw.primary_stewardee||')' \"\"Primary Stewardee Name\"\",#(lf)       pstw.typs                       \"\"Primary Stewardee Types\"\",#(lf)       CASE WHEN stw.secondary_stewardee IS NULL THEN NULL#(lf)          ELSE scnd.pref_mail_name||' ('||stw.secondary_stewardee||')' END \"\"Sec Stewardee Name\"\",#(lf)       sstw.typs                       \"\"Sec Stewardee Types\"\",#(lf)       mgr.Team                        \"\"Mgr Team\"\",#(lf)       mgr.PMgr                        \"\"Primary Mgr\"\",#(lf)       scnd.pref_name_sort             \"\"Sort Sec Stew\"\",#(lf)       prim.pref_name_sort             \"\"Sort Prim Stew\"\"#(lf)  FROM advur.vw_hh_allocation_stewardees stw #(lf) inner join advur.mvw_allocations a1            on stw.allocation_code = a1.allocation_code#(lf) inner join advur.mvw_ent_salutations prim      ON stw.primary_stewardee = prim.id_number#(lf)  left join advur.mvw_ent_salutations scnd      ON stw.secondary_stewardee = scnd.id_number#(lf)  left join (#(lf)             select astw.allocation_code allc, astw.id_number sid,#(lf)                    listagg(distinct xstw.short_desc, '; ') within group (order by xstw.short_desc) typs#(lf)               from advance.allocation_stewardee astw#(lf)               left join advance.tms_stewardee xstw ON astw.stewardee_code = xstw.stewardee#(lf)               group by astw.allocation_code, astw.id_number#(lf)             )pstw ON stw.primary_stewardee = pstw.sid AND stw.allocation_code = pstw.allc#(lf)  left join (#(lf)             select stwsp.allocation_code allc, stwsp.id_number sid,#(lf)                    listagg(distinct xstwsp.short_desc, '; ') within group (order by xstwsp.short_desc) typs#(lf)               from advance.allocation_stewardee stwsp#(lf)               left join advance.tms_stewardee xstwsp ON stwsp.stewardee_code = xstwsp.stewardee#(lf)              group by stwsp.allocation_code, stwsp.id_number#(lf)             )sstw ON stw.secondary_stewardee = sstw.sid AND stw.allocation_code = sstw.allc#(lf)  left join (#(lf)             SELECT distinct stw.household_key HHKey, #(lf)                    pm.last_name||', '||nvl(pm.nick_name,pm.first_name) PMgr,#(lf)                    uc.short_desc Team#(lf)               FROM advur.mvw_ent_active_prospects port#(lf)               left join advance.tms_unit_code uc               ON port.staff_unit_code = uc.unit_code#(lf)              inner join advur.vw_hh_allocation_stewardees stw ON port.household_key = stw.household_key#(lf)               LEFT JOIN advur.mvw_ent_salutations pm           ON port.gift_officer = pm.id_number#(lf)             )mgr ON stw.household_key = mgr.HHKey#(lf)where a1.purpose_code IN ('CCASC','CCESC')#(lf)#(lf)order by \"\"Alloc Code\"\", \"\"Sort Prim Stew\"\"\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "beneficiaries",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65dcd586-a780-4303-8987-66f0cae1bb56",
+            "sourceColumn": "Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Beneficiary ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf816df3-9a0b-4054-ac78-f48fbbdd7de7",
+            "sourceColumn": "Beneficiary ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Beneficiary Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "61552287-cd46-466b-8fcf-d94af5f2fa53",
+            "sourceColumn": "Beneficiary Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Award Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "ea3e271d-cfb8-41c1-aaf5-7d5444225a2b",
+            "sourceColumn": "Award Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Award Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "7cc1047c-5270-44bc-bfe1-739f0baddcc9",
+            "sourceColumn": "Award Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Academic Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9d43318e-97d0-483c-929f-693d7a2b882f",
+            "sourceColumn": "Academic Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "195c1c92-4a7e-4b9f-aa61-6ae6a37f4e9c",
+            "sourceColumn": "Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Benie",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6100087d-9379-47ae-a5e8-3a9a122ed4b0",
+            "sourceColumn": "Sort Benie",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bene Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b02d1d78-ddc7-4844-843b-7761bc7b3a61",
+            "sourceColumn": "Bene Key",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "dfeda973-ba22-4c9e-9906-0dfb5d9802c6",
+        "partitions": [
+          {
+            "name": "beneficiaries-e6e3adea-1c96-464b-a607-ce7328f537a7",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query written to pull Beneficiaries for Allocation Stewardship Dashboard#(lf)#(lf)SELECT distinct a1.allocation_code         \"\"Alloc Cd\"\",#(lf)       ab.bid                              \"\"Beneficiary ID\"\", #(lf)       ab.nme                              \"\"Beneficiary Name\"\", #(lf)       nvl(ab.award_amt,0)                 \"\"Award Amt\"\", #(lf)       ab.award_date                       \"\"Award Dt\"\", #(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-3)||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2))  \"\"Academic Yr\"\",#(lf)       nvl(ab.bstatus,'Not Awarded')       \"\"Status\"\",#(lf)       ab.nme_sort                         \"\"Sort Benie\"\",#(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-3)||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2))||a1.allocation_code \"\"Bene Key\"\"#(lf)FROM advur.mvw_allocations a1#(lf)left join (#(lf)           select bene.allocation_code acd, bene.id_number bid, bsal.pref_mail_name nme,bene.award_amt, bene.award_date,#(lf)                  bene.description, bstat.short_desc bstatus, bsal.pref_name_sort nme_sort#(lf)             from advance.allocation_beneficiary bene#(lf)             left join advur.mvw_ent_salutations bsal             ON bene.id_number = bsal.id_number#(lf)            inner join advur.vw_current_fiscal_year fy            on substr(bene.description, -4, 4) = to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2)#(lf)             left join advance.tms_alloc_beneficiary_status bstat ON bene.alloc_beneficiary_status_code = bstat.alloc_beneficiary_status#(lf)            where bene.alloc_beneficiary_type = 'SR'#(lf)            and   bene.alloc_beneficiary_status_code = 'AC'#(lf)            )ab on a1.allocation_code = ab.acd#(lf)where a1.is_active = 'Y'#(lf)and   a1.purpose_code IN ('CCASC','CCESC')#(lf)UNION ALL#(lf)SELECT distinct a1.allocation_code         \"\"Alloc Cd\"\",#(lf)       ab.bid                              \"\"Beneficiary ID\"\", #(lf)       ab.nme                              \"\"Beneficiary Name\"\", #(lf)       nvl(ab.award_amt,0)                 \"\"Award Amt\"\", #(lf)       ab.award_date                       \"\"Award Dt\"\", #(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2)||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1)) \"\"Academic Yr\"\",#(lf)       nvl(ab.bstatus,'Not Awarded')       \"\"Status\"\",#(lf)       ab.nme_sort                         \"\"Sort Benie\"\",#(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-2)||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1))||a1.allocation_code \"\"Bene Key\"\"#(lf)FROM advur.mvw_allocations a1#(lf)left join (#(lf)           select bene.allocation_code acd, bene.id_number bid, bsal.pref_mail_name nme,bene.award_amt, bene.award_date,#(lf)                  bene.description, bstat.short_desc bstatus, bsal.pref_name_sort nme_sort#(lf)             from advance.allocation_beneficiary bene#(lf)             left join advur.mvw_ent_salutations bsal             ON bene.id_number = bsal.id_number#(lf)            inner join advur.vw_current_fiscal_year fy            on substr(bene.description, -4, 4) = to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1)#(lf)             left join advance.tms_alloc_beneficiary_status bstat ON bene.alloc_beneficiary_status_code = bstat.alloc_beneficiary_status#(lf)            where bene.alloc_beneficiary_type = 'SR'#(lf)            and   bene.alloc_beneficiary_status_code = 'AC'#(lf)            )ab on a1.allocation_code = ab.acd#(lf)where a1.is_active = 'Y'#(lf)and   a1.purpose_code IN ('CCASC','CCESC')#(lf)UNION ALL#(lf)SELECT distinct a1.allocation_code         \"\"Alloc Cd\"\",#(lf)       ab.bid                              \"\"Beneficiary ID\"\", #(lf)       ab.nme                              \"\"Beneficiary Name\"\", #(lf)       nvl(ab.award_amt,0)                 \"\"Award Amt\"\", #(lf)       ab.award_date                       \"\"Award Dt\"\", #(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1)||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')))) \"\"Academic Yr\"\",#(lf)       nvl(ab.bstatus,'Not Awarded')       \"\"Status\"\",#(lf)       ab.nme_sort                         \"\"Sort Benie\"\",#(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-1)||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))))||a1.allocation_code \"\"Bene Key\"\"#(lf)FROM advur.mvw_allocations a1#(lf)left join (#(lf)           select bene.allocation_code acd, bene.id_number bid, bsal.pref_mail_name nme,bene.award_amt, bene.award_date,#(lf)                  bene.description, bstat.short_desc bstatus, bsal.pref_name_sort nme_sort#(lf)             from advance.allocation_beneficiary bene#(lf)             left join advur.mvw_ent_salutations bsal             ON bene.id_number = bsal.id_number#(lf)            inner join advur.vw_current_fiscal_year fy            on substr(bene.description, -4, 4) = to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')))#(lf)             left join advance.tms_alloc_beneficiary_status bstat ON bene.alloc_beneficiary_status_code = bstat.alloc_beneficiary_status#(lf)            where bene.alloc_beneficiary_type = 'SR'#(lf)            and   bene.alloc_beneficiary_status_code = 'AC'#(lf)           )ab on a1.allocation_code = ab.acd#(lf)where a1.is_active = 'Y'#(lf)and   a1.purpose_code IN ('CCASC','CCESC')#(lf)UNION ALL#(lf)SELECT distinct a1.allocation_code         \"\"Alloc Cd\"\",#(lf)       ab.bid                              \"\"Beneficiary ID\"\", #(lf)       ab.nme                              \"\"Beneficiary Name\"\", #(lf)       nvl(ab.award_amt,0)                 \"\"Award Amt\"\", #(lf)       ab.award_date                       \"\"Award Dt\"\", #(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')))||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1)) \"\"Academic Yr\"\",#(lf)       nvl(ab.bstatus,'Not Awarded')       \"\"Status\"\",#(lf)       ab.nme_sort                         \"\"Sort Benie\"\",#(lf)       nvl(ab.description,to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')))||'-'||#(lf)                          to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1))||a1.allocation_code \"\"Bene Key\"\"#(lf)FROM advur.mvw_allocations a1#(lf)left join (#(lf)           select bene.allocation_code acd, bene.id_number bid, bsal.pref_mail_name nme,bene.award_amt, bene.award_date,#(lf)                  bene.description, bstat.short_desc bstatus, bsal.pref_name_sort nme_sort#(lf)             from advance.allocation_beneficiary bene#(lf)             left join advur.mvw_ent_salutations bsal             ON bene.id_number = bsal.id_number#(lf)            inner join advur.vw_current_fiscal_year fy            on substr(bene.description, -4, 4) = to_char(advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))+1)#(lf)             left join advance.tms_alloc_beneficiary_status bstat ON bene.alloc_beneficiary_status_code = bstat.alloc_beneficiary_status#(lf)            where bene.alloc_beneficiary_type = 'SR'#(lf)            and   bene.alloc_beneficiary_status_code = 'AC'#(lf)            )ab on a1.allocation_code = ab.acd#(lf)where a1.is_active = 'Y'#(lf)and   a1.purpose_code IN ('CCASC','CCESC')#(lf)#(lf)order by \"\"Alloc Cd\"\", \"\"Academic Yr\"\", \"\"Beneficiary ID\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Award Amt\", Currency.Type}, {\"Award Dt\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Report Inventory",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b9184d0-0688-4ebe-b6bf-d996f4749616",
+            "sourceColumn": "Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e762ef0d-4c66-43d7-95cd-fd6fbc05c1ac",
+            "sourceColumn": "Report ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0a3a0a6b-e473-4ce1-b86f-f3c9276cae44",
+            "sourceColumn": "Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b0c180e6-6ca6-463e-8d3d-e83033a4e9c6",
+            "sourceColumn": "Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86daa92c-97b1-4ee5-bdd0-0d7f80cc81ec",
+            "sourceColumn": "Report Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Platform",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "26c4b0b8-f199-4352-89bc-fabddfa0bb23",
+            "sourceColumn": "Report Platform",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last Updated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "301d1c14-b1f1-4a60-aed4-81f65cdefecc",
+            "sourceColumn": "Last Updated",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Change Log",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fba9f623-36f7-4b73-9675-334a8e93fafd",
+            "sourceColumn": "Change Log",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Changed By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "73e5973c-4e68-40f5-8199-2f0505238cee",
+            "sourceColumn": "Changed By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Technical Support Co",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ace3a420-8a0a-4774-bbc5-b5bc1e0dab6c",
+            "sourceColumn": "Technical Support Co",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Directory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d077555a-19ff-4616-8083-3590b0e935c3",
+            "sourceColumn": "Report Directory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Published Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e79e5fd1-9f52-41df-bcd9-cbb3c9f8093a",
+            "sourceColumn": "Published Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Data Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e79f063-9434-42c5-a092-8864f531e0fc",
+            "sourceColumn": "Data Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "URL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c67557f7-f2b1-4c71-aeaa-9c30e0b0dee0",
+            "sourceColumn": "URL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Stored Procedure _x0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "befd7039-80af-4df3-bba3-3e59a24e30a9",
+            "sourceColumn": "Stored Procedure _x0",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Views",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5d556924-eec2-4b90-af20-133b736f999a",
+            "sourceColumn": "Views",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subreport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e2967619-b9f2-420e-9920-14a967da8679",
+            "sourceColumn": "Subreport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Requestor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a76cac8-447b-431d-b7b9-b8af2af4f40a",
+            "sourceColumn": "Requestor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IntendedAudience",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e238e97d-cdb0-4008-8cc7-9832955e7a09",
+            "sourceColumn": "IntendedAudience",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DescriptionofLogic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6e53cd61-d480-4344-accf-9fe8e9dff48e",
+            "sourceColumn": "DescriptionofLogic",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Archived?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8d755c0e-446e-4be0-a803-ed55b873d5d2",
+            "sourceColumn": "Archived?",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7e549cec-65bc-4f1d-a3d5-e667933ce0c8",
+        "partitions": [
+          {
+            "name": "Report Inventory-f9245e73-c3f5-4047-a909-3d62409ab125",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PowerBI.Dataflows([]),",
+                "    #\"ad522e15-c161-4270-b7ee-25e14a940366\" = Source{[workspaceId=\"ad522e15-c161-4270-b7ee-25e14a940366\"]}[Data],",
+                "    #\"05bac681-da16-40db-875d-fc44d48d37e3\" = #\"ad522e15-c161-4270-b7ee-25e14a940366\"{[dataflowId=\"05bac681-da16-40db-875d-fc44d48d37e3\"]}[Data],",
+                "    #\"Report Inventory1\" = #\"05bac681-da16-40db-875d-fc44d48d37e3\"{[entity=\"Report Inventory\"]}[Data]",
+                "in",
+                "    #\"Report Inventory1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Last Refresh Date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Last Refresh Date Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "f68c46d0-5e45-4bcc-a435-e3f3b36d9189",
+            "sourceColumn": "Last Refresh Date Time",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ba4c80ab-b9b1-4fc1-b76c-78265ecd6b64",
+        "partitions": [
+          {
+            "name": "Last Refresh Date-be8d7d0e-cfba-480a-95dc-5ce123d9652d",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),10)),",
+                "    #\"Converted to Table\" = #table(1, {{Source}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Last Refresh Date Time\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Last Refresh Date Time\", type datetime}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CurrentFY",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "FISCAL_YR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "587b013d-616f-4b5e-84d5-0706032e3ee5",
+            "sourceColumn": "FISCAL_YR",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "40d0ca3b-e6a9-4de9-86d4-b9b285fdf266",
+        "partitions": [
+          {
+            "name": "CurrentFY-eaba7bb1-14f2-4e76-b4fb-377cc38ea797",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"select * from advur.vw_current_fiscal_year\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "9512e805-4385-4a45-8102-14ce2891c89c",
+        "measures": [
+          {
+            "name": "Annual Scholarship Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        DISTINCTCOUNTNOBLANK( allocations[Alloc Cd] ),",
+              "        allocations[Schol Type] = \"Annual\"",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "e5148256-a02a-4294-a25b-d959b91725bc"
+          },
+          {
+            "name": "Endowed Scholarship Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        DISTINCTCOUNTNOBLANK( allocations[Alloc Cd] ),",
+              "        allocations[Schol Type] = \"Endowed\"",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "8a5bb348-d99c-4813-8e72-cebddf206daf"
+          },
+          {
+            "name": "Beneficiary Count",
+            "expression": [
+              "",
+              "    var _SelYr = [Selected Yr]",
+              "    var _BenCnt = CALCULATE(",
+              "                    DISTINCTCOUNTNOBLANK( beneficiaries[Beneficiary ID] ),",
+              "                    beneficiaries[Academic Yr] = _SelYr)",
+              "return",
+              "IF(ISBLANK(_BenCnt),0,_BenCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "397d68ea-749e-44bf-874b-e6095445f3dc"
+          },
+          {
+            "name": "Stewardee Count",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "            ( DISTINCTCOUNTNOBLANK( stewardees[Primary Stewardee ID] ) + DISTINCTCOUNTNOBLANK( stewardees[Sec Stewardee ID] )),",
+              "            ALL( stewardees[Primary Stewardee ID] )",
+              "            )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "b3799fec-0c42-4f41-9b63-f8f081ac662f"
+          },
+          {
+            "name": "Total Awarded",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    SUM( beneficiaries[Award Amt] )"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "cf100571-52ad-4c21-a96b-c8ee55aec321"
+          },
+          {
+            "name": "Awarded or Not",
+            "expression": [
+              "",
+              "    var _bens = [Total Awarded] //VALUES( allocations[Bene Ind] )",
+              "return",
+              "    IF( _bens = 0, \"Not Awarded\", \"Awarded\"",
+              "    )"
+            ],
+            "lineageTag": "f4714045-4bfe-4849-9c52-86b917d3b566"
+          },
+          {
+            "name": "Not Awarded Count",
+            "expression": [
+              "",
+              "    var _SelYr = SELECTEDVALUE( 'Award Year'[Academic Year] )",
+              "    var _NotAwdCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( allocations[Alloc Cd] ),",
+              "                                allocations[Bene Cnt] = 0, ",
+              "                                allocations[Academic Year] = _SelYr",
+              "                        )",
+              "return",
+              "IF( ISBLANK( _NotAwdCnt ),0,_NotAwdCnt )"
+            ],
+            "formatString": "0",
+            "lineageTag": "e1226dc8-be73-4dd2-b42c-46b05c396da8"
+          },
+          {
+            "name": "Selected Yr",
+            "expression": [
+              "",
+              "    SELECTEDVALUE( 'Award Year'[Academic Year] )"
+            ],
+            "lineageTag": "a879f5f3-e55c-46f2-af05-7d6c838fc7c7"
+          },
+          {
+            "name": "Scholarship Count",
+            "expression": [
+              "",
+              "    [Annual Scholarship Count] + [Endowed Scholarship Count]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "9fbd5af4-3189-4447-99ab-2733d926a6a4"
+          },
+          {
+            "name": "Page 1 Title",
+            "expression": [
+              "",
+              "    \"Scholarship Awarding Dashboard \" & [Selected Yr]"
+            ],
+            "lineageTag": "a3b01c6a-6073-4b7f-83a8-2ddb1bbfdb3a"
+          },
+          {
+            "name": "Page 2 Title",
+            "expression": [
+              "",
+              "    \"Scholarship Details - \" & SELECTEDVALUE( allocations[School], \"All Schools\" ) & \" - \" & [Selected Yr]"
+            ],
+            "lineageTag": "0e306ac2-1a19-4d02-a06d-de939312ebb6"
+          },
+          {
+            "name": "Page 3 Title",
+            "expression": [
+              "",
+              "    \"Stewardee Details - \" & SELECTEDVALUE( allocations[School], \"All Schools\" ) & \" - \" & [Selected Yr]"
+            ],
+            "lineageTag": "e003dc70-eec7-41e3-b49d-5e5213a0246e"
+          },
+          {
+            "name": "Stewardees w-Types",
+            "expression": [
+              "",
+              "    CONCATENATEX( stewardees, stewardees[Primary Stewardee Name] & stewardees[Primary Stewardee Types],\"; \" )"
+            ],
+            "lineageTag": "f13ed0e8-229a-4fcb-bb4f-6c4ca150b1fd"
+          },
+          {
+            "name": "Awarded Count",
+            "expression": [
+              "",
+              "    var _SelYr = SELECTEDVALUE( 'Award Year'[Academic Year] )",
+              "    var _AwdCnt = CALCULATE(",
+              "                    DISTINCTCOUNTNOBLANK( allocations[Alloc Cd] ),",
+              "                                allocations[Bene Cnt] > 0, ",
+              "                                allocations[Academic Year] = _SelYr",
+              "                            )",
+              "return",
+              "IF( ISBLANK( _AwdCnt),0,_AwdCnt )"
+            ],
+            "formatString": "0",
+            "lineageTag": "d5d32bec-61c3-42d7-a80b-779edde4b3b3"
+          },
+          {
+            "name": "Awarded by Year",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _Yr = [Selected Yr]",
+              "return",
+              "    CALCULATE(",
+              "            SUM( beneficiaries[Award Amt] ),",
+              "            beneficiaries[Academic Yr] = _Yr)"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "52a98408-0ecb-4d35-beb6-bb2038bf9f0a"
+          },
+          {
+            "name": "Page 4 Title",
+            "expression": [
+              "",
+              "    \"Beneficiary Details - \" & SELECTEDVALUE( allocations[School], \"All Schools\" ) & \" - \" & [Selected Yr]"
+            ],
+            "lineageTag": "7ca265ab-3b1b-4f85-985a-912e504994c6"
+          },
+          {
+            "name": "Avg Award",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _BenCnt = DISTINCTCOUNTNOBLANK( beneficiaries[Beneficiary ID] )",
+              "    var _AvgAwd = ",
+              "            CALCULATE( [Total Awarded] / [Beneficiary Count] )",
+              "return",
+              "IF( ISBLANK(_BenCnt),0,_AvgAwd)"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "1c60fc57-a0dd-4189-a5f4-65bcd1e7c274"
+          },
+          {
+            "name": "Page 5 Title",
+            "expression": [
+              "",
+              "    \"Beneficiaries and Stewardees - \" & SELECTEDVALUE( allocations[School], \"All Schools\" ) & \" - \" & [Selected Yr]"
+            ],
+            "lineageTag": "e6ebb665-658a-4a22-9c9c-0547f19a594e"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-f1aaf3c7-c03a-4d83-8670-f556a33f4833",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Award Year",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Academic Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e4105475-60c2-41b0-941b-04012d8aa5fb",
+            "sourceColumn": "Academic Year",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9198f296-509f-457d-924f-a04b31d4ffd1",
+        "partitions": [
+          {
+            "name": "Award Year-0d06cedb-cb30-4ff9-b306-df754a58406f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = allocations,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Academic Year\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Alloc Bridge",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "243003bb-1747-4a32-93b9-7d4a2f3662ad",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schol Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e6fed96-1e79-4b0b-9adb-62dc89a2058b",
+            "sourceColumn": "Schol Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dc2b4034-221c-4d99-a83f-7f7b1f6d5245",
+            "sourceColumn": "Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Long Nm",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e98a273-f4a1-401d-b6c0-c399f37d1c59",
+            "sourceColumn": "Alloc Long Nm",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bene Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f08209d9-7107-4029-9357-85a73af070bb",
+            "sourceColumn": "Bene Key",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "86396166-2799-46d5-8c65-756453ee71b1",
+        "partitions": [
+          {
+            "name": "Alloc Bridge-b3922b0b-7661-4362-9434-a10ab5691b3f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = allocations,",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Source,{\"Status\", \"Allocation Name\", \"FAO Nbr\", \"Academic Year\", \"Award Ind\", \"Bene Cnt\", \"Stew Cnt\", \"Balance\", \"Valuation Dt\", \"Fund\", \"Org\", \"Start Dt\", \"Alloc Group\", \"Ath Ind\", \"Campaign Bucket\", \"Campaign Priority\", \"Campaign Sub-Priority\", \"Goal Category\", \"Goal Sub-Category\", \"Finance Category\", \"Allocation Fund\", \"CFAE Purpose\", \"CFAE Sub-Purpose\", \"Account Nbr\", \"Stop Dt\", \"Finance Fund\", \"Alloc Desc\", \"Alloc Comment\", \"Alloc Short Nm\", \"FinCatCd\", \"AllocFundCd\", \"Sort FinCat\", \"Sort School\", \"Sort Alloc\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Columns\", {\"Alloc Cd\"})",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendar - FY13_to_EndOfCFY",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "f5216016-73ef-4dbc-8bca-f39d54d733bc",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthNum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a2c77bfe-e8a3-49a2-900a-bf868d78fe5b",
+            "sourceColumn": "MonthNum",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3434c68-716f-4924-8fd6-8cc56db66d2c",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "42671024-bc1b-4a8f-8e7a-6deac652871d",
+            "sourceColumn": "MonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7c06252b-9128-47eb-ab62-42c3e6fbe0be",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "43f407cb-5fd3-43bb-94f3-bb5ede2c996a",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SortFiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "59fb1bea-28d9-413c-b0dd-98089f14cd84",
+            "sourceColumn": "SortFiscalMonth",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b3727c0-5d68-45d8-bbaa-bff0dd24ec5d",
+            "sourceColumn": "FiscalMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalMonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e8c26cca-81ec-4384-b966-e142bb4dc2e4",
+            "sourceColumn": "FiscalMonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalQuarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1525165-dc51-4f96-987e-c14c289f85d5",
+            "sourceColumn": "FiscalQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "39fb3e82-b03f-49a3-8dc6-6388f43ef6fc",
+            "sourceColumn": "FiscalYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurMonthOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "970a32cf-20a8-44b2-815b-eb14aa6e43e3",
+            "sourceColumn": "CurMonthOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurQuarterOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2365fc34-a842-45f9-a661-311c846cf609",
+            "sourceColumn": "CurQuarterOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0968f940-9941-4cc2-b7fb-0666888bbadd",
+            "sourceColumn": "CurYearOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FutureDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a0ab59a5-e1a5-456c-bd39-dfcf7db37788",
+            "sourceColumn": "FutureDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurFiscalYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d8b90cab-b294-4114-941c-0d7d39e2b690",
+            "sourceColumn": "CurFiscalYearOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SortMonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "51047b0f-2bad-4714-be54-72c2b4e933db",
+            "sourceColumn": "SortMonthYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a347617-50e0-4cfd-997e-177002642cfa",
+            "sourceColumn": "MonthYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthYearLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5611c939-3142-40d8-b98e-70d980921f07",
+            "sourceColumn": "MonthYearLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b9b51b86-d682-4ed1-a58c-0a120cad3df3",
+            "sourceColumn": "SortWeekday",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Weekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "47641780-5013-474d-b61c-f16929dfa7b5",
+            "sourceColumn": "Weekday",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekdayWeekend",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1491ae7-9c2d-45b6-af86-78a8438440aa",
+            "sourceColumn": "WeekdayWeekend",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekSequence",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c0d4eb22-8e89-471e-9b7a-b4a0e57ca7b5",
+            "sourceColumn": "SortWeekSequence",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurWeekOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "36ea4843-dff9-4a22-8941-0b875b231175",
+            "sourceColumn": "CurWeekOffset",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "ce0d4cb1-ac6f-45c5-b33b-af24aa13159c",
+        "partitions": [
+          {
+            "name": "Calendar - FY13_to_EndOfCFY-5c9219b1-4941-45f4-9743-3283faa56e0e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    /*",
+                "    ****This Calendar was created and provided by Avi Singh****",
+                "    ****This can be freely shared as long as this text comment is retained.****",
+                "    http://www.youtube.com/PowerBIPro",
+                "    www.LearnPowerBI.com by Avi Singh",
+                "    */",
+                "    #\"LearnPowerBI.com by Avi Singh\" = 1,",
+                "    StartDate = #date(2012, 7, 1),",
+                "    EndDate = Date.AddMonths(Date.EndOfYear(DateTime.Date(DateTime.FixedLocalNow())),-6) /*was \"#date(2017, 1, 1)\" Updated on 201802027: hard Coded End of Year caused some formulas to break, switching to dynamic date*/,",
+                "    //Used for 'Offset' Column calculations, you may Hard code CurrentDate for testing e.g. #date(2017,9,1)",
+                "    CurrentDate = DateTime.Date(DateTime.FixedLocalNow()),",
+                "    // Specify the last month in your Fiscal Year, e.g. if June is the last month of your Fiscal Year, specify 6",
+                "    FiscalYearEndMonth = 6,",
+                "    #\"==SET PARAMETERS ABOVE==\" = 1,",
+                "    #\"==Build Date Column==\" = #\"==SET PARAMETERS ABOVE==\",",
+                "    ListDates = List.Dates(StartDate, Number.From(EndDate - StartDate)+1, #duration(1,0,0,0)),",
+                "    #\"Converted to Table\" = Table.FromList(ListDates, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Renamed Columns as Date\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Date\"}}),",
+                "    // As far as Power BI is concerned, the 'Date' column is all that is needed :-) But we will continue and add a few Human-Friendly Columns",
+                "    #\"Changed Type to Date\" = Table.TransformColumnTypes(#\"Renamed Columns as Date\",{{\"Date\", type date}}),",
+                "    #\"==Add Calendar Columns==\" = #\"Changed Type to Date\",",
+                "    #\"Added Calendar MonthNum\" = Table.AddColumn(#\"==Add Calendar Columns==\", \"MonthNum\", each Date.Month([Date]), Int64.Type),",
+                "    #\"Added Month Name\" = Table.AddColumn(#\"Added Calendar MonthNum\", \"Month\", each Text.Start(Date.MonthName([Date]),3), type text),",
+                "    #\"Added Month Name Long\" = Table.AddColumn(#\"Added Month Name\", \"MonthLong\", each Date.MonthName([Date]), type text),",
+                "    #\"Added Calendar Quarter\" = Table.AddColumn(#\"Added Month Name Long\", \"Quarter\", each \"Q\" & Text.From(Date.QuarterOfYear([Date]))),",
+                "    #\"Added Calendar Year\" = Table.AddColumn(#\"Added Calendar Quarter\", \"Year\", each Date.Year([Date]), Int64.Type),",
+                "    #\"==Add Fiscal Calendar Columns==\" = #\"Added Calendar Year\",",
+                "    #\"Added FiscalMonthNum\" = Table.AddColumn(#\"==Add Fiscal Calendar Columns==\", \"FiscalMonthNum\", each if [MonthNum] > FiscalYearEndMonth",
+                "then [MonthNum] - FiscalYearEndMonth",
+                "else [MonthNum] + (12 - FiscalYearEndMonth), type number),",
+                "    #\"Added FiscalMonth Name\" = Table.AddColumn(#\"Added FiscalMonthNum\", \"FiscalMonth\", each [Month]),",
+                "    #\"Added FiscalMonth Name Long\" = Table.AddColumn(#\"Added FiscalMonth Name\", \"FiscalMonthLong\", each [MonthLong]),",
+                "    #\"Added FiscalQuarter\" = Table.AddColumn(#\"Added FiscalMonth Name Long\", \"FiscalQuarter\", each \"FQ\" & Text.From(Number.RoundUp([FiscalMonthNum] / 3,0))),",
+                "    #\"Added FiscalYear\" = Table.AddColumn(#\"Added FiscalQuarter\", \"FiscalYear\", each \"FY\" & ",
+                "Text.End(",
+                "  Text.From(",
+                "    if [MonthNum] > FiscalYearEndMonth",
+                "    then [Year] + 1",
+                "    else [Year]",
+                "  )",
+                "  , 2",
+                ")),",
+                "",
+                "    #\"==Add Calendar Date Offset Columns==\" = #\"Added FiscalYear\",",
+                "    // Can be used to for example to show the past 3 months(CurMonthOffset = 0, -1, -2)",
+                "    #\"Added CurMonthOffset\" = Table.AddColumn(#\"==Add Calendar Date Offset Columns==\", \"CurMonthOffset\", each ( Date.Year([Date]) - Date.Year(CurrentDate) ) * 12",
+                "+ Date.Month([Date]) - Date.Month(CurrentDate), Int64.Type),",
+                "    // Can be used to for example to show the past 3 quarters (CurQuarterOffset = 0, -1, -2)",
+                "    #\"Added CurQuarterOffset\" = Table.AddColumn(#\"Added CurMonthOffset\", \"CurQuarterOffset\", each /*Year Difference*/",
+                "       ( Date.Year([Date]) - Date.Year(CurrentDate) )*4",
+                "       /*Quarter Difference*/",
+                "      + Number.RoundUp(Date.Month([Date]) / 3) ",
+                "      - Number.RoundUp(Date.Month(CurrentDate) / 3),",
+                "Int64.Type),",
+                "    // Can be used to for example to show the past 3 years (CurYearOffset = 0, -1, -2)",
+                "    #\"Added CurYearOffset\" = Table.AddColumn(#\"Added CurQuarterOffset\", \"CurYearOffset\", each Date.Year([Date]) - Date.Year(CurrentDate), Int64.Type),",
+                "    // Can be used to for example filter out all future dates",
+                "    #\"Added FutureDate Flag\" = Table.AddColumn(#\"Added CurYearOffset\", \"FutureDate\", each if [Date] > CurrentDate then \"Future\" else \"Past\" ),",
+                "    // FiscalYearOffset is the only Offset that is different.",
+                "    // FiscalQuarterOffset = is same as CurQuarterOffset",
+                "    // FiscalMonthOffset = is same as CurMonthOffset",
+                "    #\"==Add FiscalYearOffset==\" = #\"Added FutureDate Flag\",",
+                "    #\"Filtered Rows to CurrentDate\" = Table.SelectRows(#\"==Add FiscalYearOffset==\", each ([Date] = CurrentDate)),",
+                "    CurrentFiscalYear = #\"Filtered Rows to CurrentDate\"{0}[FiscalYear],",
+                "    #\"Continue...Orig Table\" = #\"==Add FiscalYearOffset==\",",
+                "    #\"Added CurFiscalYearOffset\" = Table.AddColumn(#\"Continue...Orig Table\", \"CurFiscalYearOffset\", each Number.From(Text.Range([FiscalYear],2,2)) - ",
+                "Number.From(Text.Range(CurrentFiscalYear,2,2))",
+                "/*Extract the numerical portion, e.g. FY18 = 18*/),",
+                "    #\"==Add General Columns==\" = #\"Added CurFiscalYearOffset\",",
+                "    // Used as 'Sort by Column' for MonthYear columns",
+                "    #\"Added MonthYearNum\" = Table.AddColumn(#\"==Add General Columns==\", \"MonthYearNum\", each [Year]*100 + [MonthNum] /*e.g. Sep-2016 would become 201609*/, Int64.Type),",
+                "    #\"Added MonthYear\" = Table.AddColumn(#\"Added MonthYearNum\", \"MonthYear\", each [Month] & \"-\" & Text.End(Text.From([Year]),2)),",
+                "    #\"Added MonthYearLong\" = Table.AddColumn(#\"Added MonthYear\", \"MonthYearLong\", each [Month] & \"-\" & Text.From([Year])),",
+                "    #\"Added WeekdayNum\" = Table.AddColumn(#\"Added MonthYearLong\", \"WeekdayNum\", each Date.DayOfWeek([Date]), Int64.Type),",
+                "    #\"Added Weekday Name\" = Table.AddColumn(#\"Added WeekdayNum\", \"Weekday\", each Text.Start(Date.DayOfWeekName([Date]),3), type text),",
+                "    #\"Added WeekdayWeekend\" = Table.AddColumn(#\"Added Weekday Name\", \"WeekdayWeekend\", each if [WeekdayNum] = 0 or [WeekdayNum] = 6",
+                "then \"Weekend\"",
+                "else \"Weekday\"),",
+                "    #\"==Improve Ultimate Table\" = #\"Added WeekdayWeekend\",",
+                "    #\"----Add WeekSequenceNum----\" = #\"==Improve Ultimate Table\",",
+                "    #\"Filtered Rows Sundays Only (Start of Week)\" = Table.SelectRows(#\"----Add WeekSequenceNum----\", each ([WeekdayNum] = 0)),",
+                "    #\"Added Index WeekSequenceNum\" = Table.AddIndexColumn(#\"Filtered Rows Sundays Only (Start of Week)\", \"WeekSequenceNum\", 2, 1),",
+                "    #\"Merged Queries Ultimate Table to WeekSequenceNum\" = Table.NestedJoin(#\"==Improve Ultimate Table\",{\"Date\"},#\"Added Index WeekSequenceNum\",{\"Date\"},\"Added Index WeekNum\",JoinKind.LeftOuter),",
+                "    #\"Expanded Added Index WeekNum\" = Table.ExpandTableColumn(#\"Merged Queries Ultimate Table to WeekSequenceNum\", \"Added Index WeekNum\", {\"WeekSequenceNum\"}, {\"WeekSequenceNum\"}),",
+                "    // somehow it ends up being unsorted after Expand Column, should not matter for the end table, but makes it harder to debug and check everything is correct. Thus sorting it.",
+                "    #\"ReSorted Rows by Date\" = Table.Sort(#\"Expanded Added Index WeekNum\",{{\"Date\", Order.Ascending}}),",
+                "    #\"Filled Down WeekSequenceNum\" = Table.FillDown(#\"ReSorted Rows by Date\",{\"WeekSequenceNum\"}),",
+                "    #\"Replaced Value WeekSequenceNum null with 1\" = Table.ReplaceValue(#\"Filled Down WeekSequenceNum\",null,1,Replacer.ReplaceValue,{\"WeekSequenceNum\"}),",
+                "    #\"----WeekSequenceNum Complete----\" = #\"Replaced Value WeekSequenceNum null with 1\",",
+                "    Current_WeekSequenceNum = #\"----WeekSequenceNum Complete----\"{[Date = CurrentDate]}?[WeekSequenceNum],",
+                "    #\"Added Custom CurWeekOffset\" = Table.AddColumn(#\"----WeekSequenceNum Complete----\", \"CurWeekOffset\", each [WeekSequenceNum] - Current_WeekSequenceNum, Int64.Type),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom CurWeekOffset\",{{\"Quarter\", type text}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"FiscalMonthNum\", \"SortFiscalMonth\"}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"FiscalMonth\", type text}, {\"FiscalMonthLong\", type text}, {\"FiscalQuarter\", type text}, {\"FiscalYear\", type text}, {\"FutureDate\", type text}, {\"CurFiscalYearOffset\", Int64.Type}}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type1\",{{\"MonthYearNum\", \"SortMonthYear\"}}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Renamed Columns1\",{{\"MonthYear\", type text}, {\"MonthYearLong\", type text}}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Changed Type2\",{{\"WeekdayNum\", \"SortWeekday\"}}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Renamed Columns2\",{{\"WeekdayWeekend\", type text}}),",
+                "    #\"Renamed Columns3\" = Table.RenameColumns(#\"Changed Type3\",{{\"WeekSequenceNum\", \"SortWeekSequence\"}})",
+                "in",
+                "    #\"Renamed Columns3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

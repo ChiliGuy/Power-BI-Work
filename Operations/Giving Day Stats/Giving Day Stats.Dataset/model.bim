@@ -1,0 +1,3711 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Giving Day Revenue\",\"Giving Day Production\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "giving_day_production": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "giving day production": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "production": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "day production": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "giving day construction": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "giving day creation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "giving day invention": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "giving day fabrication": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "giving day assembly": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "day construction": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "day creation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "day invention": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "day fabrication": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "day assembly": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.alloc_cd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Alloc Cd"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "alloc cd": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "alloc album": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "alloc disk": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "alloc disc": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "alloc recording": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.allocation_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Allocation Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "allocation name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "allocation": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "allocation nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "allocation title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "allocation label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "allocation tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "distribution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "apportionment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "division": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "provision": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "sharing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "allotment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.appeal_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Appeal Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "appeal code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "appeal id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "appeal key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.finance_category": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Finance Category"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "finance category": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "category": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "finance classification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "classification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "finance class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance group": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance type": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance grouping": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance kind": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "type": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "grouping": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.fiscal_yr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Fiscal Yr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "fiscal yr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "yr": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.gift_amt": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Gift Amt"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "gift amt": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.prim_donor_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Prim Donor ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "prim donor ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor ID": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim donor identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim donor identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "donor identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "prim donor credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "donor credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "prim giver": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "prim contributor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.prim_donor_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Prim Donor Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "prim donor name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor name": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim donor title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim donor label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim donor tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "donor nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "prim giver": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "prim contributor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.rcpt_dt": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Rcpt Dt"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "rcpt dt": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.receipt_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Receipt Nbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "receipt nbr": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.schol_ind": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "Schol Ind"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol ind": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Scholarship Ind": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "giving_day_production.school": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Production",
+                    "ConceptualProperty": "School"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "school": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "seminary": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "conservatory": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "faculty": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "department": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "university": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "college": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "institute": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "coterie": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "brotherhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "sisterhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "giving day revenue": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "revenue": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "day revenue": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "giving day income": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "day income": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "giving day profit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "giving day turnover": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "giving day yield": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "income": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "day profit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "day turnover": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "day yield": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "profit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.alloc_cd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Alloc Cd"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "alloc cd": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "alloc album": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "alloc disk": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "alloc disc": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "alloc recording": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.allocation_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Allocation Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "allocation name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "allocation": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "allocation nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "allocation title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "allocation label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "allocation tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "distribution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "apportionment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "division": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "provision": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "sharing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "allotment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.appeal_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Appeal Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "appeal code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "appeal id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "appeal key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.finance_category": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Finance Category"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "finance category": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "category": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "finance classification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "classification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "finance class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance group": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance type": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance grouping": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "finance kind": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "type": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "grouping": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.fiscal_yr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Fiscal Yr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "fiscal yr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "yr": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.gift_amt": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Gift Amt"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "gift amt": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.prim_donor_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Prim Donor ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "prim donor ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor ID": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim donor identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim donor identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "donor identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "prim donor credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "donor credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "prim giver": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "prim contributor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.prim_donor_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Prim Donor Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "prim donor name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor name": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim donor nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim donor title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim donor label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim donor tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "donor nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "prim giver": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "prim contributor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.rcpt_dt": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Rcpt Dt"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "rcpt dt": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.receipt_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Receipt Nbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "receipt nbr": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.schol_ind": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "Schol Ind"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol ind": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Scholarship Ind": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "giving_day_revenue.school": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Giving Day Revenue",
+                    "ConceptualProperty": "School"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "school": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "seminary": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "conservatory": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "faculty": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "department": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "university": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "college": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "institute": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "coterie": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "brotherhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "sisterhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "giving_day_production_has_alloc_cd": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.alloc_cd"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.alloc_cd": {
+                    "Target": {
+                      "Entity": "giving_day_production.alloc_cd"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_allocation_name": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.allocation_name"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.allocation_name": {
+                    "Target": {
+                      "Entity": "giving_day_production.allocation_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_appeal_code": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.appeal_code"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.appeal_code": {
+                    "Target": {
+                      "Entity": "giving_day_production.appeal_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.entity_ID": {
+                    "Target": {
+                      "Entity": "giving_day_production.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_finance_category": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.finance_category"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.finance_category": {
+                    "Target": {
+                      "Entity": "giving_day_production.finance_category"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_fiscal_yr": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.fiscal_yr"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.fiscal_yr": {
+                    "Target": {
+                      "Entity": "giving_day_production.fiscal_yr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_rcpt_dt": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.rcpt_dt"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.rcpt_dt": {
+                    "Target": {
+                      "Entity": "giving_day_production.rcpt_dt"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_receipt_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.receipt_nbr"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.receipt_nbr": {
+                    "Target": {
+                      "Entity": "giving_day_production.receipt_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_schol_ind": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.schol_ind"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.schol_ind": {
+                    "Target": {
+                      "Entity": "giving_day_production.schol_ind"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_has_school": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.school"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.school": {
+                    "Target": {
+                      "Entity": "giving_day_production.school"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_is_expensive": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "giving_day_production.gift_amt"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.gift_amt"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.gift_amt": {
+                    "Target": {
+                      "Entity": "giving_day_production.gift_amt"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_prim_donor_ID_don_giving_day_production": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "giving_day_production"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production.prim_donor_ID"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production.prim_donor_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.prim_donor_ID"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.prim_donor_ID": {
+                    "Target": {
+                      "Entity": "giving_day_production.prim_donor_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_production_prim_donor_name_don_giving_day_production": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Production"
+                },
+                "Phrasings": [
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "giving_day_production"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production.prim_donor_name"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production.prim_donor_name"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_production.prim_donor_name"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_production"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_production": {
+                    "Target": {
+                      "Entity": "giving_day_production"
+                    }
+                  },
+                  "giving_day_production.prim_donor_name": {
+                    "Target": {
+                      "Entity": "giving_day_production.prim_donor_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_alloc_cd": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.alloc_cd"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.alloc_cd": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.alloc_cd"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_allocation_name": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.allocation_name"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.allocation_name": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.allocation_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_appeal_code": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.appeal_code"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.appeal_code": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.appeal_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.entity_ID": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_finance_category": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.finance_category"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.finance_category": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.finance_category"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_fiscal_yr": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.fiscal_yr"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.fiscal_yr": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.fiscal_yr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_gift_amt": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.gift_amt"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "giving_day_revenue.gift_amt"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.gift_amt": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.gift_amt"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_prim_donor_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.prim_donor_ID"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "giving_day_revenue"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue.prim_donor_ID"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue.prim_donor_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.prim_donor_ID": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.prim_donor_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_prim_donor_name": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.prim_donor_name"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "giving_day_revenue"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue.prim_donor_name"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue.prim_donor_name"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.prim_donor_name": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.prim_donor_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_rcpt_dt": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.rcpt_dt"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.rcpt_dt": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.rcpt_dt"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_receipt_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.receipt_nbr"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.receipt_nbr": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.receipt_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_schol_ind": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.schol_ind"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.schol_ind": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.schol_ind"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "giving_day_revenue_has_school": {
+                "Binding": {
+                  "ConceptualEntity": "Giving Day Revenue"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "giving_day_revenue.school"
+                      },
+                      "Subject": {
+                        "Role": "giving_day_revenue"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "giving_day_revenue": {
+                    "Target": {
+                      "Entity": "giving_day_revenue"
+                    }
+                  },
+                  "giving_day_revenue.school": {
+                    "Target": {
+                      "Entity": "giving_day_revenue.school"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Giving Day Revenue",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17c9ef9f-e64c-4529-946d-3d8504208771",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Receipt Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5e0a912-868c-4643-857f-075ab2b92738",
+            "sourceColumn": "Receipt Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rcpt Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "bb2e9e44-980f-45c5-ae47-e5149aed2af2",
+            "sourceColumn": "Rcpt Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "72abe90d-7a55-4f05-a392-4fc1b81b142a",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "efcc3c9d-d7ce-4dfb-a02c-4f2c7d6ac706",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schol Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "885bc79c-e82d-4cd4-80e9-05d6204744e5",
+            "sourceColumn": "Schol Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa2e1916-7b91-485d-9943-9bb16166d578",
+            "sourceColumn": "Appeal Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad7a7ccd-0d04-45b3-ab7a-35abd3f4347c",
+            "sourceColumn": "Prim Donor ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2b8f4da4-d90f-4415-bfa3-bf5005e994f3",
+            "sourceColumn": "Prim Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "205d9820-f9eb-493d-b3e1-4d2443433a23",
+            "sourceColumn": "Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4552c9d9-aab4-4db5-b2a4-9312c6f3425c",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gift Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "030e0d03-50a1-450e-aa46-aeeb212f38db",
+            "sourceColumn": "Gift Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b51c9d8f-b9e2-46cf-84d5-c269b5bd62b5",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00631d9e-c28f-4590-9f23-c23d6bf3c69a",
+            "sourceColumn": "Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Org",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "368c3ecb-5974-4d01-a8dc-f91bd5753970",
+            "sourceColumn": "Org",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Full Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a1680d39-5155-4b4d-a1f7-b095bfda5fd8",
+            "sourceColumn": "Allocation Full Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "edd895a8-4c45-4f80-8b31-d9b952df578e",
+        "partitions": [
+          {
+            "name": "Giving Day Revenue-b790f9f1-47b8-4c15-a839-01656532348e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"-- This query created to provide key statistics (particularly distinct donor counts) for Giving Day. smk 4/18/2022#(lf)-- Updated to add the allocation Fund and Org.  smk 4/20/2022#(lf)SELECT ext.primary_recipient_ids \"\"Entity ID\"\",#(lf)       tr.trans_nbr              \"\"Receipt Nbr\"\",#(lf)       tr.trans_dt               \"\"Rcpt Dt\"\",#(lf)       tr.fiscal_yr              \"\"Fiscal Yr\"\",#(lf)       tr.finance_category       \"\"Finance Category\"\",#(lf)       CASE WHEN tr.finance_category LIKE '%Scholarship%' THEN 'Scholarship'#(lf)          ELSE 'Non-Scholarship' END  \"\"Schol Ind\"\",#(lf)       tr.appeal_code            \"\"Appeal Code\"\",#(lf)       ext.primary_recipient_ids \"\"Prim Donor ID\"\",#(lf)       ext.primary_recipients    \"\"Prim Donor Name\"\",#(lf)       tr.allocation_code        \"\"Alloc Cd\"\",#(lf)       tr.allocation_name        \"\"Allocation Name\"\",#(lf)       tr.allocation_name||' (Fund: '||a.alloc_fund||' Org: '||a.alloc_org||')' \"\"Allocation Full Name\"\",#(lf)       tr.school                 \"\"School\"\",#(lf)       a.alloc_fund              \"\"Fund\"\",#(lf)       a.alloc_org               \"\"Org\"\",#(lf)       tr.trans_amt              \"\"Gift Amt\"\"#(lf)  FROM   advur.mvw_total_revenue tr#(lf)  INNER JOIN advur.mvw_total_revenue_ext ext ON tr.trans_nbr = ext.trans_nbr#(lf)  inner join advur.mvw_allocations a         ON tr.allocation_code = a.allocation_code#(lf)  WHERE  tr.appeal_code LIKE substr(advur.fn_get_fytd_fiscalyear(TO_CHAR(SYSDATE, 'MM/DD/YYYY')),3,2)||'C25%'\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Rcpt Dt\", type date}, {\"Gift Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Giving Day Production",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "393646fa-1c94-4fd8-9c5b-9e52cd9cbe06",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Receipt Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "414a28e4-ac1a-4d45-aa02-c9fa064be07d",
+            "sourceColumn": "Receipt Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rcpt Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "ebc9d1d7-8546-46d1-a419-423a829bddee",
+            "sourceColumn": "Rcpt Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08f15e75-48b2-422b-93a6-c9c8eb7c61b7",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "be1a29c4-b302-4ceb-8d70-ce50307cc8db",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schol Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5d1f53be-77a3-4584-a53e-40982a6afa3c",
+            "sourceColumn": "Schol Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "82e4abf0-bfca-4e43-b8f0-6915ba054aea",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "be625c48-a975-4e08-b3f4-05d7432873ac",
+            "sourceColumn": "Appeal Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bac2a803-e598-4458-bcce-eb511106ee39",
+            "sourceColumn": "Prim Donor ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bba1544e-8396-4cbc-9e65-d3a158f902f5",
+            "sourceColumn": "Prim Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "20dc83fd-45f2-49dc-8de5-e9521ed89027",
+            "sourceColumn": "Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "93244c7b-28b3-4957-b1e5-d98b34000761",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gift Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "c92b453d-f854-4095-b727-d9cf47ced95f",
+            "sourceColumn": "Gift Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fd723d0d-b598-4fc0-8b8b-979a3274cdfb",
+            "sourceColumn": "Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Org",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c8f98638-92ad-4520-bbe9-34ab6d8cff00",
+            "sourceColumn": "Org",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Full Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "53a7b8fe-4ed5-433b-9c81-144fc7f05d8f",
+            "sourceColumn": "Allocation Full Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9ca7c626-e536-415d-b7be-ea3cb2f13f08",
+        "partitions": [
+          {
+            "name": "Giving Day Production-8edb161b-096d-491c-bacf-67a961ddd7b5",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"-- This query created to provide key statistics (particularly distinct donor counts) for Giving Day. smk 4/18/2022#(lf)-- Updated to add the allocation Fund and Org.  smk 4/20/2022#(lf)select ext.primary_recipient_ids \"\"Entity ID\"\",#(lf)       tp.trans_nbr              \"\"Receipt Nbr\"\",#(lf)       tp.trans_dt               \"\"Rcpt Dt\"\",#(lf)       tp.fiscal_yr              \"\"Fiscal Yr\"\",#(lf)       tp.finance_category       \"\"Finance Category\"\",#(lf)       CASE WHEN tp.finance_category LIKE '%Scholarship%' THEN 'Scholarship'#(lf)          ELSE 'Non-Scholarship' END  \"\"Schol Ind\"\",#(lf)       tp.appeal_code            \"\"Appeal Code\"\",#(lf)       ext.primary_recipient_ids \"\"Prim Donor ID\"\",#(lf)       ext.primary_recipients    \"\"Prim Donor Name\"\",#(lf)       tp.allocation_code        \"\"Alloc Cd\"\",#(lf)       tp.allocation_name        \"\"Allocation Name\"\",#(lf)       tp.allocation_name||' (Fund: '||a.alloc_fund||' Org: '||a.alloc_org||')' \"\"Allocation Full Name\"\",#(lf)       tp.school                 \"\"School\"\",#(lf)       a.alloc_fund              \"\"Fund\"\",#(lf)       a.alloc_org               \"\"Org\"\",#(lf)       tp.trans_amt              \"\"Gift Amt\"\"#(lf)from   advur.mvw_total_production tp#(lf)inner join advur.mvw_total_production_ext ext ON tp.trans_nbr = ext.trans_nbr#(lf)inner join advur.mvw_allocations a         ON tp.allocation_code = a.allocation_code#(lf)where  tp.appeal_code LIKE substr(advur.fn_get_fytd_fiscalyear(TO_CHAR(SYSDATE, 'MM/DD/YYYY')),3,2)||'C25%'\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Rcpt Dt\", type date}, {\"Gift Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

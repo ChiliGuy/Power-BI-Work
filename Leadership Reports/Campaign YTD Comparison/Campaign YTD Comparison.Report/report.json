@@ -1,0 +1,168 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU09\",\"version\":\"5.37\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU09",
+            "path": "BaseThemes/CY22SU09.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "ForwardBlue_mark_stacked_rgb12811434997055011.png",
+            "path": "ForwardBlue_mark_stacked_rgb12811434997055011.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Campaign Production",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1cbb4f5cf540113b639d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":326.8085106382979,\"y\":10.699088145896656,\"z\":1000,\"width\":625.4103343465046,\"height\":56.413373860182375,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Production FYTD Comparison\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"20pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 56.41,
+          "width": 625.41,
+          "x": 326.81,
+          "y": 10.70,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"3125d440d0b65d602e05\",\"layouts\":[{\"id\":0,\"position\":{\"x\":100.1823708206687,\"y\":116.71732522796353,\"z\":2000,\"width\":525.2279635258359,\"height\":79.75683890577508,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.Production Across FYs\"}],\"Columns\":[{\"queryRef\":\"Campaign Production.Prod Camp Yr\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"Campaign Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Prod Camp Yr\"},\"Name\":\"Campaign Production.Prod Camp Yr\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Production Across FYs\"},\"Name\":\"Key Measures.Production Across FYs\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnFormatting\":[{\"properties\":{\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Key Measures.Production Across FYs\"}}],\"columnHeaders\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter745120acff7875ebe2f3\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Production\"}},\"Property\":\"Prod Camp Yr\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Production\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Prod Camp Yr\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"' Pre-Campaign'\"}}],[{\"Literal\":{\"Value\":\"'FYTD2017 (Partial)'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 79.76,
+          "width": 525.23,
+          "x": 100.18,
+          "y": 116.72,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"76ce627d6c64a501af00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":6.808510638297872,\"y\":6.808510638297872,\"z\":3000,\"width\":226.6261398176292,\"height\":81.70212765957447,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ForwardBlue_mark_stacked_rgb12811434997055011.png\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 81.70,
+          "width": 226.63,
+          "x": 6.81,
+          "y": 6.81,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"8756691e2b041faeffb4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":48.632218844984806,\"y\":88.51063829787235,\"z\":0,\"width\":1181.7629179331307,\"height\":600.1215805471124,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Campaign Production.Prod Camp Yr\",\"active\":true}],\"Y\":[{\"queryRef\":\"Key Measures.Production Across FYs\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"Campaign Production\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Production Across FYs\"},\"Name\":\"Key Measures.Production Across FYs\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Prod Camp Yr\"},\"Name\":\"Campaign Production.Prod Camp Yr\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Prod Camp Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"backgroundTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter8e0739cb42ae5dbd1879\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Production\"}},\"Property\":\"Prod Camp Yr\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Production\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Prod Camp Yr\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"' Pre-Campaign'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 600.12,
+          "width": 1181.76,
+          "x": 48.63,
+          "y": 88.51,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b91d58932e5be725093b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1168.1458966565351,\"y\":691.5501519756839,\"z\":5000,\"width\":106.99088145896657,\"height\":28.206686930091188,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 28.21,
+          "width": 106.99,
+          "x": 1168.15,
+          "y": 691.55,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"ef8cb9dd14417124e607\",\"layouts\":[{\"id\":0,\"position\":{\"x\":88.51063829787235,\"y\":688.6322188449848,\"z\":4000,\"width\":144.92401215805472,\"height\":24.316109422492403,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.Database\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Database\"},\"Name\":\"Key Measures.Database\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 24.32,
+          "width": 144.92,
+          "x": 88.51,
+          "y": 688.63,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Campaign Revenue",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection556533f520517a7cf745",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3aefe5481e82ae7a8702\",\"layouts\":[{\"id\":0,\"position\":{\"x\":6.808510638297872,\"y\":6.808510638297872,\"z\":3000,\"width\":226.6261398176292,\"height\":81.70212765957447,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ForwardBlue_mark_stacked_rgb12811434997055011.png\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 81.70,
+          "width": 226.63,
+          "x": 6.81,
+          "y": 6.81,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"44fd2f34e0a26f17e43b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":100.1823708206687,\"y\":116.71732522796353,\"z\":2000,\"width\":530.0911854103343,\"height\":79.75683890577508,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.Revenue Across FYs\"}],\"Columns\":[{\"queryRef\":\"Campaign Revenue.Rev Camp Yr\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Campaign Revenue\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Revenue Across FYs\"},\"Name\":\"Key Measures.Revenue Across FYs\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rev Camp Yr\"},\"Name\":\"Campaign Revenue.Rev Camp Yr\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnFormatting\":[{\"properties\":{\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}},\"selector\":{\"metadata\":\"Key Measures.Revenue Across FYs\"}}],\"columnHeaders\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter68767de0e1116badfdf5\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Campaign Revenue\"}},\"Property\":\"Rev Camp Yr\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Campaign Revenue\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rev Camp Yr\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"' Pre-Campaign'\"}}],[{\"Literal\":{\"Value\":\"'FYTD2017 (Partial)'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 79.76,
+          "width": 530.09,
+          "x": 100.18,
+          "y": 116.72,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5197a694130b49677a13\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1168.1458966565351,\"y\":691.5501519756839,\"z\":5000,\"width\":106.99088145896657,\"height\":28.206686930091188,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 28.21,
+          "width": 106.99,
+          "x": 1168.15,
+          "y": 691.55,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"6f052148edf16af8a3e3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":326.8085106382979,\"y\":10.699088145896656,\"z\":1000,\"width\":625.4103343465046,\"height\":56.413373860182375,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Revenue FYTD Comparison\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"20pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 56.41,
+          "width": 625.41,
+          "x": 326.81,
+          "y": 10.70,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8f81c044a155f75b89b4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":48.632218844984806,\"y\":88.51063829787235,\"z\":0,\"width\":1177.872340425532,\"height\":600.1215805471124,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Key Measures.Revenue Across FYs\"}],\"Category\":[{\"queryRef\":\"Campaign Revenue.Rev Camp Yr\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Campaign Revenue\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Revenue Across FYs\"},\"Name\":\"Key Measures.Revenue Across FYs\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rev Camp Yr\"},\"Name\":\"Campaign Revenue.Rev Camp Yr\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rev Camp Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"backgroundTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtercb7eee325b4f2ee94e9c\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendar - FY16+\"}},\"Property\":\"FiscalYear\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendar - FY16+\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"FiscalYear\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 600.12,
+          "width": 1177.87,
+          "x": 48.63,
+          "y": 88.51,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c49fc98bfb969326425b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":88.51063829787235,\"y\":688.6322188449848,\"z\":4000,\"width\":144.92401215805472,\"height\":24.316109422492403,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.Database\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Database\"},\"Name\":\"Key Measures.Database\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 24.32,
+          "width": 144.92,
+          "x": 88.51,
+          "y": 688.63,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

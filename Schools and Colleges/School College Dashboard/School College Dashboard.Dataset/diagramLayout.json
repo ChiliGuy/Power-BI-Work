@@ -1,0 +1,178 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1422.3276999579637,
+            "y": 666.4839010761998
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 341,
+            "width": 238
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1417.4955241370706,
+            "y": 17.051510053351304
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 411.4502497862112,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 2.3721072925006155,
+            "y": 423.35201240927415
+          },
+          "nodeIndex": "Total Prod - Current FY",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 430.42316537352161,
+            "y": 45.829199360332737
+          },
+          "nodeIndex": "School Filter Ref",
+          "size": {
+            "height": 194.83019151385287,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 310.13257210236867,
+            "y": 423.17244558617159
+          },
+          "nodeIndex": "Camp Prod Scholarships",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 570.56681364638587,
+            "y": 428.83679722795819
+          },
+          "nodeIndex": "Camp Rev Scholarships",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 843.28153275094189,
+            "y": 435.39996217473322
+          },
+          "nodeIndex": "Total Rev - Current FY",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1118.4446469084066,
+            "y": 434.46080993595422
+          },
+          "nodeIndex": "AAB Participation",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1120.3501729212787,
+            "y": 769.93054925358979
+          },
+          "nodeIndex": "FacStaff Participation",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1114.9230270364983,
+            "y": 71.493551002119048
+          },
+          "nodeIndex": "Alumni Participation",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1416.4274917273392,
+            "y": 489.4558491683535
+          },
+          "nodeIndex": "Current FY",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Production",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 814.13876315579728,
+            "y": 31.163855565026154
+          },
+          "nodeIndex": "Revenue",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -1,0 +1,1851 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Calendar - FY13+\",\"DataSource\",\"Campaign Production\",\"Key Measures\",\"Donor Count Query\",\"Data Source\",\"Alt Donor Count\",\"Indiv Count by Zip\",\"Measure Type\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataSource",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "description": "This parameter allows the user to select as a data source Production (PADV) or one of the Snapshots. We only keep FYE Snapshots except for the current and previous FYs.",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL20\", \"ADVJUL21\", \"ADVJUL22\", \"ADVOCT22\", \"ADVJAN23\", \"ADVAPR23\", \"ADVJUL23\", \"ADVJUL24\", \"ADVJUL25\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "05020849-dd92-43ce-b728-29ff9c51e854"
+      },
+      {
+        "name": "Alt Donor Count",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Oracle.Database(DataSource, [HierarchicalNavigation=true, Query=\"-- Simple query to be joined to the Campaign Production query to do a distinct donor count. smk  3/10/2023#(lf)#(lf)select distinct eg.household_key   \"\"HH Key\"\",#(lf)       eg.id_number                \"\"ID_Number\"\",#(lf)       eg.member_count             \"\"HH Count\"\"#(lf)from advur.mvw_ent_household_keys eg#(lf)#(lf)order by \"\"HH Count\"\" desc\"]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"HH Count\", Int64.Type}})",
+          "in",
+          "    #\"Changed Type\""
+        ],
+        "kind": "m",
+        "lineageTag": "66f50d49-b6ea-4d2b-9bf1-c18e87366c45"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "feaff42b-827e-40d9-8bf4-69bfa5002fab",
+        "fromColumn": "Trans Nbr",
+        "fromTable": "Donor Count Query",
+        "toColumn": "Trans Nbr",
+        "toTable": "Campaign Production"
+      },
+      {
+        "name": "a596f3a3-4043-451b-8589-acbc71a0aef4",
+        "fromColumn": "Trans Dt",
+        "fromTable": "Campaign Production",
+        "toColumn": "Date",
+        "toTable": "Calendar - FY13+"
+      },
+      {
+        "name": "82bf6ab8-9b34-4a87-9e4f-f6d976712490",
+        "fromColumn": "Counts or Totals Order",
+        "fromTable": "Counts or Totals",
+        "toColumn": "ID",
+        "toTable": "Measure Type"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Calendar - FY13+",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "d9e11bb1-8e0a-4c1a-8cb9-d10c3969d286",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthNum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "aff708fe-b930-4807-8289-b308f0d0b1d2",
+            "sourceColumn": "MonthNum",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dedbe609-3f01-4410-ad5b-9e32c3ace2ac",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "615e79e6-74b5-4d42-a5bc-621da965e399",
+            "sourceColumn": "MonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59142db0-e0c1-4877-a902-903d5b899038",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "97d8ca8b-2428-45a1-a683-be2279222118",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortFiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1def856f-2933-4514-8e61-d237003acc93",
+            "sourceColumn": "SortFiscalMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f90e33ae-f55f-45ed-88c5-4c3736002293",
+            "sourceColumn": "FiscalMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalMonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a41cdddd-5049-42a9-9f06-4f33d8c25ddf",
+            "sourceColumn": "FiscalMonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalQuarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9a6f8712-f6fd-4236-bd02-685c69876f37",
+            "sourceColumn": "FiscalQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0d77ca63-db6e-4560-8d9a-726ccda4cf3d",
+            "sourceColumn": "FiscalYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurMonthOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "da246f04-0e13-4505-b47c-b574c1fdba62",
+            "sourceColumn": "CurMonthOffset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurQuarterOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "24f83870-19a5-4381-b139-3a1496be9d09",
+            "sourceColumn": "CurQuarterOffset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4f842679-8593-4e94-9c0f-34019e65f669",
+            "sourceColumn": "CurYearOffset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FutureDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9288fdca-29f1-47c0-8f24-a62ce6bde326",
+            "sourceColumn": "FutureDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurFiscalYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "70013ec2-5883-4075-a6b2-7951ae6b62f4",
+            "sourceColumn": "CurFiscalYearOffset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortMonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d584ce39-915f-4bbf-b2c3-5ad078095964",
+            "sourceColumn": "SortMonthYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "90e977ab-1aef-4d19-a1ba-e8e33f052cc9",
+            "sourceColumn": "MonthYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthYearLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "429ee520-d1f4-4ac7-81ef-05b0c6ffc9b8",
+            "sourceColumn": "MonthYearLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "de93e4a0-8ceb-4949-9733-9dfb5b148bb9",
+            "sourceColumn": "SortWeekday",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Weekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "60023b75-7f80-49a9-9d53-c8904dbafcca",
+            "sourceColumn": "Weekday",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekdayWeekend",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5d6d366e-27b4-4e21-921c-1b74257cbdc1",
+            "sourceColumn": "WeekdayWeekend",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekSequence",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e6bf9bb5-13e5-49e3-8028-03b4bfe36726",
+            "sourceColumn": "SortWeekSequence",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurWeekOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6e5a5dc8-65c8-4ed5-aec5-fe7b7b3b80cf",
+            "sourceColumn": "CurWeekOffset",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "154093b0-0616-4a28-8297-ff281c7006d9",
+        "partitions": [
+          {
+            "name": "Calendar - FY13+-41f5c18f-3880-40db-9097-917f8ac1cba2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    /*",
+                "    ****This Calendar was created and provided by Avi Singh****",
+                "    ****This can be freely shared as long as this text comment is retained.****",
+                "    http://www.youtube.com/PowerBIPro",
+                "    www.LearnPowerBI.com by Avi Singh",
+                "    */",
+                "    #\"LearnPowerBI.com by Avi Singh\" = 1,",
+                "    StartDate = #date(2012, 7, 1),",
+                "    EndDate = Date.EndOfYear(DateTime.Date(DateTime.FixedLocalNow())) /*was \"#date(2017, 1, 1)\" Updated on 201802027: hard Coded End of Year caused some formulas to break, switching to dynamic date*/,",
+                "    //Used for 'Offset' Column calculations, you may Hard code CurrentDate for testing e.g. #date(2017,9,1)",
+                "    CurrentDate = DateTime.Date(DateTime.FixedLocalNow()),",
+                "    // Specify the last month in your Fiscal Year, e.g. if June is the last month of your Fiscal Year, specify 6",
+                "    FiscalYearEndMonth = 6,",
+                "    #\"==SET PARAMETERS ABOVE==\" = 1,",
+                "    #\"==Build Date Column==\" = #\"==SET PARAMETERS ABOVE==\",",
+                "    ListDates = List.Dates(StartDate, Number.From(EndDate - StartDate)+1, #duration(1,0,0,0)),",
+                "    #\"Converted to Table\" = Table.FromList(ListDates, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Renamed Columns as Date\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Date\"}}),",
+                "    // As far as Power BI is concerned, the 'Date' column is all that is needed :-) But we will continue and add a few Human-Friendly Columns",
+                "    #\"Changed Type to Date\" = Table.TransformColumnTypes(#\"Renamed Columns as Date\",{{\"Date\", type date}}),",
+                "    #\"==Add Calendar Columns==\" = #\"Changed Type to Date\",",
+                "    #\"Added Calendar MonthNum\" = Table.AddColumn(#\"==Add Calendar Columns==\", \"MonthNum\", each Date.Month([Date]), Int64.Type),",
+                "    #\"Added Month Name\" = Table.AddColumn(#\"Added Calendar MonthNum\", \"Month\", each Text.Start(Date.MonthName([Date]),3), type text),",
+                "    #\"Added Month Name Long\" = Table.AddColumn(#\"Added Month Name\", \"MonthLong\", each Date.MonthName([Date]), type text),",
+                "    #\"Added Calendar Quarter\" = Table.AddColumn(#\"Added Month Name Long\", \"Quarter\", each \"Q\" & Text.From(Date.QuarterOfYear([Date]))),",
+                "    #\"Added Calendar Year\" = Table.AddColumn(#\"Added Calendar Quarter\", \"Year\", each Date.Year([Date]), Int64.Type),",
+                "    #\"==Add Fiscal Calendar Columns==\" = #\"Added Calendar Year\",",
+                "    #\"Added FiscalMonthNum\" = Table.AddColumn(#\"==Add Fiscal Calendar Columns==\", \"FiscalMonthNum\", each if [MonthNum] > FiscalYearEndMonth",
+                "then [MonthNum] - FiscalYearEndMonth",
+                "else [MonthNum] + (12 - FiscalYearEndMonth), type number),",
+                "    #\"Added FiscalMonth Name\" = Table.AddColumn(#\"Added FiscalMonthNum\", \"FiscalMonth\", each [Month]),",
+                "    #\"Added FiscalMonth Name Long\" = Table.AddColumn(#\"Added FiscalMonth Name\", \"FiscalMonthLong\", each [MonthLong]),",
+                "    #\"Added FiscalQuarter\" = Table.AddColumn(#\"Added FiscalMonth Name Long\", \"FiscalQuarter\", each \"FQ\" & Text.From(Number.RoundUp([FiscalMonthNum] / 3,0))),",
+                "    #\"Added FiscalYear\" = Table.AddColumn(#\"Added FiscalQuarter\", \"FiscalYear\", each ",
+                "Text.End(",
+                "  Text.From(",
+                "    if [MonthNum] > FiscalYearEndMonth",
+                "    then [Year] + 1",
+                "    else [Year]",
+                "  )",
+                "  , 4",
+                ")),",
+                "",
+                "    #\"==Add Calendar Date Offset Columns==\" = #\"Added FiscalYear\",",
+                "    // Can be used to for example to show the past 3 months(CurMonthOffset = 0, -1, -2)",
+                "    #\"Added CurMonthOffset\" = Table.AddColumn(#\"==Add Calendar Date Offset Columns==\", \"CurMonthOffset\", each ( Date.Year([Date]) - Date.Year(CurrentDate) ) * 12",
+                "+ Date.Month([Date]) - Date.Month(CurrentDate), Int64.Type),",
+                "    // Can be used to for example to show the past 3 quarters (CurQuarterOffset = 0, -1, -2)",
+                "    #\"Added CurQuarterOffset\" = Table.AddColumn(#\"Added CurMonthOffset\", \"CurQuarterOffset\", each /*Year Difference*/",
+                "       ( Date.Year([Date]) - Date.Year(CurrentDate) )*4",
+                "       /*Quarter Difference*/",
+                "      + Number.RoundUp(Date.Month([Date]) / 3) ",
+                "      - Number.RoundUp(Date.Month(CurrentDate) / 3),",
+                "Int64.Type),",
+                "    // Can be used to for example to show the past 3 years (CurYearOffset = 0, -1, -2)",
+                "    #\"Added CurYearOffset\" = Table.AddColumn(#\"Added CurQuarterOffset\", \"CurYearOffset\", each Date.Year([Date]) - Date.Year(CurrentDate), Int64.Type),",
+                "    // Can be used to for example filter out all future dates",
+                "    #\"Added FutureDate Flag\" = Table.AddColumn(#\"Added CurYearOffset\", \"FutureDate\", each if [Date] > CurrentDate then \"Future\" else \"Past\" ),",
+                "    // FiscalYearOffset is the only Offset that is different.",
+                "    // FiscalQuarterOffset = is same as CurQuarterOffset",
+                "    // FiscalMonthOffset = is same as CurMonthOffset",
+                "    #\"==Add FiscalYearOffset==\" = #\"Added FutureDate Flag\",",
+                "    #\"Filtered Rows to CurrentDate\" = Table.SelectRows(#\"==Add FiscalYearOffset==\", each ([Date] = CurrentDate)),",
+                "    CurrentFiscalYear = #\"Filtered Rows to CurrentDate\"{0}[FiscalYear],",
+                "    #\"Continue...Orig Table\" = #\"==Add FiscalYearOffset==\",",
+                "    #\"Added CurFiscalYearOffset\" = Table.AddColumn(#\"Continue...Orig Table\", \"CurFiscalYearOffset\", each Number.From(Text.Range([FiscalYear],2,2)) - ",
+                "Number.From(Text.Range(CurrentFiscalYear,2,2))",
+                "/*Extract the numerical portion, e.g. FY18 = 18*/),",
+                "    #\"==Add General Columns==\" = #\"Added CurFiscalYearOffset\",",
+                "    // Used as 'Sort by Column' for MonthYear columns",
+                "    #\"Added MonthYearNum\" = Table.AddColumn(#\"==Add General Columns==\", \"MonthYearNum\", each [Year]*100 + [MonthNum] /*e.g. Sep-2016 would become 201609*/, Int64.Type),",
+                "    #\"Added MonthYear\" = Table.AddColumn(#\"Added MonthYearNum\", \"MonthYear\", each [Month] & \"-\" & Text.End(Text.From([Year]),2)),",
+                "    #\"Added MonthYearLong\" = Table.AddColumn(#\"Added MonthYear\", \"MonthYearLong\", each [Month] & \"-\" & Text.From([Year])),",
+                "    #\"Added WeekdayNum\" = Table.AddColumn(#\"Added MonthYearLong\", \"WeekdayNum\", each Date.DayOfWeek([Date]), Int64.Type),",
+                "    #\"Added Weekday Name\" = Table.AddColumn(#\"Added WeekdayNum\", \"Weekday\", each Text.Start(Date.DayOfWeekName([Date]),3), type text),",
+                "    #\"Added WeekdayWeekend\" = Table.AddColumn(#\"Added Weekday Name\", \"WeekdayWeekend\", each if [WeekdayNum] = 0 or [WeekdayNum] = 6",
+                "then \"Weekend\"",
+                "else \"Weekday\"),",
+                "    #\"==Improve Ultimate Table\" = #\"Added WeekdayWeekend\",",
+                "    #\"----Add WeekSequenceNum----\" = #\"==Improve Ultimate Table\",",
+                "    #\"Filtered Rows Sundays Only (Start of Week)\" = Table.SelectRows(#\"----Add WeekSequenceNum----\", each ([WeekdayNum] = 0)),",
+                "    #\"Added Index WeekSequenceNum\" = Table.AddIndexColumn(#\"Filtered Rows Sundays Only (Start of Week)\", \"WeekSequenceNum\", 2, 1),",
+                "    #\"Merged Queries Ultimate Table to WeekSequenceNum\" = Table.NestedJoin(#\"==Improve Ultimate Table\",{\"Date\"},#\"Added Index WeekSequenceNum\",{\"Date\"},\"Added Index WeekNum\",JoinKind.LeftOuter),",
+                "    #\"Expanded Added Index WeekNum\" = Table.ExpandTableColumn(#\"Merged Queries Ultimate Table to WeekSequenceNum\", \"Added Index WeekNum\", {\"WeekSequenceNum\"}, {\"WeekSequenceNum\"}),",
+                "    // somehow it ends up being unsorted after Expand Column, should not matter for the end table, but makes it harder to debug and check everything is correct. Thus sorting it.",
+                "    #\"ReSorted Rows by Date\" = Table.Sort(#\"Expanded Added Index WeekNum\",{{\"Date\", Order.Ascending}}),",
+                "    #\"Filled Down WeekSequenceNum\" = Table.FillDown(#\"ReSorted Rows by Date\",{\"WeekSequenceNum\"}),",
+                "    #\"Replaced Value WeekSequenceNum null with 1\" = Table.ReplaceValue(#\"Filled Down WeekSequenceNum\",null,1,Replacer.ReplaceValue,{\"WeekSequenceNum\"}),",
+                "    #\"----WeekSequenceNum Complete----\" = #\"Replaced Value WeekSequenceNum null with 1\",",
+                "    Current_WeekSequenceNum = #\"----WeekSequenceNum Complete----\"{[Date = CurrentDate]}?[WeekSequenceNum],",
+                "    #\"Added Custom CurWeekOffset\" = Table.AddColumn(#\"----WeekSequenceNum Complete----\", \"CurWeekOffset\", each [WeekSequenceNum] - Current_WeekSequenceNum, Int64.Type),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom CurWeekOffset\",{{\"Quarter\", type text}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"FiscalMonthNum\", \"SortFiscalMonth\"}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"FiscalMonth\", type text}, {\"FiscalMonthLong\", type text}, {\"FiscalQuarter\", type text}, {\"FiscalYear\", type text}, {\"FutureDate\", type text}, {\"CurFiscalYearOffset\", Int64.Type}}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type1\",{{\"MonthYearNum\", \"SortMonthYear\"}}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Renamed Columns1\",{{\"MonthYear\", type text}, {\"MonthYearLong\", type text}}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Changed Type2\",{{\"WeekdayNum\", \"SortWeekday\"}}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Renamed Columns2\",{{\"WeekdayWeekend\", type text}}),",
+                "    #\"Renamed Columns3\" = Table.RenameColumns(#\"Changed Type3\",{{\"WeekSequenceNum\", \"SortWeekSequence\"}})",
+                "in",
+                "    #\"Renamed Columns3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Campaign Production",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7964bae3-bedb-4bc9-a4cd-999ea152f159",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d74ff1fb-9385-40f5-a155-6b39d27de2b7",
+            "sourceColumn": "Campaign",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "18aa2532-9b07-4620-bf45-2f5b57329844",
+            "sourceColumn": "Campaign Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8582745c-ddb9-4289-88af-f17fa5422073",
+            "sortByColumn": "Sort FinCat",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bc313851-202d-43df-ad0a-a4b0afe480be",
+            "sourceColumn": "Finance Category2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71a2c37a-c82f-4d62-ba1b-546009b5efb4",
+            "sourceColumn": "Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "018c31f3-6638-45b0-a22c-306a42ced927",
+            "sourceColumn": "Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Orig Proc Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "57eb4fe0-72d8-46cf-9c11-2516adc4eac8",
+            "sourceColumn": "Orig Proc Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17ef1863-c8e5-4d9e-b872-6af72878a7dc",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6e2d244f-a6fa-47fc-b482-609bc296cb72",
+            "sortByColumn": "Sort Camp Yr",
+            "sourceColumn": "Prod Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY Qtr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2ec198f-b58c-479c-b126-f020ae2f3a76",
+            "sourceColumn": "FY Qtr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY Qtr L",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1d5ef97c-ee20-4c99-95cf-10c33e1f960f",
+            "sourceColumn": "FY Qtr L",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Qtr L",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00d3d4ae-98df-4a92-bdbe-d9e9e1dff1d8",
+            "sourceColumn": "Camp Qtr L",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "39cbd9db-0054-44f4-a562-fb88fd64aa7c",
+            "sourceColumn": "Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "f6d7693f-233f-4d83-b62c-1194aab46170",
+            "sourceColumn": "Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Campaign Gift Range",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "db3edca6-8aa4-4a51-a591-adda3262e0fc",
+            "sortByColumn": "Sort Gift Range",
+            "sourceColumn": "Campaign Gift Range",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Dnr ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "439818e7-1553-4d16-b169-648b0aa9de29",
+            "sourceColumn": "Prim Dnr ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3d93ef75-15b4-4068-9ee4-6d1ae7b8512d",
+            "sourceColumn": "Prim Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hshld Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b59ccd21-cab1-47a7-b78e-0abc5d59fe8e",
+            "sourceColumn": "Hshld Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hshld Record Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5d71150-9e9d-4f38-89a1-b2e6a0b32841",
+            "sourceColumn": "Hshld Record Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "57a427e1-a56d-444a-a9ce-a76ef6434d2a",
+            "sourceColumn": "Prim Donor Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0a36a18b-7668-428e-88b7-aaa00e8664a7",
+            "sourceColumn": "HH Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24ac597a-a038-4161-b4b6-c6a1b2013f36",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a53d46d8-071a-463b-8f03-70ac423f7bdf",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "061001d5-d6e9-4e4e-839a-816cdca6725e",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e665ad5-f46b-4d56-99cf-a05fd5d3dc35",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ce4be0f5-8f85-4a9d-9fcb-645e9787b5b0",
+            "sourceColumn": "Alloc Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Goal Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "505c58d8-5c34-4c49-9461-69be0bdd9757",
+            "sortByColumn": "Sort Goal Cat",
+            "sourceColumn": "Goal Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Goal SubCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "675f134a-d876-4659-b2c4-6a1853b83a1b",
+            "sourceColumn": "Goal SubCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ee0b33d-953f-4aab-bc14-7fcf52aee6eb",
+            "sourceColumn": "Campaign Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "10cd5d6b-a721-43a9-be9c-625e9e3f0c76",
+            "sortByColumn": "Sort Priority",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign SubPriority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "481b09d6-eab2-48c0-a034-4bb6da4d57a9",
+            "sourceColumn": "Campaign SubPriority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3c743c92-0717-48d3-9ba4-fe685f6cb9f6",
+            "sourceColumn": "Appeal Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "91768424-1ddf-4787-8293-edbc4701db61",
+            "sourceColumn": "Appeal Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Channel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fcaf6952-d6e6-4b46-873d-b5c375c3b935",
+            "sourceColumn": "Appeal Channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bequest Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "134351aa-1888-4bea-966b-f0a2cfd154dd",
+            "sourceColumn": "Bequest Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort FY Qtr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "deb437e7-253f-4436-ae46-dc8ae9eef88a",
+            "sourceColumn": "Sort FY Qtr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "88b47f0d-88ae-4424-b22e-c7df3b6f041c",
+            "sourceColumn": "Sort Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "8af89d7a-3034-4f61-927a-61a16948a35e",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "68b2dcce-284d-44ce-900c-d835cb64c987",
+            "sourceColumn": "Sort Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Camp Cat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fdc31bb8-cd70-4643-9764-6e2a30353e46",
+            "sourceColumn": "Sort Camp Cat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "e9205181-aa22-4b65-8962-64543596db8d",
+            "sourceColumn": "Sort Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "84c867a9-513c-4601-855a-0fd443ae8d2f",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Gift Range",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7a411090-77ca-466f-99cd-b9673959674c",
+            "sourceColumn": "Sort Gift Range",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Athletics Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ddb8b2fb-7e3f-47a6-98f9-6514932c6bb5",
+            "sourceColumn": "Athletics Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "People or Orgs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bfd0d686-9b6c-44ed-a4a5-16b0bbfe5e78",
+            "sourceColumn": "People or Orgs",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Goal Cat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "56fd8082-aeeb-4def-a300-013412064410",
+            "sourceColumn": "Sort Goal Cat",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Goal SubCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "5545bb28-a729-4d69-bf5f-4772f502ca7e",
+            "sourceColumn": "Sort Goal SubCat",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Goal SubCat Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f51d163f-ad62-4432-8afc-9dbaa3e3830c",
+            "sortByColumn": "Sort Goal SubCat",
+            "sourceColumn": "Goal SubCat Cd",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "cac12809-bd63-4927-a17d-a166ee3d9f77",
+        "partitions": [
+          {
+            "name": "Campaign Production-00c2dc82-c0ab-4ed1-a98f-e3504a664c17",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(DataSource, [HierarchicalNavigation=true, Query=\"-- Modified Base Production query to establish a new baseline dataset for many reports. smk 3/10/2023#(lf)-- Updated to add a few needed sorting values. smk 3/28/2023#(lf)#(lf)select distinct tp.trans_category                       \"\"Trans Category\"\",#(lf)       tp.campaign                                      \"\"Campaign\"\",#(lf)       tp.campaign_type                                 \"\"Campaign Ind\"\",#(lf)       tp.finance_category                              \"\"Finance Category\"\",#(lf)       ext.trans_cat2                                   \"\"Finance Category2\"\",#(lf)       tp.trans_nbr                                     \"\"Trans Nbr\"\",#(lf)       trunc(tp.trans_dt)                               \"\"Trans Dt\"\",#(lf)       tp.orig_proc_dt                                  \"\"Orig Proc Dt\"\",#(lf)       tp.fiscal_yr                                     \"\"Fiscal Yr\"\",#(lf)       CASE WHEN tp.trans_dt < '01-OCT-2016' THEN ' Pre-Campaign'#(lf)            WHEN tp.trans_dt >= '01-OCT-2016' AND tp.fiscal_yr = '2017' THEN 'FY2017 (Partial)'#(lf)          ELSE 'FY'||tp.fiscal_yr END                   \"\"Prod Camp Yr\"\",#(lf)       CASE WHEN tp.camp_qtr = 'Quarter 00' THEN 'Pre-Campaign'#(lf)            WHEN tp.camp_qtr = 'Quarter 01' THEN 'FY2017 - Qtr 2'#(lf)            WHEN tp.camp_qtr = 'Quarter 02' THEN 'FY2017 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 03' then 'FY2017 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 04' then 'FY2018 - Qtr 1'#(lf)            when tp.camp_qtr = 'Quarter 05' then 'FY2018 - Qtr 2'#(lf)            when tp.camp_qtr = 'Quarter 06' then 'FY2018 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 07' then 'FY2018 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 08' then 'FY2019 - Qtr 1'#(lf)            when tp.camp_qtr = 'Quarter 09' then 'FY2019 - Qtr 2'  #(lf)            when tp.camp_qtr = 'Quarter 10' then 'FY2019 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 11' then 'FY2019 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 12' then 'FY2020 - Qtr 1'#(lf)            when tp.camp_qtr = 'Quarter 13' then 'FY2020 - Qtr 2'#(lf)            when tp.camp_qtr = 'Quarter 14' then 'FY2020 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 15' then 'FY2020 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 16' then 'FY2021 - Qtr 1'#(lf)            when tp.trans_nbr = '0001170572' OR tp.camp_qtr = 'Quarter 17' then 'FY2021 - Qtr 2'#(lf)            when tp.camp_qtr = 'Quarter 18' then 'FY2021 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 19' then 'FY2021 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 20' then 'FY2022 - Qtr 1'#(lf)            when tp.camp_qtr = 'Quarter 21' then 'FY2022 - Qtr 2'#(lf)            when tp.camp_qtr = 'Quarter 22' then 'FY2022 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 23' then 'FY2022 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 24' then 'FY2023 - Qtr 1'#(lf)            when tp.camp_qtr = 'Quarter 25' then 'FY2023 - Qtr 2'#(lf)            when tp.camp_qtr = 'Quarter 26' then 'FY2023 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 27' then 'FY2023 - Qtr 4'#(lf)            when tp.camp_qtr = 'Quarter 28' then 'FY2024 - Qtr 1'#(lf)            when tp.camp_qtr = 'Quarter 29' then 'FY2024 - Qtr 2'#(lf)            when tp.camp_qtr = 'Quarter 30' then 'FY2024 - Qtr 3'#(lf)            when tp.camp_qtr = 'Quarter 31' then 'FY2024 - Qtr 4'#(lf)              END                                       \"\"FY Qtr\"\",#(lf)       case when to_char(tp.trans_dt,'mmdd') between '0701' and '0930' then 'Q1'#(lf)         when to_char(tp.trans_dt,'mmdd') between '1001' and '1231' then 'Q2'#(lf)           when to_char(tp.trans_dt,'mmdd') between '0101' and '0331' then 'Q3'#(lf)       else 'Q4' end                                    \"\"FY Qtr L\"\",#(lf)       case when tp.camp_qtr = 'Quarter 00' then 'Pre-Campaign'#(lf)        else tp.fiscal_yr || ' ' ||  'Quarter' || ' ' || to_char(to_number(substr(tp.camp_qtr,9,2))+1)  end \"\"Camp Qtr L\"\",#(lf)       tp.trans_type                                    \"\"Trans Type\"\",#(lf)       tp.trans_amt                                     \"\"Trans Amt\"\",#(lf)       tp.pyramid_level                                 \"\"Campaign Gift Range\"\",#(lf)       ext.primary_recipient_ids                        \"\"Prim Dnr ID\"\",#(lf)       tp.prim_donor_name                               \"\"Prim Donor Name\"\",#(lf)       hk.household_key                                 \"\"Hshld Key\"\",#(lf)       hrt.record_type                                  \"\"Hshld Record Type\"\",#(lf)       CASE WHEN hrt.record_type_group IN ('A','B','C') THEN 'Individuals'#(lf)          ELSE 'Organizations' END                      \"\"People or Orgs\"\",#(lf)       CASE WHEN hrt.record_type_code = 'A' then 'Alumni'#(lf)            WHEN hrt.record_type_code IN ('P','FP') then 'Parents'#(lf)            WHEN hrt.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)            WHEN hrt.record_type_code IN ('S','FD') then 'Students'#(lf)            WHEN hrt.record_type_group IN ('A','B','C') AND hrt.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code = 'C' THEN 'Corporations'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)          ELSE 'Other Individuals' END                  \"\"Prim Donor Category\"\",#(lf)       CASE WHEN hha.market_area IS NULL AND hha.city > ' ' THEN hha.city||', '||hha.State_Code#(lf)            WHEN hha.market_area IS NULL AND hha.city IS NULL THEN NULL#(lf)          ELSE hha.market_area END                      \"\"HH Market Area\"\",#(lf)       CASE WHEN hha.household_key IS NULL THEN 'No Address'#(lf)          ELSE nvl(c.short_desc,'United States') END    \"\"Country\"\",#(lf)       tp.school                                        \"\"School\"\",#(lf)       tp.allocation_code                               \"\"Alloc Code\"\",#(lf)       CASE WHEN a.long_name2 > ' ' THEN a.long_name||' '||a.long_name2#(lf)          ELSE a.long_name END                          \"\"Allocation Name\"\",#(lf)       g.short_desc                                     \"\"Alloc Group\"\",#(lf)       a.athletics_ind                                  \"\"Athletics Ind\"\",#(lf)       gc.short_desc                                    \"\"Goal Category\"\",#(lf)       gsc.short_desc                                   \"\"Goal SubCategory\"\",#(lf)       c1.short_desc                                    \"\"Campaign Category\"\",#(lf)       c2.short_desc                                    \"\"Campaign Priority\"\",#(lf)       c3.short_desc                                    \"\"Campaign SubPriority\"\",#(lf)       tp.appeal_code                                   \"\"Appeal Code\"\",#(lf)       tp.appeal_description                            \"\"Appeal Name\"\",#(lf)       tp.appeal_channel                                \"\"Appeal Channel\"\",#(lf)       case when tp.trans_category = 'Bequest Expectancies and Gifts' then 'Bequests' #(lf)          else 'Non-Bequests' end                       \"\"Bequest Ind\"\",#(lf)       CASE WHEN tp.camp_qtr = 'Quarter 00' then '01'#(lf)            when tp.camp_qtr = 'Quarter 01' then '02'#(lf)            when tp.camp_qtr = 'Quarter 02' then '03'#(lf)            when tp.camp_qtr = 'Quarter 03' then '04'#(lf)            when tp.camp_qtr = 'Quarter 04' then '05'#(lf)            when tp.camp_qtr = 'Quarter 05' then '06'#(lf)            when tp.camp_qtr = 'Quarter 06' then '07'#(lf)            when tp.camp_qtr = 'Quarter 07' then '08'#(lf)            when tp.camp_qtr = 'Quarter 08' then '09'#(lf)            when tp.camp_qtr = 'Quarter 09' then '10'#(lf)            when tp.camp_qtr = 'Quarter 10' then '11'#(lf)            when tp.camp_qtr = 'Quarter 11' then '12'#(lf)            when tp.camp_qtr = 'Quarter 12' then '13'#(lf)            when tp.camp_qtr = 'Quarter 13' then '14'#(lf)            when tp.camp_qtr = 'Quarter 14' then '15'#(lf)            when tp.camp_qtr = 'Quarter 15' then '16'#(lf)            when tp.camp_qtr = 'Quarter 16' then '17'#(lf)            when tp.camp_qtr = 'Quarter 17' then '18'#(lf)            when tp.camp_qtr = 'Quarter 18' then '19'#(lf)            when tp.camp_qtr = 'Quarter 19' then '20'#(lf)            when tp.camp_qtr = 'Quarter 20' then '21'#(lf)            when tp.camp_qtr = 'Quarter 21' then '22'#(lf)            when tp.camp_qtr = 'Quarter 22' then '23'#(lf)            when tp.camp_qtr = 'Quarter 23' then '24' #(lf)            when tp.camp_qtr = 'Quarter 24' then '25'#(lf)            when tp.camp_qtr = 'Quarter 25' then '26'#(lf)            when tp.camp_qtr = 'Quarter 26' then '27'#(lf)            when tp.camp_qtr = 'Quarter 27' then '28'#(lf)            when tp.camp_qtr = 'Quarter 28' then '29'#(lf)            when tp.camp_qtr = 'Quarter 29' then '30'#(lf)            when tp.camp_qtr = 'Quarter 30' then '31'#(lf)            when tp.camp_qtr = 'Quarter 31' then '32'#(lf)           END                                          \"\"Sort FY Qtr\"\",#(lf)       CASE WHEN tp.trans_dt < '01-OCT-2016' THEN '2016'#(lf)            WHEN tp.trans_dt >= '01-OCT-2016' AND tp.fiscal_yr = '2017' THEN '2017'#(lf)          ELSE tp.fiscal_yr END                         \"\"Sort Camp Yr\"\",#(lf)       nvl(tp.alloc_sort,999999)                        \"\"Sort Alloc\"\",#(lf)       nvl(tp.transtype_sort,999)                       \"\"Sort Trans Type\"\",#(lf)       nvl(gc.hierarchy_order,999)                      \"\"Sort Goal Cat\"\",#(lf)       gsc.endow_type                                   \"\"Goal SubCat Cd\"\",#(lf)       nvl(gsc.hierarchy_order,999)                     \"\"Sort Goal SubCat\"\",#(lf)       nvl(tp.campcat_sort,'999')                       \"\"Sort Camp Cat\"\",#(lf)       nvl(tp.priority_sort,999999)                     \"\"Sort Priority\"\",#(lf)       nvl(tp.fincat_sort,'999')                        \"\"Sort FinCat\"\",#(lf)       nvl(tp.pyramid_level_sort,999)                   \"\"Sort Gift Range\"\"#(lf) from advur.mvw_total_production tp#(lf)inner join advur.mvw_total_production_ext ext on tp.trans_nbr = ext.trans_nbr#(lf)inner join advur.mvw_trans_households thh     ON tp.trans_nbr = thh.trans_nbr#(lf)inner join advance.allocation a               on tp.allocation_code = a.allocation_code#(lf)left join advance.tms_alloc_sub_dept g        on a.alloc_sub_dept = g.alloc_sub_dept_code#(lf)left join advance.tms_endow_pool gc           ON a.endow_pool_code = gc.endow_pool#(lf)left join advance.tms_endow_type gsc          ON a.endow_type_code = gsc.endow_type AND gsc.status_code = 'A'#(lf)left join advur.mvw_ent_household_keys hk     on thh.household_key = hk.household_key#(lf)left join advur.mvw_hh_record_type hrt        on hk.household_key = hrt.household_key#(lf)left join advur.mvw_hh_addresses hha          ON hk.household_key = hha.household_key#(lf)left join advance.tms_country c               ON hha.country_code = c.country_code#(lf)left join advance.tms_category1 c1            on c1.category1_code = ext.category1_code#(lf)left join advance.tms_category2 c2            on c2.category2_code = ext.category2_code#(lf)left join advance.tms_category3 c3            on c3.category3_code = ext.category3_code#(lf)#(lf)where tp.campaign_ind = 'Current Campaign'\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Trans Dt\", type date}, {\"Orig Proc Dt\", type date}, {\"Trans Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "a59b46eb-ad97-42b2-81ba-b0281afb8fd3",
+        "measures": [
+          {
+            "name": "Donor Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    DISTINCTCOUNT( 'Donor Count Query'[Donor ID] )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "b9e1be7b-338f-48df-98f1-03a91ff5056a"
+          },
+          {
+            "name": "Database",
+            "expression": [
+              "",
+              "    \"Database: \" & SELECTEDVALUE( 'Data Source'[Data Source] )"
+            ],
+            "lineageTag": "6ef52a28-feec-426f-abcb-e4595c19f0ea"
+          },
+          {
+            "name": "Last Proc Dt",
+            "expression": [
+              "",
+              "    MAX( 'Campaign Production'[Orig Proc Dt] )"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "6139691d-9cfc-455c-b222-6f1a406013c7"
+          },
+          {
+            "name": "As of Date",
+            "expression": [
+              "",
+              "    \"As of \" & 'Key Measures'[Last Proc Dt]"
+            ],
+            "lineageTag": "dd18fe28-9d23-4f6f-9979-d2fa80a1289b"
+          },
+          {
+            "name": "Production Total",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _PTtl = CALCULATE(",
+              "                    SUMX( 'Campaign Production', 'Campaign Production'[Trans Amt] )",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_PTtl),0,_PTtl)"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "635cf360-765e-4b5b-9435-31124ad437d0"
+          },
+          {
+            "name": "Current Year",
+            "expression": [
+              "",
+              "    MAX( 'Campaign Production'[Fiscal Yr] )"
+            ],
+            "lineageTag": "aab6be63-be2e-429f-84c1-b50737ba2568"
+          },
+          {
+            "name": "CFY Prod Total",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _CFY = [Current Year]",
+              "    var _CurrTtl = CALCULATE(",
+              "                    SUMX( 'Campaign Production', 'Campaign Production'[Trans Amt] ),",
+              "                        'Campaign Production'[Fiscal Yr] = _CFY",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_CurrTtl),0,_CurrTtl)"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "90ccbbce-044d-4431-af93-d2e25b227d7a"
+          },
+          {
+            "name": "PFY Prod Total",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _PFY = [Prev Fiscal Yr]",
+              "    var _PrvTtl = CALCULATE(",
+              "                    SUMX( 'Campaign Production', 'Campaign Production'[Trans Amt] ),",
+              "                        'Campaign Production'[Fiscal Yr] = _PFY",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_PrvTtl),0,_PrvTtl)"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "9a4b6a02-51ac-4ac7-b8bf-04667447be8a"
+          },
+          {
+            "name": "Prev Fiscal Yr",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "            MAX( 'Calendar - FY13+'[FiscalYear] ),",
+              "            'Calendar - FY13+'[CurFiscalYearOffset] = -1",
+              "    )"
+            ],
+            "lineageTag": "029e5eea-c532-4160-a693-d453fbbeee86"
+          },
+          {
+            "name": "CFY Donor Cnt",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _CFY = [Current Year]",
+              "    var _CurrCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Donor Count Query'[Donor ID] ),",
+              "                        'Campaign Production'[Fiscal Yr] = _CFY",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_CurrCnt),0,_CurrCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "e55905fb-d1f2-47ce-a6fb-977be119c0ee"
+          },
+          {
+            "name": "PFY Donor Cnt",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _PFY = [Prev Fiscal Yr]",
+              "    var _PrvCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Donor Count Query'[Donor ID] ),",
+              "                        'Campaign Production'[Fiscal Yr] = _PFY",
+              "                    ) + 0",
+              "   return",
+              "   IF(ISBLANK(_PrvCnt),0,_PrvCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "3f4cd9ce-acb9-4fcd-bc13-d76008cbe38d"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-c75e484b-fb18-4a4f-8a41-7e67e91b4cf7",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Donor Count Query",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Donor ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b72f185f-60b6-40e8-b3b0-4811d41247b4",
+            "sourceColumn": "Donor ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5ef2db42-d5f7-4bed-a92d-3ff3e7c8548d",
+            "sourceColumn": "Trans Nbr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "dc75cbb7-0371-45b0-a595-95d129605fb0",
+        "partitions": [
+          {
+            "name": "Donor Count Query-17f63ef9-9566-449a-aaea-6de34db43683",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(DataSource, [HierarchicalNavigation=true, Query=\"-- Simple query to be joined to the Campaign Production query to do a distinct donor count. smk  3/10/2023#(lf)-- Updated to remove non-individuals from the dataset.  smk 3/13/2023#(lf)#(lf)select distinct te.donor_id      \"\"Donor ID\"\",#(lf)       te.trans_nbr              \"\"Trans Nbr\"\"#(lf)from advur.mvw_trans_entities te#(lf)inner join advance.entity e ON te.donor_id = e.id_number#(lf)where e.person_or_org = 'P'#(lf)and   te.trans_nbr IN (#(lf)                       select p.trans_nbr #(lf)                         from advur.mvw_total_production p#(lf)                        where p.campaign_ind = 'Current Campaign'#(lf)                        )\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Data Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0dffce6b-9da2-401e-a439-0098663560e9",
+            "sourceColumn": "Data Source",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2582f6d3-3944-4e70-b257-6255b749beae",
+        "partitions": [
+          {
+            "name": "Data Source-239a0dab-9107-4f3c-a930-a21e134beb59",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DataSource",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Indiv Count by Zip",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Zip Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "10bb274c-dec9-4eed-9379-13cf8b6d7eb4",
+            "sourceColumn": "Zip Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1c873935-df65-44e5-8972-ee1fd5ab93fa",
+            "sourceColumn": "Entity Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Lat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c6fe5622-6cc3-4731-998c-bfd719694e7f",
+            "sourceColumn": "Lat",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Long",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3fd8945c-2281-4dbc-8640-ba6937839003",
+            "sourceColumn": "Long",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6718970d-8e08-4fa6-a1af-f7b4fad8a0fa",
+            "sourceColumn": "Count",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "05dcc00a-a06b-4e26-b98e-79740e7758e0",
+        "partitions": [
+          {
+            "name": "Indiv Count by Zip-5600504f-d57f-4387-82c8-094af43b5940",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(DataSource, [HierarchicalNavigation=true, Query=\"-- Query to be used for mapping individual donors in Power BI.  smk 3/14/2023#(lf)#(lf)select substr(addr.zipcode,1,5)           \"\"Zip Code\"\",#(lf)       CASE WHEN e.record_type_code = 'A' then 'Alumni'#(lf)            WHEN e.record_type_code IN ('P','FP') then 'Parents'#(lf)            WHEN e.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('S','FD') then 'Students'#(lf)            WHEN e.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)          ELSE 'Other Individuals' END    \"\"Entity Category\"\",#(lf)       addr.latitude                      \"\"Lat\"\",#(lf)       addr.longitude                     \"\"Long\"\",#(lf)       count (distinct addr.id_number)    \"\"Count\"\"#(lf)from advur.mvw_ent_addresses addr#(lf)inner join advance.entity e ON addr.id_number = e.id_number#(lf)where e.person_or_org = 'P'#(lf)and   addr.country_code = ' '#(lf)and   addr.latitude BETWEEN -90.00000 AND 90.00000#(lf)and   addr.latitude <> 0#(lf)and   addr.longitude BETWEEN -180.00000 AND 180.00000#(lf)and   addr.longitude <> 0#(lf)#(lf)and   addr.id_number IN (#(lf)                         select distinct te.donor_id#(lf)                           from advur.mvw_trans_entities te#(lf)                          where te.trans_nbr IN (#(lf)                                                 select p.trans_nbr #(lf)                                                   from advur.mvw_total_production p#(lf)                                                  where p.campaign_ind = 'Current Campaign'#(lf)                                                  )#(lf)                         )#(lf)group by substr(addr.zipcode,1,5), #(lf)         CASE WHEN e.record_type_code = 'A' then 'Alumni'#(lf)            WHEN e.record_type_code IN ('P','FP') then 'Parents'#(lf)            WHEN e.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('S','FD') then 'Students'#(lf)            WHEN e.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)          ELSE 'Other Individuals' END, addr.latitude, addr.longitude\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Count\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Counts or Totals",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "1f3f5aeba6b742f799cdd9d79a11a301"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Counts or Totals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "0eb059f4-8c29-4f0a-b62e-2fed6be25d3d",
+            "relatedColumnDetails": {
+              "groupByColumns": [
+                {
+                  "groupingColumn": "Counts or Totals Fields"
+                }
+              ]
+            },
+            "sortByColumn": "Counts or Totals Order",
+            "sourceColumn": "[Value1]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Counts or Totals Fields",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "extendedProperties": [
+              {
+                "name": "ParameterMetadata",
+                "type": "json",
+                "value": {
+                  "kind": 2,
+                  "version": 3
+                }
+              }
+            ],
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "35f083fb-adf8-499a-9d45-fa3f9732ce37",
+            "sortByColumn": "Counts or Totals Order",
+            "sourceColumn": "[Value2]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Counts or Totals Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "37126abc-449e-49bf-875f-a0682ea53553",
+            "sourceColumn": "[Value3]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "a88ced79-d8c1-468a-b80e-4aa3a898b1fc",
+        "partitions": [
+          {
+            "name": "Counts or Totals-94ded42a-e05a-4c4a-a000-e57fca9d72e6",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "{",
+                "    (\"Donor Count\", NAMEOF( 'Key Measures'[Donor Count] ), 0),",
+                "    (\"CFY Donor Count\", NAMEOF( 'Key Measures'[CFY Donor Cnt] ), 1),",
+                "    (\"PFY Donor Count\", NAMEOF( 'Key Measures'[PFY Donor Cnt] ), 2),",
+                "    (\"Production Total\", NAMEOF('Key Measures'[Production Total]), 3),",
+                "    (\"CFY Prod Total\", NAMEOF( 'Key Measures'[CFY Prod Total] ), 4),",
+                "    (\"PFY Prod Total\", NAMEOF( 'Key Measures'[PFY Prod Total] ), 5)",
+                "}"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Measure Type",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Measure Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "09d433f0-d4b9-4e25-9610-5adc715c9f3a",
+            "sourceColumn": "Measure Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1201d306-139f-43ae-a5ce-feaa2222bca2",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7602675a-652a-40d9-aa3d-b7383f23b6ed",
+        "partitions": [
+          {
+            "name": "Measure Type-8e578881-027e-4191-9ae6-d5ec0cc77168",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45Wcs4vzSspVtJRMlCK1UHiGqJyjcDckPySxBwQ1xiVa4LKNVWKjQUA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Measure Type\" = _t, ID = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Measure Type\", type text}, {\"ID\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

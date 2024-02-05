@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "userConsent": {},
+  "remoteArtifacts": [
+    {
+      "datasetId": "749fbb52-9b87-4ec7-8424-62c774da0b32"
+    }
+  ],
+  "securityBindingsSignature": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbb8LUAaU3kSVs9BL+nLGVAAAAAACAAAAAAADZgAAwAAAABAAAADv5AQVCbfRBxvvzENP73d5AAAAAASAAACgAAAAEAAAABWtYhwI5iTW55oH7wmg0NlIAAAA8qUfaMzQZYJKL5he1v0621XjhYgjsFaNnrD+5J0DzflZ4/n8UW5XtSXUt0Ky5g2r+Y40wuGlGKZVu/aCA4M8fx6qusdRD1+MFAAAAGrGnraFXfsztFK19RkaMGPsSeUB"
+}

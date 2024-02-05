@@ -1,0 +1,188 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY19SU12\",\"version\":\"5.11\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection2112af8da4a8faa47852",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filter10f31940f9dcc47a13cd\",\"boundFilter\":\"Filter10f31940f9dcc47a13cd\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"PRIM_PLEDGE_NUMBER\"}}},{\"name\":\"Param_Filterbad792605f0b108b11dd\",\"boundFilter\":\"Filterbad792605f0b108b11dd\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"APPEAL_CHANNEL\"}}},{\"name\":\"Param_Filterdfdff67d90e6fd844226\",\"boundFilter\":\"Filterdfdff67d90e6fd844226\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date Table\"}},\"Property\":\"FiscalMonthLong\"}}}]",
+      "type": 1
+    }
+  ],
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY19SU12",
+            "path": "BaseThemes/CY19SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "path": "dualCardBEB94A6387034DB489DAE31904884099.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "dualCardBEB94A6387034DB489DAE31904884099",
+        "type": 0
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"241L\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"77D\"}}}}}]}}",
+      "displayName": "Pledge Overview",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter4be3d8cb2e679b84f541\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"PL_TYPE_DESC\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"displayName\":\"Pledge Type\"},{\"name\":\"Filter33b2a525344e9f483cf4\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"APPEAL_CHANNEL\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"name\":\"Filter9694696bf9640614f98a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date Table\"}},\"Property\":\"FY\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'FY19'\"}}],[{\"Literal\":{\"Value\":\"'FY20'\"}}],[{\"Literal\":{\"Value\":\"'FY21'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0274951837c6af0ba0a5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":619.6237337192475,\"y\":466.80173661360357,\"z\":3000,\"width\":660.3762662807526,\"height\":252.8509406657019}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Date Table.FiscalMonthLong\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Date Table.FY\",\"active\":true}],\"Values\":[{\"queryRef\":\"Pledges.Pledge_cnt\"},{\"queryRef\":\"Pledges.Fulfilled_cnt\"},{\"queryRef\":\"1MeasureTable.fullfiled %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"},\"Name\":\"Date Table.FiscalMonthLong\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Fulfilled_cnt\"},\"Name\":\"Pledges.Fulfilled_cnt\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Pledge_cnt\"},\"Name\":\"Pledges.Pledge_cnt\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"fulfiled %\"},\"Name\":\"1MeasureTable.fullfiled %\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"}}}]},\"columnProperties\":{\"Date Table.FiscalMonthLong\":{\"displayName\":\"Month\"},\"Pledges.Pledge_cnt\":{\"displayName\":\"Pledges\"},\"Pledges.Fulfilled_cnt\":{\"displayName\":\"Fulfilled\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fulfillment'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 252.85,
+          "width": 660.38,
+          "x": 619.62,
+          "y": 466.80,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"2299810f158eb3e89b5d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":619.8124467178176,\"y\":0,\"z\":2000,\"width\":660.1875532821824,\"height\":222.6086956521739}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Pledges.PL_STATUS_DESC\",\"active\":true}],\"Y\":[{\"queryRef\":\"Pledges.Pledge_cnt\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Pledges\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PL_STATUS_DESC\"},\"Name\":\"Pledges.PL_STATUS_DESC\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Pledge_cnt\"},\"Name\":\"Pledges.Pledge_cnt\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Pledge_cnt\"}}}]},\"columnProperties\":{\"Pledges.PL_STATUS_DESC\":{\"displayName\":\"Pledge Status\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Pledges by Status'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 222.61,
+          "width": 660.19,
+          "x": 619.81,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"3573f3238d94f114634b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":619.6237337192475,\"y\":231.2464607059712,\"z\":4000,\"width\":660.3762662807526,\"height\":226.91751085383504}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date Table.FiscalMonthLong\",\"active\":true}],\"Series\":[{\"queryRef\":\"Date Table.FY\"}],\"Y\":[{\"queryRef\":\"1MeasureTable.fullfiled %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"},\"Name\":\"Date Table.FiscalMonthLong\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"fulfiled %\"},\"Name\":\"1MeasureTable.fullfiled %\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"}}}]},\"columnProperties\":{\"Date Table.FiscalMonthLong\":{\"displayName\":\"Month\"},\"1MeasureTable.fullfiled %\":{\"displayName\":\"Fulfilled %\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fulfillment Rate'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 226.92,
+          "width": 660.38,
+          "x": 619.62,
+          "y": 231.25,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"548124002afe2ae99d2f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":360.10230179028133,\"z\":0,\"width\":603.4441602728048,\"height\":360.10230179028133}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"Date Table.FY\",\"active\":true}],\"Rows\":[{\"queryRef\":\"Date Table.FiscalMonthLong\",\"active\":true},{\"queryRef\":\"Pledges.APPEAL_CHANNEL\"},{\"queryRef\":\"Pledges.PL_STATUS_DESC\"}],\"Values\":[{\"queryRef\":\"Pledges.Pledge_cnt\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Pledges\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"},\"Name\":\"Date Table.FiscalMonthLong\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Pledge_cnt\"},\"Name\":\"Pledges.Pledge_cnt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PL_STATUS_DESC\"},\"Name\":\"Pledges.PL_STATUS_DESC\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"APPEAL_CHANNEL\"},\"Name\":\"Pledges.APPEAL_CHANNEL\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Date Table.FiscalMonthLong\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date Table\"}},\"Property\":\"FiscalMonthLong\"}}],\"isPinned\":true},{\"queryRefs\":[\"Pledges.APPEAL_CHANNEL\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"APPEAL_CHANNEL\"}}],\"isPinned\":true},{\"queryRefs\":[\"Pledges.PL_STATUS_DESC\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"PL_STATUS_DESC\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Date Table.FiscalMonthLong\":{\"displayName\":\"Month\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"217.29665401391065D\"}}}},\"selector\":{\"metadata\":\"Date Table.FiscalMonthLong\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Pledge Cnt by Month'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.10,
+          "width": 603.44,
+          "x": 0.00,
+          "y": 360.10,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b52acea082256bcce4ad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":603.4441602728048,\"height\":349.1901108269395}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"Date Table.FY\",\"active\":true}],\"Rows\":[{\"queryRef\":\"Date Table.FiscalMonthLong\",\"active\":true},{\"queryRef\":\"Pledges.APPEAL_CHANNEL\",\"active\":true},{\"queryRef\":\"Pledges.PL_STATUS_DESC\",\"active\":true}],\"Values\":[{\"queryRef\":\"Pledges.pledge_dollars\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Pledges\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"},\"Name\":\"Date Table.FiscalMonthLong\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PL_STATUS_DESC\"},\"Name\":\"Pledges.PL_STATUS_DESC\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"APPEAL_CHANNEL\"},\"Name\":\"Pledges.APPEAL_CHANNEL\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"pledge_dollars\"},\"Name\":\"Pledges.pledge_dollars\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"APPEAL_CHANNEL\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PL_STATUS_DESC\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Date Table.FiscalMonthLong\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date Table\"}},\"Property\":\"FiscalMonthLong\"}}],\"isPinned\":true},{\"queryRefs\":[\"Pledges.APPEAL_CHANNEL\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"APPEAL_CHANNEL\"}}],\"isPinned\":true},{\"queryRefs\":[\"Pledges.PL_STATUS_DESC\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"PL_STATUS_DESC\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'September'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Telephone'\"}}],\"isToggled\":true}]},{\"identityValues\":[{\"Literal\":{\"Value\":\"'February'\"}}],\"isToggled\":true}]}}],\"columnProperties\":{\"Date Table.FiscalMonthLong\":{\"displayName\":\"Month\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"217.29665401391065D\"}}}},\"selector\":{\"metadata\":\"Date Table.FiscalMonthLong\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Pledge Dollars by Month'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 349.19,
+          "width": 603.44,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Details",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter10f31940f9dcc47a13cd\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"PRIM_PLEDGE_NUMBER\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterbad792605f0b108b11dd\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Pledges\"}},\"Property\":\"APPEAL_CHANNEL\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"Filterdfdff67d90e6fd844226\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date Table\"}},\"Property\":\"FiscalMonthLong\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'August'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ReportSection2112af8da4a8faa47852",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7161dbb92fe995ca8f39\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e011b4e6240acaa094d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.114327062228655,\"y\":55.571635311143275,\"z\":0,\"width\":1268.8856729377715,\"height\":664.0810419681621}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Pledges.PRIM_PLEDGE_NUMBER\"},{\"queryRef\":\"Pledges.PRIM_PLEDGE_DATE_OF_RECORD\"},{\"queryRef\":\"Date Table.FY\"},{\"queryRef\":\"Pledges.APPEAL_CHANNEL\"},{\"queryRef\":\"Pledges.PL_STATUS_DESC\"},{\"queryRef\":\"Pledges.PL_TYPE_DESC\"},{\"queryRef\":\"Pledges.ALLOCATION_NAME\"},{\"queryRef\":\"Sum(Pledges.PRIM_PLEDGE_AMOUNT)\"},{\"queryRef\":\"Sum(Pledges.TRANS_AMT2)\"},{\"queryRef\":\"Sum(Pledges.BALANCE)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Pledges\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PRIM_PLEDGE_NUMBER\"},\"Name\":\"Pledges.PRIM_PLEDGE_NUMBER\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PL_STATUS_DESC\"},\"Name\":\"Pledges.PL_STATUS_DESC\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PL_TYPE_DESC\"},\"Name\":\"Pledges.PL_TYPE_DESC\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PRIM_PLEDGE_AMOUNT\"}},\"Function\":0},\"Name\":\"Sum(Pledges.PRIM_PLEDGE_AMOUNT)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"TRANS_AMT2\"}},\"Function\":0},\"Name\":\"Sum(Pledges.TRANS_AMT2)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"PRIM_PLEDGE_DATE_OF_RECORD\"},\"Name\":\"Pledges.PRIM_PLEDGE_DATE_OF_RECORD\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"APPEAL_CHANNEL\"},\"Name\":\"Pledges.APPEAL_CHANNEL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ALLOCATION_NAME\"},\"Name\":\"Pledges.ALLOCATION_NAME\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"BALANCE\"}},\"Function\":0},\"Name\":\"Sum(Pledges.BALANCE)\"}]},\"columnProperties\":{\"Sum(Pledges.TRANS_AMT2)\":{\"displayName\":\"Adjusted Pledge Amt\"},\"Pledges.PRIM_PLEDGE_NUMBER\":{\"displayName\":\"Pledge Number\"},\"Pledges.PRIM_PLEDGE_DATE_OF_RECORD\":{\"displayName\":\"Pledge Date\"},\"Pledges.APPEAL_CHANNEL\":{\"displayName\":\"Appeal Channel\"},\"Pledges.PL_STATUS_DESC\":{\"displayName\":\"Pledge Status\"},\"Pledges.PL_TYPE_DESC\":{\"displayName\":\"Pledge Type\"},\"Sum(Pledges.PRIM_PLEDGE_AMOUNT)\":{\"displayName\":\"Pledge Amt\"},\"Sum(Pledges.BALANCE)\":{\"displayName\":\"Pledge Balance\"},\"Pledges.ALLOCATION_NAME\":{\"displayName\":\"Allocation\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"58.726027397260275D\"}}}},\"selector\":{\"metadata\":\"Date Table.FY\"}}]}}}",
+          "filters": "[]",
+          "height": 664.08,
+          "width": 1268.89,
+          "x": 11.11,
+          "y": 55.57,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Late Payments",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter1e2d230a3df8c800ab20\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date Table\"}},\"Property\":\"FY\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'FY20'\"}}],[{\"Literal\":{\"Value\":\"'FY21'\"}}],[{\"Literal\":{\"Value\":\"'FY19'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection3bddd59ae5ef06325428",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3f1f33e5d0f4486a565e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":604.8046309696093,\"height\":360.2894356005789}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"1MeasureTable.Missed_Payment_Cnt\"}],\"Series\":[{\"queryRef\":\"missed_payments.PLEDGE_RANGE\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"missed_payments\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Late_Payment_Cnt\"},\"Name\":\"1MeasureTable.Missed_Payment_Cnt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PLEDGE_RANGE\"},\"Name\":\"missed_payments.PLEDGE_RANGE\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Late_Payment_Cnt\"}}}]},\"columnProperties\":{\"missed_payments.PLEDGE_RANGE\":{\"displayName\":\"Pledge Range\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"legend\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Late Payments by Pledge Amount'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.29,
+          "width": 604.80,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"4a5b46711cae121aa632\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":368.6251808972504,\"z\":2000,\"width\":604.8046309696093,\"height\":351.027496382055}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"1MeasureTable.Missed_Payment_Cnt\"}],\"Category\":[{\"queryRef\":\"missed_payments.DAYS_LATE_GROUP\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"missed_payments\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Late_Payment_Cnt\"},\"Name\":\"1MeasureTable.Missed_Payment_Cnt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"DAYS_LATE_GROUP\"},\"Name\":\"missed_payments.DAYS_LATE_GROUP\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Late_Payment_Cnt\"}}}]},\"columnProperties\":{\"missed_payments.DAYS_LATE_GROUP\":{\"displayName\":\"Days Late\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"legend\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Late Payments by Days Late'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 351.03,
+          "width": 604.80,
+          "x": 0.00,
+          "y": 368.63,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"54fbe82086c84a5e39dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":620.5499276410999,\"y\":0,\"z\":0,\"width\":649.2619392185239,\"height\":359.3632416787265}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date Table.FiscalMonthLong\",\"active\":true}],\"Y\":[{\"queryRef\":\"missed_payments.Missed_Payment_Cnt\"}],\"Series\":[{\"queryRef\":\"Date Table.FY\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"Late_Payment_Cnt\"},\"Name\":\"missed_payments.Missed_Payment_Cnt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"},\"Name\":\"Date Table.FiscalMonthLong\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FiscalMonthLong\"}}}]},\"columnProperties\":{\"Date Table.FiscalMonthLong\":{\"displayName\":\"Month\"},\"missed_payments.Missed_Payment_Cnt\":{\"displayName\":\"Late Payments\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Late Payments by Month'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.36,
+          "width": 649.26,
+          "x": 620.55,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"daf58e948bf86d149fa2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":989.1793313069909,\"y\":429.90881458966567,\"z\":4000,\"width\":271.3677811550152,\"height\":63.22188449848024}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"*Write-Offs are based on the date of the pledge, not the year the pledge was written off.\",\"textStyle\":{\"fontStyle\":\"italic\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 63.22,
+          "width": 271.37,
+          "x": 989.18,
+          "y": 429.91,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f4dd9a328d23836ed04b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":621.0214168039538,\"y\":369.02800658978583,\"z\":3000,\"width\":649.489291598023,\"height\":175.02471169686984}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Date Table.FY\"},{\"queryRef\":\"1MeasureTable.WO_%\"},{\"queryRef\":\"1MeasureTable.WO_balance\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"1MeasureTable\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date Table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"},\"Name\":\"Date Table.FY\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"WO_%\"},\"Name\":\"1MeasureTable.WO_%\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"WO_balance\"},\"Name\":\"1MeasureTable.WO_balance\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FY\"}}}]},\"columnProperties\":{\"1MeasureTable.WO_balance\":{\"displayName\":\"Write-Off Dollars\"},\"1MeasureTable.WO_%\":{\"displayName\":\"Write-Off %\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"grid\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Write-Offs'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 175.02,
+          "width": 649.49,
+          "x": 621.02,
+          "y": 369.03,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

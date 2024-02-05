@@ -1,0 +1,5039 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Entity Query\",\"Key Measures\",\"Data Source\",\"Zip to CBSA Ref\",\"Zip to CBSA\",\"Zip to County\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "entity_query": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity query": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "query": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity enquiry": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "entity inquiry": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "entity interrogation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "enquiry": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "inquiry": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "interrogation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "entity question": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "entity request": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "entity demand": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "entity probe": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "entity_query.HH_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "HH Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "HH count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "hh amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "entity_query.city": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "City"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "city": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "metropolis": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "municipality": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "town": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "metropolitan": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "entity_query.donor_ind": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Donor Ind"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor ind": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "entity_query.entity_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Entity ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "entity credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "entity_query.entity_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Entity Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entity name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "entity": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "entity nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "entity tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "unit": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "thing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "person": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "creature": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "object": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "article": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "entity_query.household_key": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Household Key"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "household key": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "key": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "main": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "basic": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "fundamental": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "central": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "major": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "keynote": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "essential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "household solution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "household explanation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "household basis": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  }
+                ]
+              },
+              "entity_query.inst_suffix": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Inst Suffix"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "inst suffix": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "entity_query.market_area": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Market Area"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "market area": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "area": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "market region": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locale": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market locality": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "market neighbourhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "locale": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "market district": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market continent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "market field": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "entity_query.region": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Region"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "region": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.818
+                    }
+                  },
+                  {
+                    "province": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "district": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "section": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "zone": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "continent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "entity_query.st": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "ST"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "st": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "entity_query.state": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "State"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {},
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "province": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "territory": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "nation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "condition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "country": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "entity_query.total_prod": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Total Prod"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total prod": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "prod": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate prod": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall prod": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total nudge": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total poke": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total elbow": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total dig": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total jab": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total push": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "nudge": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "poke": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "entity_query.total_rev": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Total Rev"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total rev": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "rev": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate rev": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall rev": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total revolution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total rotation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total rpm": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "revolution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "rotation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "rpm": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "total cycle": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "total turn": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "entity_query.zipcode": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Query",
+                    "ConceptualProperty": "Zipcode"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zipcode": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "key_measure": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "key measure": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "measure": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "key degree": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "key quantity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "key quota": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "key extent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "degree": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "quota": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "extent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "key amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "key portion": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "key ration": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "key_measure.CBSA_ranked_by_participation__DENSE": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "CBSA Ranked by Participation - DENSE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "CBSA ranked by participation - DENSE": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "CBSA ranked by participation DENSE": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "key_measure.alumni_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Alumni Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "alumni count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "alumnus amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_participation": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor Participation"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor participation": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "participation": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor contribution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "donor involvement": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "donor membership": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "contribution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "involvement": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "membership": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "donor input": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "donor sharing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "donor partaking": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "input": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zip to CBSA": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "energy to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "vigor to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "vitality to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "dynamism to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "spunk to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "punch to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "go to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "pep to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "fastener to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "zippo to cbsa": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA.CBSA_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA",
+                    "ConceptualProperty": "CBSA Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "CBSA code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "cbsa id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "cbsa key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA.zip_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA",
+                    "ConceptualProperty": "Zip Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zip code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "zip id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "zip key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.54
+                    }
+                  },
+                  {
+                    "postcode": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.54
+                    }
+                  },
+                  {
+                    "post code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.524
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zip to CBSA ref": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "energy to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "vigor to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "vitality to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "dynamism to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "spunk to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "punch to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.499
+                    }
+                  },
+                  {
+                    "go to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.499
+                    }
+                  },
+                  {
+                    "pep to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.499
+                    }
+                  },
+                  {
+                    "fastener to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.489
+                    }
+                  },
+                  {
+                    "zippo to cbsa ref": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.489
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref.CBSA_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref",
+                    "ConceptualProperty": "CBSA Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "CBSA code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "cbsa id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "cbsa key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref.CBSA_title": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref",
+                    "ConceptualProperty": "CBSA Title"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "CBSA title": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "title": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "cbsa designation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "designation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "cbsa name": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "cbsa award": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "cbsa call": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "cbsa heading": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "cbsa label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "award": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "call": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "heading": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref.county_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref",
+                    "ConceptualProperty": "County Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "county name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "county": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "county nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "county title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "county label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "county tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "province": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "shire": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "section": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "district": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "canton": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref.ref_FIP": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref",
+                    "ConceptualProperty": "Ref FIPS"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ref FIP": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "FIP": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref.state_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref",
+                    "ConceptualProperty": "State Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "state id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "state key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "location code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "province code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "territory code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "nation code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "condition code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "country code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "zip_to_CBSA_ref.zip_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA Ref",
+                    "ConceptualProperty": "Zip Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zip code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "zip id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "zip key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.54
+                    }
+                  },
+                  {
+                    "postcode": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.54
+                    }
+                  },
+                  {
+                    "post code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.524
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "zip_to_cbsa.cbsa_title": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to CBSA",
+                    "ConceptualProperty": "CBSA Title"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "CBSA title": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "title": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "Area": {
+                      "State": "Suggested",
+                      "Weight": 0.873
+                    }
+                  },
+                  {
+                    "cbsa designation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "cbsa region": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "cbsa locale": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "cbsa locality": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "cbsa neighbourhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "designation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locale": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "locality": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "neighbourhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "cbsa name": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "CBSA Area": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "zip_to_county": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to County"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zip to county": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "zip": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "energy to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "vigor to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "vitality to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "dynamism to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "spunk to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "punch to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "go to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "pep to county": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "energy": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "vigor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "zip_to_county.county_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to County",
+                    "ConceptualProperty": "County Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "county name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "county": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "county nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "county title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "county label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "county tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "province": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "shire": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "section": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "district": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "canton": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "zip_to_county.ref_FIP": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to County",
+                    "ConceptualProperty": "Ref FIPS"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ref FIP": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "FIP": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "zip_to_county.state_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to County",
+                    "ConceptualProperty": "State Code"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "state id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "state key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "location code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "province code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "territory code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "nation code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "condition code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "country code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "zip_to_county.zip_code": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Zip to County",
+                    "ConceptualProperty": "Zip Code"
+                  }
+                },
+                "NameType": "Identifier",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zip code": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "code": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "zip id": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "zip key": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.54
+                    }
+                  },
+                  {
+                    "postcode": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.54
+                    }
+                  },
+                  {
+                    "post code": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.524
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "entity_query_has_HH_count": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.HH_count"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.HH_count": {
+                    "Target": {
+                      "Entity": "entity_query.HH_count"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_city": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.city"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.city": {
+                    "Target": {
+                      "Entity": "entity_query.city"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_donor_ind": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.donor_ind"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.donor_ind": {
+                    "Target": {
+                      "Entity": "entity_query.donor_ind"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_entity_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.entity_ID"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.entity_ID": {
+                    "Target": {
+                      "Entity": "entity_query.entity_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_entity_name": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.entity_name"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.entity_name": {
+                    "Target": {
+                      "Entity": "entity_query.entity_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_household_key": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.household_key"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.household_key": {
+                    "Target": {
+                      "Entity": "entity_query.household_key"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_inst_suffix": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.inst_suffix"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.inst_suffix": {
+                    "Target": {
+                      "Entity": "entity_query.inst_suffix"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.market_area"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.market_area": {
+                    "Target": {
+                      "Entity": "entity_query.market_area"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_region": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.region"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.region": {
+                    "Target": {
+                      "Entity": "entity_query.region"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_st": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.st"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.st": {
+                    "Target": {
+                      "Entity": "entity_query.st"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_state": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.state"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.state": {
+                    "Target": {
+                      "Entity": "entity_query.state"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_total_prod": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.total_prod"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.total_prod": {
+                    "Target": {
+                      "Entity": "entity_query.total_prod"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_total_rev": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query.total_rev"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.total_rev": {
+                    "Target": {
+                      "Entity": "entity_query.total_rev"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_has_zip_to_CBSA": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA"
+                      },
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity_query"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_in_city": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "entity_query.city"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.city": {
+                    "Target": {
+                      "Entity": "entity_query.city"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "entity_query.city"
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_in_market_area": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "entity_query.market_area"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.market_area": {
+                    "Target": {
+                      "Entity": "entity_query.market_area"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "entity_query.market_area"
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_in_region": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "entity_query.region"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.region": {
+                    "Target": {
+                      "Entity": "entity_query.region"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "entity_query.region"
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity_query_in_state": {
+                "Binding": {
+                  "ConceptualEntity": "Entity Query"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "entity_query.state"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "entity_query"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity_query": {
+                    "Target": {
+                      "Entity": "entity_query"
+                    }
+                  },
+                  "entity_query.state": {
+                    "Target": {
+                      "Entity": "entity_query.state"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "entity_query.state"
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_CBSA_ranked_by_participation__DENSE": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.CBSA_ranked_by_participation__DENSE"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.CBSA_ranked_by_participation__DENSE": {
+                    "Target": {
+                      "Entity": "key_measure.CBSA_ranked_by_participation__DENSE"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_alumni_count": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.alumni_count"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.alumni_count": {
+                    "Target": {
+                      "Entity": "key_measure.alumni_count"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_donor_count": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_count"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.donor_count": {
+                    "Target": {
+                      "Entity": "key_measure.donor_count"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_donor_participation": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_participation"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.donor_participation": {
+                    "Target": {
+                      "Entity": "key_measure.donor_participation"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_has_CBSA_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA.CBSA_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_CBSA.CBSA_code": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA.CBSA_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_has_cbsa_title": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_cbsa.cbsa_title"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_cbsa.cbsa_title": {
+                    "Target": {
+                      "Entity": "zip_to_cbsa.cbsa_title"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_has_zip_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA.zip_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_CBSA.zip_code": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA.zip_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_has_zip_to_county": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_county"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_in_cbsa_title": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "zip_to_cbsa.cbsa_title"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_cbsa.cbsa_title": {
+                    "Target": {
+                      "Entity": "zip_to_cbsa.cbsa_title"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "zip_to_cbsa.cbsa_title"
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_in_zip_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "zip_to_CBSA.zip_code"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_CBSA.zip_code": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA.zip_code"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "zip_to_CBSA.zip_code"
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_has_CBSA_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.CBSA_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.CBSA_code": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.CBSA_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_has_CBSA_title": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.CBSA_title"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.CBSA_title": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.CBSA_title"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_has_county_name": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.county_name"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.county_name": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.county_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_has_ref_FIP": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.ref_FIP"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.ref_FIP": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.ref_FIP"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_has_state_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.state_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.state_code": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.state_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_has_zip_to_CBSA": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_CBSA"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_in_county_name": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.county_name"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.county_name": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.county_name"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "zip_to_CBSA_ref.county_name"
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_CBSA_ref_in_state_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to CBSA Ref"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "zip_to_CBSA_ref.state_code"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "zip_to_CBSA_ref"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA_ref": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref"
+                    }
+                  },
+                  "zip_to_CBSA_ref.state_code": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA_ref.state_code"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "zip_to_CBSA_ref.state_code"
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_has_county_name": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_county.county_name"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  },
+                  "zip_to_county.county_name": {
+                    "Target": {
+                      "Entity": "zip_to_county.county_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_has_ref_FIP": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_county.ref_FIP"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  },
+                  "zip_to_county.ref_FIP": {
+                    "Target": {
+                      "Entity": "zip_to_county.ref_FIP"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_has_state_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_county.state_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  },
+                  "zip_to_county.state_code": {
+                    "Target": {
+                      "Entity": "zip_to_county.state_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_has_zip_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_county.zip_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Name": {
+                      "Name": {
+                        "Role": "zip_to_county.zip_code"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  },
+                  "zip_to_county.zip_code": {
+                    "Target": {
+                      "Entity": "zip_to_county.zip_code"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_has_zip_to_CBSA": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "zip_to_CBSA"
+                      },
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_CBSA": {
+                    "Target": {
+                      "Entity": "zip_to_CBSA"
+                    }
+                  },
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_in_county_name": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "zip_to_county.county_name"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  },
+                  "zip_to_county.county_name": {
+                    "Target": {
+                      "Entity": "zip_to_county.county_name"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "zip_to_county.county_name"
+                  }
+                },
+                "State": "Generated"
+              },
+              "zip_to_county_in_state_code": {
+                "Binding": {
+                  "ConceptualEntity": "Zip to County"
+                },
+                "Phrasings": [
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "zip_to_county.state_code"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "zip_to_county"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "zip_to_county": {
+                    "Target": {
+                      "Entity": "zip_to_county"
+                    }
+                  },
+                  "zip_to_county.state_code": {
+                    "Target": {
+                      "Entity": "zip_to_county.state_code"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "zip_to_county.state_code"
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "3.1.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "description": "Provides the option of connecting to one of the Snapshots.",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL20\", \"ADVJUL21\", \"ADVJUL22\", \"ADVOCT22\", \"ADVJAN23\", \"ADVAPR23\", \"ADVJUL23\", \"ADVOCT23\", \"ADVJAN24\", \"ADVAPR24\", \"ADVJUL24\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "bd248faa-73ba-41f2-9231-4abd4338c12f"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "a9be1ca0-cd28-4cf5-b043-eb3b3117e917",
+        "fromColumn": "Zipcode",
+        "fromTable": "Entity Query",
+        "toColumn": "Zip Code",
+        "toTable": "Zip to CBSA"
+      },
+      {
+        "name": "24a31a94-7899-41e2-b550-15e74edb47f7",
+        "fromColumn": "Zip Code",
+        "fromTable": "Zip to CBSA Ref",
+        "toColumn": "Zip Code",
+        "toTable": "Zip to CBSA"
+      },
+      {
+        "name": "59663d77-175f-4cb9-9b9c-7c1800a458d7",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Zip Code",
+        "fromTable": "Zip to County",
+        "toColumn": "Zip Code",
+        "toTable": "Zip to CBSA"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Entity Query",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Household Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3c71f2b-1d11-4d42-99da-c6fab8d3e0db",
+            "sourceColumn": "Household Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bac46612-b34d-46ed-a5f5-315716eede39",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "505b42a6-fd79-403c-8bf1-8d022218dafe",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inst Suffix",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fe21c5f3-7716-403c-becc-dbd4c1fafa9b",
+            "sourceColumn": "Inst Suffix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "922d17e5-b2b3-4a0a-8111-86e1b0b33969",
+            "sourceColumn": "Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Zipcode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e61142b-646c-4457-8b33-1833b425f053",
+            "sourceColumn": "Zipcode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ST",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c3de27d0-9e66-4b1f-aaf1-afb5be4fae26",
+            "sourceColumn": "ST",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4bff4e97-eeb3-4e3d-a900-46fb36536050",
+            "sourceColumn": "State",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "167ff89a-b3e9-465f-93e3-1207b6639cbd",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "29620ec4-6ba3-489c-94a6-6bb10fa56574",
+            "sourceColumn": "HH Count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Donor Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "787e4757-ee64-44ff-8ba7-17b74669e274",
+            "sourceColumn": "Donor Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total Prod",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "decimal",
+            "lineageTag": "a0fface9-a79f-4fd3-b999-63eb0b849a1f",
+            "sourceColumn": "Total Prod",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Rev",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "decimal",
+            "lineageTag": "bc5a1a99-c4ff-4f52-a1e7-b080a0434eaf",
+            "sourceColumn": "Total Rev",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "05dbf9f7-df28-40eb-a288-54e30f24b5fb",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5f40d383-0c87-46b3-9d70-9170f6232f66",
+        "partitions": [
+          {
+            "name": "Entity Query-4813b07e-89f3-421b-9308-c6c4a179b7fd",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(#\"Data Source\", [HierarchicalNavigation=true, Query=\"-- Query modified from the Strategic Targeting PBIX to simplify; will be used to create a new, simpler visual for Campaign Check-In and Leadership Reports. smk 6/3/2022#(lf)-- Modified to handle US addresses without Market Area codes; also changed to pull Campaign Production and Revenue.  smk 06/06/2022#(lf)#(lf)select distinct k.household_key                      \"\"Household Key\"\",#(lf)       a.id_number                                   \"\"Entity ID\"\",#(lf)       e.pref_mail_name                              \"\"Entity Name\"\",#(lf)       e.institutional_suffix                        \"\"Inst Suffix\"\",#(lf)       CASE WHEN a.geo_code <= '000' THEN a.geo_code#(lf)            WHEN a.geo_code IS NULL THEN 'Armed Forces & US Territories'#(lf)          ELSE a.geo_code||' - '||a.market_area END  \"\"Market Area\"\",#(lf)       substr(a.zipcode,1,5)                         \"\"Zipcode\"\",#(lf)       a.city                                        \"\"City\"\",#(lf)       a.State_Code                                  \"\"ST\"\",#(lf)       s.short_desc                                  \"\"State\"\",#(lf)       r.short_desc                                  \"\"Region\"\",#(lf)       k.member_count                                \"\"HH Count\"\",#(lf)       CASE WHEN rev.ttl > 0 THEN 1#(lf)          ELSE 0 END                                 \"\"Donor Ind\"\",#(lf)       nvl(prod.ttl,0)                               \"\"Total Prod\"\",#(lf)       nvl(rev.ttl,0)                                \"\"Total Rev\"\"#(lf)from advur.mvw_ent_addresses a#(lf)inner join advance.entity e               ON a.id_number = e.id_number#(lf)inner join advance.tms_states s           ON a.state_code = s.state_code#(lf)left join advance.tms_national_region r   ON s.national_region = r.national_region_code#(lf)inner join advur.mvw_ent_household_keys k ON a.id_number = k.id_number#(lf)left join (#(lf)           select xp.primary_recipient_ids did, sum(p.trans_amt) ttl#(lf)             from advur.mvw_total_production p#(lf)            inner join advur.mvw_total_production_ext xp ON p.trans_nbr = xp.trans_nbr#(lf)            where p.campaign_ind = 'Current Campaign'#(lf)            group by xp.primary_recipient_ids#(lf)            )prod ON e.id_number = prod.did#(lf)left join (#(lf)           select xr.primary_recipient_ids did, sum(r.trans_amt) ttl#(lf)             from advur.mvw_total_revenue r#(lf)            inner join advur.mvw_total_revenue_ext xr ON r.trans_nbr = xr.trans_nbr#(lf)            where r.campaign_ind = 'Current Campaign'#(lf)            group by xr.primary_recipient_ids#(lf)            )rev ON e.id_number = rev.did#(lf)           #(lf)where a.country_code = ' '#(lf)and   substr(a.zipcode,1,5) > '00000'#(lf)and   e.record_type_code = 'A'#(lf)and   e.record_status_code IN ('A','I','L')#(lf)#(lf)order by \"\"Region\"\", \"\"Market Area\"\", \"\"Entity ID\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Total Prod\", Currency.Type}, {\"Total Rev\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "a760d671-f348-48fc-bdff-b74dae50b0c4",
+        "measures": [
+          {
+            "name": "Alumni Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _EntityCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Entity Query'[Entity ID] )",
+              "    )",
+              "   return",
+              "   IF(ISBLANK(_EntityCnt),0,_EntityCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "ea404689-ecf6-4567-8170-f3e9064242ae"
+          },
+          {
+            "name": "Donor Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _DonorCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Entity Query'[Entity ID] ),",
+              "                    'Entity Query'[Total Rev] > 0",
+              "                    )",
+              "   return",
+              "   IF(ISBLANK(_DonorCnt),0,_DonorCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "25130b2f-4e92-477a-b63f-4aa3f07e86b3"
+          },
+          {
+            "name": "Donor Participation",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "         [Donor Count] / [Alumni Count] ",
+              "            )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "5ab70e09-4c5d-452b-93e1-dba3a8016f2d"
+          },
+          {
+            "name": "CBSA Ranked by Participation - DENSE",
+            "expression": [
+              "",
+              "    RANKX(",
+              "        CROSSJOIN(",
+              "                ALL( 'Zip to CBSA'[CBSA Title] ), ALL('Entity Query'[Donor Ind] )",
+              "        ),",
+              "        [Donor Participation],,,Dense",
+              "        )"
+            ],
+            "formatString": "0",
+            "lineageTag": "e6ef72a0-fd73-4516-8426-22bee810b0d5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-7d77b286-e04d-45f0-9acf-470816558d3b",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Zip to CBSA Ref",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Ref FIPS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a9778e08-698e-487f-a25f-b68974ead58b",
+            "sourceColumn": "Ref FIPS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CBSA Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65448b08-7ea5-452d-bbb9-caeac5b0a21c",
+            "sourceColumn": "CBSA Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CBSA Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "49c87cea-41b4-4b2c-98f6-e2388fb9ce63",
+            "sourceColumn": "CBSA Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Zip Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2d7a90d2-75cd-491b-b1d7-093e715f52e8",
+            "sourceColumn": "Zip Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dfb9b5b2-e46b-4187-86b1-48c7cfb62741",
+            "sourceColumn": "County Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f680e86f-089a-4d7b-b0bb-3b15eb8b2233",
+            "sourceColumn": "State Code",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "87e04fad-75e9-458d-af8b-003a3eefafdb",
+        "partitions": [
+          {
+            "name": "Zip to CBSA Ref-9995bb70-c595-4fa1-b2d7-51e5746e291c",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(Web.Contents(\"https://creightonuniv.sharepoint.com/teams/UR/DevProgs/AdvSvcs/Shared Documents/Power BI Reference Files (DO NOT MOVE)/Zip to CBSA.xlsx\"), null, true),",
+                "    #\"Zip to CBSA_Sheet\" = Source{[Item=\"Zip to CBSA\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Zip to CBSA_Sheet\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Ref FIPS\", type text}, {\"CBSA Code\", type text}, {\"CBSA Title\", type text}, {\"Zip Code\", type text}, {\"County Name\", type text}, {\"State Code\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Zip to CBSA",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Zip Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6be3f0e7-4b99-4bfb-b8af-c5d9434282e3",
+            "sourceColumn": "Zip Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CBSA Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59298a5e-12b0-43f8-b43e-c2564ad84622",
+            "sourceColumn": "CBSA Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CBSA Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e735b95f-1223-49e5-9820-6d681444d098",
+            "sourceColumn": "CBSA Title",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e06f75f2-df42-4032-897c-ac88512db236",
+        "partitions": [
+          {
+            "name": "Zip to CBSA-4fd654aa-4024-4299-bf04-504247bcff32",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"Zip to CBSA Ref\",",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Source,{\"Ref FIPS\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns\",{\"Zip Code\", \"CBSA Code\", \"CBSA Title\", \"County Name\", \"State Code\"}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Reordered Columns\",{\"County Name\", \"State Code\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Columns1\", {\"Zip Code\"})",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Zip to County",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Zip Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71378878-ca0d-4d06-b354-4327e81392d6",
+            "sourceColumn": "Zip Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ref FIPS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4da51b89-9f9b-42af-964d-1340bbe0f69e",
+            "sourceColumn": "Ref FIPS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13b1687d-f63d-4b38-bbe9-5a7b5c7b4e58",
+            "sourceColumn": "County Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a26061b2-87a4-42dd-ae45-3bee8bda3c33",
+            "sourceColumn": "State Code",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a2bffd8c-c8c9-420a-86df-100d81ab5746",
+        "partitions": [
+          {
+            "name": "Zip to County-85002f59-69d0-4c57-bd3f-884eb2d6b5cc",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"Zip to CBSA Ref\",",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(Source,{\"Zip Code\", \"Ref FIPS\", \"CBSA Code\", \"CBSA Title\", \"County Name\", \"State Code\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Reordered Columns\",{\"CBSA Code\", \"CBSA Title\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Columns\", {\"Zip Code\"})",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

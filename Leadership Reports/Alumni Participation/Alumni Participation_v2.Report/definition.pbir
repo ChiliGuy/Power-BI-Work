@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Alumni Participation_v2.Dataset"
+    },
+    "byConnection": null
+  }
+}

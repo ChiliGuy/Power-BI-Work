@@ -1,0 +1,1451 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Alumni Participation\",\"Key Measures\",\"AAB Participation\",\"FacStaff Participation\",\"Schools\",\"Current FY\",\"Data Source\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "description": "This parameter allows the user to run this report against the live database or one of the Snapshots.",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL20\", \"ADVJUL21\", \"ADVJUL22\", \"ADVJUL23\", \"ADVOCT23\", \"ADVJAN24\", \"ADVAPR24\", \"ADVJUL24\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "006019f4-a605-4079-8729-91ef69fb965a"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "c82d5419-eb05-4ab7-af66-b2dc64921061",
+        "fromColumn": "Alumni?",
+        "fromTable": "Alumni Participation",
+        "toColumn": "Code",
+        "toTable": "Schools"
+      },
+      {
+        "name": "7c8252b6-79ea-48aa-81e5-89409a06873a",
+        "fromColumn": "AAB?",
+        "fromTable": "AAB Participation",
+        "toColumn": "Code",
+        "toTable": "Schools"
+      },
+      {
+        "name": "d3331def-f559-4297-a005-acfc429223f1",
+        "fromColumn": "FacStaff?",
+        "fromTable": "FacStaff Participation",
+        "toColumn": "Code",
+        "toTable": "Schools"
+      },
+      {
+        "name": "cfc4346b-2cb5-4e53-b4c3-4d54bc86c434",
+        "fromColumn": "Fiscal Yr",
+        "fromTable": "Alumni Participation",
+        "toColumn": "CFY",
+        "toTable": "Current FY"
+      },
+      {
+        "name": "b08a88c6-ac13-459f-8b49-702511f263fd",
+        "fromColumn": "Fiscal Yr",
+        "fromTable": "AAB Participation",
+        "toColumn": "CFY",
+        "toTable": "Current FY"
+      },
+      {
+        "name": "9ec01e8f-c70b-482f-a7a7-465a2816cc80",
+        "fromColumn": "Fiscal Yr",
+        "fromTable": "FacStaff Participation",
+        "toColumn": "CFY",
+        "toTable": "Current FY"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Alumni Participation",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "62b6077b-a3ba-4853-a0d1-813e025673be",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3be39cf5-eeee-4ad8-99a0-45be50e825d4",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inst Suffix",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9b638c8b-17a5-49f3-ba7e-d19d9c9c7fcd",
+            "sourceColumn": "Inst Suffix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Record Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4419565a-5546-4e60-824d-14989cc79c12",
+            "sourceColumn": "Record Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School/College",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6114e578-0e44-489d-bb91-458026fff658",
+            "sourceColumn": "School/College",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg Lvl",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0fddcd8b-f20b-499a-9d09-df8cef0da892",
+            "sourceColumn": "Deg Lvl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dddb0c35-183d-4fce-891e-a4c875af78a8",
+            "sourceColumn": "Level Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alumni?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eb672dcf-187d-4efc-9e7d-8cda6b5e5380",
+            "sourceColumn": "Alumni?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AAB?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d463d5c6-69b8-42a6-8514-e4cb60021d81",
+            "sourceColumn": "AAB?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FacStaff?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5a6aa1fd-e85e-4104-af0e-86e17fb2204a",
+            "sourceColumn": "FacStaff?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71d10639-d4e1-49da-9983-3d9cf105463b",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "f05f292d-9b97-47aa-9118-2e6a55ddbb69",
+            "sourceColumn": "School Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Entity Sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2070dbf0-8c4a-466d-90bf-fcd96e27f8d7",
+            "sourceColumn": "Entity Sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OtherSchool Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "c61eb9c4-a62d-4d68-92e2-f9f61f2d549d",
+            "sourceColumn": "OtherSchool Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Athletics Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "e4055114-85f5-4daf-ae21-726f1e6c9d29",
+            "sourceColumn": "Athletics Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Other Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "79fe9980-bad7-483c-831d-99e134ec760d",
+            "sourceColumn": "Other Total",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "f078de31-7233-4261-92b7-418e253f0b06",
+        "partitions": [
+          {
+            "name": "Alumni Participation-db52b114-d423-4b8c-8027-b8b86c05cf51",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query created for the School/College Dashboard in PBI to pull participation data; may be used to replace query in SSRS Participation report. smk  11/5/2021#(lf)WITH alumni AS (  -- This section identifies entities who are degreed Alumni; pulls all degrees earned by school/college#(lf)     select d.id_number         aid,#(lf)            d.school_code       schlcd,#(lf)            listagg(d.degree_level_code, '+') within group (order by d.degree_level_code) as dlcd#(lf)       from advance.degrees d#(lf)      where d.institution_code = '6121'#(lf)      and   d.degree_type <> 'S'#(lf)      and   d.degree_level_code IN ('A','B','D','M')#(lf)      and   d.admiss_status_code = ' '#(lf)      and   d.id_number||d.xsequence NOT IN (select xd.id_number||xd.xsequence#(lf)                                               from advance.degrees xd#(lf)                                              where ((substr(d.degree_code,1,1) = '2' and substr(d.degree_code,3,1) = '9'))#(lf)                                                 or  d.degree_code IN ('000','051','052','777','NONDE','WWW','BA/BS','SMJ')#(lf)                                             )#(lf)      and   d.grad_dt > '00000000'#(lf)      and   d.non_grad_code <> 'Y'#(lf)      group by d.id_number, d.school_code#(lf)                 ),#(lf)gifts AS (   -- This pulls the person's giving since FY2017 (plus Campaign Reachback gifts) by school#(lf)      select r.trans_nbr            tnbr,#(lf)             te.donor_id            did,#(lf)             a.school_code          schl,#(lf)             r.fiscal_yr            fy,#(lf)             r.campaign_ind         camp,#(lf)             r.trans_amt            amt#(lf)        from advur.mvw_total_revenue r#(lf)       inner join advur.mvw_allocations a     ON r.allocation_code = a.allocation_code#(lf)       inner join advur.mvw_trans_entities te ON r.trans_nbr = te.trans_nbr#(lf)       where (r.fiscal_yr >= '2017'#(lf)          or  r.fiscal_yr >= '2014' AND r.campaign_ind = 'Current Campaign')#(lf)           ),#(lf)aab AS (    -- This section pulls an indicator for current Alumni Advisory Board members#(lf)    select c.id_number              cid,#(lf)           CASE WHEN substr(c.committee_code,4,2) = '01' THEN 'AS'  -- This converts the AAB committee code to a school code for connecting to Alumni and giving#(lf)                WHEN substr(c.committee_code,4,2) = '02' THEN 'CBA'#(lf)                WHEN substr(c.committee_code,4,2) = '03' THEN 'DEN'#(lf)                WHEN substr(c.committee_code,4,2) = '04' THEN 'LAW'#(lf)                WHEN substr(c.committee_code,4,2) = '05' THEN 'MED'#(lf)                WHEN substr(c.committee_code,4,2) = '06' THEN 'PHA'#(lf)                WHEN substr(c.committee_code,4,2) = '07' THEN 'GRA'#(lf)                WHEN substr(c.committee_code,4,2) = '08' THEN 'NUR'#(lf)                WHEN substr(c.committee_code,4,2) = '09' THEN 'UC'#(lf)              ELSE NULL END         schl#(lf)      from advance.committee c#(lf)     where c.committee_code LIKE 'SAB%'#(lf)     and   c.committee_status_code = 'C'#(lf)       ),#(lf)facstaff AS (    #(lf)         select emp.id_number            eid,#(lf)                CASE WHEN substr(emp.place_of_work_code,3,1) = '2' THEN 'DEN'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '3' THEN 'LAW'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '4' THEN 'GRA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '5' THEN 'PHA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '6' THEN 'CBA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '7' THEN 'NUR'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '8' THEN 'AS'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '9' THEN 'UC'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '1' AND emp.place_of_work_code <> 'SS1' THEN 'MED'#(lf)                   ELSE 'XXX' END    schl#(lf)          from advance.employment emp#(lf)         where emp.job_status_code IN ('A','C','T')#(lf)         and   emp.employer_id_number = '0000054952'#(lf)             )#(lf)#(lf)select distinct e.id_number            \"\"Entity ID\"\",#(lf)       e.pref_mail_name                \"\"Entity Name\"\",#(lf)       e.institutional_suffix          \"\"Inst Suffix\"\",#(lf)       CASE WHEN e.record_type_code IN ('DP','FP','P') THEN 'Parent'#(lf)            WHEN e.record_type_code IN ('DS','S') THEN 'Student'#(lf)            WHEN e.record_type_code IN ('FL','FW','R','FR') THEN 'Resident/Fellow'#(lf)            WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('C','CF','PF','RO','O','G') THEN 'Organization'#(lf)            WHEN e.record_type_code IN ('FD','F','H','EI') THEN 'Other Individuals'#(lf)          ELSE rt.short_desc END       \"\"Record Type\"\",#(lf)       s.short_desc                    \"\"School/College\"\",#(lf)       alm.dlcd                        \"\"Deg Lvl\"\",#(lf)       CASE WHEN alm.dlcd IN ('A','B') THEN 'Undergrad'    -- This section categorizes the various degrees a person might have earned at each school/college#(lf)            WHEN alm.dlcd IN ('D','M') THEN 'Grad'#(lf)            WHEN alm.dlcd = 'B+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+A' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd LIKE '%B+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%B+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE 'D+%' THEN 'Grad'#(lf)            WHEN alm.dlcd LIKE 'M+%' THEN 'Grad'#(lf)          ELSE 'Non-Alumni' END        \"\"Level Category\"\",#(lf)       alm.schlcd                      \"\"Alumni?\"\",#(lf)       aab.schl                        \"\"AAB?\"\",#(lf)       fs.schl                         \"\"FacStaff?\"\",#(lf)       rev.fy                          \"\"Fiscal Yr\"\",#(lf)       CASE WHEN (rev.schl = alm.schlcd) AND rev.schl IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"School Total\"\",#(lf)       CASE WHEN (rev.schl <> alm.schlcd) AND rev.schl IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"OtherSchool Total\"\",#(lf)       CASE WHEN rev.schl = 'ATH' THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"Athletics Total\"\",#(lf)       CASE WHEN rev.schl NOT IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC','ATH') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"Other Total\"\",#(lf)       e.pref_name_sort                \"\"Entity Sort\"\"#(lf)from advance.entity e#(lf)inner join advance.tms_record_type rt ON e.record_type_code = rt.record_type_code#(lf)inner join alumni alm                 ON e.id_number = alm.aid#(lf)left join advance.tms_school s        ON alm.schlcd = s.school_code#(lf)left join gifts rev                   ON e.id_number = rev.did#(lf)left join aab aab                     ON e.id_number = aab.cid#(lf)left join facstaff fs                 ON e.id_number = fs.eid#(lf)where e.record_status_code = 'A'#(lf)#(lf)group by e.id_number, e.pref_mail_name, e.institutional_suffix,#(lf)         CASE WHEN e.record_type_code IN ('DP','FP','P') THEN 'Parent'#(lf)              WHEN e.record_type_code IN ('DS','S') THEN 'Student'#(lf)              WHEN e.record_type_code IN ('FL','FW','R','FR') THEN 'Resident/Fellow'#(lf)              WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)              WHEN e.record_type_code IN ('C','CF','PF','RO','O','G') THEN 'Organization'#(lf)              WHEN e.record_type_code IN ('FD','F','H','EI') THEN 'Other Individuals'#(lf)            ELSE rt.short_desc END, s.short_desc, alm.dlcd,#(lf)       CASE WHEN alm.dlcd IN ('A','B') THEN 'Undergrad'#(lf)            WHEN alm.dlcd IN ('D','M') THEN 'Grad'#(lf)            WHEN alm.dlcd = 'B+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+A' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd LIKE '%B+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%B+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE 'D+%' THEN 'Grad'#(lf)            WHEN alm.dlcd LIKE 'M+%' THEN 'Grad'#(lf)          ELSE 'Non-Alumni' END, aab.schl, fs.schl, rev.fy, rev.schl, alm.schlcd, e.pref_name_sort#(lf)#(lf)order by \"\"Entity Sort\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"School Total\", Currency.Type}, {\"OtherSchool Total\", Currency.Type}, {\"Athletics Total\", Currency.Type}, {\"Other Total\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "82eacabe-4924-4931-b485-3dac3c644a16",
+        "measures": [
+          {
+            "name": "FS School Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _FSDCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'FacStaff Participation'[Entity ID] ),",
+              "                    FILTER( 'FacStaff Participation', 'FacStaff Participation'[FacStaff?] = _School &&",
+              "\t\t\t            'FacStaff Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_FSDCnt),0,_FSDCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "73f9ef6c-e0c5-4ef5-bb71-1f3801cd6c69"
+          },
+          {
+            "name": "FacStaff Count",
+            "expression": [
+              "",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _FSCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'FacStaff Participation'[Entity ID] ),",
+              "                    FILTER( 'FacStaff Participation', 'FacStaff Participation'[FacStaff?] = _School )",
+              "    )",
+              "   return",
+              "   IF(ISBLANK(_FSCnt),0,_FSCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "b7355d87-3b14-4c2b-b24e-3542515eadf2"
+          },
+          {
+            "name": "FS School Participation",
+            "expression": [
+              "",
+              "    IF( [FacStaff Count] = 0,0, [FS School Dnr Count] / [FacStaff Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "153fc8b8-93c1-4bc3-b55e-c92be8d74db8"
+          },
+          {
+            "name": "AAB Count",
+            "expression": [
+              "",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AABCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'AAB Participation'[Entity ID] ),",
+              "                    FILTER( 'AAB Participation', 'AAB Participation'[AAB?] = _School )",
+              "    )",
+              "   return",
+              "   IF(ISBLANK(_AABCnt),0,_AABCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "d6223828-e9d7-4fc6-8766-d9c706c31f11"
+          },
+          {
+            "name": "Alumni Count",
+            "expression": [
+              "",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AlumCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Alumni Participation'[Entity ID] ),",
+              "                    FILTER( 'Alumni Participation', 'Alumni Participation'[Alumni?] = _School )",
+              "    )",
+              "   return",
+              "   IF(ISBLANK(_AlumCnt),0,_AlumCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "53b7c9fd-855e-4c8a-8e14-d1d0c12eb8cf"
+          },
+          {
+            "name": "AAB School Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AABCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'AAB Participation'[Entity ID] ),",
+              "                    FILTER( 'AAB Participation', 'AAB Participation'[AAB?] = _School &&",
+              "                        'AAB Participation'[School Total] > 0 &&",
+              "\t\t\t            'AAB Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AABCnt),0,_AABCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "4afb5dcd-cd6f-4c7a-ab7a-53649af3a383"
+          },
+          {
+            "name": "AAB School Participation",
+            "expression": [
+              "",
+              "    IF( [AAB Count] = 0,0, [AAB School Dnr Count] / [AAB Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "b511999a-a899-4c54-af3b-e0b58eb1d43e"
+          },
+          {
+            "name": "Alumni School Dnr Total",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AlumTtl = CALCULATE(",
+              "                    SUMX( 'Alumni Participation', 'Alumni Participation'[School Total] ),",
+              "                    FILTER( 'Alumni Participation', 'Alumni Participation'[Alumni?] = _School &&",
+              "                        'Alumni Participation'[School Total] > 0 &&",
+              "\t\t\t            'Alumni Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AlumTtl),0,_AlumTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "919d833c-a613-4db5-bc0c-1ff98b3b36c8"
+          },
+          {
+            "name": "Alumni School Participation",
+            "expression": [
+              "",
+              "    IF( [Alumni Count] = 0,0, [Alumni School Dnr Count] / [Alumni Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "64f54745-a596-4d01-9d60-4ff65a50be83"
+          },
+          {
+            "name": "Page Title",
+            "expression": [
+              "",
+              "    \"Participation Statistics for \" & SELECTEDVALUE( Schools[School/College Name] )"
+            ],
+            "lineageTag": "74019689-da4b-464e-be9a-85ce7b7c5ab4"
+          },
+          {
+            "name": "Section Header",
+            "expression": [
+              "",
+              "    \"Revenue to \" & SELECTEDVALUE( Schools[School/College Name] )"
+            ],
+            "lineageTag": "16cb1017-df57-4232-9fdf-705d5862b6a4"
+          },
+          {
+            "name": "Alumni School Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AlumCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Alumni Participation'[Entity ID] ),",
+              "                    FILTER( 'Alumni Participation', 'Alumni Participation'[Alumni?] = _School && ",
+              "                        'Alumni Participation'[School Total] > 0 &&",
+              "\t\t\t            'Alumni Participation'[Fiscal Yr] = _FY)",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_AlumCnt),0,_AlumCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "32630de2-c636-4828-bd4c-c007f57279d0"
+          },
+          {
+            "name": "Alumni Other Dnr Count",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AlumCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Alumni Participation'[Entity ID] ),",
+              "                    FILTER( 'Alumni Participation', 'Alumni Participation'[Alumni?] = _School &&",
+              "                        'Alumni Participation'[School Total] = 0 && 'Alumni Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AlumCnt),0,_AlumCnt)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "17d76c71-510c-42ce-af4c-06da61ec355c"
+          },
+          {
+            "name": "Alumni Other Participation",
+            "expression": [
+              "",
+              "    IF( [Alumni Count] = 0,0, [Alumni Other Dnr Count] / [Alumni Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "d373d9a0-ae2d-4dcc-8b62-d1a7dec360c3"
+          },
+          {
+            "name": "Alumni Other Dnr Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AlumGenTtl = CALCULATE(",
+              "                    SUMX( 'Alumni Participation', 'Alumni Participation'[Athletics Total] + 'Alumni Participation'[Other Total] + 'Alumni Participation'[OtherSchool Total] ),",
+              "                    FILTER( 'Alumni Participation', 'Alumni Participation'[Alumni?] = _School &&",
+              "\t\t\t            'Alumni Participation'[School Total] = 0 && 'Alumni Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AlumGenTtl),0,_AlumGenTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "5dd4448f-4f80-4738-9832-0c8eae86b1a4"
+          },
+          {
+            "name": "Page SubTitle",
+            "expression": [
+              "",
+              "    \"FY\" & MAX( 'Current FY'[CFY] )"
+            ],
+            "lineageTag": "0008c692-4c40-4f6e-9960-30ed8015095e"
+          },
+          {
+            "name": "AAB Other Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AABCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'AAB Participation'[Entity ID] ),",
+              "                    FILTER( 'AAB Participation', 'AAB Participation'[AAB?] = _School &&",
+              "                        'AAB Participation'[School Total] = 0 &&",
+              "\t\t\t            'AAB Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AABCnt),0,_AABCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "d864b51b-ec40-4931-80b2-c07714053fad"
+          },
+          {
+            "name": "AAB Other Participation",
+            "expression": [
+              "",
+              "    IF( [AAB Count] = 0,0, [AAB Other Dnr Count] / [AAB Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "41b4e681-3636-4578-8746-e9883cf4da03"
+          },
+          {
+            "name": "FS Other Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _FSOCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'FacStaff Participation'[Entity ID] ),",
+              "                    FILTER( 'FacStaff Participation', 'FacStaff Participation'[FacStaff?] = _School &&",
+              "                        'FacStaff Participation'[School Total] = 0 &&",
+              "\t\t\t            'FacStaff Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_FSOCnt),0,_FSOCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "c9e12ecd-f618-42eb-ab42-a8c526a75703"
+          },
+          {
+            "name": "FS Other Participation",
+            "expression": [
+              "",
+              "    IF( [FacStaff Count] = 0,0, [FS Other Dnr Count] / [FacStaff Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "e7e20f3b-bed5-4a39-ab07-737d0694c4f6"
+          },
+          {
+            "name": "AAB School Dnr Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AABSchTtl = CALCULATE(",
+              "                    SUMX( 'AAB Participation', 'AAB Participation'[School Total] ),",
+              "                    FILTER( 'AAB Participation', 'AAB Participation'[AAB?] = _School &&",
+              "                        'AAB Participation'[School Total] > 0 &&",
+              "\t\t\t            'AAB Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AABSchTtl),0,_AABSchTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "51fdf45e-3b83-4f51-9a50-41661a91e141"
+          },
+          {
+            "name": "FS School Dnr Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _FSSchTtl = CALCULATE(",
+              "                    SUMX( 'FacStaff Participation', 'FacStaff Participation'[School Total] ),",
+              "                    FILTER( 'FacStaff Participation', 'FacStaff Participation'[FacStaff?] = _School &&",
+              "                        'FacStaff Participation'[School Total] > 0 &&",
+              "\t\t\t            'FacStaff Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_FSSchTtl),0,_FSSchTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "e3a0f4e8-bea0-45a1-864d-8a1325ecb734"
+          },
+          {
+            "name": "AAB Other Dnr Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AABGenTtl = CALCULATE(",
+              "                    SUMX( 'AAB Participation', 'AAB Participation'[Athletics Total] + 'AAB Participation'[Other Total] + 'AAB Participation'[OtherSchool Total] ),",
+              "                    FILTER( 'AAB Participation', 'AAB Participation'[AAB?] = _School &&",
+              "\t\t\t            'AAB Participation'[School Total] = 0 && 'AAB Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_AABGenTtl),0,_AABGenTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "6e76ec86-ca9b-4b5d-85f5-556800e85e84"
+          },
+          {
+            "name": "FS Other Dnr Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _FSGenTtl = CALCULATE(",
+              "                    SUMX( 'FacStaff Participation', 'FacStaff Participation'[Athletics Total] + 'FacStaff Participation'[Other Total] + 'FacStaff Participation'[OtherSchool Total] ),",
+              "                    FILTER( 'FacStaff Participation', 'FacStaff Participation'[FacStaff?] = _School &&",
+              "\t\t\t            'FacStaff Participation'[School Total] = 0 && 'FacStaff Participation'[Fiscal Yr] = _FY)",
+              "   )",
+              "   return",
+              "   IF(ISBLANK(_FSGenTtl),0,_FSGenTtl)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "37db0cb5-5e78-40be-9d26-282e544f803f"
+          },
+          {
+            "name": "Alumni Overall Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AlumDnrCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'Alumni Participation'[Entity ID] ),",
+              "                    FILTER( 'Alumni Participation', 'Alumni Participation'[Alumni?] = _School && ",
+              "\t\t\t            'Alumni Participation'[Fiscal Yr] = _FY)",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_AlumDnrCnt),0,_AlumDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "23959c15-b2fd-49c1-b576-3b4ba66fd741"
+          },
+          {
+            "name": "AAB Overall Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _AABDnrCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'AAB Participation'[Entity ID] ),",
+              "                    FILTER( 'AAB Participation', 'AAB Participation'[AAB?] = _School && ",
+              "\t\t\t            'AAB Participation'[Fiscal Yr] = _FY)",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_AABDnrCnt),0,_AABDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "3f35af31-b71f-46df-a075-ba5b752efbdf"
+          },
+          {
+            "name": "FS Overall Dnr Count",
+            "expression": [
+              "",
+              "    var _FY = MAX( 'Current FY'[CFY] )",
+              "    var _School = SELECTEDVALUE( Schools[Code] )",
+              "    var _FSDnrCnt = CALCULATE(",
+              "                    DISTINCTCOUNT( 'FacStaff Participation'[Entity ID] ),",
+              "                    FILTER( 'FacStaff Participation', 'FacStaff Participation'[FacStaff?] = _School && ",
+              "\t\t\t            'FacStaff Participation'[Fiscal Yr] = _FY)",
+              "                        )",
+              "   return",
+              "   IF(ISBLANK(_FSDnrCnt),0,_FSDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "fcc6b793-dcde-4008-9359-536029075fae"
+          },
+          {
+            "name": "Alumni Overall Participation",
+            "expression": [
+              "",
+              "    IF( [Alumni Count] = 0,0, [Alumni Overall Dnr Count] / [Alumni Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "a445abeb-8fc0-4099-aa31-fdc879b12be8"
+          },
+          {
+            "name": "AAB Overall Participation",
+            "expression": [
+              "",
+              "    IF( [AAB Count] = 0,0, [AAB Overall Dnr Count] / [AAB Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "2c8e1269-c108-4f8d-8303-09b4b324fa89"
+          },
+          {
+            "name": "FS Overall Participation",
+            "expression": [
+              "",
+              "    IF( [FacStaff Count] = 0,0, [FS Overall Dnr Count] / [FacStaff Count] )"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "a2996d6b-f5f1-4be1-8130-5a3aa5f45a60"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-a8a74231-c42e-4975-a2b6-a88e4a46ace9",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "AAB Participation",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e4b996da-9e73-4f06-a8a7-26bfdd5e88e9",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17797b19-fba4-4d4d-a46b-bcbfb4c7b4f4",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inst Suffix",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "06c9fcda-a068-4ba9-8d37-b59228f4d1bf",
+            "sourceColumn": "Inst Suffix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Record Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54dde931-d1ea-4b3c-8df9-13a62cc6ced4",
+            "sourceColumn": "Record Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School/College",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "378d073a-65b2-4f84-922a-528bdcbc9163",
+            "sourceColumn": "School/College",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg Lvl",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "49088f48-d1ea-4f1e-b5cf-59b8e1dd2f88",
+            "sourceColumn": "Deg Lvl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7176a05-471e-4cf4-830d-d0d31fdb621b",
+            "sourceColumn": "Level Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alumni?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d290d29b-832e-4fb8-a9b0-c87b105eb3b4",
+            "sourceColumn": "Alumni?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AAB?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0fac19d0-1dd4-4dbd-933e-0247e35e787b",
+            "sourceColumn": "AAB?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FacStaff?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "944ce75b-b119-4228-9491-63eed2a9709c",
+            "sourceColumn": "FacStaff?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c08f3c97-7951-4337-95db-3b9efc52b72b",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "4634ed15-fd3a-4aa1-85d0-26ca10f85346",
+            "sourceColumn": "School Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "OtherSchool Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "af1ddbf7-2288-4f27-b285-9f8419b90d4d",
+            "sourceColumn": "OtherSchool Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Athletics Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "a35dab4f-58f3-4319-b536-0fc6391fa074",
+            "sourceColumn": "Athletics Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Other Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "2f2f7b42-8060-4107-81f6-5a1a27a7bdf5",
+            "sourceColumn": "Other Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Entity Sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c75d58fc-b079-4f1a-810c-62d14e10186e",
+            "sourceColumn": "Entity Sort",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f2df860d-351e-410b-8769-e9736be75dbe",
+        "partitions": [
+          {
+            "name": "AAB Participation-1f7fb884-37a7-48d6-b15f-f56944991c60",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query created for the School/College Dashboard in PBI to pull participation data; may be used to replace query in SSRS Participation report. smk  11/5/2021#(lf)WITH alumni AS (  -- This section identifies entities who are degreed Alumni; pulls all degrees earned by school/college#(lf)     select d.id_number         aid,#(lf)            d.school_code       schlcd,#(lf)            listagg(d.degree_level_code, '+') within group (order by d.degree_level_code) as dlcd#(lf)       from advance.degrees d#(lf)      where d.institution_code = '6121'#(lf)      and   d.degree_type <> 'S'#(lf)      and   d.degree_level_code IN ('A','B','D','M')#(lf)      and   d.admiss_status_code = ' '#(lf)      and   d.id_number||d.xsequence NOT IN (select xd.id_number||xd.xsequence#(lf)                                               from advance.degrees xd#(lf)                                              where ((substr(d.degree_code,1,1) = '2' and substr(d.degree_code,3,1) = '9'))#(lf)                                                 or  d.degree_code IN ('000','051','052','777','NONDE','WWW','BA/BS','SMJ')#(lf)                                             )#(lf)      and   d.grad_dt > '00000000'#(lf)      and   d.non_grad_code <> 'Y'#(lf)      group by d.id_number, d.school_code#(lf)                 ),#(lf)gifts AS (   -- This pulls the person's giving since FY2017 (plus Campaign Reachback gifts) by school#(lf)      select r.trans_nbr            tnbr,#(lf)             te.donor_id            did,#(lf)             a.school_code          schl,#(lf)             r.fiscal_yr            fy,#(lf)             r.campaign_ind         camp,#(lf)             r.trans_amt            amt#(lf)        from advur.mvw_total_revenue r#(lf)       inner join advur.mvw_allocations a     ON r.allocation_code = a.allocation_code#(lf)       inner join advur.mvw_trans_entities te ON r.trans_nbr = te.trans_nbr#(lf)       where (r.fiscal_yr >= '2017'#(lf)          or  r.fiscal_yr >= '2014' AND r.campaign_ind = 'Current Campaign')#(lf)           ),#(lf)aab AS (    -- This section pulls an indicator for current Alumni Advisory Board members#(lf)    select c.id_number              cid,#(lf)           CASE WHEN substr(c.committee_code,4,2) = '01' THEN 'AS'  -- This converts the AAB committee code to a school code for connecting to Alumni and giving#(lf)                WHEN substr(c.committee_code,4,2) = '02' THEN 'CBA'#(lf)                WHEN substr(c.committee_code,4,2) = '03' THEN 'DEN'#(lf)                WHEN substr(c.committee_code,4,2) = '04' THEN 'LAW'#(lf)                WHEN substr(c.committee_code,4,2) = '05' THEN 'MED'#(lf)                WHEN substr(c.committee_code,4,2) = '06' THEN 'PHA'#(lf)                WHEN substr(c.committee_code,4,2) = '07' THEN 'GRA'#(lf)                WHEN substr(c.committee_code,4,2) = '08' THEN 'NUR'#(lf)                WHEN substr(c.committee_code,4,2) = '09' THEN 'UC'#(lf)              ELSE NULL END         schl#(lf)      from advance.committee c#(lf)     where c.committee_code LIKE 'SAB%'#(lf)     and   c.committee_status_code = 'C'#(lf)       ),#(lf)facstaff AS (    #(lf)         select emp.id_number            eid,#(lf)                CASE WHEN substr(emp.place_of_work_code,3,1) = '2' THEN 'DEN'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '3' THEN 'LAW'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '4' THEN 'GRA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '5' THEN 'PHA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '6' THEN 'CBA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '7' THEN 'NUR'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '8' THEN 'AS'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '9' THEN 'UC'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '1' AND emp.place_of_work_code <> 'SS1' THEN 'MED'#(lf)                   ELSE 'XXX' END    schl#(lf)          from advance.employment emp#(lf)         where emp.job_status_code IN ('A','C','T')#(lf)         and   emp.employer_id_number = '0000054952'#(lf)             )#(lf)#(lf)select distinct e.id_number            \"\"Entity ID\"\",#(lf)       e.pref_mail_name                \"\"Entity Name\"\",#(lf)       e.institutional_suffix          \"\"Inst Suffix\"\",#(lf)       CASE WHEN e.record_type_code IN ('DP','FP','P') THEN 'Parent'#(lf)            WHEN e.record_type_code IN ('DS','S') THEN 'Student'#(lf)            WHEN e.record_type_code IN ('FL','FW','R','FR') THEN 'Resident/Fellow'#(lf)            WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('C','CF','PF','RO','O','G') THEN 'Organization'#(lf)            WHEN e.record_type_code IN ('FD','F','H','EI') THEN 'Other Individuals'#(lf)          ELSE rt.short_desc END       \"\"Record Type\"\",#(lf)       s.short_desc                    \"\"School/College\"\",#(lf)       alm.dlcd                        \"\"Deg Lvl\"\",#(lf)       CASE WHEN alm.dlcd IN ('A','B') THEN 'Undergrad'    -- This section categorizes the various degrees a person might have earned at each school/college#(lf)            WHEN alm.dlcd IN ('D','M') THEN 'Grad'#(lf)            WHEN alm.dlcd = 'B+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+A' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd LIKE '%B+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%B+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE 'D+%' THEN 'Grad'#(lf)            WHEN alm.dlcd LIKE 'M+%' THEN 'Grad'#(lf)          ELSE 'Non-Alumni' END        \"\"Level Category\"\",#(lf)       alm.schlcd                      \"\"Alumni?\"\",#(lf)       aab.schl                        \"\"AAB?\"\",#(lf)       fs.schl                         \"\"FacStaff?\"\",#(lf)       rev.fy                          \"\"Fiscal Yr\"\",#(lf)       CASE WHEN (rev.schl = aab.schl) AND rev.schl IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"School Total\"\",#(lf)       CASE WHEN (rev.schl <> aab.schl) AND rev.schl IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"OtherSchool Total\"\",#(lf)       CASE WHEN rev.schl = 'ATH' THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"Athletics Total\"\",#(lf)       CASE WHEN rev.schl NOT IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC','ATH') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"Other Total\"\",#(lf)       e.pref_name_sort                \"\"Entity Sort\"\"#(lf)from advance.entity e#(lf)inner join advance.tms_record_type rt ON e.record_type_code = rt.record_type_code#(lf)inner join aab aab                    ON e.id_number = aab.cid#(lf)left join advance.tms_school s        ON aab.schl = s.school_code#(lf)left join alumni alm                  ON e.id_number = alm.aid#(lf)left join gifts rev                   ON e.id_number = rev.did#(lf)left join facstaff fs                 ON e.id_number = fs.eid#(lf)where e.record_status_code = 'A'#(lf)#(lf)group by e.id_number, e.pref_mail_name, e.institutional_suffix,#(lf)         CASE WHEN e.record_type_code IN ('DP','FP','P') THEN 'Parent'#(lf)              WHEN e.record_type_code IN ('DS','S') THEN 'Student'#(lf)              WHEN e.record_type_code IN ('FL','FW','R','FR') THEN 'Resident/Fellow'#(lf)              WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)              WHEN e.record_type_code IN ('C','CF','PF','RO','O','G') THEN 'Organization'#(lf)              WHEN e.record_type_code IN ('FD','F','H','EI') THEN 'Other Individuals'#(lf)            ELSE rt.short_desc END, s.short_desc, alm.dlcd,#(lf)       CASE WHEN alm.dlcd IN ('A','B') THEN 'Undergrad'#(lf)            WHEN alm.dlcd IN ('D','M') THEN 'Grad'#(lf)            WHEN alm.dlcd = 'B+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+A' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd LIKE '%B+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%B+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE 'D+%' THEN 'Grad'#(lf)            WHEN alm.dlcd LIKE 'M+%' THEN 'Grad'#(lf)          ELSE 'Non-Alumni' END, aab.schl, fs.schl, rev.fy, rev.schl, alm.schlcd, e.pref_name_sort#(lf)#(lf)order by \"\"Entity Sort\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"School Total\", Currency.Type}, {\"OtherSchool Total\", Currency.Type}, {\"Athletics Total\", Currency.Type}, {\"Other Total\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FacStaff Participation",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0eb911fc-353d-4cf9-8157-5c414c8702e1",
+            "sourceColumn": "Entity ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Entity Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "37f29cdf-a7aa-48da-b77c-0a4077293222",
+            "sourceColumn": "Entity Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Inst Suffix",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "974b19bf-a100-4ce6-a337-e7910432c595",
+            "sourceColumn": "Inst Suffix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Record Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e5d4128-b1ed-4e93-b110-83301d544698",
+            "sourceColumn": "Record Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School/College",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ddfb25e-9eaa-4ff1-8ee4-83d838cecc35",
+            "sourceColumn": "School/College",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deg Lvl",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "72a94786-8b0d-488d-a656-4831e59adf99",
+            "sourceColumn": "Deg Lvl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9ac92d9d-b305-4bba-be3c-7e8c70ea8a46",
+            "sourceColumn": "Level Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alumni?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6a0ac805-2c11-44c0-b11e-3086f5bb6427",
+            "sourceColumn": "Alumni?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AAB?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "358519f2-a018-42cc-97b8-b78c207f07ba",
+            "sourceColumn": "AAB?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FacStaff?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a69e5eeb-aadd-4fde-9269-8c69c04d6241",
+            "sourceColumn": "FacStaff?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65ccefd0-14d0-4160-9d99-d65a2bde607d",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "16e9e078-b687-46a3-9865-0a2f66511ab0",
+            "sourceColumn": "School Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "OtherSchool Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "2d873cfa-ecbe-4d41-a483-f0b8b12725e7",
+            "sourceColumn": "OtherSchool Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Athletics Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "8c57cea1-16ef-4d75-93e7-2ffaceddff84",
+            "sourceColumn": "Athletics Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Other Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "f0e34aed-8cc6-4773-ae24-623197bd6cf6",
+            "sourceColumn": "Other Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Entity Sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad3f075c-48cb-4bbb-aeac-2f0318bb8142",
+            "sourceColumn": "Entity Sort",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "453fbb80-8d47-4351-81d0-81ebddb150c1",
+        "partitions": [
+          {
+            "name": "FacStaff Participation-42dce07e-60f3-47cd-9a77-2d6ef8cd86c8",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query created for the School/College Dashboard in PBI to pull participation data; may be used to replace query in SSRS Participation report. smk  11/5/2021#(lf)WITH alumni AS (  -- This section identifies entities who are degreed Alumni; pulls all degrees earned by school/college#(lf)     select d.id_number         aid,#(lf)            d.school_code       schlcd,#(lf)            listagg(d.degree_level_code, '+') within group (order by d.degree_level_code) as dlcd#(lf)       from advance.degrees d#(lf)      where d.institution_code = '6121'#(lf)      and   d.degree_type <> 'S'#(lf)      and   d.degree_level_code IN ('A','B','D','M')#(lf)      and   d.admiss_status_code = ' '#(lf)      and   d.id_number||d.xsequence NOT IN (select xd.id_number||xd.xsequence#(lf)                                               from advance.degrees xd#(lf)                                              where ((substr(d.degree_code,1,1) = '2' and substr(d.degree_code,3,1) = '9'))#(lf)                                                 or  d.degree_code IN ('000','051','052','777','NONDE','WWW','BA/BS','SMJ')#(lf)                                             )#(lf)      and   d.grad_dt > '00000000'#(lf)      and   d.non_grad_code <> 'Y'#(lf)      group by d.id_number, d.school_code#(lf)                 ),#(lf)gifts AS (   -- This pulls the person's giving since FY2017 (plus Campaign Reachback gifts) by school#(lf)      select r.trans_nbr            tnbr,#(lf)             te.donor_id            did,#(lf)             a.school_code          schl,#(lf)             r.fiscal_yr            fy,#(lf)             r.campaign_ind         camp,#(lf)             r.trans_amt            amt#(lf)        from advur.mvw_total_revenue r#(lf)       inner join advur.mvw_allocations a     ON r.allocation_code = a.allocation_code#(lf)       inner join advur.mvw_trans_entities te ON r.trans_nbr = te.trans_nbr#(lf)       where (r.fiscal_yr >= '2017'#(lf)          or  r.fiscal_yr >= '2014' AND r.campaign_ind = 'Current Campaign')#(lf)           ),#(lf)aab AS (    -- This section pulls an indicator for current Alumni Advisory Board members#(lf)    select c.id_number              cid,#(lf)           CASE WHEN substr(c.committee_code,4,2) = '01' THEN 'AS'  -- This converts the AAB committee code to a school code for connecting to Alumni and giving#(lf)                WHEN substr(c.committee_code,4,2) = '02' THEN 'CBA'#(lf)                WHEN substr(c.committee_code,4,2) = '03' THEN 'DEN'#(lf)                WHEN substr(c.committee_code,4,2) = '04' THEN 'LAW'#(lf)                WHEN substr(c.committee_code,4,2) = '05' THEN 'MED'#(lf)                WHEN substr(c.committee_code,4,2) = '06' THEN 'PHA'#(lf)                WHEN substr(c.committee_code,4,2) = '07' THEN 'GRA'#(lf)                WHEN substr(c.committee_code,4,2) = '08' THEN 'NUR'#(lf)                WHEN substr(c.committee_code,4,2) = '09' THEN 'UC'#(lf)              ELSE NULL END         schl#(lf)      from advance.committee c#(lf)     where c.committee_code LIKE 'SAB%'#(lf)     and   c.committee_status_code = 'C'#(lf)       ),#(lf)facstaff AS (    #(lf)         select emp.id_number            eid,#(lf)                CASE WHEN substr(emp.place_of_work_code,3,1) = '2' THEN 'DEN'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '3' THEN 'LAW'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '4' THEN 'GRA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '5' THEN 'PHA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '6' THEN 'CBA'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '7' THEN 'NUR'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '8' THEN 'AS'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '9' THEN 'UC'#(lf)                     WHEN substr(emp.place_of_work_code,3,1) = '1' AND emp.place_of_work_code <> 'SS1' THEN 'MED'#(lf)                   ELSE 'XXX' END    schl#(lf)          from advance.employment emp#(lf)         where emp.job_status_code IN ('A','C','T')#(lf)         and   emp.employer_id_number = '0000054952'#(lf)             )#(lf)#(lf)select distinct e.id_number            \"\"Entity ID\"\",#(lf)       e.pref_mail_name                \"\"Entity Name\"\",#(lf)       e.institutional_suffix          \"\"Inst Suffix\"\",#(lf)       CASE WHEN e.record_type_code IN ('DP','FP','P') THEN 'Parent'#(lf)            WHEN e.record_type_code IN ('DS','S') THEN 'Student'#(lf)            WHEN e.record_type_code IN ('FL','FW','R','FR') THEN 'Resident/Fellow'#(lf)            WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('C','CF','PF','RO','O','G') THEN 'Organization'#(lf)            WHEN e.record_type_code IN ('FD','F','H','EI') THEN 'Other Individuals'#(lf)          ELSE rt.short_desc END       \"\"Record Type\"\",#(lf)       s.short_desc                    \"\"School/College\"\",#(lf)       alm.dlcd                        \"\"Deg Lvl\"\",#(lf)       CASE WHEN alm.dlcd IN ('A','B') THEN 'Undergrad'    -- This section categorizes the various degrees a person might have earned at each school/college#(lf)            WHEN alm.dlcd IN ('D','M') THEN 'Grad'#(lf)            WHEN alm.dlcd = 'B+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+A' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd LIKE '%B+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%B+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE 'D+%' THEN 'Grad'#(lf)            WHEN alm.dlcd LIKE 'M+%' THEN 'Grad'#(lf)          ELSE 'Non-Alumni' END        \"\"Level Category\"\",#(lf)       alm.schlcd                      \"\"Alumni?\"\",#(lf)       aab.schl                        \"\"AAB?\"\",#(lf)       fs.schl                         \"\"FacStaff?\"\",#(lf)       rev.fy                          \"\"Fiscal Yr\"\",#(lf)       CASE WHEN (rev.schl = fs.schl) AND rev.schl IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"School Total\"\",#(lf)       CASE WHEN (rev.schl <> fs.schl) AND rev.schl IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"OtherSchool Total\"\",#(lf)       CASE WHEN rev.schl = 'ATH' THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"Athletics Total\"\",#(lf)       CASE WHEN rev.schl NOT IN ('AS','CBA','NUR','PHA','GRA','LAW','DEN','MED','UC','ATH') THEN sum(rev.amt)#(lf)          ELSE 0 END                   \"\"Other Total\"\",#(lf)       e.pref_name_sort                \"\"Entity Sort\"\"#(lf)from advance.entity e#(lf)inner join advance.tms_record_type rt ON e.record_type_code = rt.record_type_code#(lf)inner join facstaff fs                ON e.id_number = fs.eid#(lf)left join advance.tms_school s        ON fs.schl = s.school_code#(lf)left join alumni alm                  ON e.id_number = alm.aid#(lf)left join gifts rev                   ON e.id_number = rev.did#(lf)left join aab aab                    ON e.id_number = aab.cid#(lf)where e.record_status_code = 'A'#(lf)#(lf)group by e.id_number, e.pref_mail_name, e.institutional_suffix,#(lf)         CASE WHEN e.record_type_code IN ('DP','FP','P') THEN 'Parent'#(lf)              WHEN e.record_type_code IN ('DS','S') THEN 'Student'#(lf)              WHEN e.record_type_code IN ('FL','FW','R','FR') THEN 'Resident/Fellow'#(lf)              WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)              WHEN e.record_type_code IN ('C','CF','PF','RO','O','G') THEN 'Organization'#(lf)              WHEN e.record_type_code IN ('FD','F','H','EI') THEN 'Other Individuals'#(lf)            ELSE rt.short_desc END, s.short_desc, alm.dlcd,#(lf)       CASE WHEN alm.dlcd IN ('A','B') THEN 'Undergrad'#(lf)            WHEN alm.dlcd IN ('D','M') THEN 'Grad'#(lf)            WHEN alm.dlcd = 'B+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+A' THEN 'Undergrad'#(lf)            WHEN alm.dlcd = 'A+B' THEN 'Undergrad'#(lf)            WHEN alm.dlcd LIKE '%B+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%B+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+D%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE '%A+M%' THEN 'Multi-Level'#(lf)            WHEN alm.dlcd LIKE 'D+%' THEN 'Grad'#(lf)            WHEN alm.dlcd LIKE 'M+%' THEN 'Grad'#(lf)          ELSE 'Non-Alumni' END, aab.schl, fs.schl, rev.fy, rev.schl, alm.schlcd, e.pref_name_sort#(lf)#(lf)order by \"\"Entity Sort\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"School Total\", Currency.Type}, {\"OtherSchool Total\", Currency.Type}, {\"Athletics Total\", Currency.Type}, {\"Other Total\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Schools",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f30dc93b-b733-4fae-bb43-f5fa074b34db",
+            "sourceColumn": "Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School/College Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "561d1950-bd4b-4b18-aabd-c40045c41f16",
+            "sourceColumn": "School/College Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3eae65c6-7bfe-446b-8572-00aadd569c23",
+        "partitions": [
+          {
+            "name": "Schools-78560cf3-b0a6-491a-9611-d65d9aa17cfd",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"VZDLCsIwEEV/JWStIC7c11bsQktpKRZqFyEd24GYQB6Kf2+aKprtnHtPZtJ1NKnpiqZKCBiBqBtJtDXk6jab7Y7UHEFyMLRfdTTdJz6ZAw6gyV9h7wxKMEuoaKpYVzjt8Rhgmc+Gmk9KiZmVE9N3xl/f53Jgwk6k1Ormfajk4jxWc+2o2eCYBbL0Azkll0h4Ys8wzw5FNM9AWjRWvwI9H7KInmFA7k8IsEnj/X/LMEFq6wb8fEfbtj5ZKLn+mDJ84Jyjff8G\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Code = _t, #\"School/College Name\" = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Code\", type text}, {\"School/College Name\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Current FY",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "CFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2cb1bcc2-d29c-457e-b2f4-a618e9098058",
+            "sourceColumn": "CFY",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "014a1b35-1729-4f0f-a52b-768623bd8b94",
+        "partitions": [
+          {
+            "name": "Current FY-cc1ef5c6-a6ff-4e6f-b148-da5c569d65dc",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(#\"Data Source\", [HierarchicalNavigation=true, Query=\"select advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY')) CFY#(lf)from dual\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"CFY\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.29\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [
+    "ChicletSlicer1448559807354"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "path": "ChicletSlicer1448559807354.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "ChicletSlicer1448559807354",
+        "type": 0
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Gift Counts & Totals by Source",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1e536d024ed840a515d3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":324.8632218844985,\"y\":6.808510638297872,\"z\":3000,\"width\":630.2735562310031,\"height\":42.796352583586625}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Credit Card Gift Analysis\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"18pt\",\"color\":\"#0d6abf\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 42.80,
+          "width": 630.27,
+          "x": 324.86,
+          "y": 6.81,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"497c693202b48215c30b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.589665653495441,\"y\":79.75683890577508,\"z\":0,\"width\":1241.0942249240122,\"height\":304.4376899696049}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Credit Card Gifts.Gift Source\",\"active\":true}],\"Values\":[{\"queryRef\":\"Key Measures.Gift Count\"},{\"queryRef\":\"Key Measures.Gift Total\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Gift Source\"},\"Name\":\"Credit Card Gifts.Gift Source\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Gift Count\"},\"Name\":\"Key Measures.Gift Count\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Gift Total\"},\"Name\":\"Key Measures.Gift Total\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"51.574368750729484D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Athletics Ticketing Office'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"64.57436875072949D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Athletics Ticketing Office'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"59.355561607594446D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'call report filed by development staff'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"77.2154223242423D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'call report filed by development staff'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"53.51966696494573D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'correspondence from the donor'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"66.69575535929658D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'correspondence from the donor'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"49.601719643621365D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Letter of Intent Signed by Donor'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"73.61370268062093D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Letter of Intent Signed by Donor'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"56.4102633933782D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Mobile Cause'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"86.02735089289187D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Mobile Cause'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"55.14873750145897D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'reply card from solicitation'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"56.43761428627008D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'reply card from solicitation'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"55.43761428627008D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Wilson-Bennett'\"}}}}}],\"metadata\":\"Key Measures.Gift Count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"63.02735089289188D\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Credit Card Gifts\"}},\"Property\":\"Gift Source\"}},\"Right\":{\"Literal\":{\"Value\":\"'Wilson-Bennett'\"}}}}}],\"metadata\":\"Key Measures.Gift Total\"}}],\"columnHeaders\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 304.44,
+          "width": 1241.09,
+          "x": 14.59,
+          "y": 79.76,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9a22d49f18a043c26bed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":299.5744680851064,\"y\":384.19452887537994,\"z\":2000,\"width\":956.1094224924012,\"height\":313.19148936170217}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\",\"active\":true},{\"queryRef\":\"Credit Card Gifts.Rcpt Month\"}],\"Y\":[{\"queryRef\":\"Key Measures.Avg Gift\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rcpt Month\"},\"Name\":\"Credit Card Gifts.Rcpt Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Avg Gift\"},\"Name\":\"Key Measures.Avg Gift\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}},\"backgroundTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 313.19,
+          "width": 956.11,
+          "x": 299.57,
+          "y": 384.19,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a27bd9575e081780236c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.589665653495441,\"y\":431.85410334346506,\"z\":1000,\"width\":284.98480243161094,\"height\":251.91489361702128}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\",\"active\":true}],\"Values\":[{\"queryRef\":\"Key Measures.Gift Count\"},{\"queryRef\":\"Key Measures.Gift Total\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Gift Count\"},\"Name\":\"Key Measures.Gift Count\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Gift Total\"},\"Name\":\"Key Measures.Gift Total\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 251.91,
+          "width": 284.98,
+          "x": 14.59,
+          "y": 431.85,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c28f8b5b247386db191c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":224.6808510638298,\"z\":4000,\"width\":106.99088145896657,\"height\":269.42249240121583}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"}]},\"display\":{\"mode\":\"hidden\"},\"syncGroup\":{\"groupName\":\"Fiscal Yr\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"rows\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 269.42,
+          "width": 106.99,
+          "x": 7.78,
+          "y": 224.68,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Gift Counts and Totals by FY",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection5f47a9e4ada7a0149b0b",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2dd22e7733b4b7868d98\",\"layouts\":[{\"id\":0,\"position\":{\"x\":123.5258358662614,\"y\":384.19452887537994,\"z\":0,\"width\":1131.1854103343464,\"height\":313.19148936170217}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\",\"active\":true},{\"queryRef\":\"Credit Card Gifts.Rcpt Month\"}],\"Y\":[{\"queryRef\":\"Key Measures.Gift Total\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rcpt Month\"},\"Name\":\"Credit Card Gifts.Rcpt Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Gift Total\"},\"Name\":\"Key Measures.Gift Total\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}},\"backgroundTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 313.19,
+          "width": 1131.19,
+          "x": 123.53,
+          "y": 384.19,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"5bf231dde460011234b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":123.5258358662614,\"y\":46.68693009118541,\"z\":1000,\"width\":556.3525835866261,\"height\":313.19148936170217}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\",\"active\":true},{\"queryRef\":\"Credit Card Gifts.Rcpt Month\"}],\"Y\":[{\"queryRef\":\"Key Measures.Gift Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rcpt Month\"},\"Name\":\"Credit Card Gifts.Rcpt Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Gift Count\"},\"Name\":\"Key Measures.Gift Count\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}},\"backgroundTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 313.19,
+          "width": 556.35,
+          "x": 123.53,
+          "y": 46.69,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a25ba5e036e34020be2c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":698.3586626139818,\"y\":49.6048632218845,\"z\":4000,\"width\":556.3525835866261,\"height\":313.19148936170217}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\",\"active\":true},{\"queryRef\":\"Credit Card Gifts.Rcpt Month\"}],\"Y\":[{\"queryRef\":\"Key Measures.Donor Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Rcpt Month\"},\"Name\":\"Credit Card Gifts.Rcpt Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Donor Count\"},\"Name\":\"Key Measures.Donor Count\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.5}}}}},\"backgroundTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 313.19,
+          "width": 556.35,
+          "x": 698.36,
+          "y": 49.60,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"bcfe5e0719c690605d05\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":224.6808510638298,\"z\":3000,\"width\":106.99088145896657,\"height\":269.42249240121583}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"Credit Card Gifts.Fiscal Yr\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Credit Card Gifts\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Fiscal Yr\"},\"Name\":\"Credit Card Gifts.Fiscal Yr\"}]},\"syncGroup\":{\"groupName\":\"Fiscal Yr\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"rows\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 269.42,
+          "width": 106.99,
+          "x": 7.78,
+          "y": 224.68,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"e2bcbb6ee7745d86d7e9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":326.8085106382979,\"y\":6.808510638297872,\"z\":2000,\"width\":630.2735562310031,\"height\":42.796352583586625}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Credit Card Gift Analysis\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"18pt\",\"color\":\"#0d6abf\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 42.80,
+          "width": 630.27,
+          "x": 326.81,
+          "y": 6.81,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

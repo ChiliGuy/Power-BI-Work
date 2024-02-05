@@ -1,0 +1,217 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Main Query\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Main Query",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Prim Donor Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e79b5db4-75ba-424f-aa2b-25afd36d4c32",
+            "sourceColumn": "Prim Donor Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Market Area",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "737dfa5e-769e-48fd-8c2e-41de07cd3c5f",
+            "sourceColumn": "HH Market Area",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Lat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Latitude",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "4051663e-14d1-4b29-87b9-270f4534775d",
+            "sourceColumn": "HH Lat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Long",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "Longitude",
+            "dataType": "double",
+            "formatString": "0.00",
+            "lineageTag": "0db552b8-d992-4de2-bf1c-2fe23a94b263",
+            "sourceColumn": "HH Long",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4211d7f1-e78f-46db-ab4b-36b8c121f636",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7adf3ccc-a66a-4df7-8d43-e859333b133c",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ddae6e7e-b695-4873-bacb-b43e66d28774",
+            "sourceColumn": "Campaign Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bequest Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2c16b749-17f3-445b-ac61-2d77d8d4d8a7",
+            "sourceColumn": "Bequest Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Dnr ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7a107bb1-11ad-4b55-9082-153f2bbd86b0",
+            "sourceColumn": "Prim Dnr ID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "88863b20-b315-41c2-9ecd-bceae417af75",
+            "sourceColumn": "Trans Amt",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "1b18aad0-77c1-4925-a942-f0997e6b35e4",
+        "partitions": [
+          {
+            "name": "Main Query-1ebf1699-ba16-49aa-be16-80b47b968556",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"-- Modified Base Production query to establish a new baseline dataset for many reports. smk 3/10/2023#(lf)-- Updated to add a few needed sorting values. smk 3/28/2023#(lf)-- Based on \"\"Campaign Production w_AddrInfo\"\", this query is intended for mapping Campaign Donors. smk 5/30/2023#(lf)#(lf)select distinct#(lf)       CASE WHEN hrt.record_type_code = 'A' then 'Alumni'#(lf)            WHEN hrt.record_type_code IN ('P','FP') then 'Parents'#(lf)            WHEN hrt.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)            WHEN hrt.record_type_code IN ('S','FD') then 'Students'#(lf)            WHEN hrt.record_type_group IN ('A','B','C') AND hrt.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code = 'C' THEN 'Corporations'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)            WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)          ELSE 'Other Individuals' END                    \"\"Prim Donor Category\"\",#(lf)       CASE WHEN hha.city > ' ' THEN hha.city||', '||hha.State_Code#(lf)            WHEN hha.city IS NULL THEN hha.market_area#(lf)          ELSE NULL END                                   \"\"HH Market Area\"\",#(lf)       hha.latitude                                       \"\"HH Lat\"\",#(lf)       hha.longitude                                      \"\"HH Long\"\",#(lf)       CASE WHEN hha.household_key IS NULL THEN 'No Address'#(lf)          ELSE nvl(c.short_desc,'United States') END      \"\"Country\"\",#(lf)       tp.school                                          \"\"School\"\",#(lf)       c1.short_desc                                      \"\"Campaign Category\"\",#(lf)       case when tp.trans_category = 'Bequest Expectancies and Gifts' then 'Bequests' #(lf)          else 'Non-Bequests' end                         \"\"Bequest Ind\"\",#(lf)       count(distinct ext.primary_recipient_ids)          \"\"Prim Dnr ID\"\",#(lf)       sum(tp.trans_amt)                                  \"\"Trans Amt\"\"#(lf)       #(lf) from advur.mvw_total_production tp#(lf)inner join advur.mvw_total_production_ext ext on tp.trans_nbr = ext.trans_nbr#(lf)inner join advur.mvw_trans_households thh     ON tp.trans_nbr = thh.trans_nbr#(lf)inner join advance.allocation a               on tp.allocation_code = a.allocation_code#(lf)inner join advur.mvw_ent_household_keys hk     on thh.household_key = hk.household_key#(lf)inner join advur.mvw_hh_record_type hrt        on hk.household_key = hrt.household_key#(lf)inner join advur.mvw_hh_addresses hha          ON hk.household_key = hha.household_key#(lf)left join advance.tms_country c               ON hha.country_code = c.country_code#(lf)left join advance.tms_category1 c1            on c1.category1_code = ext.category1_code#(lf)#(lf)where tp.campaign_ind = 'Current Campaign'#(lf)and   hha.latitude BETWEEN -90.00000 AND 90.00000#(lf)and   hha.latitude <> 0#(lf)and   hha.longitude BETWEEN -180.00000 AND 180.00000#(lf)and   hha.longitude <> 0#(lf)#(lf)group by CASE WHEN hrt.record_type_code = 'A' then 'Alumni'#(lf)              WHEN hrt.record_type_code IN ('P','FP') then 'Parents'#(lf)              WHEN hrt.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)              WHEN hrt.record_type_code IN ('S','FD') then 'Students'#(lf)              WHEN hrt.record_type_group IN ('A','B','C') AND hrt.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)              WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code = 'C' THEN 'Corporations'#(lf)              WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)              WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)              WHEN hrt.record_type_group IN ('D','E','F','H') AND hrt.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)            ELSE 'Other Individuals' END, #(lf)         CASE WHEN hha.city > ' ' THEN hha.city||', '||hha.State_Code#(lf)            WHEN hha.city IS NULL THEN hha.market_area#(lf)          ELSE NULL END, hha.latitude, hha.longitude, #(lf)         CASE WHEN hha.household_key IS NULL THEN 'No Address'#(lf)            ELSE nvl(c.short_desc,'United States') END,#(lf)         tp.school, c1.short_desc,#(lf)       case when tp.trans_category = 'Bequest Expectancies and Gifts' then 'Bequests' #(lf)          else 'Non-Bequests' end\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Prim Dnr ID\", Int64.Type}, {\"Trans Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

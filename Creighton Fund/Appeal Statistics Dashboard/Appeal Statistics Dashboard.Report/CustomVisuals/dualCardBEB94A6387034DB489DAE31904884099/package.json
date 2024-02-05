@@ -1,0 +1,29 @@
+{
+  "version": "1.0.4",
+  "author": {
+    "name": "Inservit LLC",
+    "email": "support@inservit.com"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/dualCardBEB94A6387034DB489DAE31904884099.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "dualCardBEB94A6387034DB489DAE31904884099",
+    "name": "DualCard",
+    "displayName": "DualCard",
+    "version": "1.0.4",
+    "description": "Custom visual to compare two measures.",
+    "supportUrl": "https://www.inservit.com/pbiviz-dualcard/",
+    "gitHubUrl": "",
+    "visualClassName": "dualCard"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

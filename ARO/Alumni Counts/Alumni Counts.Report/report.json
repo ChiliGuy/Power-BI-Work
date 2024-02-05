@@ -1,0 +1,52 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.44\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"ae21219e09fe31e63210\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.45288753799392,\"y\":57.38601823708207,\"z\":0,\"width\":1240.1215805471124,\"height\":631.2462006079028}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"All Degrees.School\",\"active\":true},{\"queryRef\":\"All Degrees.Deg Lvl\"},{\"queryRef\":\"All Degrees.Deg Yr\"}],\"Values\":[{\"queryRef\":\"All Degrees.Alumni Count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All Degrees\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Deg Yr\"},\"Name\":\"All Degrees.Deg Yr\",\"NativeReferenceName\":\"Deg Yr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Deg Lvl\"},\"Name\":\"All Degrees.Deg Lvl\",\"NativeReferenceName\":\"Deg Lvl\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"School\"},\"Name\":\"All Degrees.School\",\"NativeReferenceName\":\"School\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alumni Count\"},\"Name\":\"All Degrees.Alumni Count\",\"NativeReferenceName\":\"Alumni Count\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"All Degrees.School\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"All Degrees\"}},\"Property\":\"School\"}}],\"isPinned\":true},{\"queryRefs\":[\"All Degrees.Deg Lvl\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"All Degrees\"}},\"Property\":\"Deg Lvl\"}}],\"isPinned\":true},{\"queryRefs\":[\"All Degrees.Deg Yr\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 631.25,
+          "width": 1240.12,
+          "x": 19.45,
+          "y": 57.39,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f623d711446f4255ab73\",\"layouts\":[{\"id\":0,\"position\":{\"x\":331.6717325227964,\"y\":0,\"z\":1000,\"width\":658.4802431610942,\"height\":60}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Alumni Counts by Degree Level and Year\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"18pt\",\"color\":\"#0045a6\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 60.00,
+          "width": 658.48,
+          "x": 331.67,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

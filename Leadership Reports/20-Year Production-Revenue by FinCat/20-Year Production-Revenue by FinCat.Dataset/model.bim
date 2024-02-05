@@ -1,0 +1,420 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"20 Yr Prod & Rev Agg\",\"Data Source\",\"Key Measures\",\"DataSource\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "description": "This allows the user to choose which data source to runt he reprot against.",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL20\", \"ADVJUL21\", \"ADVJUL22\", \"ADVJUL23\", \"ADVOCT23\", \"ADVJAN24\", \"ADVAPR24\", \"ADVJUL24\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "f3f5323a-b866-482d-88b3-e11619bda691"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "20 Yr Prod & Rev Agg",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9aae9de8-08d0-4341-97c7-a33d43eba699",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2466b10a-c1e8-4eab-8b63-22cf04ca593f",
+            "sourceColumn": "Camp Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4a7bc143-03ff-459c-908b-e5100a7301ea",
+            "sortByColumn": "Sort School",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "80941548-06b4-4748-8349-b316c64297ce",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa7001e9-1f92-457d-9a0d-003ad9759baa",
+            "sortByColumn": "Sort FinCat",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Beq Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c2d74be-7e64-4b22-bf7b-27b23d35bdda",
+            "sourceColumn": "Beq Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Cnt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1c0cab44-d373-4af7-85b5-0a2253b0ee0f",
+            "sourceColumn": "Trans Cnt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "c1aaa1c5-73f5-4620-a117-6c8a844400e1",
+            "sourceColumn": "Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Production/Revenue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "921d4ca3-b867-4f69-90a9-a031cdb9ee16",
+            "sourceColumn": "Production/Revenue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7138bc2f-2c2b-4dc6-a21e-3b85ec6930a3",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Orig Proc Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "933702e5-5e36-40e4-958c-d110e035755b",
+            "sourceColumn": "Orig Proc Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "ebd91b8b-be9a-4ac7-9238-af960f2bcfb9",
+            "sourceColumn": "Sort School",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0b7381ca-a3e6-42bd-bc8a-4cdd5d6a76dd",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "221f3e4c-d53f-4af2-8d27-2468498eb46d",
+        "measures": [
+          {
+            "name": "Total Production",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    SUM( '20 Yr Prod & Rev Agg'[Trans Amt] )"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "de284fc5-f4f8-4add-9ee6-9b7a918bf5fc"
+          },
+          {
+            "name": "Selection",
+            "expression": [
+              "",
+              "    SELECTEDVALUE( '20 Yr Prod & Rev Agg'[Production/Revenue] )"
+            ],
+            "lineageTag": "5b5a76e1-e152-4530-8fbf-01be34e8a1ed"
+          },
+          {
+            "name": "Tab Title",
+            "expression": [
+              "",
+              "    \"20-Year \" & [Selection] & \" By Finance Category\""
+            ],
+            "lineageTag": "41590c61-6941-4598-be99-6e4187bad9a5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "20 Yr Prod & Rev Agg-79c60d92-ad8c-411b-b1a6-5001711baab9",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Query created for use with the 20-Year Trend report for Production and Revenue. smk 4/20/2023#(lf)-- Updated to add more sorting values.  smk 5/9/2023#(lf)#(lf)select distinct 'Production'                                  \"\"Production/Revenue\"\",#(lf)       prd.trans_category                                     \"\"Trans Category\"\",#(lf)       prd.fiscal_yr                                          \"\"Fiscal Yr\"\",#(lf)       CASE WHEN substr(prd.campaign,1,2) = 'C2' THEN 'C2000 Campaign'#(lf)            WHEN substr(prd.campaign,1,4) = 'Camp' THEN 'Campaign For Creighton'#(lf)            WHEN substr(prd.campaign,1,4) = 'Cent' THEN 'Century II Campaign'#(lf)            WHEN substr(prd.campaign,1,4) = 'Comp' THEN 'Forward Blue'#(lf)            WHEN substr(prd.campaign,1,2) = 'Ig' THEN 'Ignite the Greatness'#(lf)            WHEN substr(prd.campaign,1,2) = 'No' THEN 'Non-Campaign Related'#(lf)            WHEN substr(prd.campaign,1,2) = 'Wi' THEN 'Willing to Lead'#(lf)            WHEN substr(prd.campaign,1,3) = 'Int' THEN 'Non-Campaign Related'#(lf)          ELSE 'Other Campaign' END                           \"\"Camp Category\"\",#(lf)       CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 'Administration'#(lf)            WHEN a.alloc_school = ' ' THEN 'Missing'#(lf)          ELSE tas.short_desc END                             \"\"School\"\",#(lf)       prd.allocation_name||' ('||prd.allocation_code||')'    \"\"Allocation Name\"\",#(lf)       prd.finance_category                                   \"\"Finance Category\"\",#(lf)       CASE WHEN prd.trans_category = 'Bequest Expectancies and Gifts' THEN 'Bequests'#(lf)          ELSE 'Non-Bequests' END                             \"\"Beq Ind\"\",#(lf)       count(distinct prd.trans_nbr)                          \"\"Trans Cnt\"\",#(lf)       sum(prd.trans_amt)                                     \"\"Trans Amt\"\",#(lf)       prd.orig_proc_dt                                       \"\"Orig Proc Dt\"\",#(lf)       prd.fincat_sort                                        \"\"Sort FinCat\"\",#(lf)       CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 999#(lf)            WHEN a.alloc_school = ' ' THEN 990#(lf)          ELSE tas.hierarchy_order END                        \"\"Sort School\"\"#(lf)from advur.mvw_total_production prd#(lf)inner join advance.allocation a        ON prd.allocation_code = a.allocation_code#(lf)left join advance.tms_alloc_school tas ON a.alloc_school = tas.alloc_school_code#(lf)where prd.fiscal_yr >= advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-19#(lf)group by prd.trans_category, prd.fiscal_yr,#(lf)       CASE WHEN substr(prd.campaign,1,2) = 'C2' THEN 'C2000 Campaign'#(lf)            WHEN substr(prd.campaign,1,4) = 'Camp' THEN 'Campaign For Creighton'#(lf)            WHEN substr(prd.campaign,1,4) = 'Cent' THEN 'Century II Campaign'#(lf)            WHEN substr(prd.campaign,1,4) = 'Comp' THEN 'Forward Blue'#(lf)            WHEN substr(prd.campaign,1,2) = 'Ig' THEN 'Ignite the Greatness'#(lf)            WHEN substr(prd.campaign,1,2) = 'No' THEN 'Non-Campaign Related'#(lf)            WHEN substr(prd.campaign,1,2) = 'Wi' THEN 'Willing to Lead'#(lf)            WHEN substr(prd.campaign,1,3) = 'Int' THEN 'Non-Campaign Related'#(lf)          ELSE 'Other Campaign' END, #(lf)        CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 'Administration'#(lf)             WHEN a.alloc_school = ' ' THEN 'Missing'#(lf)          ELSE tas.short_desc END, prd.allocation_name||' ('||prd.allocation_code||')', prd.finance_category, #(lf)        prd.orig_proc_dt, prd.fincat_sort, #(lf)        CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 999#(lf)             WHEN a.alloc_school = ' ' THEN 990#(lf)         ELSE tas.hierarchy_order END#(lf)#(lf)#(lf)UNION ALL#(lf)select distinct 'Revenue'                                     \"\"Production/Revenue\"\",#(lf)       rev.trans_category                                     \"\"Trans Category\"\",#(lf)       rev.fiscal_yr                                          \"\"Fiscal Yr\"\",#(lf)       CASE WHEN substr(rev.campaign,1,2) = 'C2' THEN 'C2000 Campaign'#(lf)            WHEN substr(rev.campaign,1,4) = 'Camp' THEN 'Campaign For Creighton'#(lf)            WHEN substr(rev.campaign,1,4) = 'Cent' THEN 'Century II Campaign'#(lf)            WHEN substr(rev.campaign,1,4) = 'Comp' THEN 'Forward Blue'#(lf)            WHEN substr(rev.campaign,1,2) = 'Ig' THEN 'Ignite the Greatness'#(lf)            WHEN substr(rev.campaign,1,2) = 'No' THEN 'Non-Campaign Related'#(lf)            WHEN substr(rev.campaign,1,2) = 'Wi' THEN 'Willing to Lead'#(lf)            WHEN substr(rev.campaign,1,3) = 'Int' THEN 'Non-Campaign Related'#(lf)          ELSE 'Other Campaign' END                           \"\"Camp Category\"\",#(lf)       CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 'Administration'#(lf)            WHEN a.alloc_school = ' ' THEN 'Missing'#(lf)          ELSE tas.short_desc END                             \"\"School\"\",#(lf)       rev.allocation_name||' ('||rev.allocation_code||')'    \"\"Allocation Name\"\",#(lf)       rev.finance_category                                   \"\"Finance Category\"\",#(lf)       CASE WHEN rev.trans_category = 'Realized Bequests' THEN 'Bequests'#(lf)          ELSE 'Non-Bequests' END                             \"\"Beq Ind\"\",#(lf)       count(distinct rev.trans_nbr)                          \"\"Trans Cnt\"\",#(lf)       sum(rev.trans_amt)                                     \"\"Trans Amt\"\",#(lf)       rev.orig_proc_dt                                       \"\"Orig Proc Dt\"\",#(lf)       rev.fincat_sort                                        \"\"Sort FinCat\"\",#(lf)       CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 999#(lf)            WHEN a.alloc_school = ' ' THEN 990#(lf)          ELSE tas.hierarchy_order END                        \"\"Sort School\"\"#(lf)from advur.mvw_total_revenue rev#(lf)inner join advance.allocation a        ON rev.allocation_code = a.allocation_code#(lf)left join advance.tms_alloc_school tas ON a.alloc_school = tas.alloc_school_code#(lf)where rev.fiscal_yr >= advur.fn_get_fytd_fiscalyear(to_char(sysdate,'MM/DD/YYYY'))-19#(lf)group by rev.trans_category, rev.fiscal_yr,#(lf)       CASE WHEN substr(rev.campaign,1,2) = 'C2' THEN 'C2000 Campaign'#(lf)            WHEN substr(rev.campaign,1,4) = 'Camp' THEN 'Campaign For Creighton'#(lf)            WHEN substr(rev.campaign,1,4) = 'Cent' THEN 'Century II Campaign'#(lf)            WHEN substr(rev.campaign,1,4) = 'Comp' THEN 'Forward Blue'#(lf)            WHEN substr(rev.campaign,1,2) = 'Ig' THEN 'Ignite the Greatness'#(lf)            WHEN substr(rev.campaign,1,2) = 'No' THEN 'Non-Campaign Related'#(lf)            WHEN substr(rev.campaign,1,2) = 'Wi' THEN 'Willing to Lead'#(lf)            WHEN substr(rev.campaign,1,3) = 'Int' THEN 'Non-Campaign Related'#(lf)          ELSE 'Other Campaign' END, #(lf)       CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 'Administration'#(lf)            WHEN a.alloc_school = ' ' THEN 'Missing'#(lf)          ELSE tas.short_desc END, rev.allocation_name||' ('||rev.allocation_code||')', rev.finance_category, #(lf)       rev.orig_proc_dt, rev.fincat_sort, #(lf)       CASE WHEN a.alloc_school IN ('1000','3000','4000','5000','6000','7000','7200') THEN 999#(lf)            WHEN a.alloc_school = ' ' THEN 990#(lf)          ELSE tas.hierarchy_order END#(lf)#(lf)order by \"\"Fiscal Yr\"\", \"\"Sort School\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Trans Cnt\", Int64.Type}, {\"Trans Amt\", Currency.Type}, {\"Orig Proc Dt\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "016faf3d-c44a-42ed-816c-aacd1ba07c32",
+        "measures": [
+          {
+            "name": "Database",
+            "expression": [
+              "",
+              "    SELECTEDVALUE( DataSource[DataSource] )"
+            ],
+            "lineageTag": "1147318d-73b5-4c95-9ea9-72caa31a6544"
+          },
+          {
+            "name": "Last Date",
+            "expression": [
+              "",
+              "    MAX( '20 Yr Prod & Rev Agg'[Orig Proc Dt] )"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "8af8acf4-36e8-4307-b9f2-e43e9de1c2be"
+          },
+          {
+            "name": "As Of Date",
+            "expression": [
+              "",
+              "    \"Last Proc Date: \" & [Last Date]"
+            ],
+            "lineageTag": "190c8c57-b086-4f0a-a3af-55f89e5bb0cc"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-54396521-f869-40f0-9569-200c440fbec7",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DataSource",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DataSource",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "822422a4-3c2b-4855-9458-bdd1db80e568",
+            "sourceColumn": "DataSource",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c6e11d4d-2320-4ef3-8407-20780ae429fb",
+        "partitions": [
+          {
+            "name": "DataSource-3c35bd09-51e8-4258-98ce-3a614bc1c397",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"Data Source\"",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

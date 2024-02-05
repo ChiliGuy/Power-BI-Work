@@ -1,0 +1,118 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"version\":\"5.30\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"isPersistentUserStateDisabled\":false,\"hideVisualContainerHeader\":false,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":0,\"useNewFilterPaneExperience\":true,\"optOutNewFilterPaneExperience\":false,\"defaultFilterActionIsDataFilter\":false,\"useCrossReportDrillthrough\":false,\"allowChangeFilterTypes\":true,\"allowInlineExploration\":false,\"disableFilterPaneSearch\":false,\"enableDeveloperMode\":false,\"useEnhancedTooltips\":false},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Revenue",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"58cd473f536e874b8a27\",\"layouts\":[{\"id\":0,\"position\":{\"x\":321.9452887537994,\"y\":11.671732522796352,\"z\":1000,\"width\":635.1367781155016,\"height\":43.76899696048633}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Giving Day Stats - Revenue\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"18pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 43.77,
+          "width": 635.14,
+          "x": 321.95,
+          "y": 11.67,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"84fe1def155d083d6216\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1093.2522796352584,\"y\":456.17021276595744,\"z\":3000,\"width\":181.88449848024317,\"height\":215.92705167173253}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Giving Day Revenue.Appeal Code\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Giving Day Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Appeal Code\"},\"Name\":\"Giving Day Revenue.Appeal Code\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 215.93,
+          "width": 181.88,
+          "x": 1093.25,
+          "y": 456.17,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b58b27aae784771b6c91\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.644376899696049,\"y\":79.75683890577508,\"z\":0,\"width\":1074.7720364741642,\"height\":606.9300911854103}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Giving Day Revenue.Schol Ind\",\"active\":true},{\"queryRef\":\"Giving Day Revenue.Finance Category\",\"active\":true},{\"queryRef\":\"Giving Day Revenue.Allocation Full Name\"}],\"Values\":[{\"queryRef\":\"Min(Giving Day Revenue.Prim Donor ID)\"},{\"queryRef\":\"Sum(Giving Day Revenue.Gift Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Giving Day Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Finance Category\"},\"Name\":\"Giving Day Revenue.Finance Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Schol Ind\"},\"Name\":\"Giving Day Revenue.Schol Ind\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Prim Donor ID\"}},\"Function\":2},\"Name\":\"Min(Giving Day Revenue.Prim Donor ID)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Gift Amt\"}},\"Function\":0},\"Name\":\"Sum(Giving Day Revenue.Gift Amt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Allocation Full Name\"},\"Name\":\"Giving Day Revenue.Allocation Full Name\"}]},\"columnProperties\":{\"Sum(Giving Day Revenue.Gift Amt)\":{\"displayName\":\"Revenue Sum\"},\"Min(Giving Day Revenue.Prim Donor ID)\":{\"displayName\":\"Distinct Donor Count\"},\"Giving Day Revenue.Schol Ind\":{\"displayName\":\"Scholarship Ind\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 606.93,
+          "width": 1074.77,
+          "x": 12.64,
+          "y": 79.76,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c79c6eb78e9f6a5691a2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1093.2522796352584,\"y\":20.425531914893618,\"z\":2000,\"width\":181.88449848024317,\"height\":412.40121580547117}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Giving Day Revenue.School\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Giving Day Revenue\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"School\"},\"Name\":\"Giving Day Revenue.School\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 412.40,
+          "width": 181.88,
+          "x": 1093.25,
+          "y": 20.43,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Production",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection26637644fab1785bc027",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1702c657a63ac9b36621\",\"layouts\":[{\"id\":0,\"position\":{\"x\":321.9452887537994,\"y\":11.671732522796352,\"z\":1000,\"width\":635.1367781155016,\"height\":43.76899696048633}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Giving Day Stats - Production\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"18pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 43.77,
+          "width": 635.14,
+          "x": 321.95,
+          "y": 11.67,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"21d8d263e90d4e4d35ca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1093.2522796352584,\"y\":20.425531914893618,\"z\":2000,\"width\":181.88449848024317,\"height\":412.40121580547117}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Giving Day Production.School\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g1\",\"Entity\":\"Giving Day Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"School\"},\"Name\":\"Giving Day Production.School\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 412.40,
+          "width": 181.88,
+          "x": 1093.25,
+          "y": 20.43,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"63040c20e8ddfde97f42\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.644376899696049,\"y\":79.75683890577508,\"z\":0,\"width\":1074.7720364741642,\"height\":606.9300911854103}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Giving Day Production.Schol Ind\",\"active\":true},{\"queryRef\":\"Giving Day Production.Finance Category\",\"active\":true},{\"queryRef\":\"Giving Day Production.Allocation Name\"}],\"Values\":[{\"queryRef\":\"Min(Giving Day Production.Prim Donor ID)\"},{\"queryRef\":\"Sum(Giving Day Production.Gift Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g1\",\"Entity\":\"Giving Day Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Schol Ind\"},\"Name\":\"Giving Day Production.Schol Ind\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Finance Category\"},\"Name\":\"Giving Day Production.Finance Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Allocation Name\"},\"Name\":\"Giving Day Production.Allocation Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Prim Donor ID\"}},\"Function\":2},\"Name\":\"Min(Giving Day Production.Prim Donor ID)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Gift Amt\"}},\"Function\":0},\"Name\":\"Sum(Giving Day Production.Gift Amt)\"}]},\"columnProperties\":{\"Giving Day Production.Schol Ind\":{\"displayName\":\"Scholarship Ind\"},\"Min(Giving Day Production.Prim Donor ID)\":{\"displayName\":\"Distinct Donor Count\"},\"Sum(Giving Day Production.Gift Amt)\":{\"displayName\":\"Production Sum\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 606.93,
+          "width": 1074.77,
+          "x": 12.64,
+          "y": 79.76,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fc91c60deabcf804561d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1093.2522796352584,\"y\":456.17021276595744,\"z\":3000,\"width\":181.88449848024317,\"height\":215.92705167173253}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Giving Day Production.Appeal Code\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g1\",\"Entity\":\"Giving Day Production\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Appeal Code\"},\"Name\":\"Giving Day Production.Appeal Code\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 215.93,
+          "width": 181.88,
+          "x": 1093.25,
+          "y": 456.17,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

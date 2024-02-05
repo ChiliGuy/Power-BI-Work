@@ -1,0 +1,892 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY19SU12\",\"version\":\"5.11\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY19SU12",
+            "path": "BaseThemes/CY19SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "FA by Finance Category",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection0ba793408eb530304338",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0c65eeef1ba169be1bd2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":130.7947598253275,\"y\":95.02183406113537,\"z\":5000,\"width\":267.17903930131007,\"height\":100.61135371179039,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'24'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Fundraising Activity'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 100.61,
+          "width": 267.18,
+          "x": 130.79,
+          "y": 95.02,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"20818b167358d7666915\",\"layouts\":[{\"id\":0,\"position\":{\"x\":23.68281938325991,\"y\":67.66519823788546,\"z\":4500,\"width\":1228.123348017621,\"height\":615.7533039647577,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Series\":[{\"queryRef\":\"Fundraising Activity.Bequest Ind\"}],\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"Category\":[{\"queryRef\":\"Fundraising Activity.Finance Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"},\"Name\":\"Fundraising Activity.Bequest Ind\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Fundraising Activity.Finance Category\"}]},\"columnProperties\":{\"Main Query Fundraising Activity.BEQUEST_ACTIVITY\":{\"displayName\":\"Bequest Activity\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"labelOverflow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384C70'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"Bequest Ind\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"Bequest Ind\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequests'\"}}}}}]}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fundraising Activity by Finance Category'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter22e3d910ad5d0e007a97\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Deferred'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 615.75,
+          "width": 1228.12,
+          "x": 23.68,
+          "y": 67.67,
+          "z": 4500.00
+        },
+        {
+          "config": "{\"name\":\"4bac4f2e1928a1069510\",\"layouts\":[{\"id\":0,\"position\":{\"x\":201.80180180180182,\"y\":14.99099099099099,\"z\":2000,\"width\":876.3963963963964,\"height\":59.96396396396396,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Fundraising Activity by Finance Category\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 59.96,
+          "width": 876.40,
+          "x": 201.80,
+          "y": 14.99,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"8043e0e29207515350db\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.0516717325228,\"y\":0,\"z\":3000,\"width\":145.89665653495442,\"height\":30.15197568389058,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.15,
+          "width": 145.90,
+          "x": 567.05,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"817dfc2296ea80da6366\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1168.352422907489,\"y\":689.0572687224669,\"z\":4000,\"width\":107.13656387665198,\"height\":28.19383259911894,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'As of Date'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 28.19,
+          "width": 107.14,
+          "x": 1168.35,
+          "y": 689.06,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA by Gift Type",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection17ebfcea6a2d0d74e544",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"02b8c1aa0610295b347e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":636.1807047484565,\"y\":152.2466303223273,\"z\":9000,\"width\":272,\"height\":40,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Planned Gifts $2.2M (0.5%)\",\"textStyle\":{\"fontFamily\":\"Tahoma\",\"fontSize\":\"16pt\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Planned Gifts Label'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 272.00,
+          "x": 636.18,
+          "y": 152.25,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"095b219a056cc3141155\",\"layouts\":[{\"id\":0,\"position\":{\"x\":250.1818181818182,\"y\":43.054545454545455,\"z\":1000,\"width\":778.4727272727273,\"height\":62.836363636363636,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Fundraising Activity by Gift Type\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 62.84,
+          "width": 778.47,
+          "x": 250.18,
+          "y": 43.05,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"0ac51ab4017334071b5b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":466.60578386605783,\"y\":379.9086757990867,\"z\":10000,\"width\":297.10806697108063,\"height\":79.87823439878234,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'39'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Center Total'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.88,
+          "width": 297.11,
+          "x": 466.61,
+          "y": 379.91,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"1f3de0b7901403606599\",\"layouts\":[{\"id\":0,\"position\":{\"x\":144,\"y\":128,\"z\":3000,\"width\":944,\"height\":584,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Fundraising Activity.Finance Category2\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category2\"},\"Name\":\"Fundraising Activity.Finance Category2\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Category, data value, percent of total'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Tahoma'\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"percentageLabelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'preferOutside'\"}}},\"overflow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"background\":{\"expr\":{\"Literal\":{\"Value\":\"'off'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Pledges Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Cash Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#a1ddef'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Gifts In Kind'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#d0eef7'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Planned Gifts'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Pledges Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#2581C4'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Cash Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#95D2F3'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Intentions'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Gifts In Kind'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFCC4F'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Realized Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#01B8AA'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Pledges Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#374649'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Cash Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FD625E'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Intentions'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F2C80F'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Realized Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#5F6B6D'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Gifts In Kind'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8AD4EB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Planned Gifts'\"}}}}}]}}],\"slices\":[{\"properties\":{\"innerRadiusRatio\":{\"expr\":{\"Literal\":{\"Value\":\"77L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Fundraising Activity by Type'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'21'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 584.00,
+          "width": 944.00,
+          "x": 144.00,
+          "y": 128.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"68964bbd63b24a83d446\",\"layouts\":[{\"id\":0,\"position\":{\"x\":588.3920375271734,\"y\":125.28631212960649,\"z\":5000,\"width\":40,\"height\":24,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"270D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'RB Upper Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 24.00,
+          "width": 40.00,
+          "x": 588.39,
+          "y": 125.29,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"6d1e2fc7d09004d88e7a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":620.3920375271734,\"y\":117.28631212960649,\"z\":6000,\"width\":352,\"height\":40,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Gifts In-Kind $5.8M (1.3%)\",\"textStyle\":{\"fontFamily\":\"Tahoma\",\"fontSize\":\"16pt\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Realized Beq Label'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 352.00,
+          "x": 620.39,
+          "y": 117.29,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"91a42455456c01c2bd6d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":604.1807047484565,\"y\":160.2466303223273,\"z\":8000,\"width\":40,\"height\":24,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"270D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PG Upper Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 24.00,
+          "width": 40.00,
+          "x": 604.18,
+          "y": 160.25,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"9e49127779702d82ab08\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a0498fa0021035966b2b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":603.0177091537429,\"y\":161.51535278928765,\"z\":7000,\"width\":23.68281938325991,\"height\":48.49339207048458,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PG Lower Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 48.49,
+          "width": 23.68,
+          "x": 603.02,
+          "y": 161.52,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"cfe57922ec6cd75e1cc3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":587.4404956769532,\"y\":126.97794208555364,\"z\":4000,\"width\":23.68281938325991,\"height\":80.0704845814978,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'RB Lower Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.07,
+          "width": 23.68,
+          "x": 587.44,
+          "y": 126.98,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f225ffd004b50a6de96c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6909090909091,\"y\":0,\"z\":2000,\"width\":146.61818181818182,\"height\":30.254545454545454,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.25,
+          "width": 146.62,
+          "x": 566.69,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA by School",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection3b2b9c4a611c9c4b1a13",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"295a0723cb1e0aad7bcd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":468.5358255451713,\"y\":74.76635514018692,\"z\":0,\"width\":341.9314641744548,\"height\":33.89408099688473,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"(Excluding Athletics and General University)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontStyle\":\"italic\",\"fontSize\":\"12pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Subtitle'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.89,
+          "width": 341.93,
+          "x": 468.54,
+          "y": 74.77,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"47f037baae34abb57c7b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":929.2687224669603,\"y\":108.26431718061674,\"z\":5000,\"width\":248.1057268722467,\"height\":78.94273127753304,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'24'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'School/College Support'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'12'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter8178d2a0bc3a83b2e30d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"School\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"School\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Athletics'\"}}],[{\"Literal\":{\"Value\":\"'General University'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 78.94,
+          "width": 248.11,
+          "x": 929.27,
+          "y": 108.26,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"52e06be78a634580a908\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.0516717325228,\"y\":0,\"z\":2000,\"width\":145.89665653495442,\"height\":30.15197568389058,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.15,
+          "width": 145.90,
+          "x": 567.05,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"900692702401337793bc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":21.430745814307457,\"y\":52.602739726027394,\"z\":3000,\"width\":1236.1643835616437,\"height\":637.0776255707763,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Fundraising Activity.School\",\"active\":true}],\"Series\":[{\"queryRef\":\"Fundraising Activity.Bequest Ind\"}],\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"School\"},\"Name\":\"Fundraising Activity.School\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"},\"Name\":\"Fundraising Activity.Bequest Ind\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'11'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'InsideCenter'\"}}},\"labelOverflow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384C70'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"Bequest Ind\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"Bequest Ind\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequests'\"}}}}}]}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fundraising Activity by School/College'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter1286c78044a660087acb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"School\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"School\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Athletics'\"}}],[{\"Literal\":{\"Value\":\"'General University'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 637.08,
+          "width": 1236.16,
+          "x": 21.43,
+          "y": 52.60,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b0391a306405bc40971c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1168.352422907489,\"y\":689.0572687224669,\"z\":2500,\"width\":107.13656387665198,\"height\":28.19383259911894,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'As of Date'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 28.19,
+          "width": 107.14,
+          "x": 1168.35,
+          "y": 689.06,
+          "z": 2500.00
+        },
+        {
+          "config": "{\"name\":\"ff3bd0e9dd2ac9b01464\",\"layouts\":[{\"id\":0,\"position\":{\"x\":303.7090909090909,\"y\":22.10909090909091,\"z\":1000,\"width\":672.5818181818182,\"height\":59.345454545454544,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Fundraising Activity by School\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 59.35,
+          "width": 672.58,
+          "x": 303.71,
+          "y": 22.11,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Bequest Donors by Finance Category",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter8ab8032f10d000a14db9\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Hshld Record Type\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Hshld Record Type\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}],[{\"Literal\":{\"Value\":\"'Corporation'\"}}],[{\"Literal\":{\"Value\":\"'Hard/Legal Credit Entity'\"}}],[{\"Literal\":{\"Value\":\"'Other Organization'\"}}],[{\"Literal\":{\"Value\":\"'Private Foundation'\"}}],[{\"Literal\":{\"Value\":\"'Religious Organization'\"}}],[{\"Literal\":{\"Value\":\"'Corporate Foundation'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection44caece9a9a2e60a55c3",
+      "ordinal": 9,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0c3f7d8be1540e3515cd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":941.6740088105727,\"y\":125.18061674008811,\"z\":4000,\"width\":155.62995594713655,\"height\":95.85903083700441,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Fundraising Activity.Hshld Key)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Hshld Key\"}},\"Function\":2},\"Name\":\"Min(Fundraising Activity.Hshld Key)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Hshld Key\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'24'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Bequest Donor Count'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'12'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter0764945c26b90c8cb7c5\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 95.86,
+          "width": 155.63,
+          "x": 941.67,
+          "y": 125.18,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"2b6b2247ba707e2607b6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.275494672754945,\"y\":72.08523592085236,\"z\":3000,\"width\":1229.345509893455,\"height\":615.6468797564688,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Fundraising Activity.Finance Category\",\"active\":true}],\"Series\":[{\"queryRef\":\"Fundraising Activity.Bequest Ind\"}],\"Y\":[{\"queryRef\":\"CountNonNull(Fundraising Activity.Hshld Key)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Fundraising Activity.Finance Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"},\"Name\":\"Fundraising Activity.Bequest Ind\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Hshld Key\"}},\"Function\":2},\"Name\":\"CountNonNull(Fundraising Activity.Hshld Key)\"}]},\"columnProperties\":{\"Main Query Fundraising Activity.BEQUEST_ACTIVITY\":{\"displayName\":\"Bequest Activity\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'16'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"showAll\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequest Activity'\"}}}}}]}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384C70'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"Bequest Ind\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"75D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fundraising Activity Donor Counts by Finance Category'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere093b6ef3ac7e0e363d1\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 615.65,
+          "width": 1229.35,
+          "x": 27.28,
+          "y": 72.09,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5d100d94462a67c3892e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8dc1a6d5a4ab19b3960b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":213.14537444933922,\"y\":30.449339207048457,\"z\":1000,\"width\":853.7092511013216,\"height\":54.13215859030837,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Bequest Donor Counts by Finance Category\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"20pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 54.13,
+          "width": 853.71,
+          "x": 213.15,
+          "y": 30.45,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e1a08faf9d51a4916198\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6909090909091,\"y\":0,\"z\":2000,\"width\":146.61818181818182,\"height\":30.254545454545454,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.25,
+          "width": 146.62,
+          "x": 566.69,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Campaign FA Progress",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection54e8c9dada32dd8ce8d2",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"215336dd99111653ac20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.405286343612335,\"y\":82.32599118942731,\"z\":3000,\"width\":1254.0616740088105,\"height\":607.8590308370044,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"FA Progress.YR_QTR_MOD\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}],\"Y2\":[{\"queryRef\":\"Sum(FA Progress.RUNNING_TOTAL)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FA Progress\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"Goals - 550M (2024)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"YR_QTR_MOD\"},\"Name\":\"FA Progress.YR_QTR_MOD\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"GoalValue\"}},\"Function\":0},\"Name\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"RUNNING_TOTAL\"}},\"Function\":0},\"Name\":\"Sum(FA Progress.RUNNING_TOTAL)\"}]},\"columnProperties\":{\"FA Progress.YR_QTR_MOD\":{\"displayName\":\"Fiscal Yr & Qtr\"},\"CountNonNull(Goals - 550M (2024).GoalValue)\":{\"displayName\":\"Cumulative Goal\"},\"Sum(FA Progress.RUNNING_TOTAL)\":{\"displayName\":\"Cumulative Actual\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"60000000D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"400000000D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"y2Axis\":[{\"properties\":{\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"60000000D\"}}},\"secLabelColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D64550'\"}}}}},\"secFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D64550'\"}}}}}},\"selector\":{\"metadata\":\"Sum(FA Progress.RUNNING_TOTAL)\"}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"showAll\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}}],\"lineStyles\":[{\"properties\":{\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"markerShape\":{\"expr\":{\"Literal\":{\"Value\":\"'diamond'\"}}}},\"selector\":{\"metadata\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Fundraising Activity'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtera2118ccbd0601db625ac\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FA Progress\"}},\"Property\":\"YR_QTR_MOD\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FA Progress\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"YR_QTR_MOD\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 607.86,
+          "width": 1254.06,
+          "x": 12.41,
+          "y": 82.33,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"303054fb3a5276db485a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'As of Date'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"70b7d1b3ad1b8b021658\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1091.332744924978,\"y\":412.3565754633716,\"z\":5000,\"width\":103.93645189761695,\"height\":37.28155339805825,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Goals - 550M (2024).GoalValue)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Goals - 550M (2024)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"GoalValue\"}},\"Function\":0},\"Name\":\"Sum(Goals - 550M (2024).GoalValue)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"GoalValue\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Goals - 550M (2024).GoalValue)\":{\"displayName\":\"Cumulative Goal\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter132be8cce797e3b5de81\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FA Progress\"}},\"Property\":\"YR_QTR_MOD\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FA Progress\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"YR_QTR_MOD\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'FY2021 - Qtr 4'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 37.28,
+          "width": 103.94,
+          "x": 1091.33,
+          "y": 412.36,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"b37c7f6fd7dcd4b3d75b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1090.5374449339206,\"y\":442.07929515418505,\"z\":6000,\"width\":104.88105726872247,\"height\":36.08810572687225,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E70303'\"}}}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.09,
+          "width": 104.88,
+          "x": 1090.54,
+          "y": 442.08,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"cbad88b6d0024c0095b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":818.9665653495441,\"y\":411.42857142857144,\"z\":4000,\"width\":272.3404255319149,\"height\":76.83890577507599,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Cumulative Goal (2024):\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"right\"},{\"textRuns\":[{\"value\":\"Cumulative Actual:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#ff0a00\"}}],\"horizontalTextAlignment\":\"right\"}]}}]}}}",
+          "filters": "[]",
+          "height": 76.84,
+          "width": 272.34,
+          "x": 818.97,
+          "y": 411.43,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"e3e5a1393966d7793701\",\"layouts\":[{\"id\":0,\"position\":{\"x\":303.7090909090909,\"y\":22.10909090909091,\"z\":1000,\"width\":672.5818181818182,\"height\":59.345454545454544,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Progress - $550M Goal\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 59.35,
+          "width": 672.58,
+          "x": 303.71,
+          "y": 22.11,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"eb64bfbd39863d5a72c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.0516717325228,\"y\":0,\"z\":2000,\"width\":145.89665653495442,\"height\":30.15197568389058,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.15,
+          "width": 145.90,
+          "x": 567.05,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA Progress - 4 Qtr Focus",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection6a00ec87a51c67c7e39b",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"215336dd99111653ac20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.405286343612335,\"y\":82.32599118942731,\"z\":3000,\"width\":1254.0616740088105,\"height\":607.8590308370044,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"FA Progress.YR_QTR_MOD\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}],\"Y2\":[{\"queryRef\":\"Sum(FA Progress.RUNNING_TOTAL)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FA Progress\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"Goals - 550M (2024)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"YR_QTR_MOD\"},\"Name\":\"FA Progress.YR_QTR_MOD\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"GoalValue\"}},\"Function\":0},\"Name\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"RUNNING_TOTAL\"}},\"Function\":0},\"Name\":\"Sum(FA Progress.RUNNING_TOTAL)\"}]},\"columnProperties\":{\"FA Progress.YR_QTR_MOD\":{\"displayName\":\"Fiscal Yr & Qtr\"},\"CountNonNull(Goals - 550M (2024).GoalValue)\":{\"displayName\":\"Cumulative Goal\"},\"Sum(FA Progress.RUNNING_TOTAL)\":{\"displayName\":\"Cumulative Actual\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"250000000D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"400000000D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"y2Axis\":[{\"properties\":{\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"250000000D\"}}},\"secLabelColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D64550'\"}}}}},\"secFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"secEnd\":{\"expr\":{\"Literal\":{\"Value\":\"450000000D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D64550'\"}}}}}},\"selector\":{\"metadata\":\"Sum(FA Progress.RUNNING_TOTAL)\"}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"showAll\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}}],\"lineStyles\":[{\"properties\":{\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"markerShape\":{\"expr\":{\"Literal\":{\"Value\":\"'diamond'\"}}}},\"selector\":{\"metadata\":\"CountNonNull(Goals - 550M (2024).GoalValue)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Fundraising Activity'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtera2118ccbd0601db625ac\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FA Progress\"}},\"Property\":\"YR_QTR_MOD\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FA Progress\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"YR_QTR_MOD\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'FY2021 - Qtr 2'\"}}],[{\"Literal\":{\"Value\":\"'FY2021 - Qtr 3'\"}}],[{\"Literal\":{\"Value\":\"'FY2021 - Qtr 4'\"}}],[{\"Literal\":{\"Value\":\"'FY2021 - Qtr 1'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false}]",
+          "height": 607.86,
+          "width": 1254.06,
+          "x": 12.41,
+          "y": 82.33,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"303054fb3a5276db485a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'As of Date'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"70b7d1b3ad1b8b021658\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1091.332744924978,\"y\":412.3565754633716,\"z\":5000,\"width\":103.93645189761695,\"height\":37.28155339805825,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Goals - 550M (2024).GoalValue)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Goals - 550M (2024)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"GoalValue\"}},\"Function\":0},\"Name\":\"Sum(Goals - 550M (2024).GoalValue)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"GoalValue\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Goals - 550M (2024).GoalValue)\":{\"displayName\":\"Cumulative Goal\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter132be8cce797e3b5de81\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FA Progress\"}},\"Property\":\"YR_QTR_MOD\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FA Progress\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"YR_QTR_MOD\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'FY2021 - Qtr 4'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 37.28,
+          "width": 103.94,
+          "x": 1091.33,
+          "y": 412.36,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"b37c7f6fd7dcd4b3d75b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1090.5374449339206,\"y\":442.07929515418505,\"z\":6000,\"width\":104.88105726872247,\"height\":36.08810572687225,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E70303'\"}}}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.09,
+          "width": 104.88,
+          "x": 1090.54,
+          "y": 442.08,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"cbad88b6d0024c0095b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":818.9665653495441,\"y\":411.42857142857144,\"z\":4000,\"width\":272.3404255319149,\"height\":76.83890577507599,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Cumulative Goal (2024):\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"right\"},{\"textRuns\":[{\"value\":\"Cumulative Actual:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI\",\"fontSize\":\"16pt\",\"color\":\"#ff0a00\"}}],\"horizontalTextAlignment\":\"right\"}]}}]}}}",
+          "filters": "[]",
+          "height": 76.84,
+          "width": 272.34,
+          "x": 818.97,
+          "y": 411.43,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"e3e5a1393966d7793701\",\"layouts\":[{\"id\":0,\"position\":{\"x\":303.7090909090909,\"y\":22.10909090909091,\"z\":1000,\"width\":672.5818181818182,\"height\":59.345454545454544,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Progress - $550M Goal\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 59.35,
+          "width": 672.58,
+          "x": 303.71,
+          "y": 22.11,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"eb64bfbd39863d5a72c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.0516717325228,\"y\":0,\"z\":2000,\"width\":145.89665653495442,\"height\":30.15197568389058,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.15,
+          "width": 145.90,
+          "x": 567.05,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Bequests by Finance Category",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection73f6dadb559dc0340607",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7932f40d1e50eb93055d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1168.352422907489,\"y\":689.0572687224669,\"z\":1500,\"width\":107.13656387665198,\"height\":28.19383259911894,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'As of Date'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 28.19,
+          "width": 107.14,
+          "x": 1168.35,
+          "y": 689.06,
+          "z": 1500.00
+        },
+        {
+          "config": "{\"name\":\"87594fb792a037282ed0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.2599118942732,\"y\":0,\"z\":1000,\"width\":145.48017621145374,\"height\":30.449339207048457,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.45,
+          "width": 145.48,
+          "x": 567.26,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9b94e40730b5eb0dc83c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.534246575342465,\"y\":91.56773211567732,\"z\":2000,\"width\":1243.9573820395738,\"height\":601.03500761035,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Fundraising Activity.Finance Category\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Finance Category\"},\"Name\":\"Fundraising Activity.Finance Category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"columnProperties\":{\"Main Query Fundraising Activity.BEQUEST_ACTIVITY\":{\"displayName\":\"Bequest Activity\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'13'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384C70'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Activity'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#384C70'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"BEQUEST_ACTIVITY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'10'\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"52000D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fundraising Activity by Finance Category'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter0d97a1db9cd33c5a554b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 601.04,
+          "width": 1243.96,
+          "x": 17.53,
+          "y": 91.57,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b5dbe6722a2b4e47e133\",\"layouts\":[{\"id\":0,\"position\":{\"x\":201.86784140969164,\"y\":30.449339207048457,\"z\":0,\"width\":876.2643171806168,\"height\":59.77092511013216,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Fundraising Activity Bequests by Finance Category\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"20pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 59.77,
+          "width": 876.26,
+          "x": 201.87,
+          "y": 30.45,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fbae37507caa008dc80e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":191.71806167400882,\"y\":160.1409691629956,\"z\":4000,\"width\":217.65638766519822,\"height\":102.62555066079295,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'24'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Fundraising Activity Bequests'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterf1d9acd270e270ccb703\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 102.63,
+          "width": 217.66,
+          "x": 191.72,
+          "y": 160.14,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA by Priority",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection8178c477ec3ccc975deb",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"105819f5d7045d9d3649\",\"layouts\":[{\"id\":0,\"position\":{\"x\":450.6181818181819,\"y\":214.69090909090903,\"z\":5000,\"width\":208,\"height\":128,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Enhancing the Student Experience'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter92edd26452100cd9469e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Campaign Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Student Experience'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 128.00,
+          "width": 208.00,
+          "x": 450.62,
+          "y": 214.69,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"17d99e94052bbb393819\",\"layouts\":[{\"id\":0,\"position\":{\"x\":178.61818181818182,\"y\":182.69090909090903,\"z\":4000,\"width\":240,\"height\":160,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Fundraising Activity'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 160.00,
+          "width": 240.00,
+          "x": 178.62,
+          "y": 182.69,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"28a11c3f804891906c08\",\"layouts\":[{\"id\":0,\"position\":{\"x\":450.1652242328875,\"y\":441.1014948859166,\"z\":9000,\"width\":208.46577498033045,\"height\":127.89929189614477,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Enhancing the Student Experience'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FAE99F'\"}}}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtera65c221d40ba2070b545\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"Filter89991289db1da9a81701\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Campaign Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Student Experience'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 127.90,
+          "width": 208.47,
+          "x": 450.17,
+          "y": 441.10,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"3151bd197d70a3c7074b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.0516717325228,\"y\":0,\"z\":3000,\"width\":145.89665653495442,\"height\":30.15197568389058,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.15,
+          "width": 145.90,
+          "x": 567.05,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"585f645c8a0cd209b105\",\"layouts\":[{\"id\":0,\"position\":{\"x\":181.98181818181837,\"y\":409.01818181818186,\"z\":8000,\"width\":240,\"height\":160,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Bequests Only'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FAE99F'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterbc7a9a5fc9197535ba17\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 160.00,
+          "width": 240.00,
+          "x": 181.98,
+          "y": 409.02,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"5934cd198e2cc0c75eb3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":898.8193832599119,\"y\":442.07929515418505,\"z\":11000,\"width\":208.63436123348018,\"height\":127.43612334801762,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Mission, Academics, Programs'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FAE99F'\"}}}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtera65c221d40ba2070b545\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"Filter89991289db1da9a81701\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Campaign Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Mission, Academics, Programs'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 127.44,
+          "width": 208.63,
+          "x": 898.82,
+          "y": 442.08,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"66ec284d2140b0abc792\",\"layouts\":[{\"id\":0,\"position\":{\"x\":674.6181818181818,\"y\":214.69090909090903,\"z\":6000,\"width\":208,\"height\":128,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Scholarships'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterf65c24d6a577e0915e02\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Campaign Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Scholarship'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 128.00,
+          "width": 208.00,
+          "x": 674.62,
+          "y": 214.69,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"72ff7c35737074c02ea3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":303.7090909090909,\"y\":22.10909090909091,\"z\":2000,\"width\":672.5818181818182,\"height\":59.345454545454544,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Fundraising Activity by Priority\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 59.35,
+          "width": 672.58,
+          "x": 303.71,
+          "y": 22.11,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7c13cf4c1400329020c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"91af7cbd95001979730c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":898.6181818181818,\"y\":214.69090909090903,\"z\":7000,\"width\":192.00000000000003,\"height\":128,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Mission, Academics, Programs'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter28af6d83b95367687e20\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Campaign Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Mission, Academics, Programs'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 128.00,
+          "width": 192.00,
+          "x": 898.62,
+          "y": 214.69,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"c06b602e7c73d214a185\",\"layouts\":[{\"id\":0,\"position\":{\"x\":159.4181818181818,\"y\":359.56363636363636,\"z\":1000,\"width\":960,\"height\":44.21818181818182,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90D\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 44.22,
+          "width": 960.00,
+          "x": 159.42,
+          "y": 359.56,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"caabf929035a42b73953\",\"layouts\":[{\"id\":0,\"position\":{\"x\":674.3964757709251,\"y\":442.07929515418505,\"z\":10000,\"width\":208.63436123348018,\"height\":127.43612334801762,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Scholarships'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FAE99F'\"}}}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtera65c221d40ba2070b545\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Bequest Ind\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bequest Ind\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bequests'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"Filter89991289db1da9a81701\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Campaign Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Scholarship'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 127.44,
+          "width": 208.63,
+          "x": 674.40,
+          "y": 442.08,
+          "z": 10000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA by Source",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection94b71ace1bb21d013b6c",
+      "ordinal": 8,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"184f0be452782eb2811c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":580.7929175119478,\"y\":99.37001002296103,\"z\":8000,\"width\":121.79735682819383,\"height\":40.59911894273128,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"76D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'OO Upper Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.60,
+          "width": 121.80,
+          "x": 580.79,
+          "y": 99.37,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"1a1ffe903672504d3d89\",\"layouts\":[{\"id\":0,\"position\":{\"x\":503.84724939519134,\"y\":133.96791974503859,\"z\":4000,\"width\":81.30131680867545,\"height\":71.38652207591015,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"155D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'OO Lower Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 71.39,
+          "width": 81.30,
+          "x": 503.85,
+          "y": 133.97,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"1b990150320dc8d17e4a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":276.94545454545454,\"y\":30.254545454545454,\"z\":1000,\"width\":731.9272727272727,\"height\":62.836363636363636,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Fundraising Activity by Source\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 62.84,
+          "width": 731.93,
+          "x": 276.95,
+          "y": 30.25,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"41097d3c44b866952675\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"56bf06bb5a3864a442a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":110.51982378854626,\"y\":128.56387665198238,\"z\":3000,\"width\":977.762114537445,\"height\":583.0484581497798,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"Category\":[{\"queryRef\":\"Fundraising Activity.Prim Donor Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Prim Donor Category\"},\"Name\":\"Fundraising Activity.Prim Donor Category\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Category, data value, percent of total'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Tahoma'\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"percentageLabelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'preferOutside'\"}}},\"overflow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"background\":{\"expr\":{\"Literal\":{\"Value\":\"'off'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Pledges Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Cash Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#a1ddef'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Gifts In Kind'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#d0eef7'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Production\"}},\"Property\":\"TRANS_CAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Planned Gifts'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Pledges Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#2581C4'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Cash Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#95D2F3'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Intentions'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#019CDB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Gifts In Kind'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFCC4F'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Main Query Fund Act\"}},\"Property\":\"FINCAT2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Realized Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#01B8AA'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Pledges Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#374649'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'New Cash Received'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FD625E'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Bequest Intentions'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F2C80F'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Realized Bequests'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#5F6B6D'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Gifts In Kind'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8AD4EB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Finance Category2\"}},\"Right\":{\"Literal\":{\"Value\":\"'Planned Gifts'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#01B8AA'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Alumni'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#374649'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Foundations'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FD625E'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Other Individuals'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#5F6B6D'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Corporations'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#8AD4EB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Parents'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F2C80F'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Other Organizations'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#73B865'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Fundraising Activity\"}},\"Property\":\"Prim Donor Category\"}},\"Right\":{\"Literal\":{\"Value\":\"'Religious Organizations'\"}}}}}]}}],\"slices\":[{\"properties\":{\"innerRadiusRatio\":{\"expr\":{\"Literal\":{\"Value\":\"77L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Fundraising Activity by Type'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'21'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 583.05,
+          "width": 977.76,
+          "x": 110.52,
+          "y": 128.56,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5b7840f0165009c0dbb4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":411.6396583804731,\"y\":124.05312501227324,\"z\":5000,\"width\":125.9178931061193,\"height\":40.650658404337726,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'OO Upper Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.65,
+          "width": 125.92,
+          "x": 411.64,
+          "y": 124.05,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"7ba6973f9b5be260c865\",\"layouts\":[{\"id\":0,\"position\":{\"x\":680.1953753125451,\"y\":148.86317402783175,\"z\":12000,\"width\":456.08055770720375,\"height\":39.65917893106119,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Faculty/Staff $2.3M (0.5%)\",\"textStyle\":{\"fontFamily\":\"Tahoma\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Religious Orgs Info'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 39.66,
+          "width": 456.08,
+          "x": 680.20,
+          "y": 148.86,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"864d3035502c87ba3ecd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":604.8429353435289,\"y\":136.96542034851336,\"z\":11000,\"width\":76.3439194422928,\"height\":49.57397366382649,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'RO Upper Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 49.57,
+          "width": 76.34,
+          "x": 604.84,
+          "y": 136.97,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"887c44305e9cb0bee4dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":565.0043712564412,\"y\":112.90304967053812,\"z\":7000,\"width\":48.49339207048458,\"height\":84.58149779735683,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'RO Lower Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 84.58,
+          "width": 48.49,
+          "x": 565.00,
+          "y": 112.90,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"8f8f71c0eb8703ea1272\",\"layouts\":[{\"id\":0,\"position\":{\"x\":32.70510783939222,\"y\":123.0531254605376,\"z\":6000,\"width\":376.01217656012176,\"height\":40.91324200913242,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Other Organizations $11.0M (2.5%)\",\"textStyle\":{\"fontFamily\":\"Tahoma\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"right\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Other Orgs Info'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.91,
+          "width": 376.01,
+          "x": 32.71,
+          "y": 123.05,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"9bbc314b97dd98b00524\",\"layouts\":[{\"id\":0,\"position\":{\"x\":700.2456443708046,\"y\":93.14937078779373,\"z\":9000,\"width\":376.4133738601824,\"height\":39.87841945288754,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Religious Organizations $3.5M (0.8%)\",\"textStyle\":{\"fontFamily\":\"Tahoma\",\"fontSize\":\"16pt\",\"color\":\"#000000\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Other Orgs Info'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 39.88,
+          "width": 376.41,
+          "x": 700.25,
+          "y": 93.15,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"c59a0c09808da3c7315d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6909090909091,\"y\":0,\"z\":2000,\"width\":146.61818181818182,\"height\":30.254545454545454,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.25,
+          "width": 146.62,
+          "x": 566.69,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"efebea8e00aa159b0a06\",\"layouts\":[{\"id\":0,\"position\":{\"x\":583.4461968250836,\"y\":148.76970415678275,\"z\":10000,\"width\":48.49339207048458,\"height\":54.13215859030837,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"basicShape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"line\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"rotation\":[{\"properties\":{\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'RO Lower Line'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 54.13,
+          "width": 48.49,
+          "x": 583.45,
+          "y": 148.77,
+          "z": 10000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA by Gift Range",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionc475f9edb5edc9b46ccd",
+      "ordinal": 10,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1904458f3a7c108c90e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":543.4181818181818,\"y\":95.41818181818182,\"z\":4000,\"width\":736.5818181818182,\"height\":594.6181818181818,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Fundraising Activity.Campaign Gift Range\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Gift Range\"},\"Name\":\"Fundraising Activity.Campaign Gift Range\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Gift Range\"}}}]},\"columnProperties\":{\"Main Query Fundraising Activity.TRANS_NBR\":{\"displayName\":\"Transaction Count\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"percentBarLabel\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'AlternatingRows'\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sum of Transactions'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'14'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 594.62,
+          "width": 736.58,
+          "x": 543.42,
+          "y": 95.42,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"33c8faa41da373819ec4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.6545454545454,\"y\":39.56363636363636,\"z\":1000,\"width\":758.6909090909091,\"height\":55.85454545454545,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Counts by Gift Range\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Calibri\",\"fontSize\":\"24pt\",\"color\":\"#365f91\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 55.85,
+          "width": 758.69,
+          "x": 260.65,
+          "y": 39.56,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"794d8e892125a530de94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6909090909091,\"y\":0,\"z\":2000,\"width\":146.61818181818182,\"height\":30.254545454545454,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 30.25,
+          "width": 146.62,
+          "x": 566.69,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"d25a37490886c1b88ada\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":95.41818181818182,\"z\":3000,\"width\":512,\"height\":594.6181818181818,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Fundraising Activity.Campaign Gift Range\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Fundraising Activity.Trans Nbr)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Campaign Gift Range\"},\"Name\":\"Fundraising Activity.Campaign Gift Range\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Nbr\"}},\"Function\":2},\"Name\":\"CountNonNull(Fundraising Activity.Trans Nbr)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Nbr\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"percentBarLabel\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'12'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"funnelLabelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Data'\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"categoryAxis\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of Transactions'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 594.62,
+          "width": 512.00,
+          "x": 0.00,
+          "y": 95.42,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"f1249d2510ba09d2de71\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1174.7945205479452,\"y\":690.6544901065449,\"z\":0,\"width\":102.28310502283105,\"height\":26.301369863013697,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 26.30,
+          "width": 102.28,
+          "x": 1174.79,
+          "y": 690.65,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FA by Campaign Year",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectione284a041502b291eb313",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"560c8baa2ed03e9684b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1168.1458966565351,\"y\":691.5501519756839,\"z\":5000,\"width\":106.99088145896657,\"height\":28.206686930091188,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Key Measures.As of Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Key Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"As of Date\"},\"Name\":\"Key Measures.As of Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 28.21,
+          "width": 106.99,
+          "x": 1168.15,
+          "y": 691.55,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"77e723aec79dee2b8ba8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.663622526636225,\"y\":40.91324200913242,\"z\":0,\"width\":1251.7503805175038,\"height\":599.0867579908676,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"Category\":[{\"queryRef\":\"Fundraising Activity.FA Camp Yr\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"FA Camp Yr\"},\"Name\":\"Fundraising Activity.FA Camp Yr\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"FA Camp Yr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Campaign Production'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"24D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 599.09,
+          "width": 1251.75,
+          "x": 12.66,
+          "y": 40.91,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b6c2c5500937d7411bde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":424.7184170471842,\"y\":30.19786910197869,\"z\":4000,\"width\":427.6407914764079,\"height\":54.55098934550989,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Campaign Production\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Page Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 54.55,
+          "width": 427.64,
+          "x": 424.72,
+          "y": 30.20,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"c9024eee4c500a7adb31\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.9406392694063,\"y\":4.87062404870624,\"z\":3000,\"width\":146.11872146118722,\"height\":27.275494672754945,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Creighton University\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"8pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'CU Title'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 27.28,
+          "width": 146.12,
+          "x": 566.94,
+          "y": 4.87,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"db0b00c766940ea57926\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":641.9482496194825,\"z\":2000,\"width\":231.84170471841705,\"height\":49.68036529680365,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Fundraising Activity.Trans Amt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0054A6'\"}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"24D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 49.68,
+          "width": 231.84,
+          "x": 640.00,
+          "y": 641.95,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e54bc42956fabdae6a3a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":435.4337899543379,\"y\":640,\"z\":1000,\"width\":204.5662100456621,\"height\":55,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Grand Total:\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\",\"color\":\"#0054a6\"}}],\"horizontalTextAlignment\":\"right\"}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fundraising Activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trans Amt\"}},\"Function\":0},\"Name\":\"Sum(Fundraising Activity.Trans Amt)\"}]}}},\"Property\":\"Sum(Fundraising Activity.Trans Amt)\"}},\"Function\":3},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"sum of fundraising activity trans amt\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'\\\\$#,0;(\\\\$#,0);\\\\$#,0'\"}}}},\"selector\":{\"id\":\"Value\"}}]}}}",
+          "filters": "[]",
+          "height": 55.00,
+          "width": 204.57,
+          "x": 435.43,
+          "y": 640.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

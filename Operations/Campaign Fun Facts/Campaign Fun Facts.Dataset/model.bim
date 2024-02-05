@@ -1,0 +1,4700 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"First Camp Gift\",\"Key Measures\",\"Scholarships\",\"Data Source\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "first_camp_gift": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "first camp gift": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "gift": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "camp gift": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "first camp talent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "first camp skill": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "first camp ability": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "first camp flair": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "first camp knack": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "first camp genius": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "first camp aptitude": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "camp talent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "camp skill": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "camp ability": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.donor_ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "Donor ID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor identification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor identity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor identifier": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor credential": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "giver": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "contributor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "benefactor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "patron": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "supporter": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "subscriber": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.donor_name": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "Donor Name"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor nickname": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor title": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor label": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor tag": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "giver": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "contributor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "benefactor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "patron": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "supporter": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "subscriber": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.donor_nbr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "Donor Nbr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor nbr": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.first_gift_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "First Gift Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "first gift date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "gift date": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "first gift moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "gift moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "first gift period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "gift period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.gift_donor_group": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "Gift Donor Group"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "gift donor group": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor group": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "gift donor category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "gift donor organization": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "donor category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "donor organization": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "gift donor bracket": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "gift donor class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "gift donor crew": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "gift donor team": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "donor bracket": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.prim_rec_type": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "Prim Rec Type"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "prim rec type": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "type": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "rec type": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "prim rec category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim rec genre": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim rec manner": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "prim rec variety": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "rec category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "rec genre": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "rec manner": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "rec variety": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "prim rec brand": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "prim rec class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "first_camp_gift.sort_gift_dnr_grp": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "First Camp Gift",
+                    "ConceptualProperty": "Sort Gift Dnr Grp"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sort gift dnr grp": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "key_measure": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "key measure": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "measure": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "key degree": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "key quantity": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "key quota": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "key extent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "degree": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "quota": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "extent": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "key amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "key portion": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "key ration": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "key_measure.cumulative_donor_counts": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Cumulative Donor Counts"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cumulative donor counts": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "counts": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor counts": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "cumulative donor total": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative donor sum": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative donor amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative donor tally": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "donor total": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "donor sum": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "donor amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "donor tally": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "cumulative donor calculation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "cumulative donor computation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  }
+                ]
+              },
+              "key_measure.cumulative_schol_counts": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Cumulative Schol Counts"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cumulative schol counts": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Counts": {
+                      "State": "Suggested",
+                      "Weight": 0.873
+                    }
+                  },
+                  {
+                    "Scholarship Counts": {
+                      "State": "Suggested",
+                      "Weight": 0.873
+                    }
+                  },
+                  {
+                    "cumulative schol total": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative schol sum": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative scholarship total": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative scholarship sum": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative schol amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative scholarship amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative schol tally": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "cumulative scholarship tally": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "scholarship total": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "scholarship sum": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "Cumulative Scholarship Counts": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_10k": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor 10k"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor 10k": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_20k": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor 20k"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor 20k": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_30k": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor 30k"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor 30k": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_40k": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor 40k"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor 40k": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.donor_count_to_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Donor Count To Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "donor count to date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "donor count": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "donor amount to date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "donor amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "donor count to moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "donor count to period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  }
+                ]
+              },
+              "key_measure.footer_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Footer Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "footer date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "footer moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "footer period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "key_measure.last_gift_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Last Gift Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "last gift date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "gift date": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "last gift moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "gift moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "last gift period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "gift period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "end gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "final gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "closing gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "concluding gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "finishing gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "former gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  }
+                ]
+              },
+              "key_measure.last_schol_gift_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Last Schol Gift Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "last schol gift date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "last schol gift moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "last schol gift period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "end schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "final schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "closing schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "concluding schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "finishing schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "former schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "latest schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "latter schol gift date": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.599
+                    }
+                  }
+                ]
+              },
+              "key_measure.schol_donor_100": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Schol Donor 100"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol donor 100": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.schol_donor_200": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Schol Donor 200"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol donor 200": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.schol_donor_300": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Schol Donor 300"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol donor 300": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.schol_donor_400": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Schol Donor 400"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol donor 400": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "key_measure.schol_footer_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Schol Footer Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "schol footer date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "schol footer moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "schol footer period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "key_measure.scholarship_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Key Measures",
+                    "ConceptualProperty": "Scholarship Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "scholarship count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "scholarship amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "scholarship": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "scholarship": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "studentship": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "subsidy": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "bursary": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "grant": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "allowance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "loan": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "erudition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "knowledge": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "skill": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "science": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "scholarship.account": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Account"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "account": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "explanation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "version": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "interpretation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "justification": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "reason": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "excuse": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "description": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "relation": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "story": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "report": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              },
+              "scholarship.active": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Active?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "active?": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "scholarship.alloc_cd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Alloc Cd"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "alloc cd": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "alloc album": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "alloc disk": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "alloc disc": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "alloc recording": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "scholarship.allocation": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Allocation"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "allocation": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "distribution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "apportionment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "division": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "provision": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "sharing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "allotment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "share": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "portion": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "part": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  },
+                  {
+                    "allowance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              },
+              "scholarship.est_yr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Est Yr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "est yr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "yr": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "scholarship.prod_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Prod Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "prod total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "prod aggregate": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "prod overall": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "scholarship.scholarship_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Scholarship Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "scholarship count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "scholarship amount": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "scholarship.scholarship_status": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Scholarship Status"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "scholarship status": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "status": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "scholarship category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "scholarship importance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "scholarship prestige": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "scholarship prominence": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "importance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "prestige": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "prominence": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "scholarship condition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "scholarship class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "scholarship.scholarship_type": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Scholarship Type"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "scholarship type": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "type": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "scholarship category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "scholarship genre": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "scholarship manner": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "scholarship variety": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "category": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "genre": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "manner": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "variety": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "scholarship brand": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "scholarship class": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "scholarship.school": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "School"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "school": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "seminary": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "conservatory": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "faculty": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "department": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "university": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "college": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "institute": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "coterie": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "brotherhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "sisterhood": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "scholarship.sort_alloc": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Sort Alloc"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sort alloc": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "scholarship.sort_est_yr": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Sort Est Yr"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sort est yr": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "yr": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "scholarship.start_dt": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scholarships",
+                    "ConceptualProperty": "Start Dt"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "start dt": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "dt": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "Date Established": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "first_camp_gift_has_donor_ID": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.donor_ID"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "first_camp_gift"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift.donor_ID"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift.donor_ID"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.donor_ID": {
+                    "Target": {
+                      "Entity": "first_camp_gift.donor_ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_donor_name": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.donor_name"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "first_camp_gift"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift.donor_name"
+                      },
+                      "Verbs": [
+                        {
+                          "don": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift.donor_name"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.donor_name": {
+                    "Target": {
+                      "Entity": "first_camp_gift.donor_name"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_donor_nbr": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.donor_nbr"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.donor_nbr": {
+                    "Target": {
+                      "Entity": "first_camp_gift.donor_nbr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_first_gift_date": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.first_gift_date"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.first_gift_date": {
+                    "Target": {
+                      "Entity": "first_camp_gift.first_gift_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_fiscal_year": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.fiscal_year"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.fiscal_year": {
+                    "Target": {
+                      "Entity": "first_camp_gift.fiscal_year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_gift_donor_group": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.gift_donor_group"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.gift_donor_group": {
+                    "Target": {
+                      "Entity": "first_camp_gift.gift_donor_group"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_gift_rec_type": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.gift_rec_type"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.gift_rec_type": {
+                    "Target": {
+                      "Entity": "first_camp_gift.gift_rec_type"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_key_measure_cumulative_donor_counts": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.cumulative_donor_counts"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "key_measure.cumulative_donor_counts": {
+                    "Target": {
+                      "Entity": "key_measure.cumulative_donor_counts"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_key_measure_donor_count_to_date": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_count_to_date"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "key_measure.donor_count_to_date": {
+                    "Target": {
+                      "Entity": "key_measure.donor_count_to_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_key_measure_footer_date": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.footer_date"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "key_measure.footer_date": {
+                    "Target": {
+                      "Entity": "key_measure.footer_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_key_measure_last_gift_date": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.last_gift_date"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "key_measure.last_gift_date": {
+                    "Target": {
+                      "Entity": "key_measure.last_gift_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_prim_rec_type": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.prim_rec_type"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.prim_rec_type": {
+                    "Target": {
+                      "Entity": "first_camp_gift.prim_rec_type"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_sort_FY": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.sort_FY"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.sort_FY": {
+                    "Target": {
+                      "Entity": "first_camp_gift.sort_FY"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_has_sort_gift_dnr_grp": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "first_camp_gift.sort_gift_dnr_grp"
+                      },
+                      "Subject": {
+                        "Role": "first_camp_gift"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.sort_gift_dnr_grp": {
+                    "Target": {
+                      "Entity": "first_camp_gift.sort_gift_dnr_grp"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_is_gifted_on_first_gift_date": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "first_camp_gift"
+                      },
+                      "Verbs": [
+                        {
+                          "gift": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.9
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "first_camp_gift.first_gift_date": {
+                    "Target": {
+                      "Entity": "first_camp_gift.first_gift_date"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "When": {
+                    "Role": "first_camp_gift.first_gift_date"
+                  }
+                },
+                "State": "Generated"
+              },
+              "first_camp_gift_is_gifted_on_key_measure_last_gift_date": {
+                "Binding": {
+                  "ConceptualEntity": "First Camp Gift"
+                },
+                "Phrasings": [
+                  {
+                    "State": "Generated",
+                    "Verb": {
+                      "Object": {
+                        "Role": "first_camp_gift"
+                      },
+                      "Verbs": [
+                        {
+                          "gift": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.9
+                  }
+                ],
+                "Roles": {
+                  "first_camp_gift": {
+                    "Target": {
+                      "Entity": "first_camp_gift"
+                    }
+                  },
+                  "key_measure.last_gift_date": {
+                    "Target": {
+                      "Entity": "key_measure.last_gift_date"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "When": {
+                    "Role": "key_measure.last_gift_date"
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_donor_10k": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_10k"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.donor_10k": {
+                    "Target": {
+                      "Entity": "key_measure.donor_10k"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_donor_20k": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_20k"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.donor_20k": {
+                    "Target": {
+                      "Entity": "key_measure.donor_20k"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_donor_30k": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_30k"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.donor_30k": {
+                    "Target": {
+                      "Entity": "key_measure.donor_30k"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_donor_40k": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.donor_40k"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.donor_40k": {
+                    "Target": {
+                      "Entity": "key_measure.donor_40k"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_schol_donor_100": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.schol_donor_100"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.schol_donor_100": {
+                    "Target": {
+                      "Entity": "key_measure.schol_donor_100"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_schol_donor_200": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.schol_donor_200"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.schol_donor_200": {
+                    "Target": {
+                      "Entity": "key_measure.schol_donor_200"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_schol_donor_300": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.schol_donor_300"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.schol_donor_300": {
+                    "Target": {
+                      "Entity": "key_measure.schol_donor_300"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "key_measure_has_schol_donor_400": {
+                "Binding": {
+                  "ConceptualEntity": "Key Measures"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.schol_donor_400"
+                      },
+                      "Subject": {
+                        "Role": "key_measure"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure": {
+                    "Target": {
+                      "Entity": "key_measure"
+                    }
+                  },
+                  "key_measure.schol_donor_400": {
+                    "Target": {
+                      "Entity": "key_measure.schol_donor_400"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_account": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.account"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.account": {
+                    "Target": {
+                      "Entity": "scholarship.account"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_active": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.active"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.active": {
+                    "Target": {
+                      "Entity": "scholarship.active"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_alloc_cd": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.alloc_cd"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.alloc_cd": {
+                    "Target": {
+                      "Entity": "scholarship.alloc_cd"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_allocation": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.allocation"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.allocation": {
+                    "Target": {
+                      "Entity": "scholarship.allocation"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_est_yr": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.est_yr"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.est_yr": {
+                    "Target": {
+                      "Entity": "scholarship.est_yr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_key_measure_cumulative_schol_counts": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.cumulative_schol_counts"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure.cumulative_schol_counts": {
+                    "Target": {
+                      "Entity": "key_measure.cumulative_schol_counts"
+                    }
+                  },
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_key_measure_last_schol_gift_date": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.last_schol_gift_date"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure.last_schol_gift_date": {
+                    "Target": {
+                      "Entity": "key_measure.last_schol_gift_date"
+                    }
+                  },
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_key_measure_schol_footer_date": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.schol_footer_date"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure.schol_footer_date": {
+                    "Target": {
+                      "Entity": "key_measure.schol_footer_date"
+                    }
+                  },
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_key_measure_scholarship_count": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "key_measure.scholarship_count"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "key_measure.scholarship_count": {
+                    "Target": {
+                      "Entity": "key_measure.scholarship_count"
+                    }
+                  },
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_scholarship_count": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.scholarship_count"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.scholarship_count": {
+                    "Target": {
+                      "Entity": "scholarship.scholarship_count"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_scholarship_status": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.scholarship_status"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.scholarship_status": {
+                    "Target": {
+                      "Entity": "scholarship.scholarship_status"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_scholarship_type": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.scholarship_type"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.scholarship_type": {
+                    "Target": {
+                      "Entity": "scholarship.scholarship_type"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_school": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.school"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.school": {
+                    "Target": {
+                      "Entity": "scholarship.school"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_sort_alloc": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.sort_alloc"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.sort_alloc": {
+                    "Target": {
+                      "Entity": "scholarship.sort_alloc"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_sort_est_yr": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.sort_est_yr"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.sort_est_yr": {
+                    "Target": {
+                      "Entity": "scholarship.sort_est_yr"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_has_start_dt": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.start_dt"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.start_dt": {
+                    "Target": {
+                      "Entity": "scholarship.start_dt"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "scholarship_is_expensive": {
+                "Binding": {
+                  "ConceptualEntity": "Scholarships"
+                },
+                "Phrasings": [
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "scholarship.prod_total"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "scholarship.prod_total"
+                      },
+                      "Subject": {
+                        "Role": "scholarship"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "scholarship": {
+                    "Target": {
+                      "Entity": "scholarship"
+                    }
+                  },
+                  "scholarship.prod_total": {
+                    "Target": {
+                      "Entity": "scholarship.prod_total"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "description": "This parameter allows the user to select the live database or one of the Snapshots.",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL20\", \"ADVJUL21\", \"ADVOCT21\", \"ADVJAN22\", \"ADVAPR22\", \"ADVJUL22\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "25f7b3a2-7e77-47f7-9740-ef0b6f9a51a5"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "First Camp Gift",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Donor ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8abb5114-b051-4f81-bc6b-3829b526cf1c",
+            "sourceColumn": "Donor ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87bd1339-38be-4396-b2d4-549f4ee6dd36",
+            "sourceColumn": "Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Rec Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a328d5e-c003-4818-89ca-ad3fc9291849",
+            "sourceColumn": "Prim Rec Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "First Gift Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "556d29cd-86a9-4827-a3df-171ccc63617f",
+            "sourceColumn": "First Gift Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Donor Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "e639af7a-257c-47e5-a36a-3b5d1e56205a",
+            "sourceColumn": "Donor Nbr",
+            "summarizeBy": "distinctCount"
+          },
+          {
+            "name": "Gift Donor Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dfd830a2-e6a3-4cc2-9f31-eb31abcda860",
+            "sourceColumn": "Gift Donor Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Gift Dnr Grp",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "84343f55-baaf-457a-a5bb-1f165e9bd987",
+            "sourceColumn": "Sort Gift Dnr Grp",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Record Types",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3dd8e5f5-a455-425d-b44b-c9a16922498a",
+            "sourceColumn": "Record Types",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3487218-3bc5-4287-a6f5-fa222f8d051f",
+            "sortByColumn": "Sort CampYr",
+            "sourceColumn": "Campaign Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort CampYr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c2070b3-7d81-478f-b212-34f20ac506c8",
+            "sourceColumn": "Sort CampYr",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c2727743-7f12-4b9e-8968-b0565f669e4f",
+        "partitions": [
+          {
+            "name": "First Camp Gift-9345622b-c468-4df8-b965-1a77a87185c4",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(#\"Data Source\", [HierarchicalNavigation=true, Query=\"-- This logic developed to provide a distinct count of donors and the date on which we surpassed significant milestones.#(lf)-- 16 people pulled in with multiple \"\"Gift Record Types\"\" so I built a CASE statement to resolve that issue; it will likely need#(lf)-- to be updated periodically.  smk 02/15/2022#(lf)-- Updated to use just the Production view; no duplicates. Using the current record type of the donor as opposed to the record type on the gift. smk 8/21/2023#(lf)#(lf)select distinct e.id_number                               \"\"Donor ID\"\",#(lf)       e.pref_mail_name                                   \"\"Donor Name\"\",#(lf)       rt.short_desc                                      \"\"Prim Rec Type\"\",#(lf)       advdeploy.fn_get_record_type(e.id_number)          \"\"Record Types\"\",#(lf)       CASE WHEN e.record_type_code = 'A' THEN 'Alumni'#(lf)            WHEN e.record_type_code IN ('R','FR','FW','FL') THEN 'Resident/Fellow'#(lf)            WHEN e.record_type_code IN ('P','FP') THEN 'Parent'#(lf)            WHEN e.record_type_code IN ('FS','FF') THEN 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('S','FD') THEN 'Student'#(lf)          ELSE 'Other Individuals' END                    \"\"Gift Donor Group\"\",#(lf)       dnr.dt                                             \"\"First Gift Date\"\",#(lf)       CASE WHEN dnr.dt < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)            WHEN dnr.dt BETWEEN '01-OCT-2016' AND '30-JUN-2017' THEN 'FY2017 (Partial)'#(lf)          ELSE 'FY'||extract(year from ADD_MONTHS(dnr.dt,6)) END \"\"Campaign Year\"\",#(lf)       CASE WHEN dnr.dt < '01-OCT-2016' THEN '2000'#(lf)            WHEN dnr.dt BETWEEN '01-OCT-2016' AND '30-JUN-2017' THEN '2017'#(lf)          ELSE to_char(extract(year from ADD_MONTHS(dnr.dt,6))) END \"\"Sort CampYr\"\",#(lf)       CASE WHEN e.record_type_code = 'A' THEN '1'#(lf)            WHEN e.record_type_code IN ('R','FR','FW','FL') THEN '2'#(lf)            WHEN e.record_type_code IN ('P','FP') THEN '3'#(lf)            WHEN e.record_type_code IN ('FS','FF') THEN '4'#(lf)            WHEN e.record_type_code IN ('S','FD') THEN '5'#(lf)          ELSE '6' END                                    \"\"Sort Gift Dnr Grp\"\"#(lf)from advance.entity e#(lf)left join advance.tms_record_type rt     ON e.record_type_code = rt.record_type_code#(lf)inner join (#(lf)            select xte.donor_id did, min(xp.trans_dt) dt#(lf)              from advur.mvw_total_production xp#(lf)             inner join advur.mvw_trans_entities xte ON xp.trans_nbr = xte.trans_nbr#(lf)             where xp.campaign_ind = 'Current Campaign'#(lf)             group by xte.donor_id#(lf)             )dnr ON e.id_number = dnr.did#(lf)#(lf)where e.person_or_org = 'P'#(lf)#(lf)order by \"\"First Gift Date\"\", \"\"Donor ID\"\"\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"First Gift Date\", type date}}),",
+                "    #\"Added Index\" = Table.AddIndexColumn(#\"Changed Type\", \"Index\", 1, 1, Int64.Type),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Index\",{{\"Index\", \"Donor Nbr\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "e9bf9d2f-9154-466d-b391-95f1968691f1",
+        "measures": [
+          {
+            "name": "Donor 10k",
+            "expression": [
+              "",
+              "    LOOKUPVALUE('First Camp Gift'[First Gift Date],'First Camp Gift'[Donor Nbr],10000)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "21ba25e8-400d-4193-b55b-5c053414b365"
+          },
+          {
+            "name": "Donor 20k",
+            "expression": [
+              "",
+              "    LOOKUPVALUE('First Camp Gift'[First Gift Date],'First Camp Gift'[Donor Nbr],20000)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "6a7c18ea-4811-407d-8334-800a4e7ceb7e"
+          },
+          {
+            "name": "Donor 30k",
+            "expression": [
+              "",
+              "    LOOKUPVALUE('First Camp Gift'[First Gift Date],'First Camp Gift'[Donor Nbr],30000)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "99b0f2f8-f7ec-4d55-a9a3-b3cdaaee51a8"
+          },
+          {
+            "name": "Last Gift Date",
+            "expression": [
+              "",
+              "    MAXA( 'First Camp Gift'[First Gift Date] )"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "71bcf8a9-733c-4495-ba60-24031df85183"
+          },
+          {
+            "name": "Footer Date",
+            "expression": [
+              "",
+              "    \"Most Recent Date of New Campaign Donor: \" & [Last Gift Date]"
+            ],
+            "lineageTag": "bc4f5319-bfb9-4cf4-94f3-6f532dd2f476"
+          },
+          {
+            "name": "Donor Count To Date",
+            "expression": [
+              "",
+              "    COUNTROWS( 'First Camp Gift' )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "1742d0fc-200a-4b44-a697-ddf35a6a31a2"
+          },
+          {
+            "name": "Last Schol Gift Date",
+            "expression": [
+              "",
+              "    MAXA( Scholarships[Start Dt] )"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "637955d1-3661-4cee-a8b4-1b01a1cbdd9d"
+          },
+          {
+            "name": "Schol Footer Date",
+            "expression": [
+              "",
+              "    \"Most Recent Scholarship Established Date: \" & [Last Schol Gift Date]"
+            ],
+            "lineageTag": "98abc44e-faf8-4e35-90c3-2770c48d185d"
+          },
+          {
+            "name": "Schol Donor 100",
+            "expression": [
+              "",
+              "    LOOKUPVALUE( Scholarships[Start Dt], Scholarships[Scholarship Count],100)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "7d305868-cd79-4b8b-81bd-ce1c19f52333"
+          },
+          {
+            "name": "Schol Donor 200",
+            "expression": [
+              "",
+              "    LOOKUPVALUE( Scholarships[Start Dt] ,Scholarships[Scholarship Count],200)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "b67d6d88-2a48-404e-a2f4-a8230dc1b7bf"
+          },
+          {
+            "name": "Schol Donor 300",
+            "expression": [
+              "",
+              "    LOOKUPVALUE( Scholarships[Start Dt],Scholarships[Scholarship Count],300)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "d78d459b-6558-4169-9496-58cab18be786"
+          },
+          {
+            "name": "Scholarship Count",
+            "expression": [
+              "",
+              "    MAXA( Scholarships[Scholarship Count] )"
+            ],
+            "formatString": "0",
+            "lineageTag": "55f9813b-a7da-4905-ae4a-ad97e4ff3c69"
+          },
+          {
+            "name": "Cumulative Schol Counts",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        COUNTA( Scholarships[Alloc Cd] ),",
+              "        FILTER( ALL( Scholarships ), Scholarships[Start Dt] <= MAX( Scholarships[Start Dt]) ) ",
+              "        )"
+            ],
+            "formatString": "0",
+            "lineageTag": "33b47d9b-ce8e-4d02-b898-e4ed859ab47c"
+          },
+          {
+            "name": "Cumulative Donor Counts",
+            "expression": [
+              "",
+              "    CALCULATE(",
+              "        COUNTA( 'First Camp Gift'[Donor ID] ),",
+              "        FILTER( ALL( 'First Camp Gift' ), 'First Camp Gift'[First Gift Date] <= MAX( 'First Camp Gift'[First Gift Date]) ) ",
+              "        )"
+            ],
+            "formatString": "0",
+            "lineageTag": "9826196a-42ec-41cf-8031-d423fefac811"
+          },
+          {
+            "name": "Donor 40k",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "    LOOKUPVALUE('First Camp Gift'[First Gift Date],'First Camp Gift'[Donor Nbr],40000)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "76eac9d4-7d50-4bff-ac44-4ff9db1bb248"
+          },
+          {
+            "name": "Schol Donor 400",
+            "expression": [
+              "",
+              "    LOOKUPVALUE( Scholarships[Start Dt],Scholarships[Scholarship Count],400)"
+            ],
+            "formatString": "Short Date",
+            "lineageTag": "8490b60b-a477-42bc-a422-decffa2fdfb4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-a4e14984-fc61-4266-9a3b-56f096e1382b",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Scholarships",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Scholarship Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "027c5c6f-5f16-486b-bcf6-ff5900640ed3",
+            "sourceColumn": "Scholarship Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Est Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "811f3814-7362-4100-bfbe-3b60510a6f83",
+            "sourceColumn": "Sort Est Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "755ace71-1890-4b5d-a9f8-ce16d3f7e4af",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Scholarship Count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "365d7e67-b6d4-4b45-9d35-426304955f0c",
+            "sourceColumn": "Scholarship Count",
+            "summarizeBy": "distinctCount"
+          },
+          {
+            "name": "Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "4db15707-b01f-4a05-b893-1c05e269dc0f",
+            "sourceColumn": "Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Est Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a8355973-5f1f-4edf-851a-08d2a19eb485",
+            "sourceColumn": "Est Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scholarship Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b937d324-31e1-4853-b24f-cd2a4e2e75f2",
+            "sourceColumn": "Scholarship Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d891da79-ad06-4f65-9187-f4ea01051986",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08d0534e-b170-4d63-befc-0a184a5bebe0",
+            "sourceColumn": "Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Active?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "93f5ee64-9450-445d-b599-b68e382f4a1b",
+            "sourceColumn": "Active?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e6c7e48c-c6b2-4520-bf07-f1d180f9455e",
+            "sourceColumn": "Allocation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "df8dc63c-383a-45a0-993b-a53059a2855a",
+            "sourceColumn": "Prod Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Account",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3cd90c3c-4468-4545-8327-fd94cbe63e77",
+            "sourceColumn": "Account",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "22fc3f3c-7064-4c98-98fb-826ae2772e72",
+        "partitions": [
+          {
+            "name": "Scholarships-91ee10f5-2a34-4a54-9622-7c1c791e310d",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(#\"Data Source\", [HierarchicalNavigation=true, Query=\"-- This logic developed to provide a distinct count of new Campaign Scholarships and the dates on which we surpassed significant milestones.#(lf)-- It is based on the logic developed for the Campaign Scholarships page in Leadership Reports.  smk 02/15/2022#(lf)-- Updated to sync with changes made in the Campaign Scholarships logic changes.  smk 9/15/2022#(lf)SELECT distinct prd1.school                                     \"\"School\"\",#(lf)       prd1.allocation_code                                     \"\"Alloc Cd\"\",#(lf)       a.is_active                                              \"\"Active?\"\",#(lf)       a.allocation_name                                        \"\"Allocation\"\",#(lf)       a.start_date                                             \"\"Start Dt\"\",#(lf)       CASE WHEN a.start_date < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)          ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END   \"\"Est Yr\"\",#(lf)       CASE WHEN a.allocation_code = prd1.allocation_code AND a.category3_code IN ('CS7','CS8') THEN 'New in Pre-Campaign'#(lf)            WHEN a.category3_code IN ('CS1','CS2','CS3') THEN 'New in Campaign'#(lf)          ELSE 'Pre-Existing, Funded in Campaign' END           \"\"Scholarship Status\"\",#(lf)       prd1.finance_category                                    \"\"Scholarship Type\"\",#(lf)       SUM(prd1.trans_amt)                                      \"\"Prod Total\"\",#(lf)       a.alloc_fund||a.alloc_org||'5310'                        \"\"Account\"\",#(lf)       CASE WHEN a.start_date < '01-OCT-2016' THEN '2015'#(lf)          ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END   \"\"Sort Est Yr\"\",#(lf)       prd1.alloc_sort                                          \"\"Sort Alloc\"\"#(lf)FROM   advur.mvw_total_production prd1#(lf)INNER JOIN advur.mvw_total_production_ext prd2     ON prd1.trans_nbr = prd2.trans_nbr#(lf)INNER JOIN advur.mvw_allocations a                 ON prd1.allocation_code = a.allocation_code#(lf)#(lf)WHERE prd1.campaign_ind = 'Current Campaign'#(lf)AND   a.category3_code IN ('CS1','CS2','CS3','CS7','CS8')#(lf)AND   a.start_date >= '01-OCT-2016'#(lf)#(lf)group by prd1.school, prd1.allocation_code, a.is_active, a.allocation_name, a.start_date,#(lf)         CASE WHEN a.start_date < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)            ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END,#(lf)         CASE WHEN a.allocation_code = prd1.allocation_code AND a.category3_code IN ('CS7','CS8') THEN 'New in Pre-Campaign'#(lf)            WHEN a.category3_code IN ('CS1','CS2','CS3') THEN 'New in Campaign'#(lf)          ELSE 'Pre-Existing, Funded in Campaign' END,#(lf)         prd1.finance_category, a.alloc_fund||a.alloc_org||'5310', #(lf)         CASE WHEN a.start_date < '01-OCT-2016' THEN '2015'#(lf)            ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END, prd1.alloc_sort#(lf)order by a.start_date\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Start Dt\", type date}, {\"Prod Total\", Currency.Type}}),",
+                "    #\"Added Index\" = Table.AddIndexColumn(#\"Changed Type\", \"Index\", 1, 1, Int64.Type),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Index\",{{\"Index\", \"Scholarship Count\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

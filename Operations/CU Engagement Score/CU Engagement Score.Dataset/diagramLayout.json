@@ -1,0 +1,217 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 2214.39990234375,
+        "y": 436
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Engagement Score History",
+          "nodeLineageTag": "b1d8832f-e7b0-4afd-bdab-857b8fe3376e",
+          "size": {
+            "height": 300,
+            "width": 265
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 981.38305001469382,
+            "y": 170.4223489799225
+          },
+          "nodeIndex": "Gift Credit",
+          "nodeLineageTag": "00bd190f-b81e-4fba-b25e-77133ff3d851",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1255.3830500146937,
+            "y": 172.42234897992248
+          },
+          "nodeIndex": "Production",
+          "nodeLineageTag": "cd029343-9dbe-4062-8764-7749785b2214",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 471.20156119318534,
+            "y": 0
+          },
+          "nodeIndex": "Record Type Indicators",
+          "nodeLineageTag": "67f03cce-de6a-4d34-b298-32905666278d",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284.52056222172496,
+            "y": 381.4223489799225
+          },
+          "nodeIndex": "Living Entities",
+          "nodeLineageTag": "c9fc2e7f-ae2b-4e80-99ff-65ac4dc12c76",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 472.19999980926514
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "97acdc3d-6177-40ae-9fab-9342aea1623a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 995.23305611820933,
+            "y": 929.58751058578491
+          },
+          "nodeIndex": "Record Type",
+          "nodeLineageTag": "7017889d-3881-4d8a-b335-cd100036cc46",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1364.2830744287562,
+            "y": 750.04999995231628
+          },
+          "nodeIndex": "Portfolios",
+          "nodeLineageTag": "53feeeda-a873-442d-ae44-67c45ab31620",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1539.3830500146937,
+            "y": 436.04999995231628
+          },
+          "nodeIndex": "Recent Contact",
+          "nodeLineageTag": "5fd6372f-14b9-4364-83c8-d8ae18b7f19c",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 708.38305001469371,
+            "y": 649.04999995231628
+          },
+          "nodeIndex": "Recent Event",
+          "nodeLineageTag": "2f3fe742-22b9-43d2-9ed5-83d135b3c253",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1900.3830500146937,
+            "y": 879.04999995231628
+          },
+          "nodeIndex": "Recent Gift",
+          "nodeLineageTag": "a4b3f980-d3fa-4755-880f-085773e73adf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 374.18309884281871,
+            "y": 835.04999995231628
+          },
+          "nodeIndex": "School",
+          "nodeLineageTag": "74d00ec9-2083-4e31-8d8b-4af7a5bb1061",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2184.3830500146937,
+            "y": 562.79375529289246
+          },
+          "nodeIndex": "Last Refresh Date",
+          "nodeLineageTag": "c54aa2af-28d3-4add-99d6-94006b93df9a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2468.3830500146937,
+            "y": 464.79375529289246
+          },
+          "nodeIndex": "Report Inventory",
+          "nodeLineageTag": "8e1b74ff-d84e-4a73-9853-dedca2fc2654",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2796.3830500146937,
+            "y": 710.79375529289246
+          },
+          "nodeIndex": "Address",
+          "nodeLineageTag": "84de22e0-498d-4cf0-b7f1-58ccc5e4df6b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

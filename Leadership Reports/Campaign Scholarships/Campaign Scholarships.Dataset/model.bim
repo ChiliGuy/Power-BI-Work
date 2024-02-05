@@ -1,0 +1,912 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Production Scholarships\",\"Key Measures\",\"Last Refresh Date\",\"Report Inventory\",\"Data Source\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "description": "This parameter is used for selecting live data or the Snapshots.",
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL21\", \"ADVOCT21\", \"ADVJAN22\", \"ADVAPR22\", \"ADVJUL22\", \"ADVOCT22\", \"ADVJAN23\", \"ADVAPR23\", \"ADVJUL23\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "322d3bf0-dda2-4f4d-b8f0-faca586cd08f"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Production Scholarships",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Est Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "78b94ebc-7ff1-498d-b7c5-246a9cc435b1",
+            "sortByColumn": "Sort Est Yr",
+            "sourceColumn": "Est Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "fedd3d49-d299-4734-bccb-91d3b63b8e3e",
+            "sourceColumn": "Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1dd60651-28c6-4726-8bb8-eb4e6129007b",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "int64",
+            "lineageTag": "fbdb3eac-9e8a-4f41-adfd-f86cde36ea83",
+            "sourceColumn": "Sort Priority",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7c6f33d3-c3f1-4d9d-a90f-e6ae8115c3cf",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "060b4daf-2421-482a-8adb-a3d5b13e81c4",
+            "sourceColumn": "Prod Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "20caa478-96af-4640-ab81-adc14ac49b9c",
+            "sourceColumn": "Prod Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7682bfbc-b019-498d-84a5-cb6de3c5844f",
+            "sourceColumn": "Sort Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Est Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6acfbfec-22e5-4b55-8004-5bb6e72ca0ce",
+            "sourceColumn": "Sort Est Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School/College",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e8d5ea9f-8139-4e70-981b-c33d5938bc6b",
+            "sourceColumn": "School/College",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "658b4cb3-6738-4e83-aacf-3c5ef665f8d7",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "19e9ef70-bfab-45fc-b4b2-cb493a9fff24",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp SubPriority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22c9d7a8-4ef9-4967-a8a3-869a3ac31416",
+            "sourceColumn": "Camp SubPriority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6c31539-85a3-4f71-ae0e-38bc3120e36d",
+            "sourceColumn": "Alloc Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scholarship Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cb6758a3-2f20-4955-9443-b4d06ef8e0e4",
+            "sourceColumn": "Scholarship Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scholarship Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "430264c1-bcd7-4554-8255-c8a350d4fb1d",
+            "sourceColumn": "Scholarship Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Act?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4125ea90-646b-42c4-8e39-75836e5358c5",
+            "sourceColumn": "Act?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e19b307e-6723-4332-8835-4269529369da",
+            "sourceColumn": "Prod Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "8cb12563-8110-4625-86a9-bd12dc1b89fd",
+            "sourceColumn": "Prod Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c3613dd0-1b86-473e-9602-fe28a9dd500c",
+            "sourceColumn": "Prod Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "7ed8ef0b-59b4-46af-8932-bc7908fea429",
+            "sourceColumn": "Prod Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ac5b2626-e014-4ead-9c1b-ec96ee2f4d8e",
+            "sourceColumn": "Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Org",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f200c5f5-4fa0-460a-a120-f7d938be63c5",
+            "sourceColumn": "Org",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c309e5da-1b27-4644-bf33-231b807210d2",
+            "sourceColumn": "Campaign Bucket",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "339d61a5-ffc0-4f62-bf6f-2ba630deb238",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Goal Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a24acb3f-373c-4c84-b19d-5a2b51f923f0",
+            "sourceColumn": "Camp Goal Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Goal SubCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e182786c-4585-436b-9547-e494b91a61f0",
+            "sourceColumn": "Camp Goal SubCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "22201928-ce34-4a4f-8521-8d8a2821b174",
+            "sourceColumn": "Sort Bucket",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort SubPriority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "97816d47-704a-47cb-97f3-8761d92d9094",
+            "sourceColumn": "Sort SubPriority",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort GoalCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fa793871-30d3-412f-b0cd-e839c63aafb3",
+            "sourceColumn": "Sort GoalCat",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Goal SubCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "83c2a440-0f86-49f7-a7d8-9e764d07ee71",
+            "sourceColumn": "Sort Goal SubCat",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "9aa91a5a-7eb8-4f69-896f-e353df5526e9",
+        "partitions": [
+          {
+            "name": "Production Scholarships-ca3331a4-7293-4eab-befb-965b3515c881",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"-- New Production query to replace existing query in all PBI reports for scholarships. smk 9/12/2022#(lf)#(lf)select distinct a.school                       \"\"School/College\"\",#(lf)       a.allocation_code                       \"\"Alloc Code\"\",#(lf)       a.allocation_name                       \"\"Allocation Name\"\",#(lf)       c3.short_desc                           \"\"Camp SubPriority\"\",#(lf)       grp.short_desc                          \"\"Alloc Group\"\",#(lf)       prod.fincat                             \"\"Scholarship Type\"\",#(lf)       a.start_date                            \"\"Start Dt\"\",#(lf)       CASE WHEN a.start_date < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)          ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END   \"\"Est Yr\"\",#(lf)       CASE WHEN a.allocation_code = prodx.allc THEN 'New in Pre-Campaign'#(lf)            WHEN a.category3_code IN ('CS1','CS2','CS3') THEN 'New in Campaign'#(lf)          ELSE 'Pre-Existing, Funded in Campaign' END  \"\"Scholarship Status\"\",#(lf)       a.is_active                             \"\"Act?\"\",#(lf)       prod.nbr                                \"\"Prod Trans Nbr\"\",#(lf)       trunc(prod.dt)                          \"\"Prod Trans Dt\"\",#(lf)       prod.fy                                 \"\"Prod Fiscal Yr\"\",#(lf)       CASE WHEN prod.dt < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)            WHEN prod.dt >= '01-OCT-2016' AND prod.fy = '2017' THEN '2017 (Partial)'#(lf)          ELSE prod.fy END                     \"\"Prod Camp Yr\"\",#(lf)       prod.amt                                \"\"Prod Amt\"\",#(lf)       prod.typ                                \"\"Prod Trans Type\"\",#(lf)       a.alloc_fund                            \"\"Fund\"\",#(lf)       a.alloc_org                             \"\"Org\"\",#(lf)       c1.short_desc                           \"\"Campaign Bucket\"\",#(lf)       a.campaign_priority                     \"\"Campaign Priority\"\",#(lf)       gc.short_desc                           \"\"Camp Goal Category\"\",#(lf)       gsc.short_desc                          \"\"Camp Goal SubCategory\"\",#(lf)       CASE WHEN a.start_date < '01-OCT-2016' THEN '2015'#(lf)          ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END   \"\"Sort Est Yr\"\",#(lf)       CASE WHEN prod.dt < '01-OCT-2016' THEN '2015'#(lf)            WHEN prod.dt >= '01-OCT-2016' AND prod.fy = '2017' THEN '2016'#(lf)          ELSE prod.fy END                     \"\"Sort Camp Yr\"\",#(lf)       a.sort_name                             \"\"Sort Alloc\"\",#(lf)       prod.sfc                                \"\"Sort FinCat\"\",#(lf)       prod.spr                                \"\"Sort Priority\"\",#(lf)       c1.hierarchy_order                      \"\"Sort Bucket\"\",#(lf)       c3.hierarchy_order                      \"\"Sort SubPriority\"\",#(lf)       gc.hierarchy_order                      \"\"Sort GoalCat\"\",#(lf)       gsc.hierarchy_order                     \"\"Sort Goal SubCat\"\"#(lf)from advur.mvw_allocations a#(lf)left join advance.tms_category1 c1       ON a.category1_code = c1.category1_code#(lf)left join advance.tms_category3 c3       ON a.category3_code = c3.category3_code#(lf)left join advance.tms_endow_pool gc      ON a.campaign_goal_category = gc.endow_pool#(lf)left join advance.tms_endow_type gsc     ON a.campaign_goal_subcategory = gsc.endow_type#(lf)left join advance.tms_alloc_sub_dept grp ON a.alloc_sub_dept = grp.alloc_sub_dept_code#(lf)inner join (#(lf)            select p.allocation_code allc, p.finance_category fincat, p.trans_dt dt, p.trans_amt amt, p.fiscal_yr fy, #(lf)                   p.trans_category tcat, xc3.full_desc cc, p.trans_nbr nbr, p.trans_type typ, p.fincat_sort sfc, p.priority_sort spr#(lf)              from advur.mvw_total_production p#(lf)             inner join advur.mvw_total_production_ext xp ON p.trans_nbr = xp.trans_nbr#(lf)              left join advance.tms_category3 xc3          ON xp.category3_code = xc3.category3_code#(lf)             where p.finance_category IN ('Annual Scholarships','Endowed Scholarships')#(lf)             and   p.campaign_ind = 'Current Campaign'#(lf)            )prod ON a.allocation_code = prod.allc#(lf)left join (#(lf)            select distinct xp2.allocation_code allc#(lf)              from advur.mvw_total_production xp2#(lf)             inner join advur.mvw_total_production_ext xxp2 ON xp2.trans_nbr = xxp2.trans_nbr#(lf)             inner join advur.mvw_allocations xa2           ON xp2.allocation_code = xa2.allocation_code#(lf)              left join advance.tms_category3 xxc32         ON xxp2.category3_code = xxc32.category3_code#(lf)             where xp2.finance_category IN ('Annual Scholarships','Endowed Scholarships')#(lf)             and   xp2.campaign_ind = 'Current Campaign'#(lf)             and   xa2.start_date BETWEEN '01-JUL-2013' AND '30-SEP-2016'#(lf)             and   xp2.trans_dt BETWEEN '01-JUL-2013' AND '30-SEP-2016'#(lf)            )prodx ON a.allocation_code = prodx.allc#(lf)#(lf)where a.category3_code IN ('CS1','CS2','CS3','CS7','CS8')#(lf)#(lf)order by \"\"Est Yr\"\", \"\"Prod Amt\"\" desc\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Start Dt\", type date}, {\"Prod Trans Dt\", type date}, {\"Prod Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "b117ea7b-63b7-4d95-ab2e-039e98836bf3",
+        "measures": [
+          {
+            "name": "Last Trans Dt",
+            "expression": [
+              "",
+              "    MAX( 'Production Scholarships'[Prod Trans Dt] )"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "0015eb81-1b68-4943-8f5d-7b19a1360e24"
+          },
+          {
+            "name": "As of Date",
+            "expression": [
+              "",
+              "    \"As of \" & [Last Trans Dt]"
+            ],
+            "lineageTag": "72b81ad9-bfdb-4d24-96c5-4026eac02b79"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-ca0d3feb-1d1d-4c39-9fa9-9bdd4d1b7aa7",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Last Refresh Date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Last Refresh Date Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "876b2a7a-d7c6-428b-8952-dcdbefb52525",
+            "sourceColumn": "Last Refresh Date Time",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8235d021-66e0-43ca-8a8e-4296629aa6ab",
+        "partitions": [
+          {
+            "name": "Last Refresh Date-191fe3d0-013a-4c96-aa4e-b7bfd6ae1dc3",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),10)),",
+                "    #\"Converted to Table\" = #table(1, {{Source}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Last Refresh Date Time\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Last Refresh Date Time\", type datetime}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Report Inventory",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "47a9173d-7b63-4fe5-9d3d-52edf128dbba",
+            "sourceColumn": "Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "69387ea6-10c1-4e37-bbda-ea30c7459032",
+            "sourceColumn": "Report ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "439d68c2-de95-417d-8578-f814e7ab1701",
+            "sourceColumn": "Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65c61192-0440-480c-99b5-4c42dc91548b",
+            "sourceColumn": "Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "04712ab7-ddd5-46a0-af5a-10c354b91547",
+            "sourceColumn": "Report Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Platform",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "734e506a-fa72-444d-926c-be2fc5d20a08",
+            "sourceColumn": "Report Platform",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last Updated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "506b0ee6-52bf-40c3-a0b8-a7de7c79e9a5",
+            "sourceColumn": "Last Updated",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Change Log",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4109b603-d696-47fa-8d1d-487f7492b7fe",
+            "sourceColumn": "Change Log",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Changed By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c9c194f6-fed4-4fe6-8d8c-faf44af30088",
+            "sourceColumn": "Changed By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Technical Support Co",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5cfd420e-0930-4bb6-afd7-f3be8f2bc4a9",
+            "sourceColumn": "Technical Support Co",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Directory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dc29567f-7b03-4e17-ad4d-97252dce40d7",
+            "sourceColumn": "Report Directory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Published Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24585e4f-30cb-417d-8c1b-b098eef8f5da",
+            "sourceColumn": "Published Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Data Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8594c6b3-93b3-4b56-a1fe-421241134376",
+            "sourceColumn": "Data Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "URL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ff688080-b1d0-44b0-bfda-c4fbb91fe333",
+            "sourceColumn": "URL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Stored Procedure _x0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2545e384-4ef5-4b43-a26e-e4d383976a25",
+            "sourceColumn": "Stored Procedure _x0",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Views",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eab73384-df1c-4326-9707-1241547db8ec",
+            "sourceColumn": "Views",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subreport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "378db41b-3e71-4d6d-9aac-fbda5a144d75",
+            "sourceColumn": "Subreport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Requestor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d91a64d7-71fa-43a9-b833-25d8c748fa60",
+            "sourceColumn": "Requestor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IntendedAudience",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e7b3ff6d-e1a7-4b90-ac86-b430a77f005d",
+            "sourceColumn": "IntendedAudience",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DescriptionofLogic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c0511784-cd34-4685-afc8-3ab90ac98ce9",
+            "sourceColumn": "DescriptionofLogic",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Archived?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "663f90ad-5a9f-4e8c-bea7-9923a5b98fc5",
+            "sourceColumn": "Archived?",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "499fd5e6-ce9a-4b6c-acad-d97e482efa3f",
+        "partitions": [
+          {
+            "name": "Report Inventory-4cc4e7b1-f0ba-4c5c-9d4f-98cf29c81d80",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PowerBI.Dataflows([]),",
+                "    #\"922282c1-3a89-4e61-bb8b-31842dac6fa3\" = Source{[workspaceId=\"922282c1-3a89-4e61-bb8b-31842dac6fa3\"]}[Data],",
+                "    #\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\" = #\"922282c1-3a89-4e61-bb8b-31842dac6fa3\"{[dataflowId=\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\"]}[Data],",
+                "    #\"Report Inventory1\" = #\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\"{[entity=\"Report Inventory\"]}[Data]",
+                "in",
+                "    #\"Report Inventory1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

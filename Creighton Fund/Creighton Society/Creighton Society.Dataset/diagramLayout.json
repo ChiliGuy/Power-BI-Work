@@ -1,0 +1,142 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 257.02148760330573,
+            "y": 390.63852306051729
+          },
+          "nodeIndex": "Creighton Society Trends",
+          "size": {
+            "height": 212,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1206.9967741935484,
+            "y": 416.35806451612905
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Creighton Society Details",
+          "size": {
+            "height": 466,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 381.21711543588378,
+            "y": 0
+          },
+          "nodeIndex": "Creighton Society Upgrades",
+          "size": {
+            "height": 439.13064516129032,
+            "width": 544.10645161290324
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1639.7,
+            "y": 0
+          },
+          "nodeIndex": "Creighton Society Renewals",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1019.5893334759172,
+            "y": 341.85123966942143
+          },
+          "nodeIndex": "Creighton Society Loyals",
+          "size": {
+            "height": 221.74876033057851,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 2072.4,
+            "y": 0
+          },
+          "nodeIndex": "Creighton Society New",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 2423.4,
+            "y": 0
+          },
+          "nodeIndex": "Creighton Society LYBUNTs",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2809.6,
+            "y": 0
+          },
+          "nodeIndex": "Creighton Society Retained",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3242.3,
+            "y": 0
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 74.281984334203656,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

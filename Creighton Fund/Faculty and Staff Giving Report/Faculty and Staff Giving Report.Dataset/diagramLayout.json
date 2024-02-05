@@ -1,0 +1,154 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "FS_Giving",
+          "size": {
+            "height": 784.40024740727824,
+            "width": 300
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1161.313208958466,
+            "y": 708.158859912835
+          },
+          "nodeIndex": "Gift Band Group",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1083.2000000000003,
+            "y": 251
+          },
+          "nodeIndex": "Custom Sort Table",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 863.313208958466,
+            "y": 704.42116482789288
+          },
+          "nodeIndex": "FS_Counts",
+          "size": {
+            "height": 265.5648077559382,
+            "width": 254
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 819.87539016988455,
+            "y": 29.614969577511545
+          },
+          "nodeIndex": "Custom Sort Table (2)",
+          "size": {
+            "height": 137,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1394.0842505793339,
+            "y": 0
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1664.6450036680753,
+            "y": 0
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 410.20588494599309,
+            "y": 503.56624473183689
+          },
+          "nodeIndex": "Place_of_Work",
+          "size": {
+            "height": 112,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 737.25904442300327,
+            "y": 268.97313473628236
+          },
+          "nodeIndex": "FY",
+          "size": {
+            "height": 160,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 75.506232323025415,
+            "y": 986.90894549853977
+          },
+          "nodeIndex": "Alumni Status Table",
+          "size": {
+            "height": 112,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2015.6,
+            "y": 0
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 49.447317528719474,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

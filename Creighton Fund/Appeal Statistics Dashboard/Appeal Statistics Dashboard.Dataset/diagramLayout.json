@@ -1,0 +1,130 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 128
+          },
+          "nodeIndex": "Revenue Details",
+          "size": {
+            "height": 345,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 342.6,
+            "y": 101
+          },
+          "nodeIndex": "Revenue Dst Donors",
+          "size": {
+            "height": 213,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 530.8,
+            "y": 588
+          },
+          "nodeIndex": "Acq Ret and Ren",
+          "size": {
+            "height": 183,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 282,
+            "y": 422
+          },
+          "nodeIndex": "Appeal Codes",
+          "size": {
+            "height": 126,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 66.3,
+            "y": 587
+          },
+          "nodeIndex": "Acq Ret and Ren Giving",
+          "size": {
+            "height": 221,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 867.9,
+            "y": 65
+          },
+          "nodeIndex": "1MeasureTable",
+          "size": {
+            "height": 343,
+            "width": 308
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 564,
+            "y": 415
+          },
+          "nodeIndex": "Record Type",
+          "size": {
+            "height": 126,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1254.3,
+            "y": 109.5
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1566.7,
+            "y": 0
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

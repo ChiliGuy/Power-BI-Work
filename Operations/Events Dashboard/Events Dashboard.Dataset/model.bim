@@ -1,0 +1,3581 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"EVENTS\",\"INVITATIONS\",\"REGISTRATIONS\",\"PARTICIPATION\",\"MeasureTable\",\"EVENT STATUS\",\"LISTOFIRP\",\"INVITATIONS_LTG\",\"REGISTRATION_LTG\",\"PARTICIPATION_LTG\",\"WalkIn\",\"NoShow\",\"Last Refreshed Date\",\"PC_EVENT\",\"fnParChild\",\"Invoked Function\",\"totpart\",\"Decline\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "fnParChild",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ],
+        "expression": [
+          "///*",
+          "let func =  ",
+          " ",
+          "(ParChTable as table,",
+          "ChildKey as text,",
+          "ParentKey as text,",
+          "LevelColumnName as text) =>",
+          "//*/",
+          "",
+          "let",
+          "/*/Debug Parameters",
+          "ParChTable = SourceData_Loop,",
+          "ChildKey = \"NodeKey\",",
+          "ParentKey = \"ParentKey\",",
+          "LevelColumnName = \"Name\",",
+          "*/",
+          "",
+          "    SelectRelevantColumns = Table.SelectColumns(ParChTable, {ChildKey, ParentKey, LevelColumnName}),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(SelectRelevantColumns ,{{ChildKey, type text}, {ParentKey, type text}}),",
+          "    ReplaceNulls = Table.ReplaceValue(#\"Changed Type\",null,\"\",Replacer.ReplaceValue,{ParentKey}),",
+          "    //    CleanParChTable = Table.Distinct(ReplaceNulls , {ChildKey, ParentKey}),",
+          "    MissingParents = List.Buffer(List.Select(List.Difference(List.Distinct(Table.Column(ReplaceNulls , ParentKey)), List.Distinct(Table.Column(ReplaceNulls , ChildKey))), each _ <> \"\")),",
+          "    AddMissingParents = Table.Buffer(Table.Combine({ReplaceNulls , #table({ChildKey, LevelColumnName, ParentKey}, List.Transform(MissingParents, each {_, \"Unknown TopLevel\"& Text.From(List.PositionOf(MissingParents, _)), \"\"}))})),",
+          "    #\"Merged Queries0\" = Table.NestedJoin(AddMissingParents,{ChildKey},AddMissingParents,{ParentKey},\"SelectRelevantColumns\",JoinKind.LeftOuter),",
+          "    CheckIfIsLeaf = Table.AddColumn(#\"Merged Queries0\", \"IsLeaf\", each if Table.IsEmpty([SelectRelevantColumns]) then \"yes\" else \"no\"),",
+          "    #\"Replaced Value1\" = Table.ReplaceValue(CheckIfIsLeaf,null,\"\",Replacer.ReplaceValue,{ParentKey, LevelColumnName}),",
+          "    AddStartPath = Table.AddColumn(#\"Replaced Value1\", \"Path\", each Text.Trim(Record.Field(_, ChildKey)&\"|\"&Record.Field(_,ParentKey), \"|\")),",
+          "    #\"Duplicated Column\" = Table.DuplicateColumn(AddStartPath, LevelColumnName, \"FirstName\"),",
+          "    Feed = Table.DuplicateColumn(#\"Duplicated Column\", ParentKey, \"FirstParentKey\"),",
+          "",
+          "// Retrieve all parents per row",
+          "    fnAllParents = List.Generate(()=>",
+          "    [Result= Feed, Level=1, EndlessLoop = false, StopEndlessLoop = false],",
+          "    each Table.RowCount([Result]) > 0 and not [StopEndlessLoop],",
+          "    each [ Result= let",
+          "            #\"Merged Queries\" = Table.NestedJoin([Result],{ParentKey},AddMissingParents,{ChildKey},\"Added Custom\",JoinKind.Inner),",
+          "            #\"Removed Columns1\" = Table.RemoveColumns(#\"Merged Queries\",{ParentKey}),",
+          "            #\"Expanded Added Custom\" = Table.ExpandTableColumn(#\"Removed Columns1\", \"Added Custom\", {ParentKey, LevelColumnName}, {\"ParentKey.1\", \"Name.1\"}),",
+          "            #\"Duplicated Column\" = Table.DuplicateColumn(#\"Expanded Added Custom\", \"ParentKey.1\", ParentKey),",
+          "            #\"Merged Columns\" = Table.CombineColumns(#\"Duplicated Column\",{\"Path\", \"ParentKey.1\"},Combiner.CombineTextByDelimiter(\"|\", QuoteStyle.None),\"Path\"),",
+          "            #\"Merged Columns2\" = Table.CombineColumns( #\"Merged Columns\" ,{LevelColumnName, \"Name.1\"},Combiner.CombineTextByDelimiter(\"|\", QuoteStyle.None),LevelColumnName)",
+          "          in",
+          "            Table.Buffer(#\"Merged Columns2\"),",
+          "          Level = [Level]+1,",
+          "          EndlessLoop = List.Sort(List.Distinct(Table.Column(Result, ChildKey))) = List.Sort(List.Distinct(Table.Column([Result], ChildKey))),",
+          "          StopEndlessLoop = [EndlessLoop]",
+          "        ]),",
+          "    ConvertToTable = Table.FromList(fnAllParents, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+          "    ExpandLevel = Table.ExpandRecordColumn(ConvertToTable, \"Column1\", {\"Result\", \"Level\", \"EndlessLoop\"}, {\"Result\", \"Level\", \"EndlessLoop\"}),",
+          "    ExpandLG = Table.ExpandTableColumn(ExpandLevel, \"Result\", {LevelColumnName, ParentKey, ChildKey, \"Path\", \"FirstName\", \"FirstParentKey\"}, {\"Name\", \"ParentKey\", \"NodeKey\", \"Path\", \"FirstName\", \"FirstParentKey\"}),",
+          "    FilterParents = Table.SelectRows(ExpandLG, each ([ParentKey] = null or [ParentKey] = \"\")),",
+          "    #\"Removed Columns\" = Table.RemoveColumns(FilterParents,{\"ParentKey\"}),",
+          "    #\"Trimmed Text\" = Table.TransformColumns(#\"Removed Columns\",{{\"Path\", each Text.Trim(_, \"|\")}}),",
+          "    ReverseOrderName = Table.TransformColumns(#\"Trimmed Text\",{{\"Name\", each Text.Combine(List.Reverse(Text.Split(_, \"|\")), \"|\")}}),",
+          "    ReverseOrderPath = Table.TransformColumns(ReverseOrderName,{{\"Path\", each Text.Combine(List.Reverse(Text.Split(_, \"|\")), \"|\")}}),",
+          "    #\"Reordered Columns\" = Table.ReorderColumns(ReverseOrderPath,{\"NodeKey\", \"FirstParentKey\", \"Path\", \"FirstName\", \"Level\", \"Name\"}),",
+          "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Reordered Columns\", \"Name\", Splitter.SplitTextByDelimiter(\"|\", QuoteStyle.Csv), List.Transform({1..Table.RowCount(ConvertToTable)}, each \"Level \"&Text.From(_))),",
+          "    #\"Merged Queries\" = Table.NestedJoin(#\"Split Column by Delimiter\",{\"NodeKey\", \"FirstParentKey\"},ParChTable ,{ChildKey, ParentKey},\"Split Column by Delimiter\",JoinKind.LeftOuter),",
+          "    #\"Expanded Split Column by Delimiter\" = Table.ExpandTableColumn(#\"Merged Queries\", \"Split Column by Delimiter\", List.Difference(Table.ColumnNames(ParChTable), Table.ColumnNames(#\"Replaced Value1\"))),",
+          "    Rename = Table.RenameColumns(#\"Expanded Split Column by Delimiter\",{{\"Level\", \"HierarchyDepth\"}}),",
+          "    Parents = List.Buffer(Rename[FirstParentKey]),",
+          "    IsLeaf = Table.AddColumn(Rename, \"IsLeaf\", each not List.Contains(Parents, [NodeKey])),",
+          "    NoOfInterations = List.Count(fnAllParents),",
+          "    LastIteration = Table.SelectRows(ExpandLG, each ([Level] = NoOfInterations)),",
+          "    EndlessLoops = LastIteration[EndlessLoop],",
+          "    IsEndlessLoop = EndlessLoops{0},",
+          "    RemainingResults = Table.NestedJoin(IsLeaf, {ChildKey}, LastIteration, {ChildKey}, \"x\", JoinKind.LeftAnti),",
+          "    Custom1 = if IsEndlessLoop then [Message= \"The data is in an endless loop. Check Table in  \"\"Endless Loop\"\"\", #\" Endless Loop\"= LastIteration] meta [ResultsSoFar = RemainingResults] else IsLeaf",
+          "in",
+          "    Custom1",
+          "///*",
+          ", documentation = [",
+          "Documentation.Name =  \" Table.SolveParentChild",
+          "\", Documentation.Description = \" Creates columns for all parents, multiple parents are supported",
+          "\" , Documentation.LongDescription = \" Creates columns for all parents, multiple parents are supported",
+          "\", Documentation.Category = \" Table",
+          "\", Documentation.Version = \" 2.0: Checking for endless loops ",
+          "\", Documentation.Source = \" local",
+          "\", Documentation.Author = \" Imke Feldmann: www.TheBIccountant.com",
+          "\", Documentation.Examples = {[Description =  \" See: http://wp.me/p6lgsG-sl for more details",
+          "\" , Code = \" ",
+          " \", Result = \" ",
+          "\"]}] ",
+          " in ",
+          "  Value.ReplaceType(func, Value.ReplaceMetadata(Value.Type(func), documentation))",
+          " //*/"
+        ],
+        "kind": "m",
+        "lineageTag": "c761edc2-476d-49b4-bad7-da13589844b4"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "e3badccb-de1a-4553-afb1-9ef369ecedc6",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "INVITATIONS",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "b8d1128b-60d1-4d2f-a280-3f51a374d059",
+        "fromColumn": "REGDT",
+        "fromTable": "REGISTRATIONS",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_cead9675-702d-4faf-a947-ff175c820df9"
+      },
+      {
+        "name": "b79135e5-a292-46a2-b058-d4a6e908012f",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "REGISTRATIONS",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "eb752d97-97d9-4693-994b-d5db05e2ec41",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "PARTICIPATION",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "8bba35f9-5214-4311-bb2a-32de22df702c",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "EVENTS",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENT STATUS"
+      },
+      {
+        "name": "6dd0bbd6-f44d-40bd-a197-0b7f0d0228e7",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "LISTOFIRP",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "aa49cf3d-64d7-47c6-ba4a-c384c74c2d8a",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "INVITATIONS_LTG",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "5328e692-53cd-44b2-9bd9-60c96be74b9c",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "REGISTRATION_LTG",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "f02ab85b-65ee-4b8f-ba7a-7ba200c82d1d",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "PARTICIPATION_LTG",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "00bceac6-22c4-4f54-8968-c808bc6fe1af",
+        "fromColumn": "Column1",
+        "fromTable": "Last Refreshed Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_befeb2c7-ad8a-4cea-9ee0-ab8a14b1ed7a"
+      },
+      {
+        "name": "b3370e1e-cb57-410a-8af2-8b44fb5cdd11",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "NodeKey",
+        "fromTable": "Invoked Function",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENTS"
+      },
+      {
+        "name": "3558af3d-e9f2-4ec8-a2d0-add886331c9f",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "totpart",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENT STATUS"
+      },
+      {
+        "name": "70f28f08-5dcc-4a93-8925-3af02b50ace5",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "WalkIn",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENT STATUS"
+      },
+      {
+        "name": "05d878b4-1605-4331-bd4f-944398dc894a",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "NoShow",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENT STATUS"
+      },
+      {
+        "name": "e355fcf0-2032-4663-87e3-33ffe7f0abd5",
+        "fromColumn": "EVENT_ID",
+        "fromTable": "Decline",
+        "toColumn": "EVENT_ID",
+        "toTable": "EVENT STATUS"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "EVENTS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "95a105f9-9237-4e46-a45a-669cc7fecad5",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "14f26553-40d0-4cdf-96dc-dad03fbfd123",
+            "sourceColumn": "EVENT_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EMON",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c477b4f6-2805-4b79-afe4-3c0852244a74",
+            "sourceColumn": "EMON",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EMONNUM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2bc7cb0a-1e28-4160-9168-7e6ea2b62681",
+            "sourceColumn": "EMONNUM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d8eafaa1-4e09-4b32-9661-5c80924e0859",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_STATUS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d935013c-154b-459e-91aa-216fd8d225db",
+            "sourceColumn": "EVENT_STATUS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_TYPE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf2cfdf5-b521-4d3b-91de-5e055f73f20d",
+            "sourceColumn": "EVENT_TYPE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ORGANIZATION_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1da1d653-f56a-48b0-bc8f-a9c44a10949a",
+            "sourceColumn": "ORGANIZATION_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UR_DEPT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7027fdb5-8be1-41e3-92ec-cadc157cfae7",
+            "sourceColumn": "UR_DEPT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bddc944f-f21a-462a-a0b5-73f64dc39671",
+            "sourceColumn": "EALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CONT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "30d4ba88-7d46-4e17-952f-0f9d1da427f1",
+            "sourceColumn": "CONT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PURP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "93e04859-9fd3-4ab6-a6d9-9bbcc00ceb12",
+            "sourceColumn": "PURP",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVNAMEID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eceb479c-b0f5-4091-a853-a61985c8b440",
+            "sourceColumn": "EVNAMEID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVMON",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d47192ad-9776-481c-8f0d-29577f7f2c05",
+            "sourceColumn": "EVMON",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FISCALYR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "de6e4680-050f-4539-997b-606c625a0fc7",
+            "sourceColumn": "FISCALYR",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "4be79b7d-e073-41e3-bdd7-ee706a09df7e",
+        "partitions": [
+          {
+            "name": "EVENTS-6fe7e98f-c9cf-4d88-959b-0df29054a43a",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" WITH part1 AS (   #(lf)SELECT DISTINCT#(lf)   ee.event_id , #(lf)   'EVENT' eall,#(lf)   ee.event_name,#(lf)   ee.event_name||'   ' ||'ID_'||ee.event_id evnameid,#(lf)   tec.SHORT_DESC cont,#(lf)   tep.SHORT_DESC purp,#(lf)   ee.event_start_datetime esd,#(lf)   to_char(ee.event_start_datetime,'Mon')emon,#(lf)   CASE WHEN to_char(ee.event_start_datetime,'Mon') = 'Jul' THEN 1#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Aug' THEN 2#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Sep' THEN 3#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Oct' THEN 4#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Nov' THEN 5#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Dec' THEN 6#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Jan' THEN 7#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Feb' THEN 8#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Mar' THEN 9#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Apr' THEN 10#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'May' THEN 11#(lf)        WHEN to_char(ee.event_start_datetime,'Mon') = 'Jun' THEN 12#(lf)        ELSE 0 END fiscalyr,#(lf)   extract(month from ee.event_start_datetime) emonnum,#(lf)   to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)   tes.short_desc  \"\"EVENT_STATUS\"\",                     #(lf)   tet.short_desc  \"\"EVENT_TYPE\"\",                     #(lf)   eo.ORGANIZATION_ID,#(lf)   e1.PREF_MAIL_NAME \"\"UR_DEPT\"\"#(lf)FROM advance.EP_EVENT ee #(lf)  LEFT JOIN advance.TMS_EVENT_STATUS tes ON ee.EVENT_STATUS_CODE = tes.EVENT_STATUS_CODE #(lf)  LEFT JOIN advance.TMS_EVENT_TYPE tet ON ee.EVENT_TYPE = tet.EVENT_TYPE#(lf)  LEFT JOIN advance.TMS_EVENT_CONTENT tec ON ee.CONTENT_CODE = tec.CONTENT_CODE#(lf)  LEFT JOIN advance.TMS_EVENT_PURPOSE tep ON ee.PURPOSE_CODE = tep.PURPOSE_CODE#(lf)  LEFT JOIN advance.EP_EVENT_ORGANIZER eo ON ee.EVENT_ID = eo.EVENT_ID#(lf)  LEFT JOIN advance.ENTITY e1 ON eo.ORGANIZATION_ID = e1.ID_NUMBER#(lf)WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)  AND ee.event_id NOT IN (3081,3044,3032,3029,3027,2978,2854,2851,2940)#(lf)  AND tet.EVENT_TYPE <> 'TST'#(lf)ORDER BY ee.event_id DESC#(lf))#(lf)#(lf)  SELECT #(lf)    event_id,#(lf)    eall,#(lf)    event_name,#(lf)    evnameid,#(lf)    cont,#(lf)    purp,#(lf)    emon,#(lf)    lpad((fiscalyr),2,'0')||'-'||emon evmon,#(lf)    fiscalyr,#(lf)    emonnum,#(lf)    efy,#(lf)    event_status,#(lf)    event_type,#(lf)    organization_id,#(lf)    ur_dept#(lf)  FROM part1\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_b3f54b88-3dec-47b0-a00b-87ccbfa4c9a9",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "8e648161-6f6d-48d8-ae2d-befd4fc0a99d",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ba465fe8-09a3-4502-b69b-310580fb528e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "45c74c1e-1751-4896-adaa-3a2f4f87421e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "2d3f9a3e-2c04-41a1-bebd-499f41479130",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "6c37ed90-7fd2-4cba-88de-5da3104770c1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "98fdbdd8-0e1c-431d-b683-84b762940afb",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "78dcf328-f105-4f45-8840-1315d87f6e1b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "8d1cc395-d54e-48bf-b452-18865cdabb70",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "422590ce-e783-4fb5-88b8-96575cffda62",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "bd481337-4a07-4da0-acac-2d31b9e83f7f",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "cbd2f9ba-3a0e-4b52-84bc-017c5b704ebc",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "200479b7-e94f-4e79-944e-a05db5200819"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "4399ba27-e51f-4eea-a9f0-336f5a311a02",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_b3f54b88-3dec-47b0-a00b-87ccbfa4c9a9-54dc130d-8453-4b28-8af7-b2bf9b034251",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "INVITATIONS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0ea38f5f-2cc5-4df9-8290-2cf9fd5b6f6e",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVITATION_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d0fd3760-67ce-4c5a-b177-804044cba04f",
+            "sourceColumn": "INVITATION_ID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4eea468-92bc-4e9c-8406-58de4b0ac06f",
+            "sourceColumn": "ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVITED",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f5141a15-f30a-4b35-9258-e174f43f5ab4",
+            "sourceColumn": "INVITED",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INV_RELATION",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "decc4344-8923-4a53-8fb5-4920dfc2fc08",
+            "sourceColumn": "INV_RELATION",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LG_AMT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e7e19569-a7e1-49f8-89d6-3a079d10779e",
+            "sourceColumn": "LG_AMT",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "84d97215-d464-4eca-87ee-5d6f8950c59e",
+            "sourceColumn": "MGEVI",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b081c7cf-4f8f-4adb-a91b-347751b88419",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "XMGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eea5eb14-5c7a-4129-921a-5cd80c2d95ed",
+            "sourceColumn": "XMGEVI",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a1a19495-56d5-436a-a8c9-9502d08dee3c",
+            "sourceColumn": "IALL",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d5cc1687-5718-4cd5-8ff4-5f84aff51e60",
+        "partitions": [
+          {
+            "name": "INVITATIONS-6e44a326-3228-44a7-891a-5f06368894c2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" SELECT DISTINCT #(lf)   eei.EVENT_ID,#(lf)   'INVITATION' AS IALL,#(lf)   to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)   epi.INVITATION_ID,#(lf)   e.ID_NUMBER,#(lf)   e.PREF_MAIL_NAME \"\"INVITED\"\",#(lf)   trt.SHORT_DESC \"\"INV_RELATION\"\",#(lf)   ds.DNR_SUM_LIFETIME_GIFT_AMT \"\"LG_AMT\"\",#(lf)   TO_NUMBER(NVL(xmer.xmgevi,-1)) mgevi#(lf)  FROM advance.EP_EVENT ee#(lf)    JOIN advance.EP_EVENT_INVITATION eei ON ee.EVENT_ID = eei.EVENT_ID#(lf)    JOIN advance.EP_PARTICIPANT_INVITE epi ON eei.INVITATION_ID = epi.INVITATION_ID #(lf)    JOIN advance.ENTITY e ON epi.ID_NUMBER = e.ID_NUMBER #(lf)    LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)    LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)    LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)             ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)  WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)  ORDER BY eei.EVENT_ID desc\"]),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(Source, \"XMGEVI\", each if [MGEVI] = -1 then \" \" else [MGEVI])",
+                "in",
+                "    #\"Added Conditional Column\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "REGISTRATIONS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "964563ce-9787-4565-a7c2-56cdce64020e",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ENME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a5526982-c5c7-472c-bb75-fccdee759110",
+            "sourceColumn": "ENME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1d9f5c72-9885-4e64-8322-1d9b3fda33f4",
+            "sourceColumn": "RID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RST",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d63add48-e9c9-4ab4-b32e-cfdfdae81f5a",
+            "sourceColumn": "RST",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REGDT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "410e46bd-0816-4810-ade6-8b40c2106803",
+            "sourceColumn": "REGDT",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_cead9675-702d-4faf-a947-ff175c820df9"
+                },
+                "isDefault": true,
+                "relationship": "b8d1128b-60d1-4d2f-a280-3f51a374d059"
+              }
+            ]
+          },
+          {
+            "name": "RNM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c99efd1-a68d-4216-81b6-042f85440b76",
+            "sourceColumn": "RNM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REG_REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa6a3806-36a1-485c-81c6-ec85a894f221",
+            "sourceColumn": "REG_REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REG_LG_AMT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4ea16006-35ef-47c2-b97a-7eadb85cc737",
+            "sourceColumn": "REG_LG_AMT",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6154954d-bcce-4b01-94ae-48f80b157371",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "722d527d-e65b-4269-829b-baae1efec986",
+            "sourceColumn": "RGEVI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "RALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a0da7430-e9dd-44f0-821e-b7ceebdc0522",
+            "sourceColumn": "RALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "XRGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b909f963-337a-4552-b28d-bf1ffcc6b1a6",
+            "sourceColumn": "XRGEVI",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "97d50847-a26b-4ceb-88e0-052e0e9860fb",
+        "partitions": [
+          {
+            "name": "REGISTRATIONS-67e509a2-cb62-42e6-ac9e-9414bee9a5d3",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"  SELECT #(lf)     r2.event_id , #(lf)     'REGISTRATION' RALL,#(lf)     to_char(ADD_MONTHS(ev2.event_start_datetime,6),'YYYY') efy,#(lf)     ev2.event_name enme, #(lf)     r2.contact_id_number rid,#(lf)     rs2.short_desc rst, #(lf)     trunc(r2.response_date) regdt,#(lf)     e10.PREF_MAIL_NAME rnm,#(lf)     trt.SHORT_DESC reg_rel,#(lf)     ds.DNR_SUM_LIFETIME_GIFT_AMT reg_lg_amt,#(lf)     TO_NUMBER(NVL(xmer.xmgevi,-1)) rgevi#(lf)   FROM advance.ep_registration r2#(lf)     LEFT JOIN advance.tms_event_registration_status rs2 ON r2.registration_status_code = rs2.registration_status_code#(lf)     LEFT JOIN advance.ep_event ev2  ON r2.event_id = ev2.event_id #(lf)     left join advance.entity e10 ON r2.contact_id_number = e10.id_number#(lf)     LEFT JOIN advance.TMS_RECORD_TYPE trt ON e10.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)     LEFT JOIN advance.DONOR_SUMMARY ds ON e10.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)     LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)             ON e10.ID_NUMBER = xmer.ID_NUMBER#(lf)   WHERE r2.registration_status_code = 'G'#(lf)      and   to_char(ADD_MONTHS(ev2.event_start_datetime,6),'YYYY') >= '2021'#(lf)   ORDER BY r2.EVENT_ID desc\"]),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(Source, \"XRGEVI\", each if [RGEVI] = -1 then \" \" else [RGEVI])",
+                "in",
+                "    #\"Added Conditional Column\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_cead9675-702d-4faf-a947-ff175c820df9",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "a846eefc-fd6b-471d-91e8-02a91c9f25a4",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "131670f4-52f8-472d-a09a-8c1ca331823c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "3809746e-e114-4bd7-8e04-00d630c742f9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a5f85330-fc9d-4164-9d24-2b5244844af2",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "bb204c08-364b-496e-82cf-1c181ea09e65",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "0d99b193-0d79-455f-9625-396ebfbcf2bb",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "0e773cd6-b01a-493c-8e62-fb5f31e7ca31",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "52096e46-2549-4046-946c-3efe138e1cc7",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "39aa0884-dc94-4cc0-8abc-15234ecb6879",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "6ba7d863-d214-42d5-9892-abb14ce47091",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "5c95a963-f193-4af8-a144-4d62b51eb5c0",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "fcce7489-4eb0-45ab-bb91-7f1de7736b8b"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "9a7963a1-ade8-431c-b45a-354f5bafee74",
+        "partitions": [
+          {
+            "name": "LocalDateTable_cead9675-702d-4faf-a947-ff175c820df9-08ecaca3-7c6b-49f3-8fc0-c5751f04634d",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('REGISTRATIONS'[REGDT])), 1, 1), Date(Year(MAX('REGISTRATIONS'[REGDT])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "PARTICIPATION",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bdceca44-86ef-4267-907e-e92414960589",
+            "sourceColumn": "EVENT_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "51ca7006-3b3e-493d-aac1-ba9162651529",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "29900305-17af-4f24-966e-b3a1a144e2ba",
+            "sourceColumn": "PRD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4dc95d5c-c89f-4b1f-912c-51c9cfebed54",
+            "sourceColumn": "PID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PNM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cc3f57d7-abbc-4a62-bc27-73e3b2119e2e",
+            "sourceColumn": "PNM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TENTCARD_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "80d512a6-d72d-4b0c-84a1-effe05519772",
+            "sourceColumn": "TENTCARD_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "P_REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "23b38437-f6db-493c-8293-0877486ee0e1",
+            "sourceColumn": "P_REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "P_LG_AMT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e0d7fed9-e2ab-47b9-b6ab-13648ba9dd52",
+            "sourceColumn": "P_LG_AMT",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5497d689-aba7-429b-ad26-11086c46ae07",
+            "sourceColumn": "PALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "10953c8a-f521-49f5-8fb0-a401725288d7",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "361f585a-6584-4d3b-98eb-fd1cf72059f3",
+            "sourceColumn": "PGEVI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "XPGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8296d751-07f3-4454-88a9-00a90f4a90fc",
+            "sourceColumn": "XPGEVI",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PSC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cbbf8158-9dca-485d-875e-20c6b011f7c7",
+            "sourceColumn": "PSC",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3378c706-1ca1-48e6-af7b-ce9591da1b53",
+        "partitions": [
+          {
+            "name": "PARTICIPATION-8b3328e9-e1d1-45ee-81fd-e48fbd17ebf6",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" SELECT distinct#(lf)    ee.EVENT_NAME,#(lf)    ep2.EVENT_ID,#(lf)    'PARTICIPATION' PALL,#(lf)    to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)    ep2.REGISTRATION_ID prd,#(lf)    ep2.ID_NUMBER pid,#(lf)    e.PREF_MAIL_NAME pnm,#(lf)    ep2.TENTCARD_NAME,#(lf)    trt.SHORT_DESC p_rel,#(lf)    ep.PARTICIPATION_STATUS_CODE psc,#(lf)     ds.DNR_SUM_LIFETIME_GIFT_AMT p_lg_amt,#(lf)     TO_NUMBER(NVL(xmer.xmgevi,-1)) pgevi#(lf)  FROM advance.EP_EVENT ee #(lf)    LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)    LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)    LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)    LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)    LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)    LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)             ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)  WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)    AND ep2.REGISTRATION_ID IS NOT NULL#(lf)  ORDER BY ep2.EVENT_ID  desc\"]),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(Source, \"XPGEVI\", each if [PGEVI] = -1 then \" \" else [PGEVI])",
+                "in",
+                "    #\"Added Conditional Column\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "MeasureTable",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "columns": [
+          {
+            "name": "MeasureTable",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8dfccb0a-7bac-474c-8acd-a2af5434ec8a",
+            "sourceColumn": "MeasureTable",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "525dd1df-4969-4ceb-935c-3c2bf3a872cb",
+        "measures": [
+          {
+            "name": "DISTINCT EVENTS",
+            "expression": "CALCULATE(DISTINCTCOUNT(EVENTS[EVENT_ID]), EVENTS[EALL] = \"EVENT\")",
+            "formatString": "#,0",
+            "lineageTag": "d0fa2f3e-0ddf-4d39-a829-42d44a95bdf3"
+          },
+          {
+            "name": "INVITATIONS FOR ALL EVENTS",
+            "expression": "CALCULATE(DISTINCTCOUNT(INVITATIONS[INVITATION_ID]),EVENTS[EALL] =\"EVENT\")",
+            "formatString": "0",
+            "lineageTag": "04c92c9f-e74c-4622-89f8-cb4ac284fcdf"
+          },
+          {
+            "name": "INVITATION_EVI",
+            "expression": "CALCULATE(MEDIANX( INVITATIONS, INVITATIONS[MGEVI]),FILTER(INVITATIONS,INVITATIONS[MGEVI] <> -1))",
+            "formatString": "0",
+            "lineageTag": "ac6b280c-8b0d-4034-bd78-5f1b34c943fa"
+          },
+          {
+            "name": "DISTINCT INVITATIONS",
+            "expression": "CALCULATE(DISTINCTCOUNT(INVITATIONS[ID_NUMBER]), INVITATIONS[IALL] = \"INVITATION\")",
+            "formatString": "#,0",
+            "lineageTag": "5cc57183-a102-43fd-86a4-22a736340ac1"
+          },
+          {
+            "name": "DISTINCT REGISTRATIONS",
+            "expression": "CALCULATE(DISTINCTCOUNT(REGISTRATIONS[RID]), REGISTRATIONS[RALL] = \"REGISTRATION\")",
+            "formatString": "#,0",
+            "lineageTag": "e6e8422d-7f16-433c-b322-8d01b98df5b2"
+          },
+          {
+            "name": "REGISTRATION_EVI",
+            "expression": "CALCULATE(MEDIANX( REGISTRATIONS, REGISTRATIONS[RGEVI]),FILTER(REGISTRATIONS, REGISTRATIONS[RGEVI] <> -1))",
+            "formatString": "0",
+            "lineageTag": "f3cbbc93-236c-4249-ac81-3c10cd4e3c4a"
+          },
+          {
+            "name": "PARTICIPATION_EVI",
+            "expression": "CALCULATE(MEDIANX( PARTICIPATION, PARTICIPATION[PGEVI]),FILTER(PARTICIPATION, PARTICIPATION[PGEVI] <> -1))",
+            "formatString": "0",
+            "lineageTag": "d1e0e4c2-3474-428c-84bf-523bbf14a66a"
+          },
+          {
+            "name": "DISTINCT LTG_INV",
+            "expression": "SUMX(distinct(INVITATIONS[ID_NUMBER]), FIRSTNONBLANK(INVITATIONS[LG_AMT],0))",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "bd27ae1a-266a-4571-983c-1bea63544eae"
+          },
+          {
+            "name": "DISTINCT LTG_REG",
+            "expression": "SUMX(DISTINCT(REGISTRATIONS[RID]), FIRSTNONBLANK(REGISTRATIONS[REG_LG_AMT],0))",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "42008ab5-812f-4d00-b3b4-0a1f8b62e4d3"
+          },
+          {
+            "name": "DISTINCT LTG_PAR",
+            "expression": "SUMX(DISTINCT(PARTICIPATION[PID]), FIRSTNONBLANK(PARTICIPATION[P_LG_AMT],0))",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "ca46d5c3-6de5-48eb-9a90-1fc0e4ec4d8e"
+          },
+          {
+            "name": "DISTINCT PARTICIPANTS",
+            "expression": "CALCULATE(DISTINCTCOUNT(PARTICIPATION[PNM]), PARTICIPATION[PALL] = \"PARTICIPATION\")",
+            "formatString": "#,0",
+            "lineageTag": "348bb4b5-7a8c-4376-9cc7-5158da0a179d"
+          },
+          {
+            "name": "Total Invitations",
+            "expression": "Count(INVITATIONS[IALL])",
+            "formatString": "#,0",
+            "lineageTag": "ae9c8173-d8f8-4ee4-8b34-2518c419b880"
+          },
+          {
+            "name": "Total Registrations",
+            "expression": "Count(REGISTRATIONS[RALL])",
+            "formatString": "#,0",
+            "lineageTag": "b9e7c966-96e7-4338-9ad0-d5b2fcc490ed"
+          },
+          {
+            "name": "TOTAL PARTICIPATION",
+            "expression": "COUNT (PARTICIPATION[PALL])",
+            "formatString": "#,0",
+            "lineageTag": "e3434722-6fc3-4024-aec2-781fc678bfa1"
+          },
+          {
+            "name": "Total Events",
+            "expression": "Count(EVENTS[EALL])",
+            "formatString": "0",
+            "lineageTag": "8d086589-0646-41be-852f-2c5a1ecedbcc"
+          },
+          {
+            "name": "Total Participation(P)",
+            "expression": "count(totpart[PALL])",
+            "formatString": "#,0",
+            "lineageTag": "d651f22a-9d71-4c14-b752-9d3a833950a0"
+          },
+          {
+            "name": "Total Walkins",
+            "expression": "count(WalkIn[PALL])",
+            "formatString": "#,0",
+            "lineageTag": "9bef2ef6-3add-405f-b875-a1489aa61494"
+          },
+          {
+            "name": "Total mth Partic",
+            "expression": "[Total Participation(P)] + [Total Walkins]",
+            "formatString": "#,0",
+            "lineageTag": "80b6057e-f736-44e8-acf7-7d1e74afb900"
+          },
+          {
+            "name": "Total NoShow",
+            "expression": "count(NoShow[PALL])",
+            "formatString": "#,0",
+            "lineageTag": "f2abb965-3408-4749-a438-af9c1ee88513"
+          },
+          {
+            "name": "Total Declines",
+            "expression": "count(Decline[PALL])",
+            "formatString": "#,0",
+            "lineageTag": "1aa30f1f-1342-43ce-87c0-9d419a11ebb1"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "MeasureTable-e35438d0-48be-4a6c-8757-cbe338ca5dfc",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = \"\"",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "EVENT STATUS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d7cc8ece-a5b1-4f6a-9c14-c7df56822ddc",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_STATUS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de326697-4f31-4825-bd79-26c94edfacf5",
+            "sourceColumn": "EVENT_STATUS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "037b173a-4ef7-49b4-a2cb-936e6c2de599",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "50e8fbeb-fabf-4e67-8889-66caba0afc9c",
+            "sourceColumn": "RID",
+            "summarizeBy": "count"
+          }
+        ],
+        "lineageTag": "ad91915b-a4ef-4ea8-a7aa-0cd5633a1ab1",
+        "partitions": [
+          {
+            "name": "EVENT STATUS-97b1c3f7-441c-49df-9232-45bcd62379df",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" WITH part1 AS (#(lf)  SELECT #(lf)    ev2.EVENT_ID,#(lf)    tes.SHORT_DESC,#(lf)    to_char(ADD_MONTHS(ev2.event_start_datetime,6),'YYYY') efy,#(lf)    count(r2.REGISTRATION_ID) RID #(lf)  FROM advance.ep_event ev2 #(lf)     LEFT JOIN advance.TMS_EVENT_STATUS tes ON ev2.EVENT_STATUS_CODE = tes.EVENT_STATUS_CODE#(lf)     LEFT JOIN advance.ep_registration r2 ON ev2.EVENT_ID = r2.EVENT_ID#(lf)     LEFT JOIN advance.tms_event_registration_status rs2 ON r2.registration_status_code = rs2.registration_status_code#(lf)  WHERE to_char(ADD_MONTHS(ev2.event_start_datetime,6),'YYYY') >= '2021'#(lf)  GROUP BY ev2.EVENT_ID, tes.SHORT_DESC,ev2.EVENT_START_DATETIME #(lf)  ORDER BY ev2.EVENT_ID desc#(lf)    )#(lf)    SELECT #(lf)      EVENT_ID,#(lf)      CASE WHEN SHORT_DESC = 'Active' AND RID = '0'#(lf)           THEN 'Active, No Registrations'#(lf)           ELSE SHORT_DESC END EVENT_STATUS,#(lf)      EFY,#(lf)      RID#(lf)    FROM PART1\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LISTOFIRP",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bd47d3a4-862f-469b-95c2-4a1a72e1d2bb",
+            "sourceColumn": "ADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aee5cce3-7cdf-4d67-babe-94f63e7c1ceb",
+            "sourceColumn": "REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRIMMGR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fb868885-b21c-476b-bc98-24d0d80a3e46",
+            "sourceColumn": "PRIMMGR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "int64",
+            "lineageTag": "de71947f-fc5a-46a1-8b4a-4cde3254e7d6",
+            "sourceColumn": "MGEVI",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "63108e25-f0c9-418d-9696-1162fbfa6f4c",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REGIND",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "496bd690-224e-4739-a9e2-67847ea63d42",
+            "sourceColumn": "REGIND",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PARTICIND",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4223a222-eca3-48da-8483-0a9d653db6ab",
+            "sourceColumn": "PARTICIND",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CURRFYDONIND",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "801aa241-760f-422e-bc1c-ab8f58e0afff",
+            "sourceColumn": "CURRFYDONIND",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ATTEVENTS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "int64",
+            "lineageTag": "52b7f8a6-0fc2-4542-8af4-a6c1cb65222c",
+            "sourceColumn": "ATTEVENTS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PREF_MAIL_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24b1afd0-a033-4467-8ef5-9804e0430ced",
+            "sourceColumn": "PREF_MAIL_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIFETIME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "cb485f48-828e-4c9d-85d5-8c908358618c",
+            "sourceColumn": "LIFETIME",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ENAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1fc7f6e3-3d35-47b3-91a2-8f3a3a7947e2",
+            "sourceColumn": "ENAME",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0d54324b-0c2a-42bd-b7f5-35a6a97cdec3",
+        "partitions": [
+          {
+            "name": "LISTOFIRP-fa14c539-516d-4195-a845-6215ba6b30ba",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"WITH part1 AS (#(lf)#(lf)SELECT #(lf)     r2.event_id , #(lf)     'REGISTRATION' RALL,#(lf)     to_char(ADD_MONTHS(ev2.event_start_datetime,6),'YYYY') efy,#(lf)     ev2.event_name ename, #(lf)     ev2.event_start_datetime esd,#(lf)     r2.contact_id_number rid,#(lf)     rs2.short_desc rst, #(lf)     e10.ID_NUMBER,#(lf)     e10.PREF_MAIL_NAME rnm,#(lf)     trt.SHORT_DESC reg_rel,#(lf)     ds.DNR_SUM_LIFETIME_GIFT_AMT lifetime#(lf)   FROM advance.ep_registration r2#(lf)     LEFT JOIN advance.tms_event_registration_status rs2 ON r2.registration_status_code = rs2.registration_status_code#(lf)     LEFT JOIN advance.ep_event ev2  ON r2.event_id = ev2.event_id #(lf)     left join advance.entity e10 ON r2.contact_id_number = e10.id_number#(lf)     LEFT JOIN advance.TMS_RECORD_TYPE trt ON e10.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)     LEFT JOIN advance.DONOR_SUMMARY ds ON e10.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)   WHERE r2.registration_status_code = 'G'#(lf)      and   to_char(ADD_MONTHS(ev2.event_start_datetime,6),'YYYY') >= '2021'#(lf)   ORDER BY r2.EVENT_ID desc #(lf)   ),#(lf)     part2 AS (#(lf)   SELECT #(lf)      mehk.ID_NUMBER,#(lf)      mehk.HOUSEHOLD_KEY,#(lf)      e.PREF_MAIL_NAME,#(lf)      trt.SHORT_DESC rel,#(lf)      e2.PREF_MAIL_NAME PrimMgr,#(lf)     #(lf)      TO_NUMBER(NVL(xmer.xmgevi,-1)) mgevi#(lf)   FROM advur.MVW_ENT_HOUSEHOLD_KEYS mehk#(lf)     LEFT JOIN advance.ENTITY e ON mehk.ID_NUMBER = e.ID_NUMBER #(lf)     LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)     LEFT JOIN advur.MVW_ENT_ACTIVE_PROSPECTS meap ON mehk.HOUSEHOLD_KEY  = meap.HOUSEHOLD_KEY#(lf)     LEFT JOIN advance.ENTITY e2 ON meap.GIFT_OFFICER = e2.ID_NUMBER#(lf)     LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)            ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)   WHERE mehk.ACTIVE_HOUSEHOLD = 'Y'#(lf)     ),#(lf)     #(lf)      ENTINFO AS (#(lf)   SELECT#(lf)       p2.HOUSEHOLD_KEY,#(lf)       p2.ID_NUMBER,#(lf)       p2.PREF_MAIL_NAME,#(lf)       p2.rel,#(lf)       p2.PrimMgr,#(lf)       p.lifetime,#(lf)       p2.mgevi,#(lf)       p.efy||lpad(extract(month from p.esd),2,'0')eventcon,#(lf)       p.event_ID,#(lf)       p.ename,#(lf)       p.efy,#(lf)       CASE WHEN p2.ID_NUMBER = p.rid THEN 'Y' ELSE 'N' END regInd#(lf)   FROM Part1 p#(lf)      LEFT JOIN part2 p2 ON p.ID_NUMBER = p2.ID_NUMBER#(lf)   WHERE p2.ID_NUMBER IS NOT NULL#(lf)     ),#(lf)   #(lf)     gift1 AS (#(lf)  SELECT distinct#(lf)     g.GIFT_RECEIPT_NUMBER,#(lf)     g.GIFT_YEAR_OF_GIVING gyear,#(lf)     extract(month from g.GIFT_DATE_OF_RECORD) gmnum,#(lf)     -- g.GIFT_DATE_OF_RECORD,#(lf)     g.GIFT_YEAR_OF_GIVING||lpad(extract(month from g.GIFT_DATE_OF_RECORD),2,'0')giftcon,#(lf)     pg.PRIM_GIFT_AMOUNT gamt,#(lf)     mthr.HOUSEHOLD_KEY hhkey#(lf)  FROM advance.GIFT g #(lf)    JOIN advance.PRIMARY_GIFT pg ON g.GIFT_RECEIPT_NUMBER = pg.PRIM_GIFT_RECEIPT_NUMBER #(lf)    LEFT JOIN advur.MVW_TRANS_HOUSEHOLDS_REVENUE mthr ON pg.PRIM_GIFT_RECEIPT_NUMBER = mthr.TRANS_NBR #(lf)  WHERE g.GIFT_YEAR_OF_GIVING >= '2021'#(lf)  ORDER BY g.GIFT_RECEIPT_NUMBER#(lf)    ),#(lf)#(lf)     gift2 AS (#(lf)   SELECT hhkey,giftcon,gyear, min(GIFT_RECEIPT_NUMBER)gift_receipt_NUMBER#(lf)        FROM gift1#(lf)        GROUP BY hhkey,giftcon,gyear#(lf)        ORDER BY hhkey#(lf)          ),#(lf)  #(lf)     gift3 AS (#(lf)    SELECT hhkey, gyear, min(giftcon) giftcon#(lf)        FROM gift2#(lf)        GROUP BY hhkey, gyear#(lf)        ORDER BY hhkey#(lf)          ),#(lf)#(lf)       gift4 AS (#(lf)     SELECT distinct#(lf)        e.*,#(lf)        g.giftcon,#(lf)        g.gyear#(lf)     FROM ENTINFO e #(lf)       LEFT JOIN gift3 g ON e.HOUSEHOLD_KEY = g.hhkey AND e.efy = g.gyear#(lf)         ),#(lf)         #(lf)      PARTIC AS (#(lf)    SELECT distinct#(lf)       ee.EVENT_NAME,#(lf)       ep2.EVENT_ID,#(lf)       'PARTICIPATION' PALL,#(lf)       ee.event_start_datetime esd,#(lf)       to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)       ep2.REGISTRATION_ID prd,#(lf)       ep2.ID_NUMBER pid,#(lf)       e.ID_NUMBER advid,#(lf)       e.PREF_MAIL_NAME pnm,#(lf)       ep2.TENTCARD_NAME,#(lf)        trt.SHORT_DESC p_rel,#(lf)      ep.PARTICIPATION_STATUS_CODE psc,#(lf)       ds.DNR_SUM_LIFETIME_GIFT_AMT p_lg_amt,#(lf)       TO_NUMBER(NVL(xmer.xmgevi,-1)) pgevi#(lf)    FROM advance.EP_EVENT ee #(lf)      LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)      LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)      LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)      LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)      LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)      LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)         WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)         ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)             ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)   WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)      AND ep2.REGISTRATION_ID IS NOT NULL#(lf)    AND e.PREF_MAIL_NAME IS NOT NULL#(lf)  ORDER BY ep2.EVENT_ID  desc#(lf)       ),#(lf)       #(lf)        ParticIND AS (#(lf)      SELECT distinct#(lf)        p.EVENT_ID,#(lf)        p.EVENT_NAME,#(lf)        p.esd,#(lf)        p.efy,#(lf)        p.ADVID,#(lf)        e.ID_NUMBER evID,#(lf)        p.pid,#(lf)        CASE WHEN e.ID_NUMBER = p.pid THEN 'Y' ELSE 'N' END particInd#(lf)      FROM PARTIC p#(lf)      JOIN gift4 e ON p.pid = e.ID_NUMBER AND p.efy = e.efy#(lf)        ),#(lf)           #(lf)         ATTEvents AS (#(lf)          SELECT #(lf)       count(DISTINCT ep2.EVENT_ID) ATTEvents,#(lf)       e.ID_NUMBER advid,#(lf)       e.PREF_MAIL_NAME pnm,#(lf)        trt.SHORT_DESC p_rel#(lf)    FROM advance.EP_EVENT ee #(lf)      LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)      LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)      LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)      LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)   WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)      AND ep2.REGISTRATION_ID IS NOT NULL#(lf)     AND e.PREF_MAIL_NAME IS NOT NULL#(lf)  GROUP BY e.ID_NUMBER, e.PREF_MAIL_NAME, trt.SHORT_DESC #(lf)  ORDER BY e.ID_NUMBER  desc#(lf)      )#(lf)     #(lf)       SELECT distinct#(lf)    g.ID_number AdvID,#(lf)    g.PREF_MAIL_NAME,#(lf)    g.rel,#(lf)    g.PrimMgr,#(lf)    g.LIFETIME,#(lf)    g.mgevi,#(lf)    g.Event_ID,#(lf)    g.ENAME,#(lf)    g.regInd,#(lf)    p.particInd,#(lf)    a.ATTEvents,#(lf)    CASE WHEN g.giftcon <= g.eventcon THEN 'Y' ELSE 'N' END as CurrFYDonInd#(lf)   FROM gift4 g#(lf)     left JOIN ParticIND p ON g.ID_NUMBER = p.advid AND g.Event_ID = p.EVENT_ID #(lf)     left JOIN ATTEvents a ON g.ID_NUMBER = a.advid #(lf)   ORDER BY g.ID_NUMBER\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "INVITATIONS_LTG",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "INVADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a388d3c3-0ae3-4534-aa31-af4dddcf149b",
+            "sourceColumn": "INVADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVPRIMNAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "521433d6-9b7b-4985-b037-a5edbb168431",
+            "sourceColumn": "INVPRIMNAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVPRIMEREL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6fd5f18a-285d-41be-b73e-02f31c9704ee",
+            "sourceColumn": "INVPRIMEREL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSECADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cbcbaec9-a373-45f6-8ae0-d9ac2f4d0125",
+            "sourceColumn": "INVSECADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSECNAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5deb1bde-d080-474d-bfe1-685d16a08b58",
+            "sourceColumn": "INVSECNAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSREL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9a5b516f-9626-4265-8223-10d8a9bdf3b5",
+            "sourceColumn": "INVSREL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVLTG",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ee47d4ff-4bdb-42ea-9299-703aba82ade0",
+            "sourceColumn": "INVLTG",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "INVMGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "550e7431-1e8c-406c-9b1b-7e6d633975fe",
+            "sourceColumn": "INVMGEVI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eef2880d-ff91-4913-85cd-dd653ebb5ef6",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c346b483-b750-45e8-8d3d-09d6816874e6",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "000f8549-8325-4246-8823-d71333e1f43b",
+        "partitions": [
+          {
+            "name": "INVITATIONS_LTG-914ba26b-2f9a-4654-804e-c29de7cf6390",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" WITH ENTINFO AS (#(lf)    SELECT #(lf)    heg.HOUSEHOLD_KEY,#(lf)    heg.PRIMARY_ID_number,#(lf)    e.PREF_MAIL_NAME primname,#(lf)    trt.SHORT_DESC rel,#(lf)    heg.SECONDARY_ID_NUMBER,#(lf)    e2.PREF_MAIL_NAME secname,#(lf)    trt.SHORT_DESC srel,#(lf)    e3.PREF_MAIL_NAME PrimMgr,#(lf)    trevmg.LIF_TREVMG_ALL,#(lf)    TO_NUMBER(NVL(xmer.xmgevi,-1)) mgevi#(lf)  FROM advance.ENTITY e#(lf)  LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)  LEFT JOIN advur.mvw_hh_entities_gen heg ON e.ID_NUMBER = heg.PRIMARY_ID_NUMBER#(lf)  JOIN advance.ENTITY e2 ON heg.SECONDARY_ID_NUMBER = e2.ID_NUMBER#(lf)  LEFT JOIN advur.MVW_ENT_ACTIVE_PROSPECTS meap ON heg.HOUSEHOLD_KEY = meap.HOUSEHOLD_KEY#(lf)  JOIN advance.ENTITY e3 ON meap.GIFT_OFFICER = e3.ID_NUMBER#(lf)  LEFT JOIN advance.TMS_RECORD_TYPE trt2 ON e2.RECORD_TYPE_CODE = trt2.RECORD_TYPE_CODE#(lf)  LEFT JOIN ADVUR.MVW_HH_TREVMG_SUMMARIES trevmg ON heg.HOUSEHOLD_KEY = trevmg.HOUSEHOLD_KEY#(lf)  LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)            ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)    ),#(lf)#(lf)    invrev AS (#(lf) SELECT DISTINCT#(lf)    eei.EVENT_ID,#(lf)   epi.INVITATION_ID,#(lf)   e.ID_NUMBER,#(lf)   to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy#(lf) FROM advance.EP_EVENT ee #(lf)    JOIN advance.EP_EVENT_INVITATION eei ON ee.EVENT_ID = eei.EVENT_ID#(lf)    JOIN advance.EP_PARTICIPANT_INVITE epi ON eei.INVITATION_ID = epi.INVITATION_ID #(lf)    JOIN advance.ENTITY e ON epi.ID_NUMBER = e.ID_NUMBER #(lf)WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)ORDER BY eei.EVENT_ID DESC#(lf)  )#(lf)  #(lf)  SELECT distinct#(lf)    e.PRIMARY_ID_number invADVid,#(lf)    e.primname invprimname,#(lf)    e.rel invprimerel,#(lf)    e.SECONDARY_ID_NUMBER invsecADVid,#(lf)    e.secname invsecname,#(lf)    e.srel invsrel,#(lf)    e.LIF_TREVMG_ALL invLTG,#(lf)    e.mgevi invmgevi,#(lf)    i.event_id,                       #(lf)    i. efy#(lf)  FROM invrev i #(lf)   left JOIN ENTINFO e ON i.ID_NUMBER = e.PRIMARY_ID_NUMBER#(lf)  WHERE e.primary_id_number IS NOT NULL#(lf)  ORDER BY i.EVENT_ID desc\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "REGISTRATION_LTG",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "INVADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "076ffd9c-0010-4a01-8f98-56a328c6e80d",
+            "sourceColumn": "INVADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVPRIMNAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "599d289c-0462-4f21-a80c-22b3d33d6b8d",
+            "sourceColumn": "INVPRIMNAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVPRIMEREL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87ad635e-6d23-4adc-b0ff-6655ce6c20ab",
+            "sourceColumn": "INVPRIMEREL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSECADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa9e3b36-febe-40be-bda8-7f5c08d9795d",
+            "sourceColumn": "INVSECADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSECNAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f0f8c475-33eb-459c-82bd-bec9741c6924",
+            "sourceColumn": "INVSECNAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSREL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f76fe90d-85d9-454c-99fd-b0ae39684411",
+            "sourceColumn": "INVSREL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVLTG",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "32193768-3b72-42d8-845d-057a95e7e3f4",
+            "sourceColumn": "INVLTG",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "INVMGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "fa6f94ca-d354-45c3-878d-bc718c88397f",
+            "sourceColumn": "INVMGEVI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "18c6b668-b636-4880-98a4-a907c1eca1ab",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8e1e0b7d-1db6-4597-bf73-a2a634a9fb2c",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "4a90346c-aa83-4e4d-8c73-2f0d13a6673c",
+        "partitions": [
+          {
+            "name": "REGISTRATION_LTG-1c182923-ba35-4512-ae34-91f3cda48b1d",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" WITH ENTINFO AS (#(lf)    SELECT #(lf)    heg.HOUSEHOLD_KEY,#(lf)    heg.PRIMARY_ID_number,#(lf)    e.PREF_MAIL_NAME primname,#(lf)    trt.SHORT_DESC rel,#(lf)    heg.SECONDARY_ID_NUMBER,#(lf)    e2.PREF_MAIL_NAME secname,#(lf)    trt.SHORT_DESC srel,#(lf)    e3.PREF_MAIL_NAME PrimMgr,#(lf)    trevmg.LIF_TREVMG_ALL,#(lf)    TO_NUMBER(NVL(xmer.xmgevi,-1)) mgevi#(lf)  FROM advance.ENTITY e#(lf)  LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)  LEFT JOIN advur.mvw_hh_entities_gen heg ON e.ID_NUMBER = heg.PRIMARY_ID_NUMBER#(lf)  JOIN advance.ENTITY e2 ON heg.SECONDARY_ID_NUMBER = e2.ID_NUMBER#(lf)  LEFT JOIN advur.MVW_ENT_ACTIVE_PROSPECTS meap ON heg.HOUSEHOLD_KEY = meap.HOUSEHOLD_KEY#(lf)  JOIN advance.ENTITY e3 ON meap.GIFT_OFFICER = e3.ID_NUMBER#(lf)  LEFT JOIN advance.TMS_RECORD_TYPE trt2 ON e2.RECORD_TYPE_CODE = trt2.RECORD_TYPE_CODE#(lf)  LEFT JOIN ADVUR.MVW_HH_TREVMG_SUMMARIES trevmg ON heg.HOUSEHOLD_KEY = trevmg.HOUSEHOLD_KEY#(lf)  LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)            ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)    ),#(lf)    #(lf)     REG AS (#(lf)    SELECT distinct#(lf)      r2.EVENT_ID, #(lf)      ee.EVENT_NAME,#(lf)      ee.event_start_datetime esd,#(lf)      to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)      r2.contact_id_number#(lf)    FROM advance.ep_registration r2 #(lf)      JOIN advance.EP_EVENT ee ON r2.EVENT_ID = ee.EVENT_ID#(lf)      JOIN advance.tms_event_registration_status rs2 #(lf)           ON r2.registration_status_code = rs2.registration_status_code#(lf)    )#(lf)    #(lf)    SELECT distinct#(lf)     e.PRIMARY_ID_number invADVid,#(lf)    e.primname invprimname,#(lf)    e.rel invprimerel,#(lf)    e.SECONDARY_ID_NUMBER invsecADVid,#(lf)    e.secname invsecname,#(lf)    e.srel invsrel,#(lf)    e.LIF_TREVMG_ALL invLTG,#(lf)    e.mgevi invmgevi,#(lf)    r.EVENT_ID,#(lf)    r.efy#(lf)    FROM REG r#(lf)      RIGHT JOIN ENTINFO e ON r.contact_id_number =  e.PRIMARY_ID_NUMBER\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PARTICIPATION_LTG",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "INVADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86e2c9eb-714d-4baa-b658-bc9555c1932d",
+            "sourceColumn": "INVADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVPRIMNAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2c85b32a-4985-4143-aabd-2e38e23f6fc4",
+            "sourceColumn": "INVPRIMNAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVPRIMEREL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "62faa66e-cc6b-412b-a26c-24591b502143",
+            "sourceColumn": "INVPRIMEREL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSECADVID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ecc69060-3975-4bc2-9f3c-52c10e951b8a",
+            "sourceColumn": "INVSECADVID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSECNAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "76224855-136e-4054-a64d-534e7e7816de",
+            "sourceColumn": "INVSECNAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVSREL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "739fdc2c-60d1-4146-b099-6a0fd0a47269",
+            "sourceColumn": "INVSREL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "INVLTG",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8330eb06-7837-4f37-a6bb-b96bda4325e0",
+            "sourceColumn": "INVLTG",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "INVMGEVI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e999e9e8-b58b-45f6-a2c7-d9e615ac766d",
+            "sourceColumn": "INVMGEVI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d2a911e1-9e5d-4bc5-8b37-076c33680ee9",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e0b67427-b2af-4f14-936c-a14bbb2a823d",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "79d76876-d794-418c-86c9-c74a4e4a6ef3",
+        "partitions": [
+          {
+            "name": "PARTICIPATION_LTG-e07d10c7-faf5-483b-8abb-bfb601476dad",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\" WITH ENTINFO AS (#(lf)    SELECT #(lf)    heg.HOUSEHOLD_KEY,#(lf)    heg.PRIMARY_ID_number,#(lf)    e.PREF_MAIL_NAME primname,#(lf)    trt.SHORT_DESC rel,#(lf)    heg.SECONDARY_ID_NUMBER,#(lf)    e2.PREF_MAIL_NAME secname,#(lf)    trt.SHORT_DESC srel,#(lf)    e3.PREF_MAIL_NAME PrimMgr,#(lf)    trevmg.LIF_TREVMG_ALL,#(lf)    TO_NUMBER(NVL(xmer.xmgevi,-1)) mgevi#(lf)  FROM advance.ENTITY e#(lf)  LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)  LEFT JOIN advur.mvw_hh_entities_gen heg ON e.ID_NUMBER = heg.PRIMARY_ID_NUMBER#(lf)  JOIN advance.ENTITY e2 ON heg.SECONDARY_ID_NUMBER = e2.ID_NUMBER#(lf)  LEFT JOIN advur.MVW_ENT_ACTIVE_PROSPECTS meap ON heg.HOUSEHOLD_KEY = meap.HOUSEHOLD_KEY#(lf)  JOIN advance.ENTITY e3 ON meap.GIFT_OFFICER = e3.ID_NUMBER#(lf)  LEFT JOIN advance.TMS_RECORD_TYPE trt2 ON e2.RECORD_TYPE_CODE = trt2.RECORD_TYPE_CODE#(lf)  LEFT JOIN ADVUR.MVW_HH_TREVMG_SUMMARIES trevmg ON heg.HOUSEHOLD_KEY = trevmg.HOUSEHOLD_KEY#(lf)  LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)       WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)       ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)            ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)    ),#(lf)    #(lf) PARTIC AS (#(lf)    SELECT #(lf)      ep.EVENT_ID,#(lf)      ee.EVENT_NAME,#(lf)      ee.event_start_datetime esd,#(lf)      to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)      ep2.ID_NUMBER #(lf)    FROM advance.EP_PARTICIPATION ep #(lf)     JOIN advance.EP_EVENT ee ON ep.EVENT_ID = ee.EVENT_ID#(lf)     JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)       )#(lf)    #(lf)    SELECT distinct#(lf)     e.PRIMARY_ID_number invADVid,#(lf)    e.primname invprimname,#(lf)    e.rel invprimerel,#(lf)    e.SECONDARY_ID_NUMBER invsecADVid,#(lf)    e.secname invsecname,#(lf)    e.srel invsrel,#(lf)    e.LIF_TREVMG_ALL invLTG,#(lf)    e.mgevi invmgevi,#(lf)    p.EVENT_ID,#(lf)    p.efy#(lf)    FROM PARTIC p#(lf)      RIGHT JOIN ENTINFO e ON p.ID_NUMBER =  e.PRIMARY_ID_NUMBER\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "WalkIn",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bbe7a75d-1383-429a-a551-3b2defc431e9",
+            "sourceColumn": "EVENT_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b8543eae-5125-404d-9aa0-306fb5fa930c",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "178df124-0e45-4c1c-94e6-57379d53bcac",
+            "sourceColumn": "PALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0ccedbdb-c8f4-4951-b97b-a61dfd9521be",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a39f3a01-c462-4ba9-9f01-6dc43c1f9e9e",
+            "sourceColumn": "PRD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2b2043c-c479-4ff6-9fdb-646446e4ba1e",
+            "sourceColumn": "PID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PNM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "acdf88d9-3f1a-4688-9487-4cff1820bfbf",
+            "sourceColumn": "PNM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TENTCARD_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "afea992b-b8b0-4bce-a632-f61687e22f6c",
+            "sourceColumn": "TENTCARD_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "P_REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "452d1c1c-96ab-42b2-865e-1bb23ca94474",
+            "sourceColumn": "P_REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PSC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "566423b3-c39e-42f6-8ca0-c32a501a7461",
+            "sourceColumn": "PSC",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "19dd0d35-b48f-4289-825e-a31c0684898f",
+        "partitions": [
+          {
+            "name": "WalkIn-79ff24d1-7bbb-4515-b4b8-0b9ddbdbb5dc",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"SELECT distinct#(lf)    ee.EVENT_NAME,#(lf)    ep2.EVENT_ID,#(lf)    'PARTICIPATION' PALL,#(lf)    to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)    ep2.REGISTRATION_ID prd,#(lf)    ep2.ID_NUMBER pid,#(lf)    e.PREF_MAIL_NAME pnm,#(lf)    ep2.TENTCARD_NAME,#(lf)    trt.SHORT_DESC p_rel,#(lf)    ep.PARTICIPATION_STATUS_CODE psc#(lf)    -- ds.DNR_SUM_LIFETIME_GIFT_AMT p_lg_amt,#(lf)   --  TO_NUMBER(NVL(xmer.xmgevi,-1)) pgevi#(lf)  FROM advance.EP_EVENT ee #(lf)    LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)    LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)    LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)    LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)   -- LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)   -- LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)     --  WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)    --   ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)         --    ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)  WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)    AND ep2.REGISTRATION_ID IS NOT NULL#(lf)    AND ep.PARTICIPATION_STATUS_CODE = 'W'#(lf)  ORDER BY ep2.EVENT_ID  desc\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "NoShow",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "91d5d10d-2eae-4488-ad53-261afc95e206",
+            "sourceColumn": "EVENT_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37dc5f11-345a-4efe-bf3f-a3e1e69bd10c",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9645ee38-ad9c-49fd-bcbf-63b9d8e41bca",
+            "sourceColumn": "PALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1b08a1cd-6b56-4d24-91be-f23e8a029aac",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3a040dd4-68da-408b-b251-e6cf85155878",
+            "sourceColumn": "PRD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0d2328f4-0361-4d5a-b42f-097acde31568",
+            "sourceColumn": "PID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PNM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1214eaa1-1bf0-455f-817a-8775a65e5f72",
+            "sourceColumn": "PNM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TENTCARD_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b54ae74b-ffd2-48dc-b007-d56f7cc7c2ed",
+            "sourceColumn": "TENTCARD_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "P_REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7d18514a-0c9c-4480-bc59-0872b49281f5",
+            "sourceColumn": "P_REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PSC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "394c78fb-d6a2-44ab-aa57-78c483efb28a",
+            "sourceColumn": "PSC",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "08673266-61a2-4ded-b8b8-78d7cce746fd",
+        "partitions": [
+          {
+            "name": "NoShow-ef28d904-2ae8-47c4-8d09-b2ae3a09ffec",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"SELECT distinct#(lf)    ee.EVENT_NAME,#(lf)    ep2.EVENT_ID,#(lf)    'PARTICIPATION' PALL,#(lf)    to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)    ep2.REGISTRATION_ID prd,#(lf)    ep2.ID_NUMBER pid,#(lf)    e.PREF_MAIL_NAME pnm,#(lf)    ep2.TENTCARD_NAME,#(lf)    trt.SHORT_DESC p_rel,#(lf)    ep.PARTICIPATION_STATUS_CODE psc#(lf)    -- ds.DNR_SUM_LIFETIME_GIFT_AMT p_lg_amt,#(lf)   --  TO_NUMBER(NVL(xmer.xmgevi,-1)) pgevi#(lf)  FROM advance.EP_EVENT ee #(lf)    LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)    LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)    LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)    LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)   -- LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)   -- LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)     --  WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)    --   ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)         --    ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)  WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)    AND ep2.REGISTRATION_ID IS NOT NULL#(lf)    AND ep.PARTICIPATION_STATUS_CODE = 'N'#(lf)  ORDER BY ep2.EVENT_ID  desc\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Last Refreshed Date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Column1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yy",
+            "lineageTag": "1a2a1920-52ca-4c8a-bbd7-2534b2a15fe5",
+            "sourceColumn": "Column1",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_befeb2c7-ad8a-4cea-9ee0-ab8a14b1ed7a"
+                },
+                "isDefault": true,
+                "relationship": "00bceac6-22c4-4f54-8968-c808bc6fe1af"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "797772b0-9e80-4bd3-8251-5ec1db552f49",
+        "partitions": [
+          {
+            "name": "Last Refreshed Date-c87e9327-74da-4483-a3b1-9b35fb49b2c5",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DateTime.LocalNow(),",
+                "    #\"Converted to Table\" = #table(1, {{Source}})",
+                "in",
+                "    #\"Converted to Table\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_befeb2c7-ad8a-4cea-9ee0-ab8a14b1ed7a",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "b7cfd23c-dc11-4b8f-a2fc-5bde109c1ab1",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "d1a273c7-f5b2-49bf-9da8-afdff727e09b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "8991be5a-94db-46a5-b1fa-af32b2eb27d5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "67e9d68f-0cba-497d-b6da-4d03745da0b3",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "2870175b-f579-4e3e-a753-b89e22e6e408",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "9d7f6210-5104-48cb-815f-bc2cf4084ede",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e42c5fee-b210-4a15-98e4-138705cd7f37",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "7a020698-feeb-42fc-8862-e05322b98e1d",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "157134db-2a08-49df-bd30-ac0303ceba19",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "3cbc9a04-d1ef-4200-aab5-e20231dc1c96",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "3ea55ded-4688-445a-9959-d6c5641955e9",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "d97a9421-0a39-49fc-838c-28a7591fd03a"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "fcedb3a9-e017-4536-bf83-a3757813613a",
+        "partitions": [
+          {
+            "name": "LocalDateTable_befeb2c7-ad8a-4cea-9ee0-ab8a14b1ed7a-ebe7eafc-a68f-4d2b-841a-396183bceb48",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Last Refreshed Date'[Column1])), 1, 1), Date(Year(MAX('Last Refreshed Date'[Column1])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "PC_EVENT",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "NODEKEY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bdc496a1-e328-4367-97f6-135ae36a4482",
+            "sourceColumn": "NODEKEY",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "16816108-9694-43a0-9861-d97c0f54d452",
+            "sourceColumn": "NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PARENTKEY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b33bb79e-e3b0-47a2-9a02-ed0170a112eb",
+            "sourceColumn": "PARENTKEY",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "84ea5632-6f8d-412d-b11b-1b3f6326a6f2",
+        "partitions": [
+          {
+            "name": "PC_EVENT-bfbafbbd-1846-4fa2-9b38-3e35b7480625",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"SELECT #(lf)  e.Event_ID NodeKey,#(lf)  e.Event_Name||' '||'ID#'||e.EVENT_ID Name,#(lf)  e.master_event_id ParentKey#(lf)FROM advance.EP_EVENT e #(lf)   LEFT JOIN advance.TMS_EVENT_TYPE tet ON e.EVENT_TYPE = tet.EVENT_TYPE#(lf)WHERE to_char(ADD_MONTHS(e.event_start_datetime,6),'YYYY') >= '2021'#(lf)   AND e.event_id NOT IN (3081,3044,3032,3029,3027,2978,2854,2851,2940)#(lf)   AND tet.EVENT_TYPE <> 'TST'\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Invoked Function",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "NodeKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "06a617d0-8d75-4e8b-b437-d964174b5707",
+            "sourceColumn": "NodeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FirstParentKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad5c1ccd-fcf3-4349-a698-e5afddb4c946",
+            "sourceColumn": "FirstParentKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Path",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9848e169-426a-4244-9676-afaa78788b61",
+            "sourceColumn": "Path",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FirstName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e7875af3-534b-442f-83c4-ff5d3dce1d24",
+            "sourceColumn": "FirstName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HierarchyDepth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4d836abe-6979-416e-9020-40aa6b9e1ace",
+            "sourceColumn": "HierarchyDepth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7d57d15c-4cbf-402b-b8fe-1cf810e07cb4",
+            "sourceColumn": "Level 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6cfb135-fc6d-493f-8beb-86d25d444685",
+            "sourceColumn": "Level 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level 3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3481e58-d98f-466a-9468-bcec9e0e8c32",
+            "sourceColumn": "Level 3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EndlessLoop",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ac565a56-6bc7-42b3-a5b9-860eec025855",
+            "sourceColumn": "EndlessLoop",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IsLeaf",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "520d73ac-e21d-4b9e-b979-8dda067ebac0",
+            "sourceColumn": "IsLeaf",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9c871811-7e87-44fe-9164-08ccb48fd524",
+        "partitions": [
+          {
+            "name": "Invoked Function-1ec4d11a-5fe6-4350-93d5-c55421f67f08",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = fnParChild(PC_EVENT, \"NODEKEY\", \"PARENTKEY\", \"NAME\")",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "totpart",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aba336d0-4538-407f-920f-2c5710213cbc",
+            "sourceColumn": "EVENT_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "57e596c5-30d5-48af-9f4c-a9cd8a7ceab5",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5f0d73ef-042d-446d-af22-ebac2d92e803",
+            "sourceColumn": "PALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "37079a9d-a51f-4239-981f-99208559d845",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "aa895ef1-288a-4067-8df8-089a1ce604e7",
+            "sourceColumn": "PRD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "029cd5b3-19f6-4b3b-8ca3-82b789516182",
+            "sourceColumn": "PID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PNM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f86de812-86c4-4239-9690-1e36c3e4fb6f",
+            "sourceColumn": "PNM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TENTCARD_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b6a42e3-13a1-4809-8a8a-73d331a87d1a",
+            "sourceColumn": "TENTCARD_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "P_REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ef8e1c1-8613-4949-993d-662185fcb572",
+            "sourceColumn": "P_REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PSC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f177945f-fa86-43db-bc95-108be7cd87bb",
+            "sourceColumn": "PSC",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a7228a7d-180c-4889-8d8f-bfe60faed090",
+        "partitions": [
+          {
+            "name": "totpart-b5132beb-8ad7-4334-90f9-7ab18f98b747",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"SELECT distinct#(lf)    ee.EVENT_NAME,#(lf)    ep2.EVENT_ID,#(lf)    'PARTICIPATION' PALL,#(lf)    to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)    ep2.REGISTRATION_ID prd,#(lf)    ep2.ID_NUMBER pid,#(lf)    e.PREF_MAIL_NAME pnm,#(lf)    ep2.TENTCARD_NAME,#(lf)    trt.SHORT_DESC p_rel,#(lf)    ep.PARTICIPATION_STATUS_CODE psc#(lf)    -- ds.DNR_SUM_LIFETIME_GIFT_AMT p_lg_amt,#(lf)   --  TO_NUMBER(NVL(xmer.xmgevi,-1)) pgevi#(lf)  FROM advance.EP_EVENT ee #(lf)    LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)    LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)    LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)    LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)   -- LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)   -- LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)     --  WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)    --   ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)         --    ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)  WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)    AND ep2.REGISTRATION_ID IS NOT NULL#(lf)    AND ep.PARTICIPATION_STATUS_CODE = 'P'#(lf)  ORDER BY ep2.EVENT_ID  desc\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Decline",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EVENT_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87923d9f-23fe-43b1-938c-8bbd1fff93d5",
+            "sourceColumn": "EVENT_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EVENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "94304d60-553f-4867-9607-c8165ba862d4",
+            "sourceColumn": "EVENT_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "368ab23b-3e95-4e11-9d1a-39a74b5485b6",
+            "sourceColumn": "PALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EFY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "55764539-1e07-4e3f-95e7-2bfcf7144519",
+            "sourceColumn": "EFY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0634ec53-e7f8-4e10-ae04-35348ab702ac",
+            "sourceColumn": "PRD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad8cdc34-1d52-4f6e-b458-7192d388da32",
+            "sourceColumn": "PID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PNM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ee85bb3e-6e34-4cc1-8176-8bd6dee3581f",
+            "sourceColumn": "PNM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TENTCARD_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9583b764-ef6d-42da-b163-d673cf61b356",
+            "sourceColumn": "TENTCARD_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "P_REL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e91f8c68-0ba3-4e45-bba8-892c098019dc",
+            "sourceColumn": "P_REL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PSC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d0602d72-5137-41aa-aae1-2ec9ccb6a65d",
+            "sourceColumn": "PSC",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "976e63e4-f2d9-4dcd-8f39-542fcf582206",
+        "partitions": [
+          {
+            "name": "Decline-992d97a1-f7bd-48f1-adf2-7789bf524a09",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"SELECT distinct#(lf)    ee.EVENT_NAME,#(lf)    ep2.EVENT_ID,#(lf)    'PARTICIPATION' PALL,#(lf)    to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') efy,#(lf)    ep2.REGISTRATION_ID prd,#(lf)    ep2.ID_NUMBER pid,#(lf)    e.PREF_MAIL_NAME pnm,#(lf)    ep2.TENTCARD_NAME,#(lf)    trt.SHORT_DESC p_rel,#(lf)    ep.PARTICIPATION_STATUS_CODE psc#(lf)    -- ds.DNR_SUM_LIFETIME_GIFT_AMT p_lg_amt,#(lf)   --  TO_NUMBER(NVL(xmer.xmgevi,-1)) pgevi#(lf)  FROM advance.EP_EVENT ee #(lf)    LEFT JOIN advance.EP_PARTICIPATION ep  ON ee.EVENT_ID = ep.EVENT_ID #(lf)    LEFT JOIN advance.EP_PARTICIPANT ep2 ON ep.EVENT_ID = ep2.EVENT_ID#(lf)    LEFT JOIN advance.ENTITY e ON ep2.ID_NUMBER = e.ID_NUMBER#(lf)    LEFT JOIN advance.TMS_RECORD_TYPE trt ON e.RECORD_TYPE_CODE = trt.RECORD_TYPE_CODE#(lf)   -- LEFT JOIN advance.DONOR_SUMMARY ds ON e.ID_NUMBER = ds.DNR_SUM_ID_NUMBER#(lf)   -- LEFT JOIN (SELECT mer.ID_NUMBER,CASE WHEN mer.MG_EVI = 'N/A' THEN '-1'#(lf)     --  WHEN mer.MG_EVI IS NULL THEN '-1'#(lf)    --   ELSE mer.MG_EVI END xmgevi FROM advur.MVW_ENT_RATINGS mer) xmer #(lf)         --    ON e.ID_NUMBER = xmer.ID_NUMBER#(lf)  WHERE to_char(ADD_MONTHS(ee.event_start_datetime,6),'YYYY') >= '2021'#(lf)    AND ep2.REGISTRATION_ID IS NOT NULL#(lf)    AND ep.PARTICIPATION_STATUS_CODE = 'D'#(lf)  ORDER BY ep2.EVENT_ID  desc\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Faculty and Staff Giving Report.Dataset"
+    },
+    "byConnection": null
+  }
+}

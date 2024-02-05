@@ -1,0 +1,505 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Prod Scholarships\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Prod Scholarships",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "School/College",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b74724ac-120c-4b4f-81c6-50ff2e031a1a",
+            "sourceColumn": "School/College",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "959a6eef-8968-4554-8498-6b4b9c675f78",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2499e81-12da-4632-9a8c-34013af4c3fd",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scholarship Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a538faa3-4901-4d4b-beb2-9c67f36c2363",
+            "sourceColumn": "Scholarship Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "e18fa3bf-c059-4310-80cf-020c4784bb76",
+            "sourceColumn": "Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp SubPriority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d70da234-3ea5-4615-a8b7-7cbe6bfbf8f2",
+            "sourceColumn": "Camp SubPriority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0d9a57e8-2f3e-4aad-81d9-dda566907c1b",
+            "sourceColumn": "Alloc Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Est Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f17982d8-915f-4a6a-a5eb-084cb095a4fb",
+            "sourceColumn": "Est Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scholarship Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fd800731-3cee-4c5b-9b5f-a43b477e6f5a",
+            "sourceColumn": "Scholarship Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Act?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a787652b-f4b5-47a1-b850-310f9ec99d9a",
+            "sourceColumn": "Act?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c93a6941-4c82-46ed-859f-deb046137962",
+            "sourceColumn": "Prod Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "676b1a9e-28b7-4711-af95-5170c6060ea0",
+            "sourceColumn": "Prod Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52205a71-ec20-43ee-85be-1abcb457cd64",
+            "sourceColumn": "Prod Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "555adc33-1917-4eba-9ae4-f6e54a8a8a4f",
+            "sourceColumn": "Prod Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "af06fe00-26e5-4e16-89dc-d69e72ce4a62",
+            "sourceColumn": "Prod Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Prod Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "be0dadf2-e2d9-4479-83d9-47ae2e86a342",
+            "sourceColumn": "Prod Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fund",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "458828d1-36c0-4682-9f06-a5ad41c13e69",
+            "sourceColumn": "Fund",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Org",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fc9d073a-683e-459d-a36f-0d08b4e296db",
+            "sourceColumn": "Org",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9a70ebde-74a4-47a5-96f6-89c3e6c30cc2",
+            "sourceColumn": "Campaign Bucket",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4e181549-ffaf-465e-862f-e5dd5c946645",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Goal Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "66ce1706-8928-4acc-aeda-a5b48906d4e2",
+            "sourceColumn": "Camp Goal Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Goal SubCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "abc489cd-5f7e-4d7e-8a01-ff6eca7c94fc",
+            "sourceColumn": "Camp Goal SubCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Est Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b04434dc-af88-42b7-aeb1-1f8127bbfc4c",
+            "sourceColumn": "Sort Est Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "16e9bffc-7796-4914-8c82-8bfce94d36d5",
+            "sourceColumn": "Sort Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e80138d-68cc-4e10-9beb-5be8259c0d85",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9c468da6-6c7b-41e4-98a4-f38c242c138c",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1ba2ff17-ebcc-4c74-95f2-8fd9021574bb",
+            "sourceColumn": "Sort Priority",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ce472d19-3c95-48fe-9b27-2de0545c6750",
+            "sourceColumn": "Sort Bucket",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort SubPriority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b50570b6-4168-4665-9205-8292e5638658",
+            "sourceColumn": "Sort SubPriority",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort GoalCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8aa5218d-873e-4baa-89d2-32db43962b46",
+            "sourceColumn": "Sort GoalCat",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Goal SubCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d8af969e-95db-4418-a740-0ab42bd7c2bc",
+            "sourceColumn": "Sort Goal SubCat",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "61c02aca-8651-4ece-8464-df2d7d07675c",
+        "partitions": [
+          {
+            "name": "Prod Scholarships-cc3a5b9e-e7cb-4c31-8f0b-61f8836d5260",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"-- New Production query to replace existing query in all PBI reports for scholarships. smk 9/12/2022#(lf)#(lf)select distinct a.school                       \"\"School/College\"\",#(lf)       a.allocation_code                       \"\"Alloc Code\"\",#(lf)       a.allocation_name                       \"\"Allocation Name\"\",#(lf)       c3.short_desc                           \"\"Camp SubPriority\"\",#(lf)       grp.short_desc                          \"\"Alloc Group\"\",#(lf)       prod.fincat                             \"\"Scholarship Type\"\",#(lf)       a.start_date                            \"\"Start Dt\"\",#(lf)       CASE WHEN a.start_date < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)          ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END   \"\"Est Yr\"\",#(lf)       CASE WHEN a.allocation_code = prodx.allc THEN 'New in Pre-Campaign'#(lf)            WHEN a.category3_code IN ('CS1','CS2','CS3') THEN 'New in Campaign'#(lf)          ELSE 'Pre-Existing, Funded in Campaign' END  \"\"Scholarship Status\"\",#(lf)       a.is_active                             \"\"Act?\"\",#(lf)       prod.nbr                                \"\"Prod Trans Nbr\"\",#(lf)       trunc(prod.dt)                          \"\"Prod Trans Dt\"\",#(lf)       prod.fy                                 \"\"Prod Fiscal Yr\"\",#(lf)       CASE WHEN prod.dt < '01-OCT-2016' THEN 'Pre-Campaign'#(lf)            WHEN prod.dt >= '01-OCT-2016' AND prod.fy = '2017' THEN '2017 (Partial)'#(lf)          ELSE prod.fy END                     \"\"Prod Camp Yr\"\",#(lf)       prod.amt                                \"\"Prod Amt\"\",#(lf)       prod.typ                                \"\"Prod Trans Type\"\",#(lf)       a.alloc_fund                            \"\"Fund\"\",#(lf)       a.alloc_org                             \"\"Org\"\",#(lf)       c1.short_desc                           \"\"Campaign Bucket\"\",#(lf)       a.campaign_priority                     \"\"Campaign Priority\"\",#(lf)       gc.short_desc                           \"\"Camp Goal Category\"\",#(lf)       gsc.short_desc                          \"\"Camp Goal SubCategory\"\",#(lf)       CASE WHEN a.start_date < '01-OCT-2016' THEN '2015'#(lf)          ELSE to_char(EXTRACT(YEAR FROM ADD_MONTHS(a.start_date,6))) END   \"\"Sort Est Yr\"\",#(lf)       CASE WHEN prod.dt < '01-OCT-2016' THEN '2015'#(lf)            WHEN prod.dt >= '01-OCT-2016' AND prod.fy = '2017' THEN '2016'#(lf)          ELSE prod.fy END                     \"\"Sort Camp Yr\"\",#(lf)       a.sort_name                             \"\"Sort Alloc\"\",#(lf)       prod.sfc                                \"\"Sort FinCat\"\",#(lf)       prod.spr                                \"\"Sort Priority\"\",#(lf)       c1.hierarchy_order                      \"\"Sort Bucket\"\",#(lf)       c3.hierarchy_order                      \"\"Sort SubPriority\"\",#(lf)       gc.hierarchy_order                      \"\"Sort GoalCat\"\",#(lf)       gsc.hierarchy_order                     \"\"Sort Goal SubCat\"\"#(lf)from advur.mvw_allocations a#(lf)left join advance.tms_category1 c1       ON a.category1_code = c1.category1_code#(lf)left join advance.tms_category3 c3       ON a.category3_code = c3.category3_code#(lf)left join advance.tms_endow_pool gc      ON a.campaign_goal_category = gc.endow_pool#(lf)left join advance.tms_endow_type gsc     ON a.campaign_goal_subcategory = gsc.endow_type#(lf)left join advance.tms_alloc_sub_dept grp ON a.alloc_sub_dept = grp.alloc_sub_dept_code#(lf)inner join (#(lf)            select p.allocation_code allc, p.finance_category fincat, p.trans_dt dt, p.trans_amt amt, p.fiscal_yr fy, #(lf)                   p.trans_category tcat, xc3.full_desc cc, p.trans_nbr nbr, p.trans_type typ, p.fincat_sort sfc, p.priority_sort spr#(lf)              from advur.mvw_total_production p#(lf)             inner join advur.mvw_total_production_ext xp ON p.trans_nbr = xp.trans_nbr#(lf)              left join advance.tms_category3 xc3          ON xp.category3_code = xc3.category3_code#(lf)             where p.finance_category IN ('Annual Scholarships','Endowed Scholarships')#(lf)             and   p.campaign_ind = 'Current Campaign'#(lf)            )prod ON a.allocation_code = prod.allc#(lf)left join (#(lf)            select distinct xp2.allocation_code allc#(lf)              from advur.mvw_total_production xp2#(lf)             inner join advur.mvw_total_production_ext xxp2 ON xp2.trans_nbr = xxp2.trans_nbr#(lf)             inner join advur.mvw_allocations xa2           ON xp2.allocation_code = xa2.allocation_code#(lf)              left join advance.tms_category3 xxc32         ON xxp2.category3_code = xxc32.category3_code#(lf)             where xp2.finance_category IN ('Annual Scholarships','Endowed Scholarships')#(lf)             and   xp2.campaign_ind = 'Current Campaign'#(lf)             and   xa2.start_date BETWEEN '01-JUL-2013' AND '30-SEP-2016'#(lf)             and   xp2.trans_dt BETWEEN '01-JUL-2013' AND '30-SEP-2016'#(lf)            )prodx ON a.allocation_code = prodx.allc#(lf)#(lf)where a.category3_code IN ('CS1','CS2','CS3','CS7','CS8')#(lf)#(lf)order by \"\"Est Yr\"\", \"\"Prod Amt\"\" desc\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Start Dt\", type date}, {\"Prod Trans Dt\", type date}, {\"Prod Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

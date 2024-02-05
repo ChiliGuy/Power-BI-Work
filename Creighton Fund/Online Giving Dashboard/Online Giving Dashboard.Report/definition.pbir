@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Online Giving Dashboard.Dataset"
+    },
+    "byConnection": null
+  }
+}

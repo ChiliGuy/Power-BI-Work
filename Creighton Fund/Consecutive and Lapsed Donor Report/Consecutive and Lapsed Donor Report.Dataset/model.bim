@@ -1,0 +1,823 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Giving\",\"Consec Sort\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "c7d8124f-b2ca-4242-a500-ac7e381bb7b5",
+        "fromColumn": "CONSEC_GIVING",
+        "fromTable": "Giving",
+        "toColumn": "Cons Giving",
+        "toTable": "Consec Sort"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Giving",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "HOUSEHOLD_KEY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4e723962-c2f3-497a-9880-171a3c77715c",
+            "sourceColumn": "HOUSEHOLD_KEY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PRIMARY_ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6c7c9583-03a0-418a-86da-0237687b9dc0",
+            "sourceColumn": "PRIMARY_ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SECONDARY_ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "edd7d1af-e403-4fda-998b-5836cc3946db",
+            "sourceColumn": "SECONDARY_ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SCHOOL_CODE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "19531403-3507-438c-b5e8-b10f3422e6fd",
+            "sourceColumn": "SCHOOL_CODE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RECORD_TYPE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fc328341-e55b-47e6-9dc4-b796a10dd741",
+            "sourceColumn": "RECORD_TYPE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CONSEC_GIVING",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ae45a138-b011-409d-abdd-cd13c2294626",
+            "sourceColumn": "CONSEC_GIVING",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "e00ae4b1-b143-4054-aa83-a6f95f0e08b4",
+            "sourceColumn": "FY0",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "b913e6a8-170e-4369-b361-739b36ba5e5c",
+            "sourceColumn": "FY1",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "fb036fc2-a755-47fd-ba63-908765c335d4",
+            "sourceColumn": "FY2",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "187ce564-5bbf-4d82-bc6f-edc7f3971278",
+            "sourceColumn": "FY3",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9b39e7db-6871-4cfc-ac32-283c48bfeb98",
+            "sourceColumn": "FY4",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4779ffe5-80f5-4bab-9931-77af8860c305",
+            "sourceColumn": "FY5",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY6",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e76fa22b-724b-4fb4-9b35-b18727fd9845",
+            "sourceColumn": "FY6",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY7",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c948a00d-1621-4216-8732-9994f726e6e6",
+            "sourceColumn": "FY7",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY8",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "77081e17-39d4-45e3-aac4-97bf0f59fd55",
+            "sourceColumn": "FY8",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY9",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f60f2c81-988c-42f4-b5e6-65f87c9b7421",
+            "sourceColumn": "FY9",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY10",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1c7d8a65-cd1c-4dc6-a279-4d7629fde7ad",
+            "sourceColumn": "FY10",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY11",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "09199638-7513-48c4-afd0-dea8dbff5733",
+            "sourceColumn": "FY11",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY12",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "04b728f9-6e27-4f90-8033-d59cc76525f5",
+            "sourceColumn": "FY12",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY13",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ced3b067-c027-4f4d-93db-ed8d8a8ca961",
+            "sourceColumn": "FY13",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY14",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3c1874ae-71bc-485f-bc1b-9f6e7d7b2d01",
+            "sourceColumn": "FY14",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY15",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9c4bde79-5752-4c2a-9217-af248662f8bf",
+            "sourceColumn": "FY15",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY16",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a5c2df45-383e-46a7-a59f-e9c87df501ee",
+            "sourceColumn": "FY16",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY17",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9eb818e4-e30b-4f77-bf95-39e2ac9d8300",
+            "sourceColumn": "FY17",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY18",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "383e9907-c25a-4aa6-896f-50d539569d1b",
+            "sourceColumn": "FY18",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY19",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8e8a249f-eb16-4fea-9864-1bf73173258f",
+            "sourceColumn": "FY19",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a9f45f10-9637-4f93-a883-464311716f6a",
+            "sourceColumn": "FY20",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "LAPSED",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "001735c7-5338-4579-b240-b92d4d3e0c02",
+            "sourceColumn": "LAPSED",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "96c660d3-a3bb-462e-a4bd-96155a35fabf",
+        "measures": [
+          {
+            "name": "Household Cnt by Cons Giv Lvl",
+            "expression": "COUNT(Giving[HOUSEHOLD_KEY])",
+            "formatString": "#,0",
+            "lineageTag": "6f442eb8-a517-401f-a128-f6c9cc44efd7"
+          },
+          {
+            "name": "Measure",
+            "expression": "CALCULATE(COUNTROWS(Giving),FILTER(Giving,Giving[FY1]>0))",
+            "formatString": "0",
+            "lineageTag": "242d7376-18d0-4b4e-abbc-b8d676253b40"
+          },
+          {
+            "name": "Measure2",
+            "expression": "CALCULATE(COUNTROWS(Giving),FILTER(Giving,Giving[FY2]>0))",
+            "formatString": "0",
+            "lineageTag": "33656154-9da0-48cb-85cb-c9ed2c81d3a3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Giving-d36671b8-65b0-46bf-b9c5-6ee08380bff8",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"WITH tprod AS (#(lf)SELECT fygs.household_key,gen.primary_id_number,gen.secondary_id_number,fygs.fiscal_period, fygs.total_giving,rt.record_type,s.school_code#(lf)FROM advur.MVW_HH_FY_GIVING_SUMMARIES fygs#(lf)inner join advur.mvw_hh_entities_gen gen on fygs.household_key = gen.household_key#(lf)inner join advur.mvw_hh_record_type rt on fygs.household_key = rt.household_key#(lf)inner join advur.mvw_hh_school s on fygs.household_key = s.household_key and s.school_code_rank = 1#(lf)WHERE fygs.counting_method = 'TREV'#(lf)and fygs.total_giving > 0),#(lf)#(lf)        pivot AS (#(lf)SELECT *#(lf)FROM tprod#(lf)PIVOT#(lf)(MAX(tprod.total_giving) FOR fiscal_period IN ('FY0' FY0, 'FY1' FY1, 'FY2' FY2, 'FY3' FY3, 'FY4' FY4, 'FY5' FY5,#(lf) 'FY6' FY6, 'FY7' FY7, 'FY8' FY8, 'FY9' FY9, 'FY10' FY10, 'FY11' FY11, 'FY12' FY12, 'FY13' FY13, 'FY14' FY14, 'FY15' FY15,#(lf) 'FY16' FY16, 'FY17' FY17, 'FY18' FY18, 'FY19' FY19, 'FY20' FY20))),#(lf)#(lf)     kpis AS (#(lf)SELECT household_key,primary_id_number,secondary_id_number,record_type,school_code,#(lf)       --  NVL(FY0, 0) FY0, NVL(FY1, 0) FY1, NVL(FY2, 0) FY2, NVL(FY3, 0) FY3, NVL(FY4, 0) FY4, NVL(FY5, 0) FY5, NVL(FY6, 0) FY6, NVL(FY7, 0) FY7#(lf)         NVL(FY0, 0) FY0, NVL(FY1, 0) FY1, NVL(FY2, 0) FY2, NVL(FY3, 0) FY3, NVL(FY4, 0) FY4, NVL(FY5, 0) FY5,#(lf)          NVL(FY6, 0) FY6, NVL(FY7, 0) FY7, NVL(FY8, 0) FY8, NVL(FY9, 0) FY9, NVL(FY10, 0) FY10, NVL(FY11, 0) FY11, NVL(FY12, 0) FY12, NVL(FY13, 0) FY13, NVL(FY14, 0) FY14, NVL(FY15, 0) FY15,#(lf)          NVL(FY16, 0) FY16, NVL(FY17, 0) FY17, NVL(FY18, 0) FY18, NVL(FY19, 0) FY19, NVL(FY20, 0) FY20#(lf)FROM pivot),#(lf)#(lf)everything as (#(lf)SELECT distinct household_key,primary_id_number,secondary_id_number,school_code,record_type,#(lf)           CASE#(lf)         WHEN FY1 > 0 AND FY2 = 0 THEN '1 Year'#(lf)         WHEN FY1 > 0 AND FY2 > 0 AND FY3 = 0 THEN '2 Years'#(lf)         WHEN FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 = 0 THEN '3 Years'#(lf)         WHEN FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 > 0 AND FY5 = 0 THEN '4 Years'  #(lf)         WHEN FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 > 0 AND FY5 > 0 AND FY6 = 0 THEN '5 Years'#(lf)         WHEN (FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 > 0 AND FY5 > 0 AND FY6 > 0 AND FY10 = 0) THEN '6 to 9 Years'#(lf)         WHEN (FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 > 0 AND FY5 > 0 AND FY6 > 0 AND FY7 > 0#(lf)          AND FY8 > 0 AND FY9 > 0 AND FY10 > 0 AND FY15 = 0 ) THEN '10 to 14 Years'#(lf)           WHEN (FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 > 0 AND FY5 > 0 AND FY6 > 0 AND FY7 > 0#(lf)          AND FY8 > 0 AND FY9 > 0 AND FY10 > 0 AND FY11 > 0 AND FY12 > 0 AND FY13 > 0 AND FY14 > 0 AND FY15 > 0 AND FY20 = 0) THEN '15 to 19 Years'#(lf)          WHEN (FY1 > 0 AND FY2 > 0 AND FY3 > 0 AND FY4 > 0 AND FY5 > 0 AND FY6 > 0 AND FY7 > 0#(lf)          AND FY8 > 0 AND FY9 > 0 AND FY10 > 0 AND FY11 > 0 AND FY12 > 0 AND FY13 > 0 AND FY14 > 0 AND FY15 > 0 AND FY16 > 0 AND FY17 > 0 AND FY18 > 0 AND FY19 > 0 AND FY20 > 0) THEN '20+ Years'#(lf)#(lf)         END consec_giving,#(lf)         CASE #(lf)           WHEN FY1 > 0 THEN 'Last FY Donor'#(lf)           WHEN FY2 > 0 AND FY1 = 0 #(lf)                   THEN 'Lapsed 1 Year'#(lf)                   WHEN FY3 > 0 AND FY2 = 0 AND FY1 = 0 #(lf)                   THEN 'Lapsed 2 Years'#(lf)                   WHEN FY4 > 0 AND FY3 = 0 AND FY2 = 0 AND FY1 = 0 #(lf)                   THEN 'Lapsed 3 Years'#(lf)                   WHEN FY5 > 0 AND FY4 = 0 AND FY3 = 0 AND FY2 = 0 AND FY1 = 0 #(lf)                   THEN 'Lapsed 4 Years'#(lf)                   WHEN FY6 > 0 AND FY5 = 0 AND FY4 = 0 AND FY3 = 0 AND FY2 = 0 AND FY1 = 0 #(lf)                   THEN 'Lapsed 5 Years'#(lf)                   WHEN FY6 = 0 and FY5 = 0 and FY4 = 0 and FY3 = 0 and FY2 = 0 and FY1 = 0#(lf)                   THEN 'Lapsed 6+ Years'#(lf)                   --WHEN FY0 > 0#(lf)                   --THEN 'Current Donor'#(lf)                   ELSE ' ' END lapsed,#(lf)         FY0,FY1,FY2,FY3,FY4,FY5,FY6,FY7,FY8,FY9,FY10,FY11,FY12,FY13,FY14,FY15,FY16,FY17,FY18,FY19,FY20#(lf)                   #(lf)FROM kpis#(lf))#(lf)select * from everything e#(lf)--where consec_giving <> ' '#(lf)\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_3da2c83f-c5ba-4403-b216-f180d85943cd",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "db7cd6b8-e5ac-4e7d-a0cf-9cb46ded879f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "54857ef8-eb4d-47c7-ba5f-73ccb52b7c6b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a2e98644-c782-49f0-a0ca-55259db310a0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "04d2917c-c861-4cff-b981-880220ca9a4c",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "1fe0e3f7-0160-4bc3-925a-53461825f077",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ba87bab4-e002-4a7d-81c0-ba78856d0533",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "fe14ad47-b0ea-4638-a220-a6fd30183d75",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "89317406-dc5a-4d30-838b-d73d1fa1329b",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "301324ac-3336-4c7a-bb0e-c5346ad77cef",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "604b0f24-0dfd-4154-aa77-0b73561bcb93",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "9a148d06-78d5-4115-afd9-3fa22106376f",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "790e99ac-9ad3-42ff-85fd-cc2891d6dc7d"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "aa9992af-0ea8-40de-8c6b-b436e5ee3642",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_3da2c83f-c5ba-4403-b216-f180d85943cd-fe4b01fa-e035-4fb8-b542-8e0e4db85a48",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Consec Sort",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cons Giving",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "faa70d5c-9d1d-4b6b-b5f4-562f58e0c2c9",
+            "sortByColumn": "Consec Sort Order",
+            "sourceColumn": "Cons Giving",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Consec Sort Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5f1eb164-30e3-4536-96bc-3e4fe96384e1",
+            "sourceColumn": "Consec Sort Order",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "02cbcb9f-f97a-48ca-a93d-15ca273586d0",
+        "partitions": [
+          {
+            "name": "Consec Sort-f04fa7f6-7b0d-48c7-8b79-a6ed005ad5df",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMlSITE0sUtJRMlSK1YlWMgJzi4F8IzDfGM43BvNN4HwTMN8UzjcF880USvIVLOGCZmBBQwOQqCFCrzlE2BQsjFBtAXGCgTZcxFIpNhYA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [#\"Cons Giving\" = _t, #\"Consec Sort Order\" = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Cons Giving\", type text}, {\"Consec Sort Order\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

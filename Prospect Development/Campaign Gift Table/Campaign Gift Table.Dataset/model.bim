@@ -1,0 +1,1338 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"campaign_prospect_table\",\"Last Refresh Date\",\"Report Inventory\",\"campaign_pyramid\",\"pyramid_camp_potential_translate\",\"campaign_household_giving\",\"TNS_NAME\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "campaign_household_giving.actual_closed_gifts": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "campaign_household_giving",
+                    "ConceptualProperty": "actual_closed_gifts"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Actual Closed Gifts": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "campaign_household_giving.total_committments": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "campaign_household_giving",
+                    "ConceptualProperty": "total_committments"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total Committments": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pyramid_camp_potential_translate.pyramid_level": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "pyramid_camp_potential_translate",
+                    "ConceptualProperty": "pyramid_level"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Campaign Pyramid Level": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "TNS_NAME",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"PADV\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVTEST\", \"ADVDEV9\"}, DefaultValue=\"ADVTEST\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "2aff2786-6b5f-419b-8a0e-347e2d57fafd"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "9e338c1b-9c42-44a0-8569-51fbded78f78",
+        "fromColumn": "Last Refresh Date Time",
+        "fromTable": "Last Refresh Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_6cf1a128-875c-4f2f-9ddc-98ea0207e594"
+      },
+      {
+        "name": "08736a54-7747-4b8a-b52f-60cd37afd9d6",
+        "fromColumn": "PYRAMID_LEVEL_SORT",
+        "fromTable": "campaign_household_giving",
+        "toColumn": "pyramid_level_sort",
+        "toTable": "pyramid_camp_potential_translate"
+      },
+      {
+        "name": "ba42a547-77d4-4a36-8f80-7bed24f3d3f0",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "campaign_potential_code",
+        "fromTable": "campaign_pyramid",
+        "toColumn": "campaign_potential_code",
+        "toTable": "pyramid_camp_potential_translate"
+      },
+      {
+        "name": "d37ecbcc-3b87-42b8-8bbf-d22a065fb6e4",
+        "fromColumn": "campaign_potential_code",
+        "fromTable": "campaign_prospect_table",
+        "toColumn": "campaign_potential_code",
+        "toTable": "pyramid_camp_potential_translate"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "campaign_prospect_table",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":3,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/campaign_prospect_table/Replaced Value1.{Campaign Potential,0}\",\"Section1/campaign_prospect_table/Source.{RATED_ASSIGNED_PROSPECTS,2}\",\"Section1/campaign_prospect_table/Added Conditional Column.{campaign_potential_code,3}\"],\"ColumnCount\":3,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/campaign_prospect_table/Replaced Value1.{Campaign Potential,0}\",\"Section1/campaign_prospect_table/Source.{RATED_ASSIGNED_PROSPECTS,2}\",\"Section1/campaign_prospect_table/Added Conditional Column.{campaign_potential_code,3}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Campaign Potential",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d28d6353-99b2-4cc0-a313-b9a88538a5df",
+            "sortByColumn": "campaign_potential_code",
+            "sourceColumn": "Campaign Potential",
+            "sourceProviderType": "VARCHAR2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Count of Prospects",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "73787582-aa19-4290-acdd-1981067cee02",
+            "sourceColumn": "Count of Prospects",
+            "sourceProviderType": "NUMBER",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "campaign_potential_code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf49ead7-dc39-4f8e-a85d-57ea9635356b",
+            "sourceColumn": "campaign_potential_code",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6f281765-7f10-44df-b046-ab5d26a06407",
+        "partitions": [
+          {
+            "name": "campaign_prospect_table-5fdca8d3-ba29-4589-8a93-7655a3b0b081",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(TNS_NAME, [HierarchicalNavigation=true, Query=\"SELECT * #(lf)FROM advur.vw_rating_prospect_counts\"]),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"CMP_POTENTIAL\", \"Campaign Potential\"}, {\"RATED_ASSIGNED_PROSPECTS\", \"Count of Prospects\"}}),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(#\"Renamed Columns\", \"campaign_potential_code\", each if [Campaign Potential] = \"Unrated\" then \"A0\" else if [Campaign Potential] = \"Zero\" then \"A0\" else [CMP_POTENTIAL_CD]),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Conditional Column\",{\"CMP_POTENTIAL_CD\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"Zero\",\"None\",Replacer.ReplaceText,{\"Campaign Potential\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Unrated\",\"None\",Replacer.ReplaceText,{\"Campaign Potential\"})",
+                "in",
+                "    #\"Replaced Value1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_02f247aa-f1e0-468b-bbab-b61795426bfa",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "176c0356-da56-49ef-b829-47227ffc3ed0",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "c769a347-9277-409e-b5a0-e4335f8b217a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "d652301f-511e-4833-a88e-0e1fbe30a34f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "f51f71af-746c-40e3-87c8-96d22e45eb11",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "96fa81d0-dc53-463f-beba-5a57fecdbb6f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ea3148d0-8254-4d20-abe9-a39628bc265a",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "48026a43-2da6-4ee1-9c2f-2c5982326546",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f61dab8c-717a-4849-90ea-f45cea2f81c3",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "5f93788c-3687-400e-b448-97e3258ee486",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "5224e099-69ee-4f99-a4be-4601991020d4",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "c86aba06-20c3-4b48-9369-a029a6a7961d",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "ff7e1664-0947-4fd5-90d7-af0d696fd5e8"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "81cdadbc-3fe3-4e32-8ec0-c317ec369599",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_02f247aa-f1e0-468b-bbab-b61795426bfa-609cc3b7-06fd-45f7-a580-40265ce882f2",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Last Refresh Date",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":1,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Last Refresh Date/Changed Type.{Last Refresh Date Time,0}\"],\"ColumnCount\":1,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Last Refresh Date/Changed Type.{Last Refresh Date Time,0}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Last Refresh Date Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "f9c6ba42-2ea1-44a6-9ff8-90a94db3179d",
+            "sourceColumn": "Last Refresh Date Time",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_6cf1a128-875c-4f2f-9ddc-98ea0207e594"
+                },
+                "isDefault": true,
+                "relationship": "9e338c1b-9c42-44a0-8569-51fbded78f78"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "9ee73520-8fc5-4c07-a143-9164379f033c",
+        "partitions": [
+          {
+            "name": "Last Refresh Date-d78b1556-a857-4c33-9e43-62848f04e50c",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),10)),",
+                "    #\"Converted to Table\" = #table(1, {{Source}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Last Refresh Date Time\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Last Refresh Date Time\", type datetime}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_6cf1a128-875c-4f2f-9ddc-98ea0207e594",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "59526d08-2b70-4684-a878-123bd95f73e9",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "29aac5ab-39da-4203-83ac-f266d6635c59",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "119b3bef-a9f5-4b8c-9860-c66285086af6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "42a313f7-3256-48cb-85a4-823e4602c9f8",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "c255d471-18b7-4ee0-bf32-21ada3bd128a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "46cd7ef5-5e52-4977-bcc6-fce74866673d",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "972493b9-de7f-4dcb-89a5-0a5e4dd76a16",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "676d6aa2-6b2b-44d8-abcc-c29ffbc07baa",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "379aee17-f2df-411c-b114-f8888300260a",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "3d629ad9-1038-4428-80f2-602bba27cb4c",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2c29c525-50e0-4d9e-a08c-93b89974adeb",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "9c2d3cf2-9451-4fbb-a281-ed603cc92058"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "58aca94c-f359-439a-bd49-3a2f262dd842",
+        "partitions": [
+          {
+            "name": "LocalDateTable_6cf1a128-875c-4f2f-9ddc-98ea0207e594-bd969865-be92-44d2-af1c-06c38934ba40",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Last Refresh Date'[Last Refresh Date Time])), 1, 1), Date(Year(MAX('Last Refresh Date'[Last Refresh Date Time])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Report Inventory",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":20,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Report Inventory/Report Inventory1.{Id,0}\",\"Section1/Report Inventory/Report Inventory1.{Report ID,1}\",\"Section1/Report Inventory/Report Inventory1.{Title,2}\",\"Section1/Report Inventory/Report Inventory1.{Description,3}\",\"Section1/Report Inventory/Report Inventory1.{Report Group,4}\",\"Section1/Report Inventory/Report Inventory1.{Report Platform,5}\",\"Section1/Report Inventory/Report Inventory1.{Last Updated,6}\",\"Section1/Report Inventory/Report Inventory1.{Change Log,7}\",\"Section1/Report Inventory/Report Inventory1.{Changed By,8}\",\"Section1/Report Inventory/Report Inventory1.{Technical Support Co,9}\",\"Section1/Report Inventory/Report Inventory1.{Report Directory,10}\",\"Section1/Report Inventory/Report Inventory1.{Published Date,11}\",\"Section1/Report Inventory/Report Inventory1.{Data Source,12}\",\"Section1/Report Inventory/Report Inventory1.{URL,13}\",\"Section1/Report Inventory/Report Inventory1.{Stored Procedure _x0,14}\",\"Section1/Report Inventory/Report Inventory1.{Views,15}\",\"Section1/Report Inventory/Report Inventory1.{Subreport,16}\",\"Section1/Report Inventory/Report Inventory1.{Requestor,17}\",\"Section1/Report Inventory/Report Inventory1.{IntendedAudience,18}\",\"Section1/Report Inventory/Report Inventory1.{DescriptionofLogic,19}\"],\"ColumnCount\":20,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Report Inventory/Report Inventory1.{Id,0}\",\"Section1/Report Inventory/Report Inventory1.{Report ID,1}\",\"Section1/Report Inventory/Report Inventory1.{Title,2}\",\"Section1/Report Inventory/Report Inventory1.{Description,3}\",\"Section1/Report Inventory/Report Inventory1.{Report Group,4}\",\"Section1/Report Inventory/Report Inventory1.{Report Platform,5}\",\"Section1/Report Inventory/Report Inventory1.{Last Updated,6}\",\"Section1/Report Inventory/Report Inventory1.{Change Log,7}\",\"Section1/Report Inventory/Report Inventory1.{Changed By,8}\",\"Section1/Report Inventory/Report Inventory1.{Technical Support Co,9}\",\"Section1/Report Inventory/Report Inventory1.{Report Directory,10}\",\"Section1/Report Inventory/Report Inventory1.{Published Date,11}\",\"Section1/Report Inventory/Report Inventory1.{Data Source,12}\",\"Section1/Report Inventory/Report Inventory1.{URL,13}\",\"Section1/Report Inventory/Report Inventory1.{Stored Procedure _x0,14}\",\"Section1/Report Inventory/Report Inventory1.{Views,15}\",\"Section1/Report Inventory/Report Inventory1.{Subreport,16}\",\"Section1/Report Inventory/Report Inventory1.{Requestor,17}\",\"Section1/Report Inventory/Report Inventory1.{IntendedAudience,18}\",\"Section1/Report Inventory/Report Inventory1.{DescriptionofLogic,19}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "af1225c8-dedb-4193-a2ff-45e684382df1",
+            "sourceColumn": "Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cfe71fa9-faab-4ea7-9393-2c0ea4941070",
+            "sourceColumn": "Report ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1ea95170-0ef1-4af8-84a4-906a7cfa3bc7",
+            "sourceColumn": "Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "791b3117-5587-4b5b-bf33-ba767ce29466",
+            "sourceColumn": "Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4a14f1e9-4650-47da-9dbe-a8c23d9c278a",
+            "sourceColumn": "Report Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Platform",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7364b017-0383-46e3-8057-a64fabb10f70",
+            "sourceColumn": "Report Platform",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last Updated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "03b0e7bc-414e-4440-a4a0-d395ad0041f9",
+            "sourceColumn": "Last Updated",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Change Log",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59204de2-1986-457c-8509-81e9253895e8",
+            "sourceColumn": "Change Log",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Changed By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e8a52c5-4cc5-4432-91ac-e69b298e05af",
+            "sourceColumn": "Changed By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Technical Support Co",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "981e3f48-6e2d-43ea-aba2-d57b7897dd24",
+            "sourceColumn": "Technical Support Co",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Directory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "365a1139-ffc9-4ee2-b6a9-67ced5ecf931",
+            "sourceColumn": "Report Directory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Published Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fcaf78e0-ecd3-4542-b272-165ddb87fa8e",
+            "sourceColumn": "Published Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Data Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "11f6b58c-06fe-4a51-afc2-837c5e81b588",
+            "sourceColumn": "Data Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "URL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f48680f2-f5f9-470a-a50e-c7136a65aac8",
+            "sourceColumn": "URL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Stored Procedure _x0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "deeaccdb-98d4-4777-a14f-490251bbdc85",
+            "sourceColumn": "Stored Procedure _x0",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Views",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dfe7c62c-ef94-4d11-886f-925573bee94b",
+            "sourceColumn": "Views",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subreport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0c561940-43ab-4e3f-8dc6-508be42d95ae",
+            "sourceColumn": "Subreport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Requestor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1dddd82d-01fc-465a-9e6c-0ddf43653d20",
+            "sourceColumn": "Requestor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IntendedAudience",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54948ae3-031c-45e0-9f0a-d9b3f55d0c93",
+            "sourceColumn": "IntendedAudience",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DescriptionofLogic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2a38e788-c9e9-4b9c-83e0-eb0990a7741c",
+            "sourceColumn": "DescriptionofLogic",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7690e3ea-a4ec-45c2-9917-04273e88a265",
+        "partitions": [
+          {
+            "name": "Report Inventory-d46fd46f-8bda-4b9e-9212-ae867d9be45c",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PowerBI.Dataflows(null),",
+                "    #\"922282c1-3a89-4e61-bb8b-31842dac6fa3\" = Source{[workspaceId=\"922282c1-3a89-4e61-bb8b-31842dac6fa3\"]}[Data],",
+                "    #\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\" = #\"922282c1-3a89-4e61-bb8b-31842dac6fa3\"{[dataflowId=\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\"]}[Data],",
+                "    #\"Report Inventory1\" = #\"d919bdd3-a4aa-4831-a49b-9df4f0cfb949\"{[entity=\"Report Inventory\"]}[Data]",
+                "in",
+                "    #\"Report Inventory1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "campaign_pyramid",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":3,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/campaign_pyramid/Changed Type.{campaign_potential_code,0}\",\"Section1/campaign_pyramid/Changed Type.{closed_gifts_needed,1}\",\"Section1/campaign_pyramid/Changed Type.{closed_dollar_value,2}\"],\"ColumnCount\":3,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/campaign_pyramid/Changed Type.{campaign_potential_code,0}\",\"Section1/campaign_pyramid/Changed Type.{closed_gifts_needed,1}\",\"Section1/campaign_pyramid/Changed Type.{closed_dollar_value,2}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "closed_gifts_needed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9c23e6ad-9549-409b-bf9a-76429f2b4e65",
+            "sourceColumn": "closed_gifts_needed",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "closed_dollar_value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "edbbc4b9-be7e-42e2-b7c8-5d654158792d",
+            "sourceColumn": "closed_dollar_value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "campaign_potential_code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3448fac9-c4a3-41bc-b87f-0587c7a1a278",
+            "sourceColumn": "campaign_potential_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pct_of_total_goal",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "double",
+            "expression": "campaign_pyramid[closed_dollar_value]/campaign_pyramid[campaign_goal]",
+            "formatString": "0%;-0%;0%",
+            "isDataTypeInferred": true,
+            "lineageTag": "4ac34683-c5bc-4c5e-8532-33b2c0977f43",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "474bf219-0605-4c7f-8e9d-e6b20e8c2dab",
+        "measures": [
+          {
+            "name": "campaign_goal",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": "650000000",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "03b919c8-e142-4394-8b6d-cda31ae782c5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "campaign_pyramid-59661b8a-7ab1-4620-8b4a-b3cb910c0b0f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"ZZC7DsIwDEX/JXMGJyXQjhVvaMvEVPIL/P9Y394K2SKSMxwfXyuZ59C/QgxJqwhPqFHppCQb+vmSj8oarV2x9qDkgHIZTyQDt05+IEJgO3yHnQtv27hBRUyz5RBfYQr8vOcA+WWNF97GP/94cvEnvIbc+ceN/DV6rNSNaCS7Gf/VRY50ZuKNz5S1al0A\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [campaign_potential_code = _t, closed_gifts_needed = _t, closed_dollar_value = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"campaign_potential_code\", type text}, {\"closed_gifts_needed\", Int64.Type}, {\"closed_dollar_value\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "pyramid_camp_potential_translate",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":3,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/pyramid_camp_potential_translate/Changed Type.{campaign_potential_code,0}\",\"Section1/pyramid_camp_potential_translate/Changed Type.{pyramid_level_sort,1}\",\"Section1/pyramid_camp_potential_translate/Source.{pyramid_level,2}\"],\"ColumnCount\":3,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/pyramid_camp_potential_translate/Changed Type.{campaign_potential_code,0}\",\"Section1/pyramid_camp_potential_translate/Changed Type.{pyramid_level_sort,1}\",\"Section1/pyramid_camp_potential_translate/Source.{pyramid_level,2}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "campaign_potential_code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "92203242-c34e-48bb-ace2-c49daf3793ca",
+            "sortByColumn": "pyramid_level_sort",
+            "sourceColumn": "campaign_potential_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pyramid_level_sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "614620b3-4990-4d19-87f8-731b55dee1d3",
+            "sourceColumn": "pyramid_level_sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pyramid_level",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "879a75a4-b66d-4485-b91f-5b54d8ffd643",
+            "sortByColumn": "pyramid_level_sort",
+            "sourceColumn": "pyramid_level",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a7a09a07-ac27-437a-b123-17cbc7efaa88",
+        "partitions": [
+          {
+            "name": "pyramid_camp_potential_translate-e0d81919-3d9a-4a7f-b091-cf8667851b66",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"XZFNi8IwFEX/SghdZpHUVidL0fHbEQRX0kXFgIOYQq36930vgbzXbrLoObmX3J7PcmqkkmYMx849n6K71V5kRmmtZaUA54hLOOJH0TUiK5S1NuIp4gJxmbAlPEM8Crd14jm7P0cBO7KcAgqW8IuCCQWUYJmwQEHHCt7BlCVQGzs0K2HGCuhPLOEtzFgDnaQZqEf1cjZgjEOT4knhwWRtwSjTZv3dyNqBUdB0STODtD04ceJ+XD7w/sBhSw/WJu+Ag9LgwWta8WhaF4QTBllc6+je/+7jruLy6sTL333z8TED/4fFyU++rTt3lVX1BQ==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [campaign_potential_code = _t, pyramid_level_sort = _t, pyramid_level = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"campaign_potential_code\", type text}, {\"pyramid_level_sort\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "campaign_household_giving",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/campaign_household_giving/Source.{HOUSEHOLD_KEY,0}\",\"Section1/campaign_household_giving/Source.{TOTAL_GIVING,1}\",\"Section1/campaign_household_giving/Source.{PYRAMID_LEVEL,2}\",\"Section1/campaign_household_giving/Source.{PYRAMID_LEVEL_SORT,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/campaign_household_giving/Source.{HOUSEHOLD_KEY,0}\",\"Section1/campaign_household_giving/Source.{TOTAL_GIVING,1}\",\"Section1/campaign_household_giving/Source.{PYRAMID_LEVEL,2}\",\"Section1/campaign_household_giving/Source.{PYRAMID_LEVEL_SORT,3}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "HOUSEHOLD_KEY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87140a0d-9d07-4eda-8cb1-4fa82e7ec9d1",
+            "sourceColumn": "HOUSEHOLD_KEY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_GIVING",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "42b4c93f-0e46-4863-b7a2-40a68ffed23c",
+            "sourceColumn": "TOTAL_GIVING",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PYRAMID_LEVEL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ec64c341-41d2-4b9f-ae8c-69dedfbbc415",
+            "sourceColumn": "PYRAMID_LEVEL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PYRAMID_LEVEL_SORT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "60bec5d6-cc32-438d-8d6d-67a7742888f7",
+            "sourceColumn": "PYRAMID_LEVEL_SORT",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bad64581-1c83-4ae1-82d3-465b4854f03f",
+        "measures": [
+          {
+            "name": "total_committments",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": "IF (CALCULATE ( SUM (campaign_household_giving[TOTAL_GIVING])) = BLANK(), 0, CALCULATE ( SUM (campaign_household_giving[TOTAL_GIVING])))",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "8b2770f3-67ca-417a-98fd-ea7befd6ea50"
+          },
+          {
+            "name": "actual_closed_gifts",
+            "expression": "IF ( CALCULATE ( DISTINCTCOUNTNOBLANK(campaign_household_giving[HOUSEHOLD_KEY]) ) = BLANK(), 0, CALCULATE ( DISTINCTCOUNTNOBLANK(campaign_household_giving[HOUSEHOLD_KEY]) ) )",
+            "formatString": "#,0",
+            "lineageTag": "39fbf176-c999-4d8c-9c16-667930b3a1bd"
+          },
+          {
+            "name": "campaign_shortfall",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "[total_committments] - campaign_pyramid[campaign_goal]",
+            "lineageTag": "5c6083ba-a02c-4b9e-85ba-f76f0bf1dcc6"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "campaign_household_giving-e6a250bb-b21c-482d-8b2c-94db48bdd857",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(TNS_NAME, [HierarchicalNavigation=true, Query=\"WITH prim_hh AS (#(lf)SELECT pe.PROSPECT_ID, hk.HOUSEHOLD_KEY #(lf)FROM advur.MVW_ENT_HOUSEHOLD_KEYS hk#(lf)LEFT JOIN advance.PROSPECT_ENTITY pe ON hk.ID_NUMBER = pe.ID_NUMBER#(lf)WHERE (pe.PRIMARY_IND = 'Y' OR pe.PRIMARY_IND IS NULL)),#(lf)#(lf)     trans AS (#(lf)SELECT DISTINCT #(lf)#(tab)   prod.TRANS_NBR, #(lf)#(tab)   thh.HOUSEHOLD_KEY,  #(lf)#(tab)   prod.TRANS_AMT#(lf)FROM advur.MVW_TOTAL_PRODUCTION prod#(lf)INNER JOIN advur.MVW_TRANS_HOUSEHOLDS thh ON prod.trans_nbr = thh.TRANS_NBR #(lf)WHERE prod.CAMPAIGN_IND = 'Current Campaign'#(lf)ORDER BY prod.TRANS_NBR, thh.HOUSEHOLD_KEY),#(lf)#(lf)     giving AS (#(lf)SELECT trans.HOUSEHOLD_KEY, SUM(trans.TRANS_AMT) total_giving,#(lf)#(tab)   CASE WHEN SUM(trans.TRANS_AMT) <= 999.99 THEN 16#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 1000.00 AND 4999.99 THEN 15#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 5000.00 AND 9999.99 THEN 14#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 10000.00 AND 24999.99 THEN 13#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 25000.00 AND 49999.99 THEN 12#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 50000.00 AND 99999.99 THEN 11#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 100000.00 AND 249999.99 THEN 10#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 250000.00 AND 499999.99 THEN 9#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 500000.00 AND 999999.99 THEN 8#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 1000000.00 AND 2499999.99 THEN 7#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 2500000.00 AND 4999999.99 THEN 6#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 5000000.00 AND 9999999.99 THEN 5#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 10000000.00 AND 14999999.99 THEN 4#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 15000000.00 AND 24999999.99 THEN 3#(lf)            WHEN SUM(trans.TRANS_AMT) BETWEEN 25000000.00 AND 49999999.99 THEN 2#(lf)            WHEN SUM(trans.TRANS_AMT) >= 50000000.00 THEN 1#(lf)            ELSE 99 END pyramid_level_sort#(lf)FROM trans#(lf)GROUP BY trans.HOUSEHOLD_KEY)#(lf)#(lf)SELECT giving.HOUSEHOLD_KEY, giving.total_giving, pyr.PYRAMID_LEVEL, giving.pyramid_level_sort#(lf)FROM giving #(lf)INNER JOIN advur.VW_PYRAMID_LEVELS pyr ON giving.pyramid_level_sort = pyr.PYRAMID_LEVEL_SORT #(lf)ORDER BY giving.total_giving DESC\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

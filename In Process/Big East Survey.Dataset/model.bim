@@ -1,0 +1,3204 @@
+{
+  "compatibilityLevel": 1568,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Data Source\",\"Calendar - Ten Yrs\",\"Max Rev Date\",\"Production\",\"Revenue\",\"Key Measures\",\"DataSource\",\"General Measures\",\"Trustees\",\"Fiscal Years\",\"Board Production\",\"Board Revenue\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Data Source",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "description": "This parameter allows the user to select as a data source Production (PADV) or one of the Snapshots. We only keep FYE Snapshots except for the current and previous FYs.",
+        "expression": "\"ADVJUL23\" meta [IsParameterQuery=true, List={\"PADV\", \"ADVJUL20\", \"ADVJUL21\", \"ADVJUL22\", \"ADVOCT22\", \"ADVJAN23\", \"ADVAPR23\", \"ADVJUL23\", \"ADVOCT23\", \"ADVJAN24\", \"ADVAPR24\", \"ADVJUL24#(lf)ADVOCT24\", \"ADVJAN25\", \"ADVAPR25\", \"ADVJUL25\"}, DefaultValue=\"PADV\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "05020849-dd92-43ce-b728-29ff9c51e854"
+      }
+    ],
+    "maxParallelismPerRefresh": 1,
+    "relationships": [
+      {
+        "name": "c726e99b-9813-4b42-8b99-81d42b4dd24f",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Trans Dt",
+        "fromTable": "Revenue",
+        "toColumn": "Date",
+        "toTable": "Calendar - Ten Yrs"
+      },
+      {
+        "name": "3d90edda-fb44-416b-a1f7-fcde53252a2d",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Trans Dt",
+        "fromTable": "Production",
+        "toColumn": "Date",
+        "toTable": "Calendar - Ten Yrs"
+      },
+      {
+        "name": "64832e71-e04f-4a05-bf86-eea518b7b8ce",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Brd Yr",
+        "fromTable": "Trustees",
+        "toColumn": "FY",
+        "toTable": "Fiscal Years"
+      },
+      {
+        "name": "326b4d10-fe03-4340-a86c-0adb1c3c3108",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "FiscalYear",
+        "fromTable": "Calendar - Ten Yrs",
+        "toColumn": "FY",
+        "toTable": "Fiscal Years"
+      },
+      {
+        "name": "a8b6b910-03d2-4551-875d-f988fcaa094a",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "HH Key",
+        "fromTable": "Trustees",
+        "isActive": false,
+        "toCardinality": "many",
+        "toColumn": "HH Key",
+        "toTable": "Board Production"
+      },
+      {
+        "name": "3cb7f202-2b0b-46bf-b4ab-670843836788",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "HH Key",
+        "fromTable": "Trustees",
+        "isActive": false,
+        "toCardinality": "many",
+        "toColumn": "HH Key",
+        "toTable": "Board Revenue"
+      },
+      {
+        "name": "a5ae82c6-1b3e-4a07-b985-7ee0dd427db5",
+        "fromColumn": "Prod FY",
+        "fromTable": "Board Production",
+        "toColumn": "FY",
+        "toTable": "Fiscal Years"
+      },
+      {
+        "name": "27f2ba07-3770-498b-832d-a8d402980c5e",
+        "fromColumn": "Rev FY",
+        "fromTable": "Board Revenue",
+        "toColumn": "FY",
+        "toTable": "Fiscal Years"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Calendar - Ten Yrs",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isKey": true,
+            "lineageTag": "544cca6c-a9c8-41d1-a462-ce23d80b0cf8",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthNum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f787f235-96c7-4ac7-b45e-f8e557c1c352",
+            "sourceColumn": "MonthNum",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2ec127e7-c3ce-477b-bdaf-66d070a3aef6",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "20bbf2af-df37-4d00-b987-bbc9476660b6",
+            "sourceColumn": "MonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bb375d8c-daf6-433d-9df1-8e4d84569364",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ced29c78-ecc4-4851-9159-3023293953eb",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SortFiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7fd88648-be42-4090-8cd3-e8ebe193855e",
+            "sourceColumn": "SortFiscalMonth",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FiscalMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf13c7f3-8ad5-4d00-a965-279967a6ae13",
+            "sourceColumn": "FiscalMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalMonthLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4a9325e6-094e-41e6-9f2c-f2f24cc01816",
+            "sourceColumn": "FiscalMonthLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalQuarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "afd57012-7f42-4dfa-876a-aea036aaa096",
+            "sourceColumn": "FiscalQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FiscalYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "60b85b91-1d45-4151-bd7a-8c5e1aa32323",
+            "sourceColumn": "FiscalYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurMonthOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "573de6fd-366b-41a6-8201-953bb06bf24d",
+            "sourceColumn": "CurMonthOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurQuarterOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5c3fe7fe-cea4-49cc-98ee-88d22c6550f9",
+            "sourceColumn": "CurQuarterOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6ed0a4c1-e295-47bd-8d00-65192572b2bf",
+            "sourceColumn": "CurYearOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FutureDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "09ac5bdb-771a-45d3-a493-cbbc9669194d",
+            "sourceColumn": "FutureDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurFiscalYearOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f593098b-3ad7-4a09-a35e-abba6b7d31e7",
+            "sourceColumn": "CurFiscalYearOffset",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SortMonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1057c972-b224-4e4a-bf4c-390e874b70d4",
+            "sourceColumn": "SortMonthYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MonthYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56a31af5-ff2b-4643-a8b3-64f82f2ebeed",
+            "sourceColumn": "MonthYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthYearLong",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "44e0de0f-7a2c-4182-b984-8f6c311e8653",
+            "sourceColumn": "MonthYearLong",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b7616377-22f4-40e3-bad2-98b2d4cb1279",
+            "sourceColumn": "SortWeekday",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Weekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f4e90352-cfaf-423f-a017-2e26a168d200",
+            "sourceColumn": "Weekday",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekdayWeekend",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6bdd9a5-5da6-4a6d-8292-437cf834fd46",
+            "sourceColumn": "WeekdayWeekend",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortWeekSequence",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0b794846-8452-4477-8655-300e17bf8990",
+            "sourceColumn": "SortWeekSequence",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CurWeekOffset",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e34a0edf-d927-4df2-b32f-a17bee4303f4",
+            "sourceColumn": "CurWeekOffset",
+            "summarizeBy": "sum"
+          }
+        ],
+        "dataCategory": "Time",
+        "excludeFromModelRefresh": true,
+        "lineageTag": "b148a526-f1dc-433d-bdf5-2f85adf4177a",
+        "partitions": [
+          {
+            "name": "Calendar - Ten Yrs",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    /*",
+                "    ****This Calendar was created and provided by Avi Singh****",
+                "    ****This can be freely shared as long as this text comment is retained.****",
+                "    http://www.youtube.com/PowerBIPro",
+                "    www.LearnPowerBI.com by Avi Singh",
+                "    */",
+                "    #\"LearnPowerBI.com by Avi Singh\" = 1,",
+                "    StartDate = List.Min( Revenue[Trans Dt] ),",
+                "    EndDate = Date.AddMonths( Date.EndOfYear( #\"Max Rev Date\" ), FiscalYearEndMonth ) /*was \"#date(2017, 1, 1)\" Updated on 201802027: hard Coded End of Year caused some formulas to break, switching to dynamic date*/,",
+                "    //Used for 'Offset' Column calculations, you may Hard code CurrentDate for testing e.g. #date(2017,9,1)",
+                "    CurrentDate = Date.AddMonths( Date.EndOfYear( #\"Max Rev Date\" ), FiscalYearEndMonth ),",
+                "    // Specify the last month in your Fiscal Year, e.g. if June is the last month of your Fiscal Year, specify 6",
+                "    FiscalYearEndMonth = 6,",
+                "    #\"==SET PARAMETERS ABOVE==\" = 1,",
+                "    #\"==Build Date Column==\" = #\"==SET PARAMETERS ABOVE==\",",
+                "    ListDates = List.Dates(StartDate, Number.From(EndDate - StartDate)+1, #duration(1,0,0,0)),",
+                "    #\"Converted to Table\" = Table.FromList(ListDates, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Renamed Columns as Date\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Date\"}}),",
+                "    // As far as Power BI is concerned, the 'Date' column is all that is needed :-) But we will continue and add a few Human-Friendly Columns",
+                "    #\"Changed Type to Date\" = Table.TransformColumnTypes(#\"Renamed Columns as Date\",{{\"Date\", type date}}),",
+                "    #\"==Add Calendar Columns==\" = #\"Changed Type to Date\",",
+                "    #\"Added Calendar MonthNum\" = Table.AddColumn(#\"==Add Calendar Columns==\", \"MonthNum\", each Date.Month([Date]), Int64.Type),",
+                "    #\"Added Month Name\" = Table.AddColumn(#\"Added Calendar MonthNum\", \"Month\", each Text.Start(Date.MonthName([Date]),3), type text),",
+                "    #\"Added Month Name Long\" = Table.AddColumn(#\"Added Month Name\", \"MonthLong\", each Date.MonthName([Date]), type text),",
+                "    #\"Added Calendar Quarter\" = Table.AddColumn(#\"Added Month Name Long\", \"Quarter\", each \"Q\" & Text.From(Date.QuarterOfYear([Date]))),",
+                "    #\"Added Calendar Year\" = Table.AddColumn(#\"Added Calendar Quarter\", \"Year\", each Date.Year([Date]), Int64.Type),",
+                "    #\"==Add Fiscal Calendar Columns==\" = #\"Added Calendar Year\",",
+                "    #\"Added FiscalMonthNum\" = Table.AddColumn(#\"==Add Fiscal Calendar Columns==\", \"FiscalMonthNum\", each if [MonthNum] > FiscalYearEndMonth",
+                "then [MonthNum] - FiscalYearEndMonth",
+                "else [MonthNum] + (12 - FiscalYearEndMonth), type number),",
+                "    #\"Added FiscalMonth Name\" = Table.AddColumn(#\"Added FiscalMonthNum\", \"FiscalMonth\", each [Month]),",
+                "    #\"Added FiscalMonth Name Long\" = Table.AddColumn(#\"Added FiscalMonth Name\", \"FiscalMonthLong\", each [MonthLong]),",
+                "    #\"Added FiscalQuarter\" = Table.AddColumn(#\"Added FiscalMonth Name Long\", \"FiscalQuarter\", each \"FQ\" & Text.From(Number.RoundUp([FiscalMonthNum] / 3,0))),",
+                "    #\"Added FiscalYear\" = Table.AddColumn(#\"Added FiscalQuarter\", \"FiscalYear\", each Text.End(",
+                "  Text.From(",
+                "    if [MonthNum] > FiscalYearEndMonth",
+                "    then [Year] + 1",
+                "    else [Year]",
+                "  )",
+                "  , 4",
+                ")),",
+                "",
+                "    #\"==Add Calendar Date Offset Columns==\" = #\"Added FiscalYear\",",
+                "    // Can be used to for example to show the past 3 months(CurMonthOffset = 0, -1, -2)",
+                "    #\"Added CurMonthOffset\" = Table.AddColumn(#\"==Add Calendar Date Offset Columns==\", \"CurMonthOffset\", each ( Date.Year([Date]) - Date.Year(CurrentDate) ) * 12",
+                "+ Date.Month([Date]) - Date.Month(CurrentDate), Int64.Type),",
+                "    // Can be used to for example to show the past 3 quarters (CurQuarterOffset = 0, -1, -2)",
+                "    #\"Added CurQuarterOffset\" = Table.AddColumn(#\"Added CurMonthOffset\", \"CurQuarterOffset\", each /*Year Difference*/",
+                "       ( Date.Year([Date]) - Date.Year(CurrentDate) )*4",
+                "       /*Quarter Difference*/",
+                "      + Number.RoundUp(Date.Month([Date]) / 3) ",
+                "      - Number.RoundUp(Date.Month(CurrentDate) / 3),",
+                "Int64.Type),",
+                "    // Can be used to for example to show the past 3 years (CurYearOffset = 0, -1, -2)",
+                "    #\"Added CurYearOffset\" = Table.AddColumn(#\"Added CurQuarterOffset\", \"CurYearOffset\", each Date.Year([Date]) - Date.Year(CurrentDate), Int64.Type),",
+                "    // Can be used to for example filter out all future dates",
+                "    #\"Added FutureDate Flag\" = Table.AddColumn(#\"Added CurYearOffset\", \"FutureDate\", each if [Date] > CurrentDate then \"Future\" else \"Past\" ),",
+                "    // FiscalYearOffset is the only Offset that is different.",
+                "    // FiscalQuarterOffset = is same as CurQuarterOffset",
+                "    // FiscalMonthOffset = is same as CurMonthOffset",
+                "    #\"==Add FiscalYearOffset==\" = #\"Added FutureDate Flag\",",
+                "    #\"Filtered Rows to CurrentDate\" = Table.SelectRows(#\"==Add FiscalYearOffset==\", each ([Date] = CurrentDate)),",
+                "    CurrentFiscalYear = #\"Filtered Rows to CurrentDate\"{0}[FiscalYear],",
+                "    #\"Continue...Orig Table\" = #\"==Add FiscalYearOffset==\",",
+                "    #\"Added CurFiscalYearOffset\" = Table.AddColumn(#\"Continue...Orig Table\", \"CurFiscalYearOffset\", each Number.From(Text.Range([FiscalYear],2,2)) - ",
+                "Number.From(Text.Range(CurrentFiscalYear,2,2))",
+                "/*Extract the numerical portion, e.g. FY18 = 18*/),",
+                "    #\"==Add General Columns==\" = #\"Added CurFiscalYearOffset\",",
+                "    // Used as 'Sort by Column' for MonthYear columns",
+                "    #\"Added MonthYearNum\" = Table.AddColumn(#\"==Add General Columns==\", \"MonthYearNum\", each [Year]*100 + [MonthNum] /*e.g. Sep-2016 would become 201609*/, Int64.Type),",
+                "    #\"Added MonthYear\" = Table.AddColumn(#\"Added MonthYearNum\", \"MonthYear\", each [Month] & \"-\" & Text.End(Text.From([Year]),2)),",
+                "    #\"Added MonthYearLong\" = Table.AddColumn(#\"Added MonthYear\", \"MonthYearLong\", each [Month] & \"-\" & Text.From([Year])),",
+                "    #\"Added WeekdayNum\" = Table.AddColumn(#\"Added MonthYearLong\", \"WeekdayNum\", each Date.DayOfWeek([Date]), Int64.Type),",
+                "    #\"Added Weekday Name\" = Table.AddColumn(#\"Added WeekdayNum\", \"Weekday\", each Text.Start(Date.DayOfWeekName([Date]),3), type text),",
+                "    #\"Added WeekdayWeekend\" = Table.AddColumn(#\"Added Weekday Name\", \"WeekdayWeekend\", each if [WeekdayNum] = 0 or [WeekdayNum] = 6",
+                "then \"Weekend\"",
+                "else \"Weekday\"),",
+                "    #\"==Improve Ultimate Table\" = #\"Added WeekdayWeekend\",",
+                "    #\"----Add WeekSequenceNum----\" = #\"==Improve Ultimate Table\",",
+                "    #\"Filtered Rows Sundays Only (Start of Week)\" = Table.SelectRows(#\"----Add WeekSequenceNum----\", each ([WeekdayNum] = 0)),",
+                "    #\"Added Index WeekSequenceNum\" = Table.AddIndexColumn(#\"Filtered Rows Sundays Only (Start of Week)\", \"WeekSequenceNum\", 2, 1),",
+                "    #\"Merged Queries Ultimate Table to WeekSequenceNum\" = Table.NestedJoin(#\"==Improve Ultimate Table\",{\"Date\"},#\"Added Index WeekSequenceNum\",{\"Date\"},\"Added Index WeekNum\",JoinKind.LeftOuter),",
+                "    #\"Expanded Added Index WeekNum\" = Table.ExpandTableColumn(#\"Merged Queries Ultimate Table to WeekSequenceNum\", \"Added Index WeekNum\", {\"WeekSequenceNum\"}, {\"WeekSequenceNum\"}),",
+                "    // somehow it ends up being unsorted after Expand Column, should not matter for the end table, but makes it harder to debug and check everything is correct. Thus sorting it.",
+                "    #\"ReSorted Rows by Date\" = Table.Sort(#\"Expanded Added Index WeekNum\",{{\"Date\", Order.Ascending}}),",
+                "    #\"Filled Down WeekSequenceNum\" = Table.FillDown(#\"ReSorted Rows by Date\",{\"WeekSequenceNum\"}),",
+                "    #\"Replaced Value WeekSequenceNum null with 1\" = Table.ReplaceValue(#\"Filled Down WeekSequenceNum\",null,1,Replacer.ReplaceValue,{\"WeekSequenceNum\"}),",
+                "    #\"----WeekSequenceNum Complete----\" = #\"Replaced Value WeekSequenceNum null with 1\",",
+                "    Current_WeekSequenceNum = #\"----WeekSequenceNum Complete----\"{[Date = CurrentDate]}?[WeekSequenceNum],",
+                "    #\"Added Custom CurWeekOffset\" = Table.AddColumn(#\"----WeekSequenceNum Complete----\", \"CurWeekOffset\", each [WeekSequenceNum] - Current_WeekSequenceNum, Int64.Type),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom CurWeekOffset\",{{\"Quarter\", type text}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"FiscalMonthNum\", \"SortFiscalMonth\"}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"FiscalMonth\", type text}, {\"FiscalMonthLong\", type text}, {\"FiscalQuarter\", type text}, {\"FiscalYear\", type text}, {\"FutureDate\", type text}, {\"CurFiscalYearOffset\", Int64.Type}}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type1\",{{\"MonthYearNum\", \"SortMonthYear\"}}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Renamed Columns1\",{{\"MonthYear\", type text}, {\"MonthYearLong\", type text}}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Changed Type2\",{{\"WeekdayNum\", \"SortWeekday\"}}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Renamed Columns2\",{{\"WeekdayWeekend\", type text}}),",
+                "    #\"Renamed Columns3\" = Table.RenameColumns(#\"Changed Type3\",{{\"WeekSequenceNum\", \"SortWeekSequence\"}})",
+                "in",
+                "    #\"Renamed Columns3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Max Rev Date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Date"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Max Rev Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "b80dbeee-371a-4ef3-bbff-e35e42b08d86",
+            "sourceColumn": "Max Rev Date",
+            "summarizeBy": "none"
+          }
+        ],
+        "excludeFromModelRefresh": true,
+        "lineageTag": "b699e22a-2555-43fd-b737-44524c029d94",
+        "partitions": [
+          {
+            "name": "Max Rev Date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = List.Max( Revenue[Trans Dt] )",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Production",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4fd2e065-0183-47a3-bc7d-cdf1b3c91e7f",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9d27f19a-4f13-4c68-8adb-515e9d9e2500",
+            "sourceColumn": "Campaign",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "35abdf58-7a6f-4936-a2db-2723c71f0852",
+            "sourceColumn": "Campaign Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "290caa76-9544-48a3-8734-0e66a680b571",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Sub-Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "744b0bad-a38d-4c22-aebc-b0867fc00bd1",
+            "sourceColumn": "Camp Sub-Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17e54cba-08c5-45f3-ae37-17ec6899e36a",
+            "sourceColumn": "Campaign Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1ece1467-8b30-423c-98e4-ea516052e75a",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "75c718ca-13ee-4191-b481-34f8a3f269e2",
+            "sourceColumn": "Finance Category2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "581d7daf-b453-4140-ac54-f22e06f1a06c",
+            "sourceColumn": "Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "fce94af9-5a21-4aab-a2ce-f9cfe85aff7d",
+            "sourceColumn": "Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Orig Proc Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "547a9231-b96f-49c4-8ba7-919567abc843",
+            "sourceColumn": "Orig Proc Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3a4391b5-a037-437a-a123-8d12eb83fb47",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "07da1167-61a5-4041-b550-279fcce41070",
+            "sourceColumn": "Prod Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3de1c3ae-57a7-4146-8327-077942a71623",
+            "sourceColumn": "Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "f9bf48a6-3f8f-4dd7-9dde-c2f7099710bd",
+            "sourceColumn": "Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Campaign Gift Range",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f5230e59-395f-453d-bb46-b9e1d97135cd",
+            "sourceColumn": "Campaign Gift Range",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Dnr ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ff00296a-7d00-4237-813d-40cad17754d5",
+            "sourceColumn": "Prim Dnr ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aea7fbf0-dcc7-4329-8099-4ef6bc70d120",
+            "sourceColumn": "Prim Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hshld Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1ab88f3-3a0f-4adc-839a-beeaa570366d",
+            "sourceColumn": "Hshld Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hshld Record Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a073a0a2-0264-40f5-9a4d-5c2d67a57ae5",
+            "sourceColumn": "Hshld Record Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b12540f3-eb2e-49d4-9797-d3f22f02f07f",
+            "sourceColumn": "Prim Donor Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f5ce3b43-dcd4-41cb-953b-be4c33b5f45a",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d26545d4-cd9e-49de-b499-17798af4c685",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a2538a3d-43f9-47a6-8959-05888979a36c",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b90debf1-d629-4c9c-92d5-a06510a96c9a",
+            "sourceColumn": "Alloc Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ee62bd5d-97e8-4821-b0a9-940300fe088c",
+            "sourceColumn": "Appeal Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c79167df-dcfa-4675-99b0-9a59d9faa8e3",
+            "sourceColumn": "Appeal Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Channel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b25dfc2-0ce4-4b5d-8aca-a062726489fc",
+            "sourceColumn": "Appeal Channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bequest Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7096c5d7-99b6-4ade-b552-5e5702857f4c",
+            "sourceColumn": "Bequest Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a8bbaca2-38c5-4c24-9a5b-8ce633543ab8",
+            "sourceColumn": "Sort Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "86a45a8f-0ce1-416b-93a0-72530e31f2e5",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fd7bcffe-f4fe-4fc0-8808-b5c9ce67d6e1",
+            "sourceColumn": "Sort Trans Type",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Camp Cat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "904aa402-ff69-4092-911b-ad333e6ee9bd",
+            "sourceColumn": "Sort Camp Cat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4d3d428d-7102-4432-9645-4a13cb25cef9",
+            "sourceColumn": "Sort Priority",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b8b42ee2-4bc9-485f-8acb-352b7aafb2e9",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Gift Range",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fce875ad-190e-4b9a-a2af-8e95f8452948",
+            "sourceColumn": "Sort Gift Range",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "UniqKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "    Production[Hshld Key] & Production[Fiscal Yr]"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "8638e23f-04ae-4ab6-8110-ec69f75373de",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "6c90fcd2-9e3c-44d3-8b08-a8c83f6272fe",
+        "partitions": [
+          {
+            "name": "Production",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Based on the Fundraising Activity logic previously created for the Campaign Dashboard. smk 6/8/2021#(lf)-- Updated to make the sort logic for \"\"FY Qtr\"\" match the \"\"FY Qtr\"\" logic; also changed the Category codes logic to swith left and right references. smk 8/16/21#(lf)-- Added statements to the WHERE clause to allow for making this \"\"Campaign-Only\"\" or selecting a specific date in the FY. 1/20/2023#(lf)-- Updated to provide all Campaign Production, plus all other Production for the current and previous four FYs. smk 12/08/2023#(lf)#(lf)select distinct tp.trans_category                       \"\"Trans Category\"\",#(lf)       tp.campaign                                      \"\"Campaign\"\",#(lf)       c1.short_desc                                    \"\"Campaign Category\"\",#(lf)       c2.short_desc                                    \"\"Campaign Priority\"\",#(lf)       c3.short_desc                                    \"\"Camp Sub-Priority\"\",#(lf)       tp.campaign_type                                 \"\"Campaign Type\"\",#(lf)       tp.finance_category                              \"\"Finance Category\"\",#(lf)       ext.trans_cat2                                   \"\"Finance Category2\"\",#(lf)       tp.trans_nbr                                     \"\"Trans Nbr\"\",#(lf)       trunc(tp.trans_dt)                               \"\"Trans Dt\"\",#(lf)       tp.orig_proc_dt                                  \"\"Orig Proc Dt\"\",#(lf)       tp.fiscal_yr                                     \"\"Fiscal Yr\"\",#(lf)       CASE WHEN tp.trans_dt < '01-OCT-2016' THEN ' Pre-Campaign'#(lf)            WHEN tp.trans_dt >= '01-OCT-2016' AND tp.fiscal_yr = '2017' THEN 'FY2017 (Partial)'#(lf)          ELSE 'FY'||tp.fiscal_yr END                   \"\"Prod Camp Yr\"\",#(lf)       tp.trans_type                                    \"\"Trans Type\"\",#(lf)       tp.trans_amt                                     \"\"Trans Amt\"\",#(lf)       tp.pyramid_level                                 \"\"Campaign Gift Range\"\",#(lf)       ext.primary_recipient_ids                        \"\"Prim Dnr ID\"\",#(lf)       tp.prim_donor_name                               \"\"Prim Donor Name\"\",#(lf)       hk.household_key                                 \"\"Hshld Key\"\",#(lf)       hrt.record_type                                  \"\"Hshld Record Type\"\",#(lf)       CASE WHEN e.record_type_code = 'A' then 'Alumni'#(lf)            WHEN e.record_type_code IN ('P','FP') then 'Parents'#(lf)            WHEN e.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('S','FD') then 'Students'#(lf)            WHEN e.person_or_org = 'P' AND e.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code = 'C' THEN 'Corporations'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)          ELSE 'Other Individuals' END                  \"\"Prim Donor Category\"\",#(lf)       tp.school                                        \"\"School\"\",#(lf)       tp.allocation_code                               \"\"Alloc Code\"\",#(lf)       a.allocation_name                                \"\"Allocation Name\"\",#(lf)       g.short_desc                                     \"\"Alloc Group\"\",#(lf)       tp.appeal_code                                   \"\"Appeal Code\"\",#(lf)       tp.appeal_description                            \"\"Appeal Name\"\",#(lf)       tp.appeal_channel                                \"\"Appeal Channel\"\",#(lf)       case when tp.trans_category = 'Bequest Expectancies and Gifts' then 'Bequests' #(lf)          else 'Non-Bequests' end                       \"\"Bequest Ind\"\",#(lf)       CASE WHEN tp.trans_dt < '01-OCT-2016' THEN '2016'#(lf)            WHEN tp.trans_dt >= '01-OCT-2016' AND tp.fiscal_yr = '2017' THEN '2017'#(lf)          ELSE tp.fiscal_yr END                         \"\"Sort Camp Yr\"\",#(lf)       tp.alloc_sort                                    \"\"Sort Alloc\"\",#(lf)       tp.transtype_sort                                \"\"Sort Trans Type\"\",#(lf)       tp.campcat_sort                                  \"\"Sort Camp Cat\"\",#(lf)       tp.priority_sort                                 \"\"Sort Priority\"\",#(lf)       tp.fincat_sort                                   \"\"Sort FinCat\"\",#(lf)       tp.pyramid_level_sort                            \"\"Sort Gift Range\"\"#(lf) from advur.mvw_total_production tp#(lf)inner join advur.mvw_total_production_ext ext on tp.trans_nbr = ext.trans_nbr#(lf)left join advur.mvw_allocations a             on tp.allocation_code = a.allocation_code#(lf)left join advance.tms_alloc_sub_dept g        on a.alloc_sub_dept = g.alloc_sub_dept_code#(lf)left join advance.entity e                    ON ext.primary_recipient_ids = e.id_number#(lf)left join advur.mvw_ent_household_keys hk     on ext.primary_recipient_ids = hk.id_number#(lf)left join advur.mvw_hh_record_type hrt        on hk.household_key = hrt.household_key#(lf)left join advance.tms_category1 c1            on c1.category1_code = ext.category1_code#(lf)left join advance.tms_category2 c2            on c2.category2_code = ext.category2_code#(lf)left join advance.tms_category3 c3            on c3.category3_code = ext.category3_code#(lf)#(lf)where (tp.fiscal_yr >= to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)  or  tp.campaign_ind = 'Current Campaign')\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Trans Dt\", type date}, {\"Orig Proc Dt\", type date}, {\"Trans Amt\", Currency.Type}, {\"Sort Trans Type\", Int64.Type}, {\"Sort Gift Range\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Revenue",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trans Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2c5aeee9-bf78-48c6-a688-c2992a96deba",
+            "sourceColumn": "Trans Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8dd1fd6d-8c76-45d9-bc04-86f80fba15eb",
+            "sourceColumn": "Campaign",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "600b8ada-4e79-428b-8d2e-2ed4a749caa3",
+            "sourceColumn": "Campaign Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1daab8e0-1003-4d1a-9bbc-3ab379a2c40f",
+            "sourceColumn": "Campaign Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Camp Sub-Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "209ec15b-ac4f-4b9a-ae20-ab02026581e9",
+            "sourceColumn": "Camp Sub-Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campaign Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4f168f9e-618c-4230-8c83-3602543e622c",
+            "sourceColumn": "Campaign Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cc1791bb-8447-446d-9871-1698351195e1",
+            "sourceColumn": "Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Finance Category2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "575bbd91-ac80-4043-8e56-90d89b098559",
+            "sourceColumn": "Finance Category2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "63ebb561-8d6b-43b2-8f78-a3bb41ec0398",
+            "sourceColumn": "Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "9f48081d-5803-4a16-b2dd-03a925a51967",
+            "sourceColumn": "Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Orig Proc Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "387d2efc-f896-4515-9f3a-d846b8fc0f3d",
+            "sourceColumn": "Orig Proc Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e3f788ce-4577-4eb2-87bd-16bf10d0f02c",
+            "sourceColumn": "Fiscal Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eb787365-12f6-46c6-a112-bc9e0dd1be2b",
+            "sourceColumn": "Prod Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "88737c8e-e071-46aa-90bc-d2fef87d6cb9",
+            "sourceColumn": "Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "a69139b1-0faf-4cbd-b459-84b2a1ebcfac",
+            "sourceColumn": "Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Campaign Gift Range",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "736e59e0-b181-45bc-886d-e6f2f809df70",
+            "sourceColumn": "Campaign Gift Range",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Dnr ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7106366c-aa0c-47d1-8fbe-9b9c45a9264c",
+            "sourceColumn": "Prim Dnr ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2142c39-c2db-430c-a6ac-092eace2fb27",
+            "sourceColumn": "Prim Donor Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hshld Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "77aec893-fcde-463a-aaf5-eae8b944286b",
+            "sourceColumn": "Hshld Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hshld Record Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9c6d4755-0c29-4386-b31c-32d8fccff416",
+            "sourceColumn": "Hshld Record Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prim Donor Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d68775f5-5883-4bf9-b22d-3a6efd2b4433",
+            "sourceColumn": "Prim Donor Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "576a3aaf-77ed-4684-8ae9-a4323819a984",
+            "sourceColumn": "School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ebcb2ec5-2932-47f5-9238-555c4c6e2a2d",
+            "sourceColumn": "Alloc Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eca27b3d-4bb2-47a8-a2cc-d8a7042263dc",
+            "sourceColumn": "Allocation Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alloc Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ec64bc72-2303-4609-b3b1-1b6e97b05ddd",
+            "sourceColumn": "Alloc Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6807f20-6b78-41c5-af42-df26f8407ed4",
+            "sourceColumn": "Appeal Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ad92054-56a0-4ef7-ba6d-1465c366d687",
+            "sourceColumn": "Appeal Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Appeal Channel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "60cd156b-15fe-4ca2-b4b1-efb7fd35d412",
+            "sourceColumn": "Appeal Channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bequest Ind",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "701fb3ee-9592-4661-8cb0-ebf5499cde60",
+            "sourceColumn": "Bequest Ind",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Camp Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4cc6efcc-3e08-4908-8515-1cf32c91233b",
+            "sourceColumn": "Sort Camp Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Alloc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f85615c4-866f-4ffd-9324-6ad9d3ada1e8",
+            "sourceColumn": "Sort Alloc",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cb05ecda-48c6-4147-8433-5b07ced5a695",
+            "sourceColumn": "Sort Trans Type",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort Camp Cat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "db26b098-1c5d-4ee3-9ad5-107e917c4ea6",
+            "sourceColumn": "Sort Camp Cat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d7c67dae-957d-4f48-aff7-190d389088b7",
+            "sourceColumn": "Sort Priority",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Sort FinCat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8bce03e8-be91-4e9c-a187-ae91f733491e",
+            "sourceColumn": "Sort FinCat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sort Gift Range",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6c2de7f4-4701-4504-8685-9c0278825967",
+            "sourceColumn": "Sort Gift Range",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "UniqKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "    Revenue[Hshld Key] & Revenue[Fiscal Yr]"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "bb1adc77-26a5-4491-b070-cc63149dd45e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "d92b422c-de43-4253-8659-71a893dc34da",
+        "partitions": [
+          {
+            "name": "Revenue",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"-- Based on the Production logic previously created for the Campaign Dashboard. smk 6/8/2021#(lf)-- Updated to make the sort logic for \"\"FY Qtr\"\" match the \"\"FY Qtr\"\" logic; also changed the Category codes logic to swith left and right references. smk 8/16/21#(lf)-- Added statements to the WHERE clause to allow for making this \"\"Campaign-Only\"\" or selecting a specific date in the FY. 1/20/2023#(lf)-- Updated to provide all Campaign Revenue, plus all other Revenue for the current and previous four FYs. smk 12/08/2023#(lf)#(lf)select distinct tr.trans_category                       \"\"Trans Category\"\",#(lf)       tr.campaign                                      \"\"Campaign\"\",#(lf)       c1.short_desc                                    \"\"Campaign Category\"\",#(lf)       c2.short_desc                                    \"\"Campaign Priority\"\",#(lf)       c3.short_desc                                    \"\"Camp Sub-Priority\"\",#(lf)       tr.campaign_type                                 \"\"Campaign Type\"\",#(lf)       tr.finance_category                              \"\"Finance Category\"\",#(lf)       ext.trans_cat2                                   \"\"Finance Category2\"\",#(lf)       tr.trans_nbr                                     \"\"Trans Nbr\"\",#(lf)       trunc(tr.trans_dt)                               \"\"Trans Dt\"\",#(lf)       tr.orig_proc_dt                                  \"\"Orig Proc Dt\"\",#(lf)       tr.fiscal_yr                                     \"\"Fiscal Yr\"\",#(lf)       CASE WHEN tr.trans_dt < '01-OCT-2016' THEN ' Pre-Campaign'#(lf)            WHEN tr.trans_dt >= '01-OCT-2016' AND tr.fiscal_yr = '2017' THEN 'FY2017 (Partial)'#(lf)          ELSE 'FY'||tr.fiscal_yr END                   \"\"Prod Camp Yr\"\",#(lf)       tr.trans_type                                    \"\"Trans Type\"\",#(lf)       tr.trans_amt                                     \"\"Trans Amt\"\",#(lf)       tr.pyramid_level                                 \"\"Campaign Gift Range\"\",#(lf)       ext.primary_recipient_ids                        \"\"Prim Dnr ID\"\",#(lf)       ext.primary_recipients                           \"\"Prim Donor Name\"\",#(lf)       hk.household_key                                 \"\"Hshld Key\"\",#(lf)       hrt.record_type                                  \"\"Hshld Record Type\"\",#(lf)       CASE WHEN e.record_type_code = 'A' then 'Alumni'#(lf)            WHEN e.record_type_code IN ('P','FP') then 'Parents'#(lf)            WHEN e.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)            WHEN e.record_type_code IN ('S','FD') then 'Students'#(lf)            WHEN e.person_or_org = 'P' AND e.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code = 'C' THEN 'Corporations'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)            WHEN e.person_or_org = 'O' AND e.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)          ELSE 'Other Individuals' END                  \"\"Prim Donor Category\"\",#(lf)       tr.school                                        \"\"School\"\",#(lf)       tr.allocation_code                               \"\"Alloc Code\"\",#(lf)       a.allocation_name                                \"\"Allocation Name\"\",#(lf)       g.short_desc                                     \"\"Alloc Group\"\",#(lf)       tr.appeal_code                                   \"\"Appeal Code\"\",#(lf)       tr.appeal_description                            \"\"Appeal Name\"\",#(lf)       tr.appeal_channel                                \"\"Appeal Channel\"\",#(lf)       case when tr.trans_category = 'Bequest Expectancies and Gifts' then 'Bequests' #(lf)          else 'Non-Bequests' end                       \"\"Bequest Ind\"\",#(lf)       CASE WHEN tr.trans_dt < '01-OCT-2016' THEN '2016'#(lf)            WHEN tr.trans_dt >= '01-OCT-2016' AND tr.fiscal_yr = '2017' THEN '2017'#(lf)          ELSE tr.fiscal_yr END                         \"\"Sort Camp Yr\"\",#(lf)       tr.alloc_sort                                    \"\"Sort Alloc\"\",#(lf)       tr.transtype_sort                                \"\"Sort Trans Type\"\",#(lf)       tr.campcat_sort                                  \"\"Sort Camp Cat\"\",#(lf)       tr.priority_sort                                 \"\"Sort Priority\"\",#(lf)       tr.fincat_sort                                   \"\"Sort FinCat\"\",#(lf)       tr.pyramid_level_sort                            \"\"Sort Gift Range\"\"#(lf) from advur.mvw_total_revenue tr#(lf)inner join advur.mvw_total_revenue_ext ext    on tr.trans_nbr = ext.trans_nbr#(lf)left join advur.mvw_allocations a             on tr.allocation_code = a.allocation_code#(lf)left join advance.tms_alloc_sub_dept g        on a.alloc_sub_dept = g.alloc_sub_dept_code#(lf)left join advance.entity e                    ON ext.primary_recipient_ids = e.id_number#(lf)left join advur.mvw_ent_household_keys hk     on ext.primary_recipient_ids = hk.id_number#(lf)left join advur.mvw_hh_record_type hrt        on hk.household_key = hrt.household_key#(lf)left join advance.tms_category1 c1            on c1.category1_code = ext.category1_code#(lf)left join advance.tms_category2 c2            on c2.category2_code = ext.category2_code#(lf)left join advance.tms_category3 c3            on c3.category3_code = ext.category3_code#(lf)#(lf)where (tr.fiscal_yr >= to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)  or  tr.campaign_ind = 'Current Campaign')\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Trans Dt\", type date}, {\"Orig Proc Dt\", type date}, {\"Trans Amt\", Currency.Type}, {\"Sort Trans Type\", Int64.Type}, {\"Sort Gift Range\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "ef1f0cab-8124-4277-96be-36d97afc49f9",
+        "measures": [
+          {
+            "name": "CFY Production",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelYr = [FY Current]",
+              "    var _FYProd = CALCULATE(",
+              "                        SUMX( Production, Production[Trans Amt] ),",
+              "                            Production[Fiscal Yr] = _SelYr",
+              "                        )",
+              "return",
+              "IF(ISBLANK(_FYProd),0,_FYProd)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "fed4f3e4-4c2c-4acd-a6c2-d05cfe0835ad"
+          },
+          {
+            "name": "CFY Revenue",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelYr = [FY Current]",
+              "    var _FYRev = CALCULATE(",
+              "                        SUMX( Revenue, Revenue[Trans Amt] ),",
+              "                            Revenue[Fiscal Yr] = _SelYr",
+              "                        )",
+              "return",
+              "IF(ISBLANK(_FYRev),0,_FYRev)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "3306f30e-ce02-4670-ac6d-305565067138"
+          },
+          {
+            "name": "CFY Prod HH Dnr Count",
+            "expression": [
+              "",
+              "    var _SelFY = [FY Current]",
+              "    var _FYProdDnrCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( Production[Hshld Key] ),",
+              "                        FILTER( Production, Production[Fiscal Yr] = _SelFY)",
+              "                    )",
+              "return",
+              "IF(ISBLANK(_FYProdDnrCnt),0,_FYProdDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "3957653b-0718-4796-b43e-711475cfc1f9"
+          },
+          {
+            "name": "CFY Rev HH Dnr Count",
+            "expression": [
+              "",
+              "    var _SelFY = [FY Current]",
+              "    var _FYRevDnrCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( Revenue[Hshld Key] ),",
+              "                        FILTER( Revenue, Revenue[Fiscal Yr] = _SelFY)",
+              "                    )",
+              "return",
+              "IF(ISBLANK(_FYRevDnrCnt),0,_FYRevDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "c65f17d7-ad02-480a-9c4e-62093e7259ca"
+          },
+          {
+            "name": "CFY Avg HH Trans (Prod)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    [CFY Production] / [CFY Prod HH Dnr Count]"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "de691707-722f-42b3-8ba3-7f64a7408025"
+          },
+          {
+            "name": "CFY Avg HH Trans (Rev)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    [CFY Revenue] / [CFY Rev HH Dnr Count]"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "8c793e61-024e-4116-9654-a9f4901b0e65"
+          },
+          {
+            "name": "LFY Production",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelYr = [FY Last]",
+              "    var _LFYProd = CALCULATE(",
+              "                        SUMX( Production, Production[Trans Amt] ),",
+              "                            Production[Fiscal Yr] = _SelYr",
+              "                        )",
+              "return",
+              "IF(ISBLANK(_LFYProd),0,_LFYProd)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "f5c43071-ca8e-42ec-93fa-293d192fcb33"
+          },
+          {
+            "name": "LFY Revenue",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelYr = [FY Last]",
+              "    var _LFYRev = CALCULATE(",
+              "                        SUMX( Revenue, Revenue[Trans Amt] ),",
+              "                            Revenue[Fiscal Yr] = _SelYr",
+              "                        )",
+              "return",
+              "IF(ISBLANK(_LFYRev),0,_LFYRev)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "a0f7c6b1-45b1-475b-868f-b5f0a272ee40"
+          },
+          {
+            "name": "LFY Prod HH Dnr Count",
+            "expression": [
+              "",
+              "    var _SelFY = [FY Last]",
+              "    var _LFYProdDnrCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( Production[Hshld Key] ),",
+              "                        FILTER( Production, Production[Fiscal Yr] = _SelFY)",
+              "                    )",
+              "return",
+              "IF(ISBLANK(_LFYProdDnrCnt),0,_LFYProdDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "becdc1b2-240b-43c7-8cfc-560914b1b2fd"
+          },
+          {
+            "name": "LFY Rev HH Dnr Count",
+            "expression": [
+              "",
+              "    var _SelFY = [FY Last]",
+              "    var _LFYRevDnrCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( Revenue[Hshld Key] ),",
+              "                        FILTER( Revenue, Revenue[Fiscal Yr] = _SelFY)",
+              "                    )",
+              "return",
+              "IF(ISBLANK(_LFYRevDnrCnt),0,_LFYRevDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "9df4ff32-b843-4a1a-a62a-6215a2aaa937"
+          },
+          {
+            "name": "LFY Avg HH Trans (Prod)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    [LFY Production] / [LFY Prod HH Dnr Count]"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "1efcab98-bb22-434f-9cde-524c7f7ad0e8"
+          },
+          {
+            "name": "LFY Avg HH Trans (Rev)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    [LFY Revenue] / [LFY Rev HH Dnr Count]"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "778a8abd-65e8-4924-a409-2ccbb86e350e"
+          },
+          {
+            "name": "CFY Median Trans (Prod)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelFY = [FY Current]",
+              "    var _CFYMedTrans =",
+              "        CALCULATE(",
+              "            MEDIANX( Production, Production[Trans Amt] ),",
+              "            Production[Fiscal Yr] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_CFYMedTrans),0,_CFYMedTrans)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "0ab71042-8f82-4749-ac88-9180e334ccfa"
+          },
+          {
+            "name": "LFY Median Trans (Prod)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelFY = [FY Last]",
+              "    var _LFYMedTrans =",
+              "        CALCULATE(",
+              "            MEDIANX( Production, Production[Trans Amt] ),",
+              "            Production[Fiscal Yr] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_LFYMedTrans),0,_LFYMedTrans)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "e7bb161f-f975-4463-be41-c11fe26dc3ca"
+          },
+          {
+            "name": "LFY Median Trans (Rev)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelFY = [FY Last]",
+              "    var _LFYMedRevTrans =",
+              "        CALCULATE(",
+              "            MEDIANX( Revenue, Revenue[Trans Amt] ),",
+              "            Revenue[Fiscal Yr] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_LFYMedRevTrans),0,_LFYMedRevTrans)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "18ba8bd2-4319-4b4d-9e25-6c22419bd363"
+          },
+          {
+            "name": "CFY Median Trans (Rev)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelFY = [FY Current]",
+              "    var _CFYMedRevTrans =",
+              "        CALCULATE(",
+              "            MEDIANX( Revenue, Revenue[Trans Amt] ),",
+              "            Revenue[Fiscal Yr] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_CFYMedRevTrans),0,_CFYMedRevTrans)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "e5e4ad86-19ad-464e-b27b-4cb0d22a88c2"
+          },
+          {
+            "name": "CFY Board Production",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelYr = [Selected FY]",
+              "    var _FYBrdProd2 = CALCULATE(",
+              "                        SUMX( 'Board Production', 'Board Production'[Prod Trans Amt] ),",
+              "                            'Board Production'[Prod FY] = _SelYr,",
+              "                            'Board Production'[Brd Yr] = _SelYr//,",
+              "                        //    USERELATIONSHIP( 'Board Revenue'[HH Key], Trustees[HH Key] )",
+              "                        )",
+              "return",
+              "IF(ISBLANK(_FYBrdProd2),0,_FYBrdProd2)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "25d9089e-66a6-4316-ab47-1d85a07c42e4"
+          },
+          {
+            "name": "CFY Board Revenue",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _SelYr = [Selected FY]",
+              "    var _FYBrdRev2 = CALCULATE(",
+              "                        SUMX( 'Board Revenue', 'Board Revenue'[Rev Trans Amt] ),",
+              "                            'Board Revenue'[Rev FY] = _SelYr,",
+              "                            'Board Revenue'[Brd Yr] = _SelYr//,",
+              "                        //    USERELATIONSHIP( Revenue[Hshld Key], Trustees[HH Key] )",
+              "                        )",
+              "return",
+              "IF(ISBLANK(_FYBrdRev2),0,_FYBrdRev2)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "ec8c1796-ad97-4768-b843-92ec1c263108"
+          },
+          {
+            "name": "CFY Board Count",
+            "expression": [
+              "",
+              "    var _SelFY = [Selected FY]",
+              "    var _CFYBrdCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( Trustees[HH Key] ),",
+              "                        Trustees[Brd Yr] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_CFYBrdCnt),0,_CFYBrdCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "1561bcd5-169a-4e0a-9514-d8d360b172e0"
+          },
+          {
+            "name": "CFY Board Prod Donor Count",
+            "expression": [
+              "",
+              "    var _SelFY = [Selected FY]",
+              "    var _CFYBrdPDnrCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( 'Board Production'[HH Key] ),",
+              "                        'Board Production'[Brd Yr] = _SelFY,",
+              "                        'Board Production'[Prod FY] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_CFYBrdPDnrCnt),0,_CFYBrdPDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "772122f1-900e-4559-b963-4e3c16faf4f9"
+          },
+          {
+            "name": "CFY Board Rev Donor Count",
+            "expression": [
+              "",
+              "    var _SelFY = [Selected FY]",
+              "    var _CFYBrdRDnrCnt = CALCULATE(",
+              "                        DISTINCTCOUNTNOBLANK( 'Board Revenue'[HH Key] ),",
+              "                        'Board Revenue'[Brd Yr] = _SelFY,",
+              "                        'Board Revenue'[Rev FY] = _SelFY",
+              "        )",
+              "return",
+              "IF(ISBLANK(_CFYBrdRDnrCnt),0,_CFYBrdRDnrCnt)"
+            ],
+            "formatString": "0",
+            "lineageTag": "1307f9f1-f1dd-4ea1-8540-be8f5094a5a8"
+          },
+          {
+            "name": "CFY Board Prod Participation",
+            "expression": [
+              "",
+              "    [CFY Board Prod Donor Count] / [CFY Board Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "b582d379-7106-4589-9dc3-0ee25f66a71f"
+          },
+          {
+            "name": "CFY Board Rev Participation",
+            "expression": [
+              "",
+              "    [CFY Board Rev Donor Count] / [CFY Board Count]"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "f59b927f-1b65-463c-a531-cc2df264df40"
+          },
+          {
+            "name": "Max Production Transaction",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _MxPrdTrans = CALCULATE( ",
+              "                        MAX( Production[Trans Amt] ),",
+              "                        Production[Campaign Type] IN {\"Pre-Campaign\",\"Current Campaign\"}",
+              "                    )",
+              "return",
+              "IF(ISBLANK( _MxPrdTrans),0,_MxPrdTrans)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "a3acf8ff-1a45-42f3-8541-1cf6c8efb5b6"
+          },
+          {
+            "name": "Max Revenue Transaction",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "    var _MxRevTrans = CALCULATE( ",
+              "                        MAX( Revenue[Trans Amt] ),",
+              "                        Revenue[Campaign Type] IN {\"Pre-Campaign\",\"Current Campaign\"}",
+              "                    )",
+              "return",
+              "IF(ISBLANK( _MxRevTrans),0,_MxRevTrans)"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "4bca6e40-8f44-478f-a16c-49f072c33bec"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DataSource",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DataSource",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "06ef5206-2fc4-4fe5-a1d6-c4a5ee6d376a",
+            "sourceColumn": "DataSource",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7c4cf7be-345d-438c-84ed-73e2a3bd7f9f",
+        "partitions": [
+          {
+            "name": "DataSource",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"Data Source\"",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "General Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "60494bde-fa8f-44bc-bdff-0a6f2acb9921",
+        "measures": [
+          {
+            "name": "7-Figure Page Title",
+            "expression": [
+              "",
+              "    \"7-Figure Gift Count (#) and Total Volume ($) - FY\" & [Selected FY]"
+            ],
+            "lineageTag": "a65b8d54-0b53-4c73-b463-870a0dcd2280"
+          },
+          {
+            "name": "8-Figure Page Title",
+            "expression": [
+              "",
+              "    \"8-Figure Gift Count (#) and Total Volume ($) - FY\" & [Selected FY]"
+            ],
+            "lineageTag": "2bcefbcf-d925-40f5-90a5-5ee184ff8160"
+          },
+          {
+            "name": "As of Date",
+            "expression": [
+              "",
+              "    \"As of \" & 'General Measures'[Last Proc Dt]"
+            ],
+            "lineageTag": "962fc554-ab0c-4365-bff5-1df74b60ef54"
+          },
+          {
+            "name": "Database",
+            "expression": [
+              "",
+              "    \"Database: \" & SELECTEDVALUE( DataSource[DataSource] )"
+            ],
+            "lineageTag": "15f3951d-3486-4165-98c5-c5f7d4c23ad4"
+          },
+          {
+            "name": "Last Proc Dt",
+            "expression": [
+              "",
+              "    SWITCH(",
+              "        TRUE(),",
+              "        [Max Production Proc Dt] > [Max Revenue Proc Dt], [Max Production Proc Dt],",
+              "        [Max Revenue Proc Dt] > [Max Production Proc Dt], [Max Revenue Proc Dt],",
+              "        [Max Production Proc Dt]",
+              ")"
+            ],
+            "lineageTag": "f7970382-92d4-4f25-92f6-852dd4ee5c88"
+          },
+          {
+            "name": "FY Current",
+            "expression": [
+              "",
+              "    \"20\" &",
+              "    MID( CALCULATE( MAX( 'Calendar - Ten Yrs'[FiscalYear] ),",
+              "           'Calendar - Ten Yrs'[CurFiscalYearOffset] = 0",
+              "            ), 3, 2 ",
+              "            )"
+            ],
+            "lineageTag": "83e0232d-588c-4b87-88f7-a8c343c62afb"
+          },
+          {
+            "name": "FY Last",
+            "expression": [
+              "",
+              "    \"20\" &",
+              "    MID( CALCULATE( MAX( 'Calendar - Ten Yrs'[FiscalYear] ),",
+              "           'Calendar - Ten Yrs'[CurFiscalYearOffset] = -1",
+              "            ), 3, 2 ",
+              "            )"
+            ],
+            "lineageTag": "c4767583-f473-47d4-b21c-511bc6ee060d"
+          },
+          {
+            "name": "Max Production Proc Dt",
+            "expression": [
+              "",
+              "    MAXA( Production[Orig Proc Dt] )"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "4186496a-c207-4ad9-9ee8-0789da6da8e5"
+          },
+          {
+            "name": "Max Revenue Proc Dt",
+            "expression": [
+              "",
+              "    MAXA( Revenue[Orig Proc Dt] )"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "fcae98bd-fc53-40ea-8206-0ee4081975b5"
+          },
+          {
+            "name": "Selected FY",
+            "expression": [
+              "",
+              "    SELECTEDVALUE( 'Fiscal Years'[FY] )"
+            ],
+            "lineageTag": "b2a64ca5-c537-4c61-96a1-2d311f7a7c89"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "General Measures",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Trustees",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trustee ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "26525f39-1eb4-4e32-a017-23451d9191dd",
+            "sourceColumn": "Trustee ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trustee Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f5cd65c1-9d46-4e77-b15f-e5088d8d99f5",
+            "sourceColumn": "Trustee Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Spouse ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3a3fa86-49fd-4d46-9b3d-2ebc27032b30",
+            "sourceColumn": "Spouse ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Spouse Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "72940dcc-a38f-4d2e-9640-3b9e7740af6b",
+            "sourceColumn": "Spouse Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22716e83-2bfb-4e4d-aa64-fa65bdade459",
+            "sourceColumn": "HH Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "c85bcc32-008e-4c7e-afb9-0e5fb01a7e1d",
+            "sourceColumn": "Brd Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Stop Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "55399ee9-4471-4e5b-89f7-9a4da7e1fd06",
+            "sourceColumn": "Brd Stop Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5284c85-f7ef-4168-aec1-15b54c60e1b0",
+            "sourceColumn": "Brd Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UniqKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6206fbaf-1115-42b2-846e-f7a6058a76f1",
+            "sourceColumn": "UniqKey",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "44cd377f-a084-4fa1-a750-87d5833d68ab",
+        "partitions": [
+          {
+            "name": "Trustees",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"--- Board of Trustees Query for Big East Survey; pulls start and stop dates and each FY in which they were \"\"Current\"\" at any point. smk 12/5/2023#(lf)#(lf)WITH brd AS (#(lf)            select xt0.id_number tid, hk0.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)) yr, 'X' ind,#(lf)                   xt0.start_date strt, xt0.stop_date stp#(lf)              from advur.vw_ent_trustees xt0#(lf)             inner join advur.mvw_ent_household_keys hk0 ON xt0.id_number = hk0.ID_NUMBER#(lf)             where xt0.affil_status_code NOT IN ('E','W')#(lf)             and   trunc(xt0.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year))#(lf)             and   (xt0.stop_date IS NULL OR xt0.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-1))#(lf)            UNION ALL#(lf)            select xt1.id_number tid, hk1.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-1) yr, 'X' ind,#(lf)                   xt1.start_date strt, xt1.stop_date stp#(lf)              from advur.vw_ent_trustees xt1#(lf)             inner join advur.mvw_ent_household_keys hk1 ON xt1.id_number = hk1.ID_NUMBER#(lf)             where xt1.affil_status_code NOT IN ('E','W')#(lf)             and   trunc(xt1.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-1)#(lf)             and   (xt1.stop_date IS NULL OR xt1.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-2))#(lf)            UNION ALL#(lf)            select xt2.id_number tid, hk2.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-2) yr, 'X' ind,#(lf)                   xt2.start_date strt, xt2.stop_date stp#(lf)              from advur.vw_ent_trustees xt2#(lf)             inner join advur.mvw_ent_household_keys hk2 ON xt2.id_number = hk2.ID_NUMBER#(lf)             where xt2.affil_status_code NOT IN ('E','W')#(lf)             and   trunc(xt2.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-2)#(lf)             and   (xt2.stop_date IS NULL OR xt2.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-3))#(lf)            UNION ALL#(lf)            select xt3.id_number tid, hk3.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-3) yr, 'X' ind,#(lf)                   xt3.start_date strt, xt3.stop_date stp#(lf)              from advur.vw_ent_trustees xt3#(lf)             inner join advur.mvw_ent_household_keys hk3 ON xt3.id_number = hk3.ID_NUMBER#(lf)             where xt3.affil_status_code NOT IN ('E','W')#(lf)             and   trunc(xt3.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-3)#(lf)             and   (xt3.stop_date IS NULL OR xt3.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-4))#(lf)            UNION ALL#(lf)            select xt4.id_number tid, hk4.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-4) yr, 'X' ind,#(lf)                   xt4.start_date strt, xt4.stop_date stp#(lf)              from advur.vw_ent_trustees xt4#(lf)             inner join advur.mvw_ent_household_keys hk4 ON xt4.id_number = hk4.ID_NUMBER#(lf)             where xt4.affil_status_code NOT IN ('E','W')#(lf)             and   trunc(xt4.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)             and   (xt4.stop_date IS NULL OR xt4.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-5))#(lf)            UNION ALL#(lf)            select e5.id_number tid, hk5.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)) yr, 'X' ind,#(lf)                   NULL strt, NULL stp#(lf)              from advance.entity e5#(lf)             inner join advur.mvw_ent_household_keys hk5 ON e5.id_number = hk5.ID_NUMBER#(lf)             where e5.id_number IN ('0000058654','0000340868','0000230029','0000292630','0000099179')#(lf)        )#(lf)select distinct e.id_number                \"\"Trustee ID\"\",#(lf)       e.pref_mail_name                    \"\"Trustee Name\"\",#(lf)       sp.id_number                        \"\"Spouse ID\"\",#(lf)       sp.pref_mail_name                   \"\"Spouse Name\"\",#(lf)       brd.hhkey                           \"\"HH Key\"\",#(lf)       brd.hhkey||brd.yr                   \"\"UniqKey\"\",#(lf)       brd.strt                            \"\"Brd Start Dt\"\",#(lf)       brd.stp                             \"\"Brd Stop Dt\"\",#(lf)       brd.yr                              \"\"Brd Yr\"\"#(lf) from advur.mvw_hh_entities_with_deceased hk#(lf) left join brd ON (brd.tid = hk.primary_id_number OR brd.tid = hk.secondary_id_number)#(lf) inner join advance.entity e  ON brd.tid = e.id_number#(lf)  left join advance.entity sp ON e.spouse_id_number = sp.id_number\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Brd Start Dt\", type date}, {\"Brd Stop Dt\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fiscal Years",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "FY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f9fc95dd-0e3f-4682-805e-6c06f1de7452",
+            "sourceColumn": "FY",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "68533846-b153-406e-90b1-92899b8f624f",
+        "partitions": [
+          {
+            "name": "Fiscal Years",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Trustees,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Brd Yr\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Duplicates\",{{\"Brd Yr\", \"FY\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Board Production",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trustee ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "62b558b9-12df-4b18-8560-ae7e1bdd35dd",
+            "sourceColumn": "Trustee ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trustee Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b086c1ac-fc5b-4155-b0ef-f60e57ff4fe8",
+            "sourceColumn": "Trustee Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Spouse ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "91623067-0cc9-4eeb-aaa5-3485821a68e2",
+            "sourceColumn": "Spouse ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Spouse Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "262a6b51-99e1-462f-849f-a2ce597a108f",
+            "sourceColumn": "Spouse Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bc2e337b-e530-4a8a-8583-a69ccd42f9c5",
+            "sourceColumn": "HH Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "6c2c0c57-4be3-485f-8d0d-005d7ff21986",
+            "sourceColumn": "Brd Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Stop Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "ec76beea-a551-4ab7-b385-4635565c7f4b",
+            "sourceColumn": "Brd Stop Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0ee0dae0-e6d5-4613-af09-4124a94c73cc",
+            "sourceColumn": "Brd Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fae6a787-4a25-4f13-8ca9-0a5b511bab8d",
+            "sourceColumn": "Prod?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Cat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6c73a42c-3d19-4937-8ac0-078a5cdcc56a",
+            "sourceColumn": "Prod Trans Cat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3cd763f1-95cc-40fb-bbe5-139f99117622",
+            "sourceColumn": "Prod Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4fd247fc-5d33-44e9-9aeb-eaf7cebf755b",
+            "sourceColumn": "Prod Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "def2c8a6-d530-4dfd-a872-cb98944017c8",
+            "sourceColumn": "Prod Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "32fe47b1-5dc3-4ad3-8bb4-35af47012387",
+            "sourceColumn": "Prod Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod FY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a1b0c12b-6ff7-433d-a9f3-f4cc576b0495",
+            "sourceColumn": "Prod FY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Proc Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "7ace48fb-744d-43da-b7ce-d6ea86d4282b",
+            "sourceColumn": "Prod Proc Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "e573b241-d883-474d-9bd6-ce690ec2ef4b",
+            "sourceColumn": "Prod Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Prod Dnr Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bc71f417-5980-4caf-a3d0-3d66938313d9",
+            "sourceColumn": "Prod Dnr Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aab3825f-0452-4008-a88e-c185dbaac225",
+            "sourceColumn": "Prod School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56c4b9f7-0a0c-4a68-8164-1b754e960d80",
+            "sourceColumn": "Prod Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prod Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de251bf8-a2be-4363-9287-8299650a890f",
+            "sourceColumn": "Prod Allocation Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "627241cb-1da3-4d42-8769-4a10437d43a3",
+        "partitions": [
+          {
+            "name": "Board Production",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"--- Board of Trustees Query for Big East Survey; pulls start and stop dates and each FY in which they were \"\"Current\"\" at any point. smk 12/5/2023#(lf)#(lf)WITH prod AS (#(lf)         SELECT 'Production'                      qcat,#(lf)                prd.trans_category                tcat,#(lf)                prd.finance_category              fincat,#(lf)                prd.trans_nbr                     tnbr,#(lf)                prd.trans_type                    ttyp,#(lf)                trunc(prd.trans_dt)               tdt,#(lf)                prd.fiscal_yr                     fy,#(lf)                prd.orig_proc_dt                  origprdt,#(lf)                prd.trans_amt                     tamt,#(lf)                ext.primary_recipient_ids         did,#(lf)                ext.primary_recipients            dnme,#(lf)                thh.household_key                 hhkey,#(lf)                CASE WHEN e.record_type_code = 'A' then 'Alumni'#(lf)                     WHEN e.record_type_code IN ('P','FP') then 'Parents'#(lf)                     WHEN e.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)                     WHEN e.record_type_code IN ('S','FD') then 'Students'#(lf)                     WHEN e.person_or_org = 'P' AND e.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code = 'C' THEN 'Corporations'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)                   ELSE 'Other Individuals' END   dnrcat,#(lf)                allc.school                       schl,#(lf)                allc.allocation_code              alloc,#(lf)                allc.allocation_name              allnme#(lf)           FROM advur.MVW_TRANS_HOUSEHOLDS thh#(lf)          INNER JOIN advur.MVW_TOTAL_PRODUCTION prd     ON thh.trans_nbr = prd.trans_nbr#(lf)          inner join advur.mvw_total_production_ext ext ON prd.trans_nbr = ext.trans_nbr#(lf)          INNER JOIN advur.MVW_HH_ENTITIES_GEN hh       ON thh.household_key = hh.household_key#(lf)          inner join advance.entity e                   ON hh.primary_id_number = e.id_number#(lf)          INNER JOIN advur.MVW_ALLOCATIONS allc         ON prd.ALLOCATION_CODE = allc.ALLOCATION_CODE#(lf)          WHERE prd.fiscal_yr >= to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)                 ),#(lf)rev AS (#(lf)        SELECT 'Revenue'                          qcat,#(lf)               rev2.trans_category                tcat,#(lf)               rev2.finance_category              fincat,#(lf)               rev2.trans_nbr                     tnbr,#(lf)               rev2.trans_type                    ttyp,#(lf)               trunc(rev2.trans_dt)               tdt,#(lf)               rev2.fiscal_yr                     fy,#(lf)               rev2.orig_proc_dt                  origprdt,#(lf)               rev2.trans_amt                     tamt,#(lf)               ext2.primary_recipient_ids         did,#(lf)               ext2.primary_recipients            dnme,#(lf)               thh2.household_key                 hhkey,#(lf)               CASE WHEN e2.record_type_code = 'A' then 'Alumni'#(lf)                    WHEN e2.record_type_code IN ('P','FP') then 'Parents'#(lf)                    WHEN e2.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)                    WHEN e2.record_type_code IN ('S','FD') then 'Students'#(lf)                    WHEN e2.person_or_org = 'P' AND e2.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code = 'C' THEN 'Corporations'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)                  ELSE 'Other Individuals' END   dnrcat,#(lf)               allc2.school                       schl,#(lf)               allc2.allocation_code              alloc,#(lf)               allc2.allocation_name              allnme#(lf)          FROM advur.mvw_trans_households thh2#(lf)         INNER JOIN advur.mvw_total_revenue rev2        ON thh2.trans_nbr = rev2.trans_nbr#(lf)         inner join advur.mvw_total_production_ext ext2 ON rev2.trans_nbr = ext2.trans_nbr#(lf)         INNER JOIN advur.mvw_hh_entities_gen hh2       ON thh2.household_key = hh2.household_key#(lf)         inner join advance.entity e2                   ON hh2.primary_id_number = e2.id_number#(lf)         INNER JOIN advur.MVW_ALLOCATIONS allc2         ON rev2.allocation_code = allc2.allocation_code#(lf)          WHERE rev2.fiscal_yr >= to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)                 )#(lf)select distinct e.id_number                \"\"Trustee ID\"\",#(lf)       e.pref_mail_name                    \"\"Trustee Name\"\",#(lf)       sp.id_number                        \"\"Spouse ID\"\",#(lf)       sp.pref_mail_name                   \"\"Spouse Name\"\",#(lf)       brd.hhkey                           \"\"HH Key\"\",#(lf)       brd.strt                            \"\"Brd Start Dt\"\",#(lf)       brd.stp                             \"\"Brd Stop Dt\"\",#(lf)       brd.yr                              \"\"Brd Yr\"\",#(lf)       p.qcat                              \"\"Prod?\"\",#(lf)       p.tcat                              \"\"Prod Trans Cat\"\",#(lf)       p.fincat                            \"\"Prod Finance Category\"\",#(lf)       p.tnbr                              \"\"Prod Trans Nbr\"\",#(lf)       p.ttyp                              \"\"Prod Trans Type\"\",#(lf)       p.tdt                               \"\"Prod Trans Dt\"\",#(lf)       p.fy                                \"\"Prod FY\"\",#(lf)       p.origprdt                          \"\"Prod Proc Dt\"\",#(lf)       p.tamt                              \"\"Prod Trans Amt\"\",#(lf)       p.dnrcat                            \"\"Prod Dnr Category\"\",#(lf)       p.schl                              \"\"Prod School\"\",#(lf)       p.dnrcat                            \"\"Prod Alloc Cd\"\",#(lf)       p.allnme                            \"\"Prod Allocation Name\"\"--,#(lf)--       r.qcat                              \"\"Rev?\"\",#(lf)--       r.tcat                              \"\"Rev Trans Cat\"\",#(lf)--       r.fincat                            \"\"Rev Finance Category\"\",#(lf)--       r.tnbr                              \"\"Rev Trans Nbr\"\",#(lf)--       r.ttyp                              \"\"Rev Trans Type\"\",#(lf)--       r.tdt                               \"\"Rev Trans Dt\"\",#(lf)--       r.fy                                \"\"Rev FY\"\",#(lf)--       r.origprdt                          \"\"Rev Proc Dt\"\",#(lf)--       r.tamt                              \"\"Rev Trans Amt\"\",#(lf)--       r.dnrcat                            \"\"Rev Dnr Category\"\",#(lf)--       r.schl                              \"\"Rev School\"\",#(lf)--       r.dnrcat                            \"\"Rev Alloc Cd\"\",#(lf)--       r.allnme                            \"\"Rev Allocation Name\"\"#(lf) from advur.mvw_hh_entities_with_deceased hk#(lf) left join (#(lf)            select xt0.id_number tid, hk0.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)) yr, 'X' ind,#(lf)                   xt0.start_date strt, xt0.stop_date stp#(lf)                     from advur.vw_ent_trustees xt0#(lf)                    inner join advur.mvw_ent_household_keys hk0 ON xt0.id_number = hk0.ID_NUMBER#(lf)                    where xt0.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt0.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year))#(lf)                    and   (xt0.stop_date IS NULL OR xt0.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-1))#(lf)                   UNION ALL#(lf)                   select xt1.id_number tid, hk1.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-1) yr, 'X' ind,#(lf)                   xt1.start_date strt, xt1.stop_date stp#(lf)                     from advur.vw_ent_trustees xt1#(lf)                    inner join advur.mvw_ent_household_keys hk1 ON xt1.id_number = hk1.ID_NUMBER#(lf)                    where xt1.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt1.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-1)#(lf)                    and   (xt1.stop_date IS NULL OR xt1.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-2))#(lf)                   UNION ALL#(lf)                   select xt2.id_number tid, hk2.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-2) yr, 'X' ind,#(lf)                   xt2.start_date strt, xt2.stop_date stp#(lf)                     from advur.vw_ent_trustees xt2#(lf)                    inner join advur.mvw_ent_household_keys hk2 ON xt2.id_number = hk2.ID_NUMBER#(lf)                    where xt2.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt2.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-2)#(lf)                    and   (xt2.stop_date IS NULL OR xt2.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-3))#(lf)                   UNION ALL#(lf)                   select xt3.id_number tid, hk3.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-3) yr, 'X' ind,#(lf)                   xt3.start_date strt, xt3.stop_date stp#(lf)                     from advur.vw_ent_trustees xt3#(lf)                    inner join advur.mvw_ent_household_keys hk3 ON xt3.id_number = hk3.ID_NUMBER#(lf)                    where xt3.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt3.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-3)#(lf)                    and   (xt3.stop_date IS NULL OR xt3.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-4))#(lf)                   UNION ALL#(lf)                   select xt4.id_number tid, hk4.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-4) yr, 'X' ind,#(lf)                   xt4.start_date strt, xt4.stop_date stp#(lf)                     from advur.vw_ent_trustees xt4#(lf)                    inner join advur.mvw_ent_household_keys hk4 ON xt4.id_number = hk4.ID_NUMBER#(lf)                    where xt4.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt4.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)                    and   (xt4.stop_date IS NULL OR xt4.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-5))#(lf)                   UNION ALL#(lf)                   select e5.id_number tid, hk5.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)) yr, 'X' ind,#(lf)                   NULL strt, NULL stp#(lf)                     from advance.entity e5#(lf)                    inner join advur.mvw_ent_household_keys hk5 ON e5.id_number = hk5.ID_NUMBER#(lf)                    where e5.id_number IN ('0000058654','0000340868','0000230029','0000292630','0000099179')#(lf)        )brd ON (brd.tid = hk.primary_id_number OR brd.tid = hk.secondary_id_number)#(lf) inner join advance.entity e  ON brd.tid = e.id_number#(lf)  left join advance.entity sp ON e.spouse_id_number = sp.id_number#(lf) inner join prod p            ON brd.hhkey = p.hhkey AND brd.yr = p.fy\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Brd Start Dt\", type date}, {\"Brd Stop Dt\", type date}, {\"Prod Trans Dt\", type date}, {\"Prod Proc Dt\", type date}, {\"Prod Trans Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Board Revenue",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Trustee ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c7ed3a32-e83a-4fa1-b251-34dec99298ad",
+            "sourceColumn": "Trustee ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trustee Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "19367e59-f395-4035-a489-cab3fbfc6f4e",
+            "sourceColumn": "Trustee Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Spouse ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ddb3497-a1d5-4b80-8d11-a3e283ed8c9e",
+            "sourceColumn": "Spouse ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Spouse Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "192e0d5a-fec2-4995-be88-7fe1ac1b6c61",
+            "sourceColumn": "Spouse Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HH Key",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3b887392-4407-42a0-9d32-b06202f6e6df",
+            "sourceColumn": "HH Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Start Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "820633cb-dd7a-4795-855e-e49f3e06a33f",
+            "sourceColumn": "Brd Start Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Stop Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "76a8ae05-40a1-4d26-839f-32b4e5f3efce",
+            "sourceColumn": "Brd Stop Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Brd Yr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4488e386-1f9d-454c-b138-84f05b643857",
+            "sourceColumn": "Brd Yr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b1f11cd6-cb5d-4a08-80a5-9e2aceab2d0c",
+            "sourceColumn": "Rev?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Trans Cat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de89361a-99a9-47d8-a173-6df0d2239183",
+            "sourceColumn": "Rev Trans Cat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Finance Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dec3768e-929e-4e68-bab3-a117dc15d891",
+            "sourceColumn": "Rev Finance Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Trans Nbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8dbbe208-d35f-4b03-96b9-5c73ba51e727",
+            "sourceColumn": "Rev Trans Nbr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Trans Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ff8795a7-4009-488f-b45f-991484e37334",
+            "sourceColumn": "Rev Trans Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Trans Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "bb3f2515-448a-49b4-bf2b-70d81980fbb0",
+            "sourceColumn": "Rev Trans Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev FY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0e4742eb-59d3-4df7-b173-eedc6975d935",
+            "sourceColumn": "Rev FY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Proc Dt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "631ae9a5-768b-4901-83e8-483306af3743",
+            "sourceColumn": "Rev Proc Dt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Trans Amt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "ee0eb4e1-e1f7-41b1-b930-190e7a8d7804",
+            "sourceColumn": "Rev Trans Amt",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Rev Dnr Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3cab7bc9-247a-47ca-abda-8e77dc28e47e",
+            "sourceColumn": "Rev Dnr Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev School",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a756ab44-7fb6-4cd9-bfd8-f1699fb84e48",
+            "sourceColumn": "Rev School",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Alloc Cd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "85ad2d27-84ee-48f1-a511-d92abbe28a2f",
+            "sourceColumn": "Rev Alloc Cd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rev Allocation Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e9da7ed7-3bbc-4ace-b693-1550cf981996",
+            "sourceColumn": "Rev Allocation Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d530c652-1c58-4a15-9832-b02916bfe225",
+        "partitions": [
+          {
+            "name": "Board Revenue",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"PADV\", [HierarchicalNavigation=true, Query=\"--- Board of Trustees Query for Big East Survey; pulls start and stop dates and each FY in which they were \"\"Current\"\" at any point. smk 12/5/2023#(lf)#(lf)WITH prod AS (#(lf)         SELECT 'Production'                      qcat,#(lf)                prd.trans_category                tcat,#(lf)                prd.finance_category              fincat,#(lf)                prd.trans_nbr                     tnbr,#(lf)                prd.trans_type                    ttyp,#(lf)                trunc(prd.trans_dt)               tdt,#(lf)                prd.fiscal_yr                     fy,#(lf)                prd.orig_proc_dt                  origprdt,#(lf)                prd.trans_amt                     tamt,#(lf)                ext.primary_recipient_ids         did,#(lf)                ext.primary_recipients            dnme,#(lf)                thh.household_key                 hhkey,#(lf)                CASE WHEN e.record_type_code = 'A' then 'Alumni'#(lf)                     WHEN e.record_type_code IN ('P','FP') then 'Parents'#(lf)                     WHEN e.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)                     WHEN e.record_type_code IN ('S','FD') then 'Students'#(lf)                     WHEN e.person_or_org = 'P' AND e.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code = 'C' THEN 'Corporations'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)                     WHEN e.person_or_org = 'O' AND e.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)                   ELSE 'Other Individuals' END   dnrcat,#(lf)                allc.school                       schl,#(lf)                allc.allocation_code              alloc,#(lf)                allc.allocation_name              allnme#(lf)           FROM advur.MVW_TRANS_HOUSEHOLDS thh#(lf)          INNER JOIN advur.MVW_TOTAL_PRODUCTION prd     ON thh.trans_nbr = prd.trans_nbr#(lf)          inner join advur.mvw_total_production_ext ext ON prd.trans_nbr = ext.trans_nbr#(lf)          INNER JOIN advur.MVW_HH_ENTITIES_GEN hh       ON thh.household_key = hh.household_key#(lf)          inner join advance.entity e                   ON hh.primary_id_number = e.id_number#(lf)          INNER JOIN advur.MVW_ALLOCATIONS allc         ON prd.ALLOCATION_CODE = allc.ALLOCATION_CODE#(lf)          WHERE prd.fiscal_yr >= to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)                 ),#(lf)rev AS (#(lf)        SELECT 'Revenue'                          qcat,#(lf)               rev2.trans_category                tcat,#(lf)               rev2.finance_category              fincat,#(lf)               rev2.trans_nbr                     tnbr,#(lf)               rev2.trans_type                    ttyp,#(lf)               trunc(rev2.trans_dt)               tdt,#(lf)               rev2.fiscal_yr                     fy,#(lf)               rev2.orig_proc_dt                  origprdt,#(lf)               rev2.trans_amt                     tamt,#(lf)               ext2.primary_recipient_ids         did,#(lf)               ext2.primary_recipients            dnme,#(lf)               thh2.household_key                 hhkey,#(lf)               CASE WHEN e2.record_type_code = 'A' then 'Alumni'#(lf)                    WHEN e2.record_type_code IN ('P','FP') then 'Parents'#(lf)                    WHEN e2.record_type_code IN ('FS','FF') then 'Faculty/Staff'#(lf)                    WHEN e2.record_type_code IN ('S','FD') then 'Students'#(lf)                    WHEN e2.person_or_org = 'P' AND e2.record_type_code NOT IN ('A','P','FP','FS','FF','S','FD') THEN 'Other Individuals'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code = 'C' THEN 'Corporations'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code IN ('CF','PF') THEN 'Foundations'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code = 'RO' THEN 'Religious Organizations'#(lf)                    WHEN e2.person_or_org = 'O' AND e2.record_type_code NOT IN ('C','CF','PF','RO') THEN 'Other Organizations'#(lf)                  ELSE 'Other Individuals' END   dnrcat,#(lf)               allc2.school                       schl,#(lf)               allc2.allocation_code              alloc,#(lf)               allc2.allocation_name              allnme#(lf)          FROM advur.mvw_trans_households thh2#(lf)         INNER JOIN advur.mvw_total_revenue rev2        ON thh2.trans_nbr = rev2.trans_nbr#(lf)         inner join advur.mvw_total_production_ext ext2 ON rev2.trans_nbr = ext2.trans_nbr#(lf)         INNER JOIN advur.mvw_hh_entities_gen hh2       ON thh2.household_key = hh2.household_key#(lf)         inner join advance.entity e2                   ON hh2.primary_id_number = e2.id_number#(lf)         INNER JOIN advur.MVW_ALLOCATIONS allc2         ON rev2.allocation_code = allc2.allocation_code#(lf)          WHERE rev2.fiscal_yr >= to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)                 )#(lf)select distinct e.id_number                \"\"Trustee ID\"\",#(lf)       e.pref_mail_name                    \"\"Trustee Name\"\",#(lf)       sp.id_number                        \"\"Spouse ID\"\",#(lf)       sp.pref_mail_name                   \"\"Spouse Name\"\",#(lf)       brd.hhkey                           \"\"HH Key\"\",#(lf)       brd.strt                            \"\"Brd Start Dt\"\",#(lf)       brd.stp                             \"\"Brd Stop Dt\"\",#(lf)       brd.yr                              \"\"Brd Yr\"\",#(lf)--       p.qcat                              \"\"Prod?\"\",#(lf)--       p.tcat                              \"\"Prod Trans Cat\"\",#(lf)--       p.fincat                            \"\"Prod Finance Category\"\",#(lf)--       p.tnbr                              \"\"Prod Trans Nbr\"\",#(lf)--       p.ttyp                              \"\"Prod Trans Type\"\",#(lf)--       p.tdt                               \"\"Prod Trans Dt\"\",#(lf)--       p.fy                                \"\"Prod FY\"\",#(lf)--       p.origprdt                          \"\"Prod Proc Dt\"\",#(lf)--       p.tamt                              \"\"Prod Trans Amt\"\",#(lf)--       p.dnrcat                            \"\"Prod Dnr Category\"\",#(lf)--       p.schl                              \"\"Prod School\"\",#(lf)--      p.dnrcat                            \"\"Prod Alloc Cd\"\",#(lf)--       p.allnme                            \"\"Prod Allocation Name\"\"--,#(lf)       r.qcat                              \"\"Rev?\"\",#(lf)       r.tcat                              \"\"Rev Trans Cat\"\",#(lf)       r.fincat                            \"\"Rev Finance Category\"\",#(lf)       r.tnbr                              \"\"Rev Trans Nbr\"\",#(lf)       r.ttyp                              \"\"Rev Trans Type\"\",#(lf)       r.tdt                               \"\"Rev Trans Dt\"\",#(lf)       r.fy                                \"\"Rev FY\"\",#(lf)       r.origprdt                          \"\"Rev Proc Dt\"\",#(lf)       r.tamt                              \"\"Rev Trans Amt\"\",#(lf)       r.dnrcat                            \"\"Rev Dnr Category\"\",#(lf)       r.schl                              \"\"Rev School\"\",#(lf)       r.dnrcat                            \"\"Rev Alloc Cd\"\",#(lf)       r.allnme                            \"\"Rev Allocation Name\"\"#(lf) from advur.mvw_hh_entities_with_deceased hk#(lf) left join (#(lf)            select xt0.id_number tid, hk0.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)) yr, 'X' ind,#(lf)                   xt0.start_date strt, xt0.stop_date stp#(lf)                     from advur.vw_ent_trustees xt0#(lf)                    inner join advur.mvw_ent_household_keys hk0 ON xt0.id_number = hk0.ID_NUMBER#(lf)                    where xt0.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt0.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year))#(lf)                    and   (xt0.stop_date IS NULL OR xt0.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-1))#(lf)                   UNION ALL#(lf)                   select xt1.id_number tid, hk1.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-1) yr, 'X' ind,#(lf)                   xt1.start_date strt, xt1.stop_date stp#(lf)                     from advur.vw_ent_trustees xt1#(lf)                    inner join advur.mvw_ent_household_keys hk1 ON xt1.id_number = hk1.ID_NUMBER#(lf)                    where xt1.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt1.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-1)#(lf)                    and   (xt1.stop_date IS NULL OR xt1.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-2))#(lf)                   UNION ALL#(lf)                   select xt2.id_number tid, hk2.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-2) yr, 'X' ind,#(lf)                   xt2.start_date strt, xt2.stop_date stp#(lf)                     from advur.vw_ent_trustees xt2#(lf)                    inner join advur.mvw_ent_household_keys hk2 ON xt2.id_number = hk2.ID_NUMBER#(lf)                    where xt2.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt2.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-2)#(lf)                    and   (xt2.stop_date IS NULL OR xt2.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-3))#(lf)                   UNION ALL#(lf)                   select xt3.id_number tid, hk3.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-3) yr, 'X' ind,#(lf)                   xt3.start_date strt, xt3.stop_date stp#(lf)                     from advur.vw_ent_trustees xt3#(lf)                    inner join advur.mvw_ent_household_keys hk3 ON xt3.id_number = hk3.ID_NUMBER#(lf)                    where xt3.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt3.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-3)#(lf)                    and   (xt3.stop_date IS NULL OR xt3.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-4))#(lf)                   UNION ALL#(lf)                   select xt4.id_number tid, hk4.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)-4) yr, 'X' ind,#(lf)                   xt4.start_date strt, xt4.stop_date stp#(lf)                     from advur.vw_ent_trustees xt4#(lf)                    inner join advur.mvw_ent_household_keys hk4 ON xt4.id_number = hk4.ID_NUMBER#(lf)                    where xt4.affil_status_code NOT IN ('E','W')#(lf)                    and   trunc(xt4.start_date) <= '30-JUN-'||to_char((select * from advur.vw_current_fiscal_year)-4)#(lf)                    and   (xt4.stop_date IS NULL OR xt4.stop_date >= '01-JUL-'||to_char((select * from advur.vw_current_fiscal_year)-5))#(lf)                   UNION ALL#(lf)                   select e5.id_number tid, hk5.household_key hhkey, to_char((select * from advur.vw_current_fiscal_year)) yr, 'X' ind,#(lf)                   NULL strt, NULL stp#(lf)                     from advance.entity e5#(lf)                    inner join advur.mvw_ent_household_keys hk5 ON e5.id_number = hk5.ID_NUMBER#(lf)                    where e5.id_number IN ('0000058654','0000340868','0000230029','0000292630','0000099179')#(lf)        )brd ON (brd.tid = hk.primary_id_number OR brd.tid = hk.secondary_id_number)#(lf) inner join advance.entity e  ON brd.tid = e.id_number#(lf)  left join advance.entity sp ON e.spouse_id_number = sp.id_number#(lf)-- inner join prod p            ON brd.hhkey = p.hhkey AND brd.yr = p.fy#(lf) inner join rev r             ON brd.hhkey = r.hhkey AND brd.yr = r.fy\"]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Brd Start Dt\", type date}, {\"Brd Stop Dt\", type date}, {\"Rev Trans Dt\", type date}, {\"Rev Proc Dt\", type date}, {\"Rev Trans Amt\", Currency.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

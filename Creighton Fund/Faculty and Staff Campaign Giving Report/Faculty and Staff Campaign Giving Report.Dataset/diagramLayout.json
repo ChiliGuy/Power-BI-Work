@@ -1,0 +1,154 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 259.46562621364126,
+            "y": 792.03925576448023
+          },
+          "nodeIndex": "Alumni Status Table",
+          "size": {
+            "height": 130.29060715467415,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 909.66505516321627,
+            "y": 57.505576732185716
+          },
+          "nodeIndex": "Date List",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 398.74433768210946,
+            "y": 464.64589836164743
+          },
+          "nodeIndex": "FS_Counts",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1.8292444009588564,
+            "y": 430.81665396068854
+          },
+          "nodeIndex": "FS_Giving",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 5.1826038174772293,
+            "y": 0
+          },
+          "nodeIndex": "FY",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1240.513532601613,
+            "y": 517.39298629191546
+          },
+          "nodeIndex": "Gift Band Group",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 957.05697559015016
+          },
+          "nodeIndex": "Last Refresh Date",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1223.9070745146139,
+            "y": 751.87219257494007
+          },
+          "nodeIndex": "Report Inventory",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1239.1962601227285,
+            "y": 204.25779404785351
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 286.01189568620617,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 413.18606306928791,
+            "y": 50.558859912835032
+          },
+          "nodeIndex": "Places of Work",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 774.17583751667053,
+            "y": 463.11915680156886
+          },
+          "nodeIndex": "CFY FacStaff",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 49.447317528719474,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

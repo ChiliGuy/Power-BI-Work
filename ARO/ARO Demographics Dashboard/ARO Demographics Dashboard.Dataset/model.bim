@@ -1,0 +1,1893 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.120.731.0 (23.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Schools\",\"Market Areas\",\"Entity Degree Info\",\"Entity Giving\",\"Entity Address\",\"Measure Dimensions\",\"Key Measures\",\"Entity Dem Info\",\"Key Measures Avg\",\"Report Inventory\",\"Last Refresh Date\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "entity_address.city_state": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Entity Address",
+                    "ConceptualProperty": "CITY_STATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "City/State": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "measure_dimensions.measure_selection": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure Dimensions",
+                    "ConceptualProperty": "Measure Selection"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Giving": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "8c091109-887b-4eec-b87c-5254948e530c",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "ID_NUMBER",
+        "fromTable": "Entity Address",
+        "toColumn": "ID_NUMBER",
+        "toTable": "Entity Giving"
+      },
+      {
+        "name": "dfd74a7c-0561-4df8-9714-393c06ee522f",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "ID_NUMBER",
+        "fromTable": "Entity Degree Info",
+        "toColumn": "ID_NUMBER",
+        "toTable": "Entity Giving"
+      },
+      {
+        "name": "25216167-b963-4d23-a005-5c32402847fe",
+        "fromColumn": "SCHOOL_CODE",
+        "fromTable": "Entity Degree Info",
+        "toColumn": "SCHOOL_CODE",
+        "toTable": "Schools"
+      },
+      {
+        "name": "a5c689d2-6fec-4366-b6e7-3f135980eab6",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "ID_NUMBER",
+        "fromTable": "Entity Dem Info",
+        "toColumn": "ID_NUMBER",
+        "toTable": "Entity Giving"
+      },
+      {
+        "name": "31463c35-3cac-4d37-bf42-2dc8cf2b143b",
+        "fromColumn": "Last Refresh Date Time",
+        "fromTable": "Last Refresh Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_cca88d05-34c2-40f4-9f35-9526856026e0"
+      },
+      {
+        "name": "84f73e65-14d8-463f-9408-83676b46f5db",
+        "fromColumn": "GEO_CODE",
+        "fromTable": "Entity Address",
+        "toColumn": "GEO_CODE",
+        "toTable": "Market Areas"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Schools",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "SCHOOL_CODE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7b6e6cbe-924e-47df-b28f-29f2c4978147",
+            "sourceColumn": "SCHOOL_CODE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SCHOOL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "35a226ea-6d3e-4243-93ef-c9b480871135",
+            "sortByColumn": "HIERARCHY_ORDER",
+            "sourceColumn": "SCHOOL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HIERARCHY_ORDER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d5ab976d-924c-4884-9e71-e3d0c7dbc610",
+            "sourceColumn": "HIERARCHY_ORDER",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7589d411-8266-49ce-bac0-7240fabb514c",
+        "partitions": [
+          {
+            "name": "Schools-c6373466-39b4-4280-bd6c-16c48821f4c9",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select ts.school_code,ts.short_desc school,ts.hierarchy_order from advance.tms_school ts\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_1ad5e08d-6a1a-4f50-8592-70f27c64f9cd",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "8e85e7a7-e550-4a62-b064-30ef9112893f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "20d453dc-7bd4-44b7-9445-74f5544c645a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "f0d30657-a733-4061-bef9-77a887125111",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "62715421-4f4b-4559-b769-38c02e00330e",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "97526a8d-ad61-43a7-8c0f-7bb95e6d2ece",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "67f2f783-28b1-4613-9b07-a49779a515e8",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e703eb0b-44ac-46c5-93f9-0cc19faea958",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "c50b7db7-e162-45ec-b1af-78a47a4221ed",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "9f796060-5cac-4221-a856-1edce3019600",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "ed237f32-3625-4615-868c-f79f3cecd5c0",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "82d24cdb-b10d-4fb0-a371-ea2d306f6575",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "e78bbd1c-6065-4401-b142-d9591de35d8d"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "25ab79fa-3e4a-4301-836e-1470bcbf2af0",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_1ad5e08d-6a1a-4f50-8592-70f27c64f9cd-e3c79a1e-02a8-4c51-9b96-73a5f7a2d091",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Market Areas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "GEO_CODE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ffac147b-0971-4a55-84c0-00fa5311e48a",
+            "sourceColumn": "GEO_CODE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MARKET_AREA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b31325ae-a5bb-41b1-a5c2-3ce62bd4e516",
+            "sourceColumn": "MARKET_AREA",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "51c9f8dd-4d1d-40a7-a37f-88bfcef1b4fc",
+        "partitions": [
+          {
+            "name": "Market Areas-c7f68d59-d82b-4aad-9a59-0b0c39763d75",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select gc.geo_code,gc.description market_area from advance.geo_code gc#(lf)where gc.status_code = 'A'\"]),",
+                "    #\"Sorted Rows\" = Table.Sort(Source,{{\"MARKET_AREA\", Order.Ascending}})",
+                "in",
+                "    #\"Sorted Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Entity Degree Info",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5e67f31-6998-42b8-8f6c-b7658df0ddaf",
+            "sourceColumn": "ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SCHOOL_CODE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a42e21db-e6f0-49f5-8e6f-a889bf0738db",
+            "sourceColumn": "SCHOOL_CODE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DEGREE_YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "05482480-fdda-45c2-9f14-cdb040f19c78",
+            "sourceColumn": "DEGREE_YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "YEARS_OUT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86d09c7c-d578-44e7-9e7b-2a259b903bcd",
+            "sourceColumn": "YEARS_OUT",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "503d10f5-3fb2-410a-99be-4e6418dacb89",
+        "measures": [
+          {
+            "name": "Alumni Cnt",
+            "expression": "DISTINCTCOUNT('Entity Degree Info'[ID_NUMBER])",
+            "formatString": "#,0",
+            "lineageTag": "dafd99ce-f463-41ff-bd43-c634886f41d5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Entity Degree Info-3096e2bf-b6f4-4638-b833-f67fdf9a29a7",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"with alumni as(#(lf)select distinct#(lf)       e.id_number,#(lf)       d.school_code,#(lf)       d.degree_year,#(lf)       case when#(lf)       d.degree_year between to_char(extract(year from sysdate)-5) and to_char(extract(year from sysdate)) then '0-5 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-10) and to_char(extract(year from sysdate)-6) then '6-10 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-15) and to_char(extract(year from sysdate)-11) then '11-15 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-20) and to_char(extract(year from sysdate)-16) then '16-20 Years Out'  #(lf)       when d.degree_year between to_char(extract(year from sysdate)-25) and to_char(extract(year from sysdate)-21) then '21-25 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-30) and to_char(extract(year from sysdate)-26) then '26-30 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-35) and to_char(extract(year from sysdate)-31) then '31-35 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-40) and to_char(extract(year from sysdate)-36) then '36-40 Years Out'#(lf)       when d.degree_year between to_char(extract(year from sysdate)-45) and to_char(extract(year from sysdate)-41) then '41-45 Years Out'  #(lf)       when d.degree_year between to_char(extract(year from sysdate)-50) and to_char(extract(year from sysdate)-46) then '46-50 Years Out'#(lf)       --when d.degree_year >= extract(year from sysdate)-51 then '51+ Years Out' end years_out#(lf)       else '51+ Years Out' end years_out#(lf)  from advance.entity e#(lf) inner join advance.degrees d#(lf)    on d.id_number = e.id_number#(lf) where e.record_status_code = 'A'#(lf)   and e.record_type_code = 'A'#(lf)   and d.institution_code = '6121'#(lf)   and d.degree_type <> 'S'#(lf)   and d.non_grad_code <> 'Y'#(lf)   --and d.id_number = '0000009055'#(lf) --  group by e.id_number,d.school_code,d.degree_year#(lf)),#(lf)first_degree AS#(lf) (SELECT DISTINCT a.id_number, a.degree_year,a.school_code,a.years_out#(lf)    FROM alumni a#(lf)   INNER JOIN (SELECT a2.id_number,#(lf)                     a2.school_code,#(lf)                     min(a2.degree_year) degree_year#(lf)                FROM alumni a2#(lf)               GROUP BY a2.id_number, a2.school_code) first_deg#(lf)      ON a.id_number = first_deg.id_number#(lf)     AND a.degree_year = first_deg.degree_year#(lf)     and a.school_code = first_deg.school_code#(lf)     )#(lf)     #(lf)     select * from first_degree#(lf)     where degree_year <> ' '#(lf)  #(lf)  #(lf)\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Entity Giving",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e787f25a-e6b2-4377-8211-a6c3d2a86b77",
+            "sourceColumn": "ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_ALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "8cb9da27-4ca3-41e3-873a-ac57624f8f07",
+            "sourceColumn": "LIF_TPROD_ALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_AS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b07c9b76-6bbe-4411-9642-d4d441499aec",
+            "sourceColumn": "LIF_TPROD_AS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_ATH",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8d505b01-9610-4d71-87b7-2dec1d7c837b",
+            "sourceColumn": "LIF_TPROD_ATH",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_CBA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "bead19e2-c7fe-49c4-8485-3a051a5465a7",
+            "sourceColumn": "LIF_TPROD_CBA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_DEN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7f7553a4-6d29-4738-9bb1-cd5fc1e3a2b9",
+            "sourceColumn": "LIF_TPROD_DEN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_GRA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "92c15f89-f544-47f9-bef2-a71f9e383950",
+            "sourceColumn": "LIF_TPROD_GRA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_LAW",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "56ad8280-134f-4a57-950d-a96121f09716",
+            "sourceColumn": "LIF_TPROD_LAW",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_MED",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9a7c73f2-8dcd-4897-9ef3-6c8fd4ff2d03",
+            "sourceColumn": "LIF_TPROD_MED",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_NUR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3c78b147-9dfa-4092-ba49-5130ea3fef4f",
+            "sourceColumn": "LIF_TPROD_NUR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_PHA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "22cfe443-e321-4542-b6ad-5669d334ca21",
+            "sourceColumn": "LIF_TPROD_PHA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LIF_TPROD_UC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "11815739-de85-4f8b-bc7b-b4cb09fd65fe",
+            "sourceColumn": "LIF_TPROD_UC",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY0_TPROD_ALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "648ab9f2-3bc5-4274-a269-4bd63b8587f5",
+            "sourceColumn": "FY0_TPROD_ALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY1_TPROD_ALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "0558007f-41a8-480c-bbc7-b84999ae58c4",
+            "sourceColumn": "FY1_TPROD_ALL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY2_TPROD_ALL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "9d799016-92a3-442b-8d12-a49e300b1b67",
+            "sourceColumn": "FY2_TPROD_ALL",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5f49c067-4601-4256-8e58-3a1c3c156c45",
+        "measures": [
+          {
+            "name": "Total Dollars Sum",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SUM('Entity Giving'[LIF_TPROD_ALL])",
+            "lineageTag": "d2fbec5e-5e5c-4ecb-80e9-86659b786421"
+          },
+          {
+            "name": "Donor Count",
+            "expression": "CALCULATE(COUNTROWS('Entity Giving'),FILTER('Entity Giving','Measure Dimensions'[Measure Selection]>0))",
+            "formatString": "#,0",
+            "lineageTag": "56069233-fefc-4754-ad98-7762ad2e6839"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Entity Giving-2ed76c23-6b0d-4913-b1ea-a3ce1a7517b6",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct #(lf)       e.id_number,#(lf)       s.lif_tprod_all,#(lf)       s.lif_tprod_as,#(lf)       s.lif_tprod_ath,#(lf)       s.lif_tprod_cba,#(lf)       s.lif_tprod_den,#(lf)       s.lif_tprod_gra,#(lf)       s.lif_tprod_law,#(lf)       s.lif_tprod_med,#(lf)       s.lif_tprod_nur,#(lf)       s.lif_tprod_pha,#(lf)       s.lif_tprod_uc,#(lf)       s.fy0_tprod_all,#(lf)       s.fy1_tprod_all,#(lf)       s.fy2_tprod_all#(lf)  from advance.entity e#(lf) inner join advur.mvw_ent_tprod_summaries s#(lf)    on e.id_number = s.id_number#(lf) inner join advance.degrees d on e.id_number = d.id_number   #(lf) where e.record_status_code = 'A'#(lf)and e.record_type_code = 'A'#(lf)and d.institution_code = '6121'#(lf)and d.non_grad_code <> 'Y'#(lf)and d.degree_type <> 'S'#(lf)and d.degree_year <> ' '\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Entity Address",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6947ff6e-091b-426e-9e6e-9742745aca3b",
+            "sourceColumn": "ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CITY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "97ccd627-e0b3-4e54-8bc8-625b987e8bfd",
+            "sourceColumn": "CITY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "STATE_CODE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e502a3d1-5a69-4941-893f-831c348cf30c",
+            "sourceColumn": "STATE_CODE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CITY_STATE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0c99b366-b2ef-4be2-9841-a04011cdf9eb",
+            "sourceColumn": "CITY_STATE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GEO_CODE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c992dcb1-8fd2-4992-9fee-354244b71ebb",
+            "sourceColumn": "GEO_CODE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MARKET_AREA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e2d60d3-872d-404e-8bfa-67d94e3b73b2",
+            "sourceColumn": "MARKET_AREA",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6d2af9b6-168a-4c53-aafa-62d1b224b93d",
+        "partitions": [
+          {
+            "name": "Entity Address-4e6206a3-47e0-4179-bf0e-f97c338f51c6",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"SELECT DISTINCT  #(lf)       e.id_number,#(lf)       a.geo_code,#(lf)       a.city,#(lf)       a.STATE_CODE,#(lf)       a.MARKET_AREA #(lf)FROM advance.entity e#(lf)INNER JOIN advur.MVW_ENT_ADDRESSES a ON e.ID_NUMBER = a.ID_NUMBER #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)AND e.RECORD_STATUS_CODE = 'A'#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)AND a.geo_code IS NOT NULL#(lf)INNER JOIN advur.VW_ENT_DEGREED_ALUMNI deg ON e.ID_NUMBER = deg.ID_NUMBER \"]),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(Source,null,\"NA\",Replacer.ReplaceValue,{\"CITY\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",null,\"NA\",Replacer.ReplaceValue,{\"STATE_CODE\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Replaced Value1\", \"Custom\", each [CITY] & \",\" & \" \" & [STATE_CODE]),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Custom\",{{\"Custom\", \"CITY_STATE\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Measure Dimensions",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Measure",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "21e3ada2-9228-4de7-b0d4-06417efbd164",
+            "sourceColumn": "Measure",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Index",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "13d7f9dc-0dfb-4144-b866-a6a559056431",
+            "sourceColumn": "Index",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "72d9063f-f169-408d-a4e6-b57778a75946",
+        "measures": [
+          {
+            "name": "Measure Selection",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "SWITCH( TRUE(),",
+              "\tVALUES('Measure Dimensions'[Measure]) = \"Lifetime\", [Lifetime],",
+              "\tVALUES('Measure Dimensions'[Measure]) = \"Previous FY\", [Previous FY],",
+              "VALUES('Measure Dimensions'[Measure]) = \"Current FY\", [Current FY],",
+              "\tBLANK())"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "d0835909-b819-43ed-9c35-465fde214511"
+          },
+          {
+            "name": "Measure Selection Avg",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "SWITCH( TRUE(),",
+              "\tVALUES('Measure Dimensions'[Measure]) = \"Lifetime\", [Lifetime AVG],",
+              "\tVALUES('Measure Dimensions'[Measure]) = \"Previous FY\", [Previous FY AVG],",
+              "VALUES('Measure Dimensions'[Measure]) = \"Current FY\", [Current FY AVG],",
+              "\tBLANK())"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "3c58c832-ecdd-4715-ad83-f1a9cc783ea9"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Measure Dimensions-8cff7b39-be14-4201-9b71-c5148a240a62",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45W8slMSy3JzE1V0lEyVIrViVZyLi0qSs0rUYhMTSwCChqBBQOKUssy80uLYaLGSrGxAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Column1 = _t, Column2 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", Int64.Type}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Column1\", \"Measure\"}, {\"Column2\", \"Index\"}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Renamed Columns\",\"Current Year\",\"Current FY\",Replacer.ReplaceText,{\"Measure\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Previous Year\",\"Previous FY\",Replacer.ReplaceText,{\"Measure\"})",
+                "in",
+                "    #\"Replaced Value1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Column1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ec93fbf0-8629-470e-a70c-a3d9daef8606",
+            "sourceColumn": "Column1",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e25ff0d9-7f5f-44b8-b320-cc2bacca471d",
+        "measures": [
+          {
+            "name": "Lifetime",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SUM('Entity Giving'[LIF_TPROD_ALL])",
+            "lineageTag": "11d0910d-c412-40ae-92d4-3d4918d65f6c"
+          },
+          {
+            "name": "Previous FY",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "sum('Entity Giving'[FY1_TPROD_ALL])",
+            "lineageTag": "0818aec6-7519-40d8-a26b-9448e3bc3ff1"
+          },
+          {
+            "name": "Current FY",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "sum('Entity Giving'[FY0_TPROD_ALL])",
+            "lineageTag": "a9d9d4d0-ab3d-4250-ad41-c8d55ce9d77e"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures-f60346e0-2e2f-484c-a07b-77c0b24d667b",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Entity Dem Info",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_NUMBER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ab213182-1d5a-47d5-91a1-8d79e0ab4bc1",
+            "sourceColumn": "ID_NUMBER",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LAST_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cbb4c4f6-95eb-4534-af74-bffc717799f0",
+            "sourceColumn": "LAST_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FIRST_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "679f0f5c-5afc-4767-8ef8-280f445221e1",
+            "sourceColumn": "FIRST_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ETHNICITY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8983b206-3fb0-4e48-9d7b-949a6c3354c6",
+            "sourceColumn": "ETHNICITY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GENDER",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1ef9bf27-89c7-4780-8774-56f13cede813",
+            "sourceColumn": "GENDER",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "aa9b339a-169c-44dc-96cf-f036a4788e5b",
+        "partitions": [
+          {
+            "name": "Entity Dem Info-e89bea6d-9400-42d0-a359-c6b7c381cd11",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Oracle.Database(\"padv\", [HierarchicalNavigation=true, Query=\"select distinct #(lf)       e.id_number,#(lf)       e.last_name,#(lf)       e.first_name,#(lf)       g.short_desc gender,#(lf)       case when e.ethnic_code = ' ' or e.ethnic_code is null then 'Missing'#(lf)         else r.short_desc end ethnicity#(lf)  from advance.entity e#(lf) left outer join advance.tms_race r #(lf)    on e.ethnic_code = r.ethnic_code  #(lf) inner join advance.degrees d on d.id_number = e.id_number#(lf) left join advance.tms_gender g on e.gender_code = g.gender_code#(lf) where e.record_status_code = 'A'#(lf)and e.record_type_code = 'A'#(lf)and d.institution_code = '6121'#(lf)and d.non_grad_code <> 'Y'#(lf)and d.degree_type <> 'S'#(lf)and d.degree_year <> ' '#(lf)\"])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Key Measures Avg",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Column1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d4d8ead-5da5-4893-9898-9a7f8222504f",
+            "sourceColumn": "Column1",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "686dd673-142a-4f02-9cb7-0273f5053b36",
+        "measures": [
+          {
+            "name": "Current FY AVG",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SUM('Entity Giving'[FY0_TPROD_ALL])/[Donor Count]",
+            "lineageTag": "8240f59e-d490-44ab-af3d-8618152bfe9e"
+          },
+          {
+            "name": "Lifetime AVG",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "sum('Entity Giving'[LIF_TPROD_ALL])/[Donor Count]",
+            "lineageTag": "1f69c46a-e023-4d29-b75d-b78cb67c6f32"
+          },
+          {
+            "name": "Previous FY AVG",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SUM('Entity Giving'[FY1_TPROD_ALL])/[Donor Count]",
+            "lineageTag": "c54ad017-4552-4ab6-9d05-8054b07fd536"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Key Measures Avg-fdc6f408-935e-49e1-a675-4cedb220d775",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Report Inventory",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "35da5749-6234-4756-9091-b2cb353e1499",
+            "sourceColumn": "Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8609e775-5b57-4029-bd05-1b18c1a9d37e",
+            "sourceColumn": "Report ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54e7ef9c-1766-4d22-8e9a-e80f425d4749",
+            "sourceColumn": "Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d24b669f-949f-4a1f-aecf-bc8a2898c06e",
+            "sourceColumn": "Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5ef3909f-67fa-4a4a-8566-1914a02a8a3c",
+            "sourceColumn": "Report Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Platform",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cf238ae6-4029-43ef-9f22-99a0ac6b5d68",
+            "sourceColumn": "Report Platform",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last Updated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dbb6dabd-a348-4956-abb6-3cba93943832",
+            "sourceColumn": "Last Updated",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Change Log",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54049a7c-d99c-4385-99d0-4849a8b1ef19",
+            "sourceColumn": "Change Log",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Changed By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aad8f75e-7588-4880-9906-c52728a998fd",
+            "sourceColumn": "Changed By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Technical Support Co",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b761044a-e881-43da-9199-22c1a5df353f",
+            "sourceColumn": "Technical Support Co",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Directory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4e27f478-2e76-4157-b4c4-842f5e75b21b",
+            "sourceColumn": "Report Directory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Published Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b62711e-d60e-4be3-ae75-dbb3f2495c59",
+            "sourceColumn": "Published Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Data Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3c629a25-4eec-454f-90ce-8544afc1c05c",
+            "sourceColumn": "Data Source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "URL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3cada86a-96ff-43b9-b448-7217bc85af78",
+            "sourceColumn": "URL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Stored Procedure _x0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1bef9628-db93-47e7-a8f6-7c0b3b798a6e",
+            "sourceColumn": "Stored Procedure _x0",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Views",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a64f2ca8-11f0-481e-b01c-10e29dd923b4",
+            "sourceColumn": "Views",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subreport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a3398f32-df1f-42e8-a30c-90acbd66ac37",
+            "sourceColumn": "Subreport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Requestor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0723d63f-26cc-459c-a000-ee208a532cc2",
+            "sourceColumn": "Requestor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IntendedAudience",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f65eda5-305a-4a9c-9793-3ed0cb840e09",
+            "sourceColumn": "IntendedAudience",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DescriptionofLogic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22de8710-a29f-4c2c-8dc5-30d4748fa375",
+            "sourceColumn": "DescriptionofLogic",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Archived?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c062307c-9683-42d5-905e-8dc9f0b1bb75",
+            "sourceColumn": "Archived?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OData__ColorTag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b6aa95a3-f717-4557-965b-36c787f3ac19",
+            "sourceColumn": "OData__ColorTag",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0d2e62d2-ca51-4c62-9ba8-4f4b41b6f496",
+        "partitions": [
+          {
+            "name": "Report Inventory-73d39a10-74ed-4acc-bf4b-2dbb637a2f40",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = SharePoint.Tables(\"https://creightonuniv.sharepoint.com/teams/UR/DevProgs/AdvSvcs/\", [ApiVersion = 15]),",
+                "    #\"f37cb0b4-383d-4f4d-ae7d-6741cb3f1566\" = Source{[Id=\"f37cb0b4-383d-4f4d-ae7d-6741cb3f1566\"]}[Items],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"f37cb0b4-383d-4f4d-ae7d-6741cb3f1566\",{{\"ID\", \"ID.1\"}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"FileSystemObjectType\", \"ServerRedirectedEmbedUri\", \"ServerRedirectedEmbedUrl\", \"ContentTypeId\", \"ComplianceAssetId\", \"ID.1\", \"Modified\", \"Created\", \"AuthorId\", \"EditorId\", \"OData__UIVersionString\", \"Attachments\", \"GUID\", \"FirstUniqueAncestorSecurableObject\", \"RoleAssignments\", \"AttachmentFiles\", \"ContentType\", \"GetDlpPolicyTip\", \"FieldValuesAsHtml\", \"FieldValuesAsText\", \"FieldValuesForEdit\", \"File\", \"Folder\", \"LikedByInformation\", \"ParentList\", \"Properties\", \"Versions\", \"Author\", \"Editor\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([Report Platform] = \"Power BI\")),",
+                "    #\"Extracted Values\" = Table.TransformColumns(#\"Filtered Rows\", {\"Report Group\", each Text.Combine(List.Transform(_, Text.From), \",\"), type text})",
+                "in",
+                "    #\"Extracted Values\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Last Refresh Date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Last Refresh Date Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "a421a7e8-d514-46dc-bb20-3b6ff1a59e10",
+            "sourceColumn": "Last Refresh Date Time",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_cca88d05-34c2-40f4-9f35-9526856026e0"
+                },
+                "isDefault": true,
+                "relationship": "31463c35-3cac-4d37-bf42-2dc8cf2b143b"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "3d42ed74-9a6f-4dc0-94a5-c1d4a03245d2",
+        "partitions": [
+          {
+            "name": "Last Refresh Date-3115e729-3c66-4004-9631-142b614ae28e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),10)),",
+                "    #\"Converted to Table\" = #table(1, {{Source}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Last Refresh Date Time\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Last Refresh Date Time\", type datetime}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_cca88d05-34c2-40f4-9f35-9526856026e0",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "5a72f642-bd30-4279-8a62-87d93d574dd5",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "78475068-c5bd-4dfb-a00f-46d9ade1edd7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "726521f8-d167-4b9b-96db-f8a23ffd8ba9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "5723e1a4-38a5-4b69-b3fb-a831fbdd7ca7",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "66244dbd-5cd1-4fb5-8655-8485751245c9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "dac569f5-d2b3-42f5-91af-f84058c19a57",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ca5e50d4-dc46-4100-9038-cc5d0f26bf43",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "581d5cd0-ec7a-4abe-ad09-d9c0cc4509a1",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "755b71d7-ac60-4ce2-9817-b926090e7c45",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "70f1a0a5-f90c-4c55-9ce9-0e853ad163fa",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "a7817f0b-b5d5-44d7-abc3-9784bb637bc7",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "9296f1f8-999a-4672-9b64-dd20d5223bd6"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "71dcd84a-e44f-4042-9c72-227764528e88",
+        "partitions": [
+          {
+            "name": "LocalDateTable_cca88d05-34c2-40f4-9f35-9526856026e0-5a266300-568c-4e2a-b1d5-5bf6411bed7f",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Last Refresh Date'[Last Refresh Date Time])), 1, 1), Date(Year(MAX('Last Refresh Date'[Last Refresh Date Time])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}
